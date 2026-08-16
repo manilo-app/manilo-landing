@@ -1,5 +1,5 @@
 # =========================================================
-# Ledgy — robots.txt
+# Manilo — robots.txt
 # Updated: 2026-05-26
 # =========================================================
 
@@ -72,4 +72,4 @@ Allow: /
 # Disallow: /
 
 # =========================================================
-Sitemap: https://ledgy.app/sitemap.xml
+Sitemap: https://manilo.app/sitemap.xml

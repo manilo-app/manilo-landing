@@ -1,16 +1,15 @@
-# Ledgy
+# Manilo
 
-> Talk to your money. Ledgy is a multi-currency expense tracker for iOS. Free download with no ads. Optional Ledgy Cloud subscription ($2.99/mo or $22.99/yr) adds AI intake, multi-device sync, group sharing, Apple Watch logging, Telegram bot, web dashboard, and an MCP server that lets Claude, ChatGPT, Cursor, and any MCP-compatible AI assistant read, add, and edit your expenses in plain English. App Store ID: 6761738170.
+> Talk to your money. Manilo (formerly Ledgy) is a multi-currency expense tracker for iOS. Free download with no ads. An optional paid Manilo Cloud subscription adds AI intake, multi-device sync, group sharing, Apple Watch logging, Telegram bot, web dashboard, and an MCP server that lets Claude, ChatGPT, Cursor, and any MCP-compatible AI assistant read, add, and edit your expenses in plain English. App Store ID: 6761738170.
 
 ## Key facts
 
 - Platform: iOS 15+ (iPhone, iPad, Apple Watch)
-- Price: Free download, no ads; Cloud subscription optional
-- Cloud pricing: $2.99/month or $22.99/year (~$1.92/mo, save 36%), 7-day free trial
+- Price: Free download, no ads; paid Manilo Cloud subscription optional, 7-day free trial
 - Voice logging: on-device speech (Apple Speech framework); only resulting text sent to server
 - Multi-currency: daily-refreshed ECB FX rates, per-account currency, primary currency conversion
-- MCP server URL: https://api.ledgy.app/mcp (OAuth 2.0 / RFC 7591 Dynamic Client Registration)
-- REST API base: https://api.ledgy.app/api/v1/
+- MCP server URL: https://api.manilo.app/mcp (OAuth 2.0 / RFC 7591 Dynamic Client Registration)
+- REST API base: https://api.manilo.app/api/v1/
 - Languages: 14 fully translated locales (EN, DE, ES, FR, HI, IT, JA, KO, PL, PT-BR, RU, TR, UK, ZH-Hans)
 - CSV import: 29 locale auto-detection
 - No ads, no tracking SDKs, no data brokers
@@ -18,20 +17,20 @@
 
 ## Marketing
 
-- [Home](https://ledgy.app/): overview, features, capture surfaces, MCP, FAQ
-- [Plans & upgrade](https://dashboard.ledgy.app/upgrade): plan selector and web checkout (on the dashboard)
-- [Integrations / MCP](https://ledgy.app/integrations): pick your assistant (ChatGPT, Claude, Cursor, or any MCP client) and connect in about a minute — one-click install for ChatGPT and Cursor, copy-paste server URL for Claude and the rest; prompt examples, capabilities, privacy controls
-- [Ledgy in ChatGPT](https://ledgy.app/chatgpt): import bank statements by chat (ChatGPT or Claude), connection steps, statement formats, trial and pricing FAQ
+- [Home](https://manilo.app/): overview, features, capture surfaces, MCP, FAQ
+- [Plans & upgrade](https://dashboard.manilo.app/upgrade): plan selector and web checkout (on the dashboard)
+- [Integrations / MCP](https://manilo.app/integrations): pick your assistant (ChatGPT, Claude, Cursor, or any MCP client) and connect in about a minute — one-click install for ChatGPT and Cursor, copy-paste server URL for Claude and the rest; prompt examples, capabilities, privacy controls
+- [Manilo in ChatGPT](https://manilo.app/chatgpt): import bank statements by chat (ChatGPT or Claude), connection steps, statement formats, trial and pricing FAQ
 
 ## Documentation
 
-- [API v1 Reference](https://ledgy.app/api-v1): REST endpoints for accounts, categories, budgets, groups, transactions; PAT auth; bulk ops
-- [Support / Help Center](https://ledgy.app/support): install, voice, Siri, Watch, Telegram, Apple Wallet, billing, troubleshooting
+- [API v1 Reference](https://manilo.app/api-v1): REST endpoints for accounts, categories, budgets, groups, transactions; PAT auth; bulk ops
+- [Support / Help Center](https://manilo.app/support): install, voice, Siri, Watch, Telegram, Apple Wallet, billing, troubleshooting
 
 ## Legal
 
-- [Privacy Policy](https://ledgy.app/privacy)
-- [Terms of Service](https://ledgy.app/terms)
+- [Privacy Policy](https://manilo.app/privacy)
+- [Terms of Service](https://manilo.app/terms)
 
 ## App Store
 

@@ -1,5 +1,5 @@
 /* ============================================================
-   Ledgy — Colors & Type
+   Manilo — Colors & Type
    Source of truth: reference/styleguide.html (live codebase export)
    Primary font: Inter (local TTF in /fonts), fallback system stack
    ============================================================ */
@@ -14,11 +14,11 @@
 
 :root {
   /* ── Brand ──────────────────────────────────────────────── */
-  --ledgy-primary:        #6042FE;
-  --ledgy-primary-light:  #7B62FF;
-  --ledgy-primary-dark:   #3E2D99;
-  --ledgy-logo-grad-from: #FFFFFF;
-  --ledgy-logo-grad-to:   #9C96F6;
+  --manilo-primary:        #6042FE;
+  --manilo-primary-light:  #7B62FF;
+  --manilo-primary-dark:   #3E2D99;
+  --manilo-logo-grad-from: #FFFFFF;
+  --manilo-logo-grad-to:   #9C96F6;
 
   /* ── Backgrounds & surfaces (single dark theme) ────────── */
   --background:  hsl(220, 15%, 8%);       /* page bg */

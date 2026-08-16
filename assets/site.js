@@ -1,4 +1,4 @@
-// Ledgy marketing site — light interactivity.
+// Manilo marketing site — light interactivity.
 (function () {
   // CTA click tracking — fires `cta_click` events.
   document.addEventListener("click", (e) => {
@@ -12,7 +12,7 @@
     if (window.plausible) window.plausible("cta_click", { props: evt });
     if (window.gtag) window.gtag("event", "cta_click", evt);
     // Console fallback for dev visibility.
-    console.debug("[ledgy] cta_click", evt);
+    console.debug("[manilo] cta_click", evt);
   });
 
   // FAQ — single-open accordion behavior.

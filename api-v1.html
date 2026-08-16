@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>API v1 Reference — Ledgy for Developers</title>
-<meta name="description" content="Ledgy REST API v1 reference. Authenticate with a Personal Access Token and manage accounts, categories, budgets, groups, and transactions over HTTPS. Built for developers and AI agents via MCP.">
-<link rel="canonical" href="https://ledgy.app/api-v1">
-<link rel="alternate" hreflang="en" href="https://ledgy.app/api-v1">
-<link rel="alternate" hreflang="x-default" href="https://ledgy.app/api-v1">
+<title>API v1 Reference — Manilo for Developers</title>
+<meta name="description" content="Manilo REST API v1 reference. Authenticate with a Personal Access Token and manage accounts, categories, budgets, groups, and transactions over HTTPS. Built for developers and AI agents via MCP.">
+<link rel="canonical" href="https://manilo.app/api-v1">
+<link rel="alternate" hreflang="en" href="https://manilo.app/api-v1">
+<link rel="alternate" hreflang="x-default" href="https://manilo.app/api-v1">
 <meta name="apple-itunes-app" content="app-id=6761738170">
 <meta name="theme-color" content="#0a0a14">
-<meta property="og:site_name" content="Ledgy">
-<meta property="og:title" content="API v1 Reference — Ledgy for Developers">
-<meta property="og:description" content="REST API for Ledgy. PAT auth, manage accounts/categories/budgets/groups/transactions. Built for devs and AI agents via MCP.">
-<meta property="og:image" content="https://ledgy.app/assets/og-image.png">
+<meta property="og:site_name" content="Manilo">
+<meta property="og:title" content="API v1 Reference — Manilo for Developers">
+<meta property="og:description" content="REST API for Manilo. PAT auth, manage accounts/categories/budgets/groups/transactions. Built for devs and AI agents via MCP.">
+<meta property="og:image" content="https://manilo.app/assets/og-image.png">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://ledgy.app/api-v1">
+<meta property="og:url" content="https://manilo.app/api-v1">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="API v1 Reference — Ledgy for Developers">
-<meta name="twitter:description" content="REST API for Ledgy. PAT auth. Built for devs and AI agents via MCP.">
-<meta name="twitter:image" content="https://ledgy.app/assets/og-image.png">
-<link rel="icon" type="image/svg+xml" href="assets/ledgy-icon.svg">
+<meta name="twitter:title" content="API v1 Reference — Manilo for Developers">
+<meta name="twitter:description" content="REST API for Manilo. PAT auth. Built for devs and AI agents via MCP.">
+<meta name="twitter:image" content="https://manilo.app/assets/og-image.png">
+<link rel="icon" type="image/svg+xml" href="assets/manilo-icon.svg">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
 <link rel="stylesheet" href="assets/site.css">
 <link rel="stylesheet" href="assets/doc.css">
@@ -29,8 +29,8 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ledgy.app/" },
-    { "@type": "ListItem", "position": 2, "name": "API v1 Reference", "item": "https://ledgy.app/api-v1" }
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://manilo.app/" },
+    { "@type": "ListItem", "position": 2, "name": "API v1 Reference", "item": "https://manilo.app/api-v1" }
   ]
 }
 </script>
@@ -38,22 +38,22 @@
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "Ledgy REST API v1 — Reference",
-  "description": "Complete REST API reference for Ledgy: accounts, categories, budgets, groups, transactions, transfers, receipts. Bearer-token authentication (Personal Access Token, lgpat_ prefix). Bulk create/update/delete up to 100 transactions per request. Cursor pagination. Cloud subscription required.",
-  "url": "https://ledgy.app/api-v1",
+  "headline": "Manilo REST API v1 — Reference",
+  "description": "Complete REST API reference for Manilo: accounts, categories, budgets, groups, transactions, transfers, receipts. Bearer-token authentication (Personal Access Token, lgpat_ prefix). Bulk create/update/delete up to 100 transactions per request. Cursor pagination. Cloud subscription required.",
+  "url": "https://manilo.app/api-v1",
   "inLanguage": "en",
   "datePublished": "2026-05-19",
   "dateModified": "2026-05-26",
-  "image": "https://ledgy.app/assets/og-image.png",
+  "image": "https://manilo.app/assets/og-image.png",
   "author": { "@type": "Person", "name": "Borys Harholinskyi" },
   "publisher": {
     "@type": "Organization",
-    "name": "Ledgy",
-    "logo": { "@type": "ImageObject", "url": "https://ledgy.app/assets/ledgy-icon.svg" }
+    "name": "Manilo",
+    "logo": { "@type": "ImageObject", "url": "https://manilo.app/assets/manilo-icon.svg" }
   },
   "about": {
     "@type": "MobileApplication",
-    "name": "Ledgy",
+    "name": "Manilo",
     "operatingSystem": "iOS 15.0",
     "applicationCategory": "FinanceApplication"
   },
@@ -68,14 +68,14 @@
 
 <header class="site-header">
   <div class="container site-header__inner">
-    <a href="index.html" class="brand-lockup"><img src="assets/ledgy-icon.svg" alt="" class="brand-icon"><img src="assets/ledgy-logo.svg" alt="Ledgy" class="brand-word"></a>
+    <a href="index.html" class="brand-lockup"><img src="assets/manilo-icon.svg" alt="" class="brand-icon"><img src="assets/manilo-logo.svg" alt="Manilo" class="brand-word"></a>
     <nav class="site-nav" aria-label="Primary">
       <a href="index.html">Home</a>
-      <a href="https://dashboard.ledgy.app/upgrade" target="_blank" rel="noopener noreferrer">Pricing</a>
+      <a href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer">Pricing</a>
       <a href="support.html">Support</a>
     </nav>
     <div class="site-header__cta">
-      <a class="btn btn--ghost" href="https://dashboard.ledgy.app" target="_blank" rel="noopener noreferrer">Open dashboard</a>
+      <a class="btn btn--ghost" href="https://dashboard.manilo.app" target="_blank" rel="noopener noreferrer">Open dashboard</a>
       <a class="btn btn--primary" href="https://apps.apple.com/app/id6761738170" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-apple"></i> Download on the App Store</a>
     </div>
   </div>
@@ -88,7 +88,7 @@
     <h1>API v1 reference</h1>
     <p class="doc-meta">
       <span><i class="fa-solid fa-code"></i> REST · JSON · OAuth 2.0 Bearer</span>
-      <span><i class="fa-solid fa-server"></i> <code>https://api.ledgy.app</code></span>
+      <span><i class="fa-solid fa-server"></i> <code>https://api.manilo.app</code></span>
       <span><i class="fa-solid fa-circle-check"></i> Stable — no breaking changes within v1</span>
     </p>
   </div>
@@ -135,9 +135,9 @@
          ============================================================ -->
     <section id="overview">
       <h2 data-num="01">Overview</h2>
-      <p>The Ledgy API is a JSON REST API for programmatically managing the same ledger you use in the iOS app — accounts, categories, budgets, shared groups, and transactions. Use it to build importers, exporters, sync bridges, dashboards, or to power your own automations.</p>
+      <p>The Manilo API is a JSON REST API for programmatically managing the same ledger you use in the iOS app — accounts, categories, budgets, shared groups, and transactions. Use it to build importers, exporters, sync bridges, dashboards, or to power your own automations.</p>
       <ul>
-        <li><strong>Base URL:</strong> <code>https://api.ledgy.app</code></li>
+        <li><strong>Base URL:</strong> <code>https://api.manilo.app</code> — the previous base URL <code>api.ledgy.app</code> keeps working.</li>
         <li><strong>Version prefix:</strong> all endpoints in this document are mounted under <code>/api/v1/</code>.</li>
         <li><strong>Transport:</strong> HTTPS only. HTTP requests are not accepted.</li>
         <li><strong>Encoding:</strong> JSON request and response bodies. UTF-8. <code>camelCase</code> property names.</li>
@@ -147,7 +147,7 @@
       <div class="callout">
         <i class="fa-solid fa-flask"></i>
         <div>
-          <strong>Looking for an AI assistant?</strong> If you want Claude, ChatGPT, or Cursor to talk to Ledgy on your behalf, use the Model Context Protocol endpoint at <code>https://api.ledgy.app/mcp</code> — see <a href="integrations.html">Integrations</a>. The REST API documented here is for code you write yourself.
+          <strong>Looking for an AI assistant?</strong> If you want Claude, ChatGPT, or Cursor to talk to Manilo on your behalf, use the Model Context Protocol endpoint at <code>https://api.manilo.app/mcp</code> — see <a href="integrations.html">Integrations</a>. The REST API documented here is for code you write yourself.
         </div>
       </div>
     </section>
@@ -161,7 +161,7 @@
 
       <h3>1. Mint a Personal Access Token</h3>
       <ol>
-        <li>Sign in to your <a href="https://dashboard.ledgy.app" target="_blank" rel="noopener noreferrer">Ledgy dashboard</a> and open <strong>Settings → API Access</strong>.</li>
+        <li>Sign in to your <a href="https://dashboard.manilo.app" target="_blank" rel="noopener noreferrer">Manilo dashboard</a> and open <strong>Settings → API Access</strong>.</li>
         <li>Click <strong>+ New token</strong>.</li>
         <li>Give the token a descriptive name (e.g. <em>"Zapier — weekly export"</em>), pick the scopes you need (see <a href="#scopes">Scopes</a>), and optionally set an expiry.</li>
         <li>Copy the token. It's shown <em>once</em>. Tokens start with the prefix <code>lgpat_</code> followed by 64 hex characters.</li>
@@ -172,7 +172,7 @@
       <div class="code-block">
         <div class="code-block__header"><span class="code-block__lang">cURL</span><span class="code-block__caption">List accounts</span></div>
 <pre><span class="c-cmt"># Replace lgpat_… with your token</span>
-curl <span class="c-str">"https://api.ledgy.app/api/v1/accounts"</span> \
+curl <span class="c-str">"https://api.manilo.app/api/v1/accounts"</span> \
   -H <span class="c-str">"Authorization: Bearer lgpat_a1b2c3d4e5…"</span></pre>
       </div>
 
@@ -222,9 +222,9 @@ curl <span class="c-str">"https://api.ledgy.app/api/v1/accounts"</span> \
 
       <h3>Token limits</h3>
       <ul>
-        <li>Up to <strong>25 active PATs</strong> per Ledgy account.</li>
+        <li>Up to <strong>25 active PATs</strong> per Manilo account.</li>
         <li>An optional expiration can be set at creation time. Expired tokens return <code>401 Unauthorized</code>.</li>
-        <li>Revoked tokens stop working immediately — Ledgy stores only a SHA-256 hash of the token, never the value, so a leaked token cannot be recovered, only revoked and replaced.</li>
+        <li>Revoked tokens stop working immediately — Manilo stores only a SHA-256 hash of the token, never the value, so a leaked token cannot be recovered, only revoked and replaced.</li>
       </ul>
 
       <h3>Common auth failures</h3>
@@ -268,7 +268,7 @@ curl <span class="c-str">"https://api.ledgy.app/api/v1/accounts"</span> \
          ============================================================ -->
     <section id="subscription">
       <h2 data-num="05">Subscription gate</h2>
-      <p>All v1 endpoints — including read-only ones — require the calling user to have an <strong>active Ledgy Cloud subscription</strong>. If the subscription has lapsed, expired, or never been started, the API responds with:</p>
+      <p>All v1 endpoints — including read-only ones — require the calling user to have an <strong>active Manilo Cloud subscription</strong>. If the subscription has lapsed, expired, or never been started, the API responds with:</p>
       <div class="code-block">
         <div class="code-block__header"><span class="code-block__lang">403 Forbidden</span></div>
 <pre>HTTP/1.1 403 Forbidden
@@ -277,7 +277,7 @@ Content-Type: application/json
 
 { <span class="c-key">"error"</span>: <span class="c-str">"Active cloud subscription required"</span> }</pre>
       </div>
-      <p>The <code>X-Subscription-Required</code> header lets clients distinguish a subscription block from a generic permission denial. Restore access by reactivating Cloud in the iOS app or at <a href="https://dashboard.ledgy.app/upgrade" target="_blank" rel="noopener noreferrer">dashboard.ledgy.app/upgrade</a>.</p>
+      <p>The <code>X-Subscription-Required</code> header lets clients distinguish a subscription block from a generic permission denial. Restore access by reactivating Cloud in the iOS app or at <a href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer">dashboard.manilo.app/upgrade</a>.</p>
     </section>
 
     <!-- ============================================================
@@ -314,7 +314,7 @@ Content-Type: application/json
       <h3>Transactions cursor</h3>
       <div class="code-block">
         <div class="code-block__header"><span class="code-block__lang">cURL</span><span class="code-block__caption">Paginated list</span></div>
-<pre>curl <span class="c-str">"https://api.ledgy.app/api/v1/transactions?limit=50&amp;type=expense&amp;dateFrom=2026-01-01"</span> \
+<pre>curl <span class="c-str">"https://api.manilo.app/api/v1/transactions?limit=50&amp;type=expense&amp;dateFrom=2026-01-01"</span> \
   -H <span class="c-str">"Authorization: Bearer lgpat_…"</span></pre>
       </div>
       <p>The response includes a <code>nextCursor</code>. Pass it back as the <code>cursor</code> query param to fetch the next page; when <code>nextCursor</code> is <code>null</code> you've reached the end.</p>
@@ -467,7 +467,7 @@ Content-Type: application/json
           <span class="method-badge method-badge--get">GET</span>
           <code class="endpoint__path">/api/v1/categories/system-categories</code>
           <span class="endpoint__scope">categories:read</span>
-          <p class="endpoint__desc">Return Ledgy's curated set of "well-known" categories — the starter set the iOS app ships with. These are versioned globally and safe to cache by <code>version</code>.</p>
+          <p class="endpoint__desc">Return Manilo's curated set of "well-known" categories — the starter set the iOS app ships with. These are versioned globally and safe to cache by <code>version</code>.</p>
         </div>
       </div>
 
@@ -954,7 +954,7 @@ Content-Type: application/json
          ============================================================ -->
     <section id="icons">
       <h2 data-num="14">Icons</h2>
-      <p class="resource-intro">Ledgy ships with a curated icon set and color palette used everywhere — accounts, categories, groups. Fetch the catalog once, cache it, and reuse the identifiers when creating resources.</p>
+      <p class="resource-intro">Manilo ships with a curated icon set and color palette used everywhere — accounts, categories, groups. Fetch the catalog once, cache it, and reuse the identifiers when creating resources.</p>
 
       <div class="endpoint" id="ico-list">
         <div class="endpoint__head">
@@ -1000,8 +1000,8 @@ Content-Type: application/json
          ============================================================ -->
     <section id="support">
       <h2 data-num="16">Support</h2>
-      <p>Found a bug, want an endpoint, or hit something undocumented? Open the <a href="support.html">help center</a> or email <a href="mailto:support@ledgy.app">support@ledgy.app</a> — please include the request id (echoed in the <code>X-Request-Id</code> response header) when reporting an issue.</p>
-      <p>For security-sensitive disclosures (a token leak, a permission bypass, an unauthorized read) write to <a href="mailto:security@ledgy.app">security@ledgy.app</a>.</p>
+      <p>Found a bug, want an endpoint, or hit something undocumented? Open the <a href="support.html">help center</a> or email <a href="mailto:support@manilo.app">support@manilo.app</a> — please include the request id (echoed in the <code>X-Request-Id</code> response header) when reporting an issue.</p>
+      <p>For security-sensitive disclosures (a token leak, a permission bypass, an unauthorized read) write to <a href="mailto:security@manilo.app">security@manilo.app</a>.</p>
     </section>
 
   </article>
@@ -1013,15 +1013,15 @@ Content-Type: application/json
   <div class="container">
     <div class="site-footer__grid">
       <div>
-        <a href="index.html" class="brand-lockup" style="margin-bottom: 14px;"><img src="assets/ledgy-icon.svg" alt="" class="brand-icon"><img src="assets/ledgy-logo.svg" alt="Ledgy" class="brand-word"></a>
+        <a href="index.html" class="brand-lockup" style="margin-bottom: 14px;"><img src="assets/manilo-icon.svg" alt="" class="brand-icon"><img src="assets/manilo-logo.svg" alt="Manilo" class="brand-word"></a>
         <p class="site-footer__about">Expenses that track themselves.</p>
       </div>
-      <div><h4>Product</h4><ul><li><a href="index.html">Home</a></li><li><a href="https://dashboard.ledgy.app/upgrade" target="_blank" rel="noopener noreferrer">Pricing</a></li><li><a href="integrations.html">Integrations</a></li><li><a href="chatgpt.html">Ledgy in ChatGPT</a></li><li><a href="https://dashboard.ledgy.app" target="_blank" rel="noopener noreferrer">Dashboard</a></li></ul></div>
+      <div><h4>Product</h4><ul><li><a href="index.html">Home</a></li><li><a href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer">Pricing</a></li><li><a href="integrations.html">Integrations</a></li><li><a href="chatgpt.html">Manilo in ChatGPT</a></li><li><a href="https://dashboard.manilo.app" target="_blank" rel="noopener noreferrer">Dashboard</a></li></ul></div>
       <div><h4>Developers</h4><ul><li><a href="api-v1.html">API v1 reference</a></li><li><a href="integrations.html">MCP integration</a></li></ul></div>
-      <div><h4>Support</h4><ul><li><a href="support.html">Help center</a></li><li><a href="mailto:support@ledgy.app">support@ledgy.app</a></li></ul></div>
+      <div><h4>Support</h4><ul><li><a href="support.html">Help center</a></li><li><a href="mailto:support@manilo.app">support@manilo.app</a></li></ul></div>
       <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
     </div>
-    <div class="site-footer__legal"><span>© 2026 Ledgy</span></div>
+    <div class="site-footer__legal"><span>© 2026 Manilo</span></div>
   </div>
 </footer>
 
