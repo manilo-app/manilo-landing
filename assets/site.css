@@ -474,3 +474,6 @@ a { color: inherit; text-decoration: none; }
     transition-duration: 0.001ms !important;
   }
 }
+
+/* Interim text wordmark until the designed Manilo logo lands */
+.brand-lockup .brand-word--text { font-weight: 700; font-size: 21px; letter-spacing: -0.02em; color: #E7E7E9; line-height: 1; }
