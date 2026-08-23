@@ -1,0 +1,440 @@
+{
+  "meta": {
+    "title": "Dokumentacja API v1 — Manilo dla deweloperów",
+    "description": "Dokumentacja REST API v1 Manilo. Uwierzytelnianie tokenem PAT, zarządzanie kontami, budżetami, grupami i transakcjami. Dla deweloperów i agentów AI przez MCP.",
+    "ogDescription": "REST API dla Manilo. Uwierzytelnianie PAT, zarządzanie kontami, kategoriami, budżetami, grupami i transakcjami. Dla deweloperów i agentów AI przez MCP.",
+    "twitterTitle": "Dokumentacja API v1 — Manilo dla deweloperów",
+    "twitterDescription": "REST API dla Manilo. Uwierzytelnianie PAT. Dla deweloperów i agentów AI przez MCP."
+  },
+  "jsonLd": {
+    "breadcrumbHome": "Strona główna",
+    "breadcrumbApi": "Dokumentacja API v1",
+    "headline": "Manilo REST API v1 — dokumentacja",
+    "description": "Pełna dokumentacja REST API Manilo: konta, kategorie, budżety, grupy, transakcje, przelewy, paragony. Uwierzytelnianie tokenem bearer (Personal Access Token, prefiks lgpat_). Zbiorcze tworzenie, aktualizacja i usuwanie do 100 transakcji na żądanie. Paginacja kursorowa. Wymagana subskrypcja Cloud."
+  },
+  "hero": {
+    "eyebrow": "Dla deweloperów",
+    "title": "Dokumentacja API v1",
+    "stack": "REST · JSON · OAuth 2.0 Bearer",
+    "stability": "Stabilne — brak zmian łamiących zgodność w obrębie v1"
+  },
+  "toc": {
+    "ariaLabel": "Spis treści",
+    "heading": "Spis treści",
+    "toggle": "Spis treści",
+    "groups": {
+      "gettingStarted": "Pierwsze kroki",
+      "conventions": "Konwencje",
+      "resources": "Zasoby",
+      "more": "Więcej"
+    },
+    "items": {
+      "overview": "Przegląd",
+      "quickstart": "Szybki start",
+      "authentication": "Uwierzytelnianie",
+      "scopes": "Zakresy",
+      "subscription": "Wymóg subskrypcji",
+      "errors": "Błędy",
+      "pagination": "Paginacja i filtry",
+      "types": "Typy i formaty",
+      "accounts": "Konta",
+      "categories": "Kategorie",
+      "budgets": "Budżety",
+      "groups": "Grupy",
+      "transactions": "Transakcje",
+      "icons": "Ikony",
+      "changelog": "Wersjonowanie",
+      "support": "Pomoc"
+    }
+  },
+  "common": {
+    "field": "Pole",
+    "type": "Typ",
+    "description": "Opis",
+    "required": "wymagane",
+    "optional": "opcjonalne",
+    "requestBody": "Treść żądania",
+    "queryParams": "Parametry zapytania",
+    "requestLabel": "Żądanie"
+  },
+  "overview": {
+    "title": "Przegląd",
+    "intro": "Manilo API to REST API w formacie JSON, służące do programowego zarządzania tą samą historią finansów, której używasz w aplikacji na iOS — kontami, kategoriami, budżetami, wspólnymi grupami i transakcjami. Zbudujesz na nim importery, eksportery, mostki synchronizacji, panele analityczne albo własne automatyzacje.",
+    "bullets": {
+      "baseUrl": { "label": "Adres bazowy:", "t1": " — poprzedni adres bazowy ", "t2": " nadal działa." },
+      "versionPrefix": { "label": "Prefiks wersji:", "t1": " wszystkie endpointy opisane w tym dokumencie są dostępne pod ", "t2": "." },
+      "transport": { "label": "Transport:", "t1": " tylko HTTPS. Żądania HTTP nie są przyjmowane." },
+      "encoding": { "label": "Kodowanie:", "t1": " treść żądania i odpowiedzi w JSON. UTF-8. Nazwy pól w ", "t2": "." },
+      "auth": { "label": "Uwierzytelnianie:", "t1": " przy każdym żądaniu." },
+      "subscription": { "label": "Subskrypcja Cloud:", "t1": " wymagana na każdym endpoincie v1. Zobacz ", "link": "Wymóg subskrypcji", "t2": "." }
+    },
+    "callout": {
+      "strong": "Szukasz asystenta AI?",
+      "t1": " Jeśli chcesz, aby Claude, ChatGPT lub Cursor rozmawiały z Manilo w Twoim imieniu, skorzystaj z endpointu Model Context Protocol pod adresem ",
+      "t2": " — zobacz ",
+      "link": "Integracje",
+      "t3": ". Opisane tutaj API REST jest przeznaczone do kodu, który piszesz samodzielnie."
+    }
+  },
+  "quickstart": {
+    "title": "Szybki start",
+    "intro": "Trzy kroki do pierwszego uwierzytelnionego żądania.",
+    "mintTitle": "1. Wygeneruj Personal Access Token",
+    "steps": {
+      "signIn": { "t1": "Zaloguj się do ", "link": "panelu Manilo", "t2": " i otwórz ", "strong": "Ustawienia → Dostęp do API", "t3": "." },
+      "newToken": { "t1": "Kliknij ", "strong": "+ Nowy token", "t2": "." },
+      "nameIt": { "t1": "Nadaj tokenowi opisową nazwę (np. ", "em": "„Zapier — cotygodniowy eksport”", "t2": "), wybierz potrzebne zakresy (zobacz ", "link": "Zakresy", "t3": ") i opcjonalnie ustaw datę wygaśnięcia." },
+      "copyIt": { "t1": "Skopiuj token. Zobaczysz go ", "em": "tylko raz", "t2": ". Tokeny zaczynają się od prefiksu ", "t3": ", po którym następują 64 znaki szesnastkowe." }
+    },
+    "tokensPage": "Ta sama strona wyświetla Twoje aktywne tokeny wraz z czasem ostatniego użycia i liczbą uprawnień, pokazuje ostrzeżenie „Wygasa za 30 dni” i pozwala natychmiast unieważnić dowolny token ikoną kosza. Jedno konto może mieć jednocześnie maksymalnie 25 aktywnych tokenów.",
+    "requestTitle": "2. Wyślij żądanie",
+    "curlCaption": "Lista kont",
+    "responseTitle": "3. Przeanalizuj odpowiedź",
+    "callout": {
+      "strong1": "Traktuj swój token jak hasło.",
+      "t1": " Każdy, kto go ma, może odczytywać i zmieniać Twoją historię transakcji w granicach nadanych zakresów. Tokeny, które wyciekły, natychmiast unieważnij w ",
+      "strong2": "Ustawienia → Dostęp do API",
+      "t2": "."
+    }
+  },
+  "authentication": {
+    "title": "Uwierzytelnianie",
+    "intro": { "t1": "Każde żądanie do ", "t2": " musi zawierać nagłówek ", "t3": ". Akceptowane są dwa rodzaje tokenów:" },
+    "pat": {
+      "strong1": "Personal Access Token (PAT)",
+      "t1": " — długowieczny token bearer, który tworzysz w panelu na stronie ",
+      "strong2": "Ustawienia → Dostęp do API",
+      "t2": ". Format: ",
+      "t3": " + 64 znaki szesnastkowe. Ograniczony zakresami, odwoływalny, opcjonalnie wygasający. ",
+      "strong3": "Zalecany do wszystkich integracji zewnętrznych."
+    },
+    "jwt": {
+      "strong": "Sesyjny token JWT",
+      "t1": " — krótkotrwały token wydawany aplikacjom własnym (iOS, panel www). Nie ma ograniczeń zakresów. Możesz go użyć do jednorazowych testów, jeśli uda Ci się wydobyć go z zalogowanej sesji, ale wspieraną ścieżką są tokeny PAT."
+    },
+    "headerTitle": "Format nagłówka",
+    "limitsTitle": "Limity tokenów",
+    "limits": {
+      "count": { "t1": "Maksymalnie ", "strong": "25 aktywnych tokenów PAT", "t2": " na jedno konto Manilo." },
+      "expiry": { "t1": "Przy tworzeniu tokenu możesz opcjonalnie ustawić datę wygaśnięcia. Wygasłe tokeny zwracają ", "t2": "." },
+      "revoked": "Unieważnione tokeny przestają działać natychmiast — Manilo przechowuje wyłącznie skrót SHA-256 tokenu, nigdy jego wartość, więc tokenu, który wyciekł, nie da się odzyskać: można go tylko unieważnić i zastąpić nowym."
+    },
+    "failuresTitle": "Najczęstsze błędy uwierzytelniania",
+    "failures": {
+      "s401": "Brak tokenu albo token nieprawidłowy, wygasły lub unieważniony.",
+      "s403": "Token jest prawidłowy, ale żądany endpoint wymaga zakresu, którego Twój token PAT nie posiada, albo Twoja subskrypcja Cloud nie jest aktywna."
+    }
+  },
+  "scopes": {
+    "title": "Zakresy",
+    "intro": {
+      "t1": "Tokeny PAT działają w modelu ",
+      "strong": "domyślnej odmowy",
+      "t2": ". Token może wywołać wyłącznie te endpointy, których wymagany zakres posiada; wszystko inne zwraca ",
+      "t3": ". Nadawaj możliwie najwęższy zestaw zakresów, jakiego naprawdę potrzebuje Twoja integracja."
+    },
+    "available": "Dostępne zakresy:",
+    "chips": { "t1": "Każdy endpoint wymieniony poniżej pokazuje wymagany zakres jako mały fioletowy znacznik. Zakresy ", "t2": " nie oznaczają automatycznie ", "t3": " — jeśli potrzebujesz obu, poproś o oba." }
+  },
+  "subscription": {
+    "title": "Wymóg subskrypcji",
+    "intro": {
+      "t1": "Wszystkie endpointy v1 — również te tylko do odczytu — wymagają, aby wywołujący użytkownik miał ",
+      "strong": "aktywną subskrypcję Manilo Cloud",
+      "t2": ". Jeśli subskrypcja została anulowana, wygasła albo nigdy nie została uruchomiona, API odpowiada:"
+    },
+    "outro": {
+      "t1": "Nagłówek ",
+      "t2": " pozwala klientom odróżnić blokadę subskrypcji od zwykłej odmowy uprawnień. Dostęp przywrócisz, aktywując ponownie Cloud w aplikacji na iOS lub na ",
+      "t3": "."
+    }
+  },
+  "errors": {
+    "title": "Błędy",
+    "intro": "Błędy korzystają ze standardowych kodów statusu HTTP. Treścią odpowiedzi jest obiekt JSON z jednym polem:",
+    "handle": "Kody statusu, które warto obsłużyć:",
+    "statuses": {
+      "s200": "OK — zwrócono zasób albo listę.",
+      "s201": { "t1": "Created — utworzono nowy zasób. Nagłówek ", "t2": " wskazuje kanoniczny adres URL." },
+      "s204": "No Content — usunięcie powiodło się; bez treści odpowiedzi.",
+      "s400": "Walidacja nie powiodła się — brak wymaganego pola, wartość poza zakresem, nieprawidłowy JSON.",
+      "s401": { "t1": "Uwierzytelnianie nie powiodło się — zobacz ", "link": "Uwierzytelnianie", "t2": "." },
+      "s403": "Odmowa dostępu — niewystarczający zakres lub nieaktywna subskrypcja.",
+      "s404": "Nie znaleziono zasobu albo jest on ukryty ze względu na uprawnienia.",
+      "s409": "Conflict — np. naruszenie ograniczenia unikalności.",
+      "s5xx": "Błąd po stronie serwera. Idempotentne odczyty można bezpiecznie ponowić z wykładniczo rosnącym odstępem."
+    }
+  },
+  "pagination": {
+    "title": "Paginacja i filtry",
+    "intro": "Endpointy listujące domyślnie zwracają wszystkie pasujące elementy. Transakcje — jedyny zasób, który może mocno urosnąć — obsługują paginację kursorową.",
+    "cursorTitle": "Kursor transakcji",
+    "caption": "Lista z paginacją",
+    "response": {
+      "t1": "Odpowiedź zawiera pole ",
+      "t2": ". Przekaż je z powrotem jako parametr zapytania ",
+      "t3": ", aby pobrać kolejną stronę; gdy ",
+      "t4": " ma wartość ",
+      "t5": ", oznacza to koniec listy."
+    },
+    "params": {
+      "limit": { "t1": " — rozmiar strony, ograniczany do ", "t2": ". Domyślnie ", "t3": "." },
+      "cursor": " — token nieprzezroczysty. Traktuj go jak czarną skrzynkę.",
+      "filters": { "t1": " — filtry opcjonalne; zobacz endpoint ", "link": "Lista transakcji", "t2": "." }
+    }
+  },
+  "types": {
+    "title": "Typy i formaty",
+    "ids": { "strong": "Identyfikatory", "t1": " — nieprzezroczyste ciągi znaków. Nie parsuj ich; traktuj je jak identyfikatory UTF-8 z rozróżnianiem wielkości liter." },
+    "timestamps": { "strong": "Znaczniki czasu", "t1": " — ISO-8601 w UTC z końcowym ", "t2": ", np. ", "t3": "." },
+    "dates": { "strong": "Daty", "t1": " (np. pole transakcji ", "t2": ") — ten sam format ISO-8601, ale znacząca jest wyłącznie część datowa." },
+    "money": {
+      "strong1": "Kwoty",
+      "t1": " — liczby JSON w ",
+      "strong2": "jednostkach głównych",
+      "t2": ", z dokładnością do 4 miejsc po przecinku (np. ",
+      "t3": "). Nigdy w jednostkach podrzędnych. Zawsze w parze z ",
+      "t4": "."
+    },
+    "currencyCodes": { "strong": "Kody walut", "t1": " — ISO-4217, dokładnie trzy wielkie litery (np. ", "t2": ")." },
+    "deletes": {
+      "strong1": "Usuwanie",
+      "t1": " — wszystkie operacje usuwania to ",
+      "strong2": "usunięcia miękkie",
+      "t2": ". Usunięte elementy przestają pojawiać się w odpowiedziach list i pobrań; powiązania z osobami współdzielącymi oraz historyczne paragony zostają zachowane."
+    },
+    "sideEffects": {
+      "strong": "Efekty uboczne",
+      "t1": " — usunięcie konta, kategorii lub grupy nie narusza powiązanych transakcji; odpinane są jedynie odwołania. Endpoint ",
+      "link": "Usuń konto",
+      "t2": " przyjmuje jawnie wskazaną strategię."
+    }
+  },
+  "accounts": {
+    "title": "Konta",
+    "intro": "Konta to kubełki, które przechowują salda — rachunek bankowy, karta kredytowa, portfel gotówkowy, rachunek maklerski. Każda transakcja jest powiązana z jednym kontem (albo z dwoma, gdy jest to przelew).",
+    "list": { "desc": "Zwraca każde konto, którego uwierzytelniony użytkownik jest właścicielem lub do którego ma dostęp." },
+    "get": { "desc": { "t1": "Pobiera jedno konto po identyfikatorze. ", "t2": ", jeśli nie znaleziono." } },
+    "create": {
+      "desc": { "t1": "Tworzy nowe konto. Zwraca ", "t2": " z utworzonym obiektem oraz nagłówek ", "t3": "." },
+      "fields": {
+        "name": "Nazwa wyświetlana. Maks. 100 znaków.",
+        "currencyCode": "ISO-4217. Dokładnie 3 litery.",
+        "initialBalance": { "t1": "Saldo początkowe w walucie ", "t2": "." },
+        "order": "Pozycja sortowania. Niższa wartość jest wyżej.",
+        "icon": { "t1": "Identyfikator ikony z ", "t2": ". Maks. 50." },
+        "color": { "t1": "Kolor szesnastkowy, np. ", "t2": ". Maks. 20." },
+        "iconColor": "Nadpisuje kolor ikony."
+      }
+    },
+    "update": { "desc": { "t1": "Zastępuje istniejące konto. Treść żądania jest identyczna jak w ", "link": "Utwórz", "t2": "; należy podać wszystkie pola." } },
+    "delete": {
+      "desc": { "t1": "Usuwa konto miękko. O tym, co stanie się z jego transakcjami, decydujesz parametrem zapytania ", "t2": "." },
+      "fields": {
+        "action": { "t1": " (domyślnie): usuwa odwołanie do konta w każdej transakcji. ", "t2": ": przenosi transakcje na konto wskazane w ", "t3": ". ", "t4": ": usuwa miękko każdą powiązaną transakcję, której jesteś właścicielem." },
+        "moveTargetAccountId": { "t1": "Wymagane, gdy ", "t2": ". Identyfikator konta docelowego." }
+      }
+    }
+  },
+  "categories": {
+    "title": "Kategorie",
+    "intro": "Kategorie określają, czego dotyczy transakcja (zakupy spożywcze, czynsz, przychód z freelancingu). Kategorie systemowe są tylko do odczytu i wspólne dla wszystkich użytkowników; kategoriami użytkownika zarządzasz sam. Grupy kategorii łączą powiązane ze sobą kategorie.",
+    "system": { "desc": { "t1": "Zwraca wyselekcjonowany przez Manilo zestaw kategorii „dobrze znanych” — startowy zestaw dostarczany z aplikacją na iOS. Jest wersjonowany globalnie i można go bezpiecznie buforować według pola ", "t2": "." } },
+    "userTitle": "Kategorie użytkownika",
+    "list": { "desc": "Zwraca wszystkie kategorie zdefiniowane przez użytkownika." },
+    "get": { "desc": "Pobiera jedną kategorię użytkownika po identyfikatorze." },
+    "create": {
+      "desc": "Tworzy kategorię użytkownika.",
+      "fields": {
+        "name": "Nazwa wyświetlana. Maks. 100.",
+        "type": { "t1": " lub ", "t2": "." },
+        "order": "Pozycja sortowania w obrębie grupy.",
+        "isPinned": "Przypina na górze listy wyboru.",
+        "categoryGroupId": { "t1": "Identyfikator grupy nadrzędnej albo ", "t2": " dla kategorii bez grupy." },
+        "icon": "Identyfikator ikony.",
+        "color": "Kolor szesnastkowy."
+      }
+    },
+    "update": { "desc": { "t1": "Zastępuje kategorię użytkownika. Treść żądania jest identyczna jak w ", "link": "Utwórz", "t2": "." } },
+    "delete": { "desc": { "t1": "Usuwa miękko kategorię użytkownika. Transakcje nie są usuwane; czyszczone jest ich pole ", "t2": "." } },
+    "groupsTitle": "Grupy kategorii",
+    "cgList": { "desc": "Zwraca Twoje grupy kategorii." },
+    "cgGet": { "desc": "Pobiera jedną grupę kategorii." },
+    "cgCreate": {
+      "desc": "Tworzy grupę kategorii.",
+      "fields": {
+        "name": "Nazwa wyświetlana. Maks. 100.",
+        "order": "Pozycja sortowania.",
+        "icon": "Identyfikator ikony.",
+        "color": "Kolor szesnastkowy."
+      }
+    },
+    "cgUpdate": { "desc": "Zastępuje grupę kategorii." },
+    "cgDelete": { "desc": { "t1": "Usuwa miękko grupę. Kategorie podrzędne zostają zachowane — czyszczone jest ich pole ", "t2": "." } }
+  },
+  "budgets": {
+    "title": "Budżety",
+    "intro": { "t1": "Budżet ogranicza wydatki w ramach kategorii (a gdy ", "t2": " ma wartość null — w ramach całej historii transakcji) w powtarzalnym okresie. Aby udostępnić budżet grupie, ustaw ", "t3": "." },
+    "list": { "desc": "Zwraca wszystkie budżety." },
+    "get": { "desc": "Pobiera jeden budżet." },
+    "create": {
+      "desc": "Tworzy budżet.",
+      "fields": {
+        "amount": "Limit na okres. Musi być większy niż 0.",
+        "currencyCode": "ISO-4217.",
+        "period": { "t1": " tygodniowy · ", "t2": " miesięczny · ", "t3": " kwartalny · ", "t4": " roczny." },
+        "startDate": "Początek pierwszego okresu.",
+        "isActive": "Czy ten budżet jest obecnie egzekwowany.",
+        "endDate": "Po tej dacie śledzenie zostaje wstrzymane.",
+        "name": "Etykieta. Maks. 200.",
+        "categoryId": "Kategoria do śledzenia. Pomiń, aby objąć budżetem wszystkie wydatki.",
+        "groupId": "Grupa, której chcesz udostępnić budżet. Pomiń dla budżetu osobistego."
+      }
+    },
+    "update": { "desc": "Zastępuje budżet." },
+    "delete": { "desc": "Usuwa budżet miękko." }
+  },
+  "groups": {
+    "title": "Grupy",
+    "intro": "Grupy to wspólne historie transakcji — gospodarstwo domowe, wyjazd, wspólne mieszkanie. Każdy członek widzi te same transakcje; własność pozostaje osobista. Członkostwem i zaproszeniami zarządza się w aplikacji na iOS; API udostępnia tutaj sam zasób.",
+    "list": { "desc": "Zwraca grupy, których jesteś właścicielem lub członkiem." },
+    "get": { "desc": "Pobiera jedną grupę." },
+    "create": {
+      "desc": "Tworzy grupę. Stajesz się jej właścicielem; członków zaprosisz z aplikacji na iOS.",
+      "fields": {
+        "name": "Nazwa wyświetlana. Maks. 100.",
+        "description": "Dowolny tekst. Maks. 500.",
+        "icon": "Identyfikator ikony.",
+        "color": "Kolor szesnastkowy."
+      }
+    },
+    "update": { "desc": "Zastępuje metadane grupy." },
+    "delete": { "desc": "Usuwa grupę miękko. Członkowie tracą widoczność; powiązane transakcje wracają do statusu osobistych." }
+  },
+  "transactions": {
+    "title": "Transakcje",
+    "intro": {
+      "t1": "Transakcje to czasowniki Twojej historii finansów. Występują w czterech postaciach: ",
+      "t2": " (z konta na konto) oraz ",
+      "t3": " (jednorazowe wyrównanie salda). Endpoint podstawowy tworzy przychody i wydatki; przelewy mają własny endpoint; dla importerów o dużym wolumenie istnieją warianty zbiorcze."
+    },
+    "list": {
+      "desc": "Zwraca listę transakcji z paginacją kursorową i filtrami.",
+      "fields": {
+        "limit": { "t1": "Rozmiar strony. ", "t2": ". Domyślnie ", "t3": "." },
+        "cursor": "Nieprzezroczysty token kontynuacji z poprzedniej odpowiedzi.",
+        "type": { "t1": " lub ", "t2": "." },
+        "dateFrom": "Dolna granica włącznie.",
+        "dateTo": "Górna granica włącznie.",
+        "categoryId": "Filtruje do jednej kategorii.",
+        "accountId": "Filtruje do jednego konta.",
+        "groupId": "Filtruje do wspólnej grupy."
+      }
+    },
+    "get": { "desc": "Pobiera jedną transakcję." },
+    "create": {
+      "desc": { "t1": "Tworzy pojedynczą transakcję przychodu lub wydatku. Do przelewów użyj ", "t2": "." },
+      "fields": {
+        "type": { "t1": " lub ", "t2": "." },
+        "amount": { "t1": "Kwota dodatnia w walucie ", "t2": "." },
+        "currencyCode": "ISO-4217.",
+        "date": "Kiedy nastąpiła transakcja (UTC).",
+        "accountId": "Konto źródłowe lub docelowe.",
+        "categoryId": "Etykieta kategorii.",
+        "payee": "Sprzedawca lub kontrahent. Maks. 200.",
+        "note": "Dowolna notatka. Maks. 2000.",
+        "groupId": "Udostępnienie grupie.",
+        "exchangeRate": { "t1": "Kurs wymiany, gdy ", "t2": " ≠ waluta główna użytkownika." },
+        "convertedAmount": "Kwota w walucie głównej użytkownika."
+      },
+      "exampleCaption": "Kawa za €8.50 wczoraj na koncie Wise"
+    },
+    "update": { "desc": { "t1": "Zastępuje transakcję. Treść żądania jest identyczna jak w ", "link": "Utwórz", "t2": "." } },
+    "delete": { "desc": "Usuwa miękko jedną transakcję." },
+    "transfer": {
+      "desc": { "t1": "Tworzy przelew między dwoma kontami. Bez kategorii. Przy przelewach międzywalutowych podaj ", "t2": " oraz ", "t3": " w walucie docelowej." },
+      "fields": {
+        "fromAccountId": "Konto źródłowe.",
+        "toAccountId": "Konto docelowe. Musi być inne niż źródłowe.",
+        "amount": { "t1": "Kwota wysłana, w walucie ", "t2": "." },
+        "currencyCode": "Waluta źródłowa, ISO-4217.",
+        "date": "Data przelewu.",
+        "exchangeRate": "Wymagane, gdy waluta źródłowa i docelowa są różne.",
+        "convertedAmount": "Kwota zaksięgowana na koncie docelowym, w jego walucie.",
+        "note": "Maks. 2000."
+      }
+    },
+    "bulkTitle": "Operacje zbiorcze",
+    "bulkIntro": {
+      "t1": "Zaprojektowane z myślą o importerach. Każda partia jest ograniczona do ",
+      "strong1": "100 elementów",
+      "t2": " i działa w trybie ",
+      "strong2": "best-effort",
+      "t3": ": jeden błędny wiersz nie wycofuje pozostałych. Elementy przyjęte oraz błędy poszczególnych wierszy raportowane są osobno, dzięki czemu możesz ponowić tylko te nieudane."
+    },
+    "bulkCreate": { "desc": "Tworzy do 100 transakcji w jednym wywołaniu." },
+    "bulkUpdate": { "desc": { "t1": "Aktualizuje do 100 transakcji w jednym wywołaniu. Każdy element musi zawierać własne ", "t2": " wraz z pełną treścią transakcji." } },
+    "bulkDelete": {
+      "desc": { "t1": "Usuwa miękko do 100 transakcji w jednym wywołaniu. Używa ", "t2": " zamiast ", "t3": ", dzięki czemu treść żądania jest akceptowana przez wszystkie klienty HTTP." },
+      "fields": {
+        "ids": "Od 1 do 100 identyfikatorów transakcji."
+      }
+    },
+    "objectTitle": "Obiekt transakcji",
+    "object": {
+      "id": "Nieprzezroczysty identyfikator.",
+      "amount": { "t1": "W walucie ", "t2": "." },
+      "currencyCode": "ISO-4217.",
+      "exchangeRate": "Ustawiane przy wpisach międzywalutowych.",
+      "convertedAmount": "Ta sama wartość w walucie głównej użytkownika.",
+      "date": "ISO-8601 UTC.",
+      "accountId": "Przy przelewach jest to konto źródłowe.",
+      "toAccountId": "Konto docelowe — wyłącznie przy przelewach.",
+      "categoryId": "Null przy przelewach.",
+      "groupId": "Ustawiane, gdy transakcja jest udostępniona grupie.",
+      "payee": "Sprzedawca lub kontrahent.",
+      "note": "Dowolny tekst.",
+      "receiptImagePath": "Ścieżka do załączonego paragonu. Pobierz przez endpoint paragonów (osobny, poza v1).",
+      "recurringTransactionId": "Ustawiane, gdy wiersz powstał z reguły cyklicznej.",
+      "source": { "t1": "Znacznik pochodzenia — ", "t2": " itd." },
+      "createdAt": "ISO-8601 UTC.",
+      "updatedAt": "ISO-8601 UTC."
+    }
+  },
+  "icons": {
+    "title": "Ikony",
+    "intro": "Manilo dostarcza wyselekcjonowany zestaw ikon i paletę kolorów używaną wszędzie — na kontach, kategoriach i grupach. Pobierz katalog raz, zbuforuj go i używaj tych samych identyfikatorów przy tworzeniu zasobów.",
+    "list": { "desc": { "t1": "Zwraca pełną bibliotekę ikon pogrupowanych w kategorie wraz z obsługiwaną paletą kolorów. Jest wersjonowana — można ją bezpiecznie buforować według pola ", "t2": "." } }
+  },
+  "versioning": {
+    "title": "Wersjonowanie",
+    "noBreaking": {
+      "strong": "Brak zmian łamiących zgodność w obrębie v1.",
+      "t1": " Będziemy dodawać wyłącznie nowe endpointy, nowe pola opcjonalne i nowe wartości enumów. Typ pola, dopuszczalność wartości null ani jego wymagalność nie ulegną zmianie."
+    },
+    "enums": {
+      "strong": "Nowe wartości enumów nie łamią zgodności.",
+      "t1": " Nieznane wartości pól ",
+      "t2": " oraz ",
+      "t3": " traktuj jako ",
+      "em": "„nie renderuj”",
+      "t4": ", zamiast przerywać działanie — będziemy je dodawać wraz z rozwojem produktu."
+    },
+    "v2": {
+      "strong": "Zmiany łamiące zgodność",
+      "t1": " (jeśli kiedykolwiek okażą się potrzebne) trafią pod ",
+      "t2": ", z co najmniej 6-miesięczną równoległą dostępnością i nagłówkiem o wycofaniu w odpowiedziach v1."
+    }
+  },
+  "support": {
+    "title": "Pomoc",
+    "p1": {
+      "t1": "Błąd do zgłoszenia? Brakujący endpoint? Coś nieudokumentowanego? Otwórz ",
+      "link": "centrum pomocy",
+      "t2": " lub napisz na ",
+      "t3": " — zgłaszając problem, dołącz identyfikator żądania (zwracany w nagłówku odpowiedzi ",
+      "t4": ")."
+    },
+    "p2": { "t1": "W sprawach zgłoszeń dotyczących bezpieczeństwa (wyciek tokenu, obejście uprawnień, nieautoryzowany odczyt) pisz na ", "t2": "." }
+  }
+}
