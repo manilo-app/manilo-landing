@@ -1,0 +1,30 @@
+{
+  "skipLink": "İçeriğe atla",
+  "nav": { "home": "Ana sayfa", "pricing": "Fiyatlar", "support": "Destek" },
+  "header": {
+    "brandAria": "Manilo ana sayfa",
+    "openDashboard": "Paneli aç",
+    "downloadAppStore": "App Store'dan indir"
+  },
+  "footer": {
+    "tagline": "Kendi kendini kaydeden harcamalar. iOS için yapay zekalı harcama takip uygulaması — şimdi App Store'da.",
+    "product": "Ürün",
+    "home": "Ana sayfa",
+    "pricing": "Fiyatlar",
+    "integrations": "Entegrasyonlar",
+    "chatgpt": "ChatGPT'de Manilo",
+    "openDashboard": "Paneli aç",
+    "downloadAppStore": "App Store'dan indir",
+    "developers": "Geliştiriciler",
+    "apiRef": "API v1 referansı",
+    "mcp": "MCP entegrasyonu",
+    "support": "Destek",
+    "helpCenter": "Yardım merkezi",
+    "legal": "Yasal",
+    "privacy": "Gizlilik",
+    "terms": "Koşullar",
+    "copyright": "© 2026 Manilo",
+    "status": "Tüm sistemler çalışıyor",
+    "language": "Dil"
+  }
+}

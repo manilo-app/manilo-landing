@@ -1,0 +1,30 @@
+{
+  "skipLink": "Aller au contenu",
+  "nav": { "home": "Accueil", "pricing": "Tarifs", "support": "Assistance" },
+  "header": {
+    "brandAria": "Accueil Manilo",
+    "openDashboard": "Ouvrir le tableau de bord",
+    "downloadAppStore": "Télécharger dans l’App Store"
+  },
+  "footer": {
+    "tagline": "Des dépenses qui se suivent toutes seules. Suivi des dépenses par IA pour iOS — désormais sur l’App Store.",
+    "product": "Produit",
+    "home": "Accueil",
+    "pricing": "Tarifs",
+    "integrations": "Intégrations",
+    "chatgpt": "Manilo dans ChatGPT",
+    "openDashboard": "Ouvrir le tableau de bord",
+    "downloadAppStore": "Télécharger dans l’App Store",
+    "developers": "Développeurs",
+    "apiRef": "Référence API v1",
+    "mcp": "Intégration MCP",
+    "support": "Assistance",
+    "helpCenter": "Centre d’aide",
+    "legal": "Légal",
+    "privacy": "Confidentialité",
+    "terms": "Conditions d’utilisation",
+    "copyright": "© 2026 Manilo",
+    "status": "Tous les systèmes sont opérationnels",
+    "language": "Langue"
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "title": "Manilo — iOS için çoklu para birimli harcama takip uygulaması",
+    "description": "iOS için çoklu para birimli harcama takibi. Sesle veya fişin fotoğrafıyla kaydet, reklamsız. MCP ile Claude ve ChatGPT'den yönet. App Store'da ücretsiz.",
+    "ogDescription": "Her harcamayı istediğin para biriminde kaydet. Ücretsiz, reklamsız. Claude, ChatGPT ve dilediğin yapay zeka asistanından Manilo'yla MCP üzerinden konuş.",
+    "keywords": "harcama takip, harcama takip uygulaması, gider takibi uygulaması, sesle harcama kaydı, çoklu para birimi harcama takibi, reklamsız harcama takip uygulaması, bütçe uygulaması iOS, Apple Watch harcama kaydı, MCP harcama takibi, Claude harcama takibi",
+    "ogImageAlt": "Manilo — iOS için çoklu para birimli harcama takip uygulaması",
+    "twitterTitle": "Manilo — iOS için çoklu para birimli harcama takip uygulaması",
+    "twitterDescription": "Her harcamayı istediğin para biriminde kaydet. Ücretsiz, reklamsız. MCP ile Claude, ChatGPT ve dilediğin yapay zekayla çalışır."
+  },
+  "jsonLd": {
+    "appAlternateName": "Manilo — Sesli Harcama Takibi",
+    "appDescription": "iOS için çoklu para birimli harcama takip uygulaması. Her harcamayı istediğin para biriminde kaydet — Siri, Apple Watch veya Eylem düğmesiyle. Ücretsiz, reklamsız. İsteğe bağlı Cloud senkronizasyonu şunların kilidini açar: yapay zekayla fiş tarama, Claude, ChatGPT ve diğer yapay zeka asistanlarıyla MCP entegrasyonu, aile paylaşımı, web paneli ve Telegram botu.",
+    "featureList": [
+      "Siri ve Eylem düğmesiyle sesle harcama kaydı",
+      "Apple Watch'tan harcama kaydı",
+      "Güncel ECB döviz kurlarıyla çoklu para birimli hesaplar",
+      "Yapay zekayla fiş tarama ve otomatik kategorilendirme",
+      "MCP sunucusu — Claude, ChatGPT ve dilediğin yapay zeka asistanını bağla",
+      "Cihaz üzerinde ses tanıma — ses kaydın telefonundan asla çıkmaz",
+      "Aile ve ev halkıyla paylaşılan hesaplar",
+      "Yerel SQLite veritabanıyla çevrimdışı öncelikli çalışma",
+      "CSV ve PDF dışa aktarma",
+      "14 dil desteği",
+      "Reklam yok, veri satışı yok, takip SDK'sı yok",
+      "Telegram botuyla harcama kaydı",
+      "Apple Pay için Apple Wallet otomatik kaydı",
+      "Trendler ve raporlarla web paneli"
+    ],
+    "websiteDescription": "iOS için çoklu para birimli harcama takip uygulaması. Ücretsiz, reklamsız."
+  },
+  "hero": {
+    "pillAria": "Artık App Store'da. iOS için kullanılabilir.",
+    "pill": "Artık App Store'da · iOS",
+    "title": "Her harcamayı istediğin para biriminde kaydet.",
+    "sub": "Paranla konuş. Manilo (eski adıyla Ledgy), iOS için çoklu para birimli bir harcama takip uygulaması. iPhone'unda veya Apple Watch'unda sesle kaydet, fişin fotoğrafını çek ya da doğrudan Claude ve ChatGPT'ye söyle. İndirmesi ücretsiz. Reklamsız. Verilerin cihazında kalır.",
+    "downloadCta": "App Store'dan indir",
+    "downloadMeta": "İndirmesi ücretsiz · iOS 15+",
+    "pricingCta": "Fiyatları gör",
+    "pricingMeta": "Bireysel kullanım sonsuza dek ücretsiz",
+    "phoneAlt": "Manilo'nun işlem ekleme ekranı: $555'lik bir harcama sesle kaydediliyor",
+    "chips": {
+      "voice": { "label": "Ses", "line": "\"Blue Bottle'da kahveye $4.50\"" },
+      "receipt": { "label": "Fiş", "line": "Öğle yemeği · €18.20" },
+      "telegram": { "label": "Telegram", "line": "Bir depo benzin · 60 EUR" }
+    }
+  },
+  "trust": {
+    "languages": "14 dilde kullanılabilir",
+    "offline": "Çevrimdışı çalışır. Verilerin cihazında."
+  },
+  "how": {
+    "eyebrow": "Nasıl çalışır",
+    "title": "Üç adım. Bir daha uğraşmak yok.",
+    "sub": "O an hangisi en hızlıysa onunla kaydet. Gerisini Manilo halleder.",
+    "steps": [
+      { "num": "01", "title": "Kaydet", "body": "Saatinden sesle, fişin fotoğrafıyla ya da Telegram'a ilettiğin SMS'le." },
+      { "num": "02", "title": "Yapay zeka çözer", "body": "Kaydını okur; doğru kategoriyi, hesabı ve grubu kendisi seçer." },
+      { "num": "03", "title": "Her yerde gör", "body": "iPhone, Apple Watch, web paneli ve yapay zeka ajanların (ChatGPT, Claude, Gemini ve diğerleri)." }
+    ]
+  },
+  "surfaces": {
+    "eyebrow": "Kayıt kanalları",
+    "title": "Beş farklı yol.",
+    "titleAccent": "Tek yer.",
+    "sub": "Hangi cihaz en yakınsa Manilo onu kullanır. Her şey aynı deftere akar.",
+    "cards": {
+      "iphone": { "title": "iPhone", "body": "Ses, fotoğraf, tuş takımı ya da dilediğin yerden yapıştırma. Bir dokunuş, bir cümle. Bitti." },
+      "watch": { "title": "Apple Watch", "body": "Mikrofonu basılı tut. Konuş. 5 saniyede tamam. Kadrandaki komplikasyonlar seni doğrudan kayıt ekranına götürür." },
+      "siri": { "title": "Siri", "body": "\"Hey Siri, Manilo'ya harcama kaydet.\" iOS 16 ve sonrasında App Intents ile." },
+      "wallet": { "title": "Apple Wallet", "body": "Apple Pay ödemeleri kendiliğinden kaydedilir. Her kartın kendi yapay zeka kuralı olur (örn. \"Gezi 2026 etiketi ekle\")." },
+      "telegram": { "title": "Telegram botu", "body": "Sohbetten yazı, fotoğraf ya da sesli mesaj gönder. Satır içi seçicilerle her şeyi iki dokunuşta düzelt." },
+      "aiAgent": { "title": "Yapay zeka ajanı", "body": "Hangi yapay zeka ajanını kullanıyorsan (ChatGPT, Claude, Gemini ve diğerleri) ona ne kaydedeceğini söylemen yeter." }
+    }
+  },
+  "smart": {
+    "eyebrow": "Doğuştan akıllı",
+    "title": "Paranın sıkıcı kısımları — halledildi.",
+    "ai": {
+      "title": "Hayatını öğrenen yapay zeka",
+      "body": "Bilinen kategoriler, kendi kategorilerin ve özel kurallar. Kart bazlı Wallet kurallarıyla \"seyahat\" Visa'n her zaman \"Gezi 2026\" etiketini alır.",
+      "checklist": [
+        "14 hazır kategori + sınırsız özel kategori",
+        "Apple Pay için kart bazlı kurallar",
+        "Bir düzeltme yaptığında geçmiş işlemleri de günceller"
+      ],
+      "alt": "Manilo'da otomatik kategorilenmiş işlem listesi"
+    },
+    "budgets": {
+      "title": "Seni kollayan bütçeler",
+      "body": "Kategori bazında ve genel; haftalık / aylık / üç aylık / yıllık. Sınırı aştığın an kırmızıya döner. Sürpriz yok.",
+      "checklist": [
+        "4 bütçe dönemi — dilediğin gibi karıştır",
+        "Esnek ve katı limitler",
+        "Limite yaklaştığında bildirim"
+      ]
+    },
+    "budgetMock": {
+      "food": { "name": "Yiyecek ve İçecek", "sub": "$612 / $600" },
+      "groceries": { "name": "Market", "sub": "$384 / $500" },
+      "transport": { "name": "Ulaşım", "sub": "$142 / $250" }
+    },
+    "fx": {
+      "title": "Hesap kitap gerektirmeyen çoklu para birimi",
+      "body": "Canlı döviz kurları. Çevirmek için herhangi bir tutara basılı tut. Ana para birimini seç; toplamları Manilo senin için çevirsin.",
+      "checklist": [
+        "Güvenilir kaynaktan her gün güncellenen kurlar",
+        "Her hesaba kendi para birimi, ana birim en üstte",
+        "Yurt dışındayken gezi modu"
+      ]
+    },
+    "fxMock": {
+      "trip": "Gezi · Avrupa",
+      "primary": "Ana · USD",
+      "rate": "€1 = $1.0808 · bugün"
+    },
+    "receipts": {
+      "title": "Fişler ait oldukları yerde",
+      "body": "Fotoğrafını iliştir. Paylaşılan grubun tüm üyelerine sunucu üzerinden kopyalanır, yalnızca sana ait alanda tutulur, sen istediğinde silinir.",
+      "checklist": [
+        "Kameradan veya galeriden tek dokunuşla ekleme",
+        "Tutara ve işletmeye göre arama",
+        "Saklanırken şifreli, her kullanıcı için yalıtılmış"
+      ]
+    },
+    "receiptMock": {
+      "store": "Blue Bottle Coffee",
+      "item1": "Cortado",
+      "item2": "Bademli kruvasan",
+      "totalLabel": "Toplam",
+      "date": "9 Mayıs 2026 · 09:17",
+      "category": "Kahve ve Çay"
+    }
+  },
+  "mcp": {
+    "eyebrow": "Paranla konuş",
+    "titlePre": "Harcamalarını",
+    "titleAccent": "ChatGPT, Claude veya Cursor'a",
+    "titlePost": "sor.",
+    "sub": "Manilo'yu en sevdiğin yapay zeka sohbetine bağla. Aklına geleni kendi cümlelerinle sor — “geçen ay kahveye ne kadar harcadım?” — cevap doğrudan senin verilerinden gelir. Kopyala-yapıştır yok, tablo yok.",
+    "viz": {
+      "hub": "Manilo",
+      "claude": "Claude",
+      "chatgpt": "ChatGPT",
+      "cursor": "Cursor",
+      "more": "Ve dahası"
+    },
+    "prompts": [
+      "\"Geçen ay kahveye ne kadar harcadım?\"",
+      "\"Market bütçem yolunda gidiyor mu?\"",
+      "\"Son 90 günü kategori bazında grafiğe dök.\"",
+      "\"Mayısta €100 üzeri tüm işlemleri bul.\""
+    ],
+    "note": "Bir kez bağla, dilediğini sor. Yapay zekan yalnızca izin verdiğini görür — kontrol her zaman sende, istediğin an bağlantıyı kesebilirsin.",
+    "setupCta": "Kurulum: ChatGPT, Claude veya Cursor →",
+    "chatgptCta": "Banka ekstrelerini sohbetle içe aktar →"
+  },
+  "sharing": {
+    "eyebrow": "Paylaşmak için tasarlandı",
+    "titlePre": "Sahibi sensin.",
+    "titleAccent": "Grubun görür.",
+    "sub": "Aile bütçesine ya da gezi grubuna katıl; işlemlerin sonsuza dek senin kalır. Paylaşım yalnızca onları kimin göreceğine karar verir — kime ait olduklarına asla. Gruptan ayrıl, geçmişin sende kalsın.",
+    "cta": "Paylaşımı fiyatlarda gör →",
+    "groupNode": {
+      "title": "Aile · 3 üye",
+      "sub": "Ortak görünürlük"
+    }
+  },
+  "devices": {
+    "eyebrow": "Bilek · Cep · Tarayıcı",
+    "title": "Bilekten kaydet. Tarayıcıda analiz et.",
+    "sub": "Aynı defter, her cihazda. Saat şu an için, panel sonrası için.",
+    "watch": {
+      "listening": "Dinliyorum…",
+      "title": "Apple Watch",
+      "body": "Digital Crown'u basılı tut ve konuş. Sen bileğini indirmeden işlem telefonunda."
+    },
+    "dashboard": {
+      "alt": "Manilo web paneli: aylık özet, kategori bazında harcama ve bütçeler",
+      "title": "Web paneli",
+      "body": "Trendler, ayrıntılı dökümler, dışa aktarımlar. Kayıtların içgörüye dönüştüğü yer."
+    }
+  },
+  "numbers": [
+    { "value": "14", "label": "Dil — tamamı çevrildi" },
+    { "value": "29", "label": "CSV içe aktarmada otomatik algılanan biçim" },
+    { "value": "30+", "label": "Yapay zeka ajanları için MCP aracı" },
+    { "value": "5", "label": "Kayıt kanalı · 1 yer" }
+  ],
+  "faq": {
+    "eyebrow": "SSS",
+    "title": "Herkesin sorduğu sekiz soru.",
+    "items": [
+      {
+        "id": "free",
+        "q": "Manilo ücretsiz mi?",
+        "a": "Evet — bireysel takibin her özelliği sonsuza dek ücretsiz. Cloud ise şunların kilidini açar: cihazlar arası senkronizasyon, paylaşım, yapay zekayla ses/fotoğraf kaydı, Siri, Apple Watch'tan kayıt, Telegram botu, Apple Wallet otomasyonu ve web paneli."
+      },
+      {
+        "id": "price",
+        "q": "Cloud ne kadar?",
+        "a": "$2.99/ay veya $22.99/yıl (~$1.92/ay). 7 gün ücretsiz deneme. İstediğin an iptal edebilirsin."
+      },
+      {
+        "id": "android",
+        "q": "Android sürümü var mı?",
+        "a": "Henüz yok. Manilo şimdilik yalnızca iOS için. Android yol haritamızda — çıkınca haber almak istersen bize yaz."
+      },
+      {
+        "id": "offline",
+        "q": "Manilo çevrimdışı çalışır mı?",
+        "a": "Evet. Her ekran, verileri telefonundaki yerel SQLite veritabanından okur. Yeni işlemler anında görünür; tekrar çevrimiçi olduğunda senkronizasyon arka planda tamamlanır."
+      },
+      {
+        "id": "shared-data",
+        "q": "Paylaşılan bir gruptan ayrılırsam verilerime ne olur?",
+        "a": "Hiçbir şey. İşlemlerin kişisel olarak sana ait — paylaşım yalnızca kimin göreceğini belirler. Gruptan ayrılsan da geçmişin sende kalır."
+      },
+      {
+        "id": "voice",
+        "q": "Sesim bir sunucuya gönderiliyor mu?",
+        "a": "Hayır. Sesin, Apple'ın cihaz üzerindeki konuşma tanıma özelliğiyle telefonunda yazıya dökülür. Yapay zekamıza yalnızca ortaya çıkan metin gönderilir."
+      },
+      {
+        "id": "import",
+        "q": "Mint / YNAB / başka bir uygulamadan içe aktarabilir miyim?",
+        "a": "Evet. CSV içe aktarma sihirbazı 29 dilde sütun başlıklarını, para birimi simgelerini ve kategori adlarını otomatik tanır. Tüm geçmişini yanında getir."
+      },
+      {
+        "id": "languages",
+        "anchor": "faq-languages",
+        "q": "Hangi diller destekleniyor?",
+        "a": "Tamamı çevrilmiş 14 dil: İngilizce, Almanca, İspanyolca (Meksika), Fransızca, Hintçe, İtalyanca, Japonca, Korece, Lehçe, Portekizce (Brezilya), Rusça, Türkçe, Ukraynaca ve Basitleştirilmiş Çince."
+      }
+    ]
+  },
+  "ctaBand": {
+    "title": "Harcamalarını en tembel yöntemle kaydetmeye başla.",
+    "sub": "Bireysel kullanımda isteyeceğin her şey Manilo'da ücretsiz. Cloud ise her cihazın, her kayıt kanalının ve her paylaşılan grubun kilidini açar.",
+    "download": "App Store'dan indir",
+    "pricing": "Fiyatları gör"
+  }
+}

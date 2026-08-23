@@ -1,0 +1,30 @@
+{
+  "skipLink": "Pular para o conteúdo",
+  "nav": { "home": "Início", "pricing": "Preços", "support": "Suporte" },
+  "header": {
+    "brandAria": "Página inicial do Manilo",
+    "openDashboard": "Abrir painel",
+    "downloadAppStore": "Baixar na App Store"
+  },
+  "footer": {
+    "tagline": "Gastos que se registram sozinhos. Controle de gastos com IA para iOS — já na App Store.",
+    "product": "Produto",
+    "home": "Início",
+    "pricing": "Preços",
+    "integrations": "Integrações",
+    "chatgpt": "Manilo no ChatGPT",
+    "openDashboard": "Abrir painel",
+    "downloadAppStore": "Baixar na App Store",
+    "developers": "Desenvolvedores",
+    "apiRef": "Referência da API v1",
+    "mcp": "Integração MCP",
+    "support": "Suporte",
+    "helpCenter": "Central de ajuda",
+    "legal": "Legal",
+    "privacy": "Privacidade",
+    "terms": "Termos",
+    "copyright": "© 2026 Manilo",
+    "status": "Todos os sistemas em operação",
+    "language": "Idioma"
+  }
+}

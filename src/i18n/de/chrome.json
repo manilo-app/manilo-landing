@@ -1,0 +1,30 @@
+{
+  "skipLink": "Zum Inhalt springen",
+  "nav": { "home": "Start", "pricing": "Preise", "support": "Support" },
+  "header": {
+    "brandAria": "Manilo — zur Startseite",
+    "openDashboard": "Dashboard öffnen",
+    "downloadAppStore": "Laden im App Store"
+  },
+  "footer": {
+    "tagline": "Ausgaben, die sich von selbst erfassen. AI-Ausgaben-Tracker für iOS — jetzt im App Store.",
+    "product": "Produkt",
+    "home": "Start",
+    "pricing": "Preise",
+    "integrations": "Integrationen",
+    "chatgpt": "Manilo in ChatGPT",
+    "openDashboard": "Dashboard öffnen",
+    "downloadAppStore": "Laden im App Store",
+    "developers": "Entwickler",
+    "apiRef": "API-v1-Referenz",
+    "mcp": "MCP-Integration",
+    "support": "Support",
+    "helpCenter": "Hilfe-Center",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "copyright": "© 2026 Manilo",
+    "status": "Alle Systeme laufen",
+    "language": "Sprache"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "skipLink": "Salta al contenuto",
+  "nav": { "home": "Home", "pricing": "Prezzi", "support": "Supporto" },
+  "header": {
+    "brandAria": "Home di Manilo",
+    "openDashboard": "Apri la dashboard",
+    "downloadAppStore": "Scarica su App Store"
+  },
+  "footer": {
+    "tagline": "Spese che si registrano da sole. Tracker di spese con IA per iOS — ora su App Store.",
+    "product": "Prodotto",
+    "home": "Home",
+    "pricing": "Prezzi",
+    "integrations": "Integrazioni",
+    "chatgpt": "Manilo in ChatGPT",
+    "openDashboard": "Apri la dashboard",
+    "downloadAppStore": "Scarica su App Store",
+    "developers": "Sviluppatori",
+    "apiRef": "Documentazione API v1",
+    "mcp": "Integrazione MCP",
+    "support": "Supporto",
+    "helpCenter": "Centro assistenza",
+    "legal": "Note legali",
+    "privacy": "Privacy",
+    "terms": "Termini",
+    "copyright": "© 2026 Manilo",
+    "status": "Tutti i sistemi sono operativi",
+    "language": "Lingua"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "skipLink": "Przejdź do treści",
+  "nav": { "home": "Strona główna", "pricing": "Cennik", "support": "Pomoc" },
+  "header": {
+    "brandAria": "Strona główna Manilo",
+    "openDashboard": "Otwórz panel",
+    "downloadAppStore": "Pobierz w App Store"
+  },
+  "footer": {
+    "tagline": "Wydatki, które zapisują się same. Tracker wydatków z AI na iOS — już w App Store.",
+    "product": "Produkt",
+    "home": "Strona główna",
+    "pricing": "Cennik",
+    "integrations": "Integracje",
+    "chatgpt": "Manilo w ChatGPT",
+    "openDashboard": "Otwórz panel",
+    "downloadAppStore": "Pobierz w App Store",
+    "developers": "Dla deweloperów",
+    "apiRef": "Dokumentacja API v1",
+    "mcp": "Integracja MCP",
+    "support": "Pomoc",
+    "helpCenter": "Centrum pomocy",
+    "legal": "Informacje prawne",
+    "privacy": "Prywatność",
+    "terms": "Regulamin",
+    "copyright": "© 2026 Manilo",
+    "status": "Wszystkie systemy działają",
+    "language": "Język"
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "title": "Manilo — iOS 다중 통화 지출 관리 앱",
+    "description": "iOS용 다중 통화 지출 관리 앱. 음성·사진 기록, 광고 없음. MCP로 Claude와 ChatGPT 연동. App Store 무료.",
+    "ogDescription": "어떤 지출이든 어떤 통화로든 기록하세요. 무료, 광고 없음. MCP를 통해 Claude, ChatGPT 등 어떤 AI 어시스턴트에서든 Manilo와 대화해 보세요.",
+    "keywords": "지출 관리 앱, 가계부 앱, 음성 가계부, 다중 통화 가계부, 광고 없는 가계부, 아이폰 가계부, iOS 지출 관리, Apple Watch 가계부, Claude 가계부, MCP 지출 관리",
+    "ogImageAlt": "Manilo — iOS용 다중 통화 지출 관리 앱",
+    "twitterTitle": "Manilo — iOS 다중 통화 지출 관리 앱",
+    "twitterDescription": "어떤 지출이든 어떤 통화로든. 무료, 광고 없음. MCP로 Claude, ChatGPT 등 어떤 AI와도 연동돼요."
+  },
+  "jsonLd": {
+    "appAlternateName": "Manilo 음성 지출 관리 앱",
+    "appDescription": "iOS용 다중 통화 지출 관리 앱. 어떤 지출이든 어떤 통화로든 — Siri, Apple Watch, 동작 버튼으로 기록하세요. 무료, 광고 없음. 선택형 Cloud 동기화를 켜면 AI 영수증 스캔, Claude·ChatGPT 등 AI 어시스턴트와의 MCP 연동, 가족 공유, 웹 대시보드, Telegram 봇이 열려요.",
+    "featureList": [
+      "Siri와 동작 버튼으로 음성 지출 기록",
+      "Apple Watch 지출 기록",
+      "실시간 ECB 환율 기반 다중 통화 계좌",
+      "AI 영수증 스캔과 자동 분류",
+      "MCP 서버 — Claude, ChatGPT 등 어떤 AI 어시스턴트든 연결",
+      "온디바이스 음성 인식 — 음성이 폰 밖으로 나가지 않아요",
+      "가족·가구 공유 계좌",
+      "로컬 SQLite 데이터베이스 기반 오프라인 우선",
+      "CSV·PDF 내보내기",
+      "14개 언어 지원",
+      "광고 없음, 데이터 판매 없음, 추적 SDK 없음",
+      "Telegram 봇 지출 기록",
+      "Apple Pay를 위한 Apple Wallet 자동 기록",
+      "트렌드와 리포트를 담은 웹 대시보드"
+    ],
+    "websiteDescription": "iOS용 다중 통화 지출 관리 앱. 무료, 광고 없음."
+  },
+  "hero": {
+    "pillAria": "지금 App Store에서 만나볼 수 있어요. iOS용으로 제공돼요.",
+    "pill": "App Store 출시 · iOS",
+    "title": "어떤 지출이든, 어떤 통화로든 기록하세요.",
+    "sub": "돈과 대화하세요. Manilo(구 Ledgy)는 iOS용 다중 통화 지출 관리 앱이에요. iPhone이나 Apple Watch에서 음성으로 기록하고, 영수증을 찍고, Claude와 ChatGPT에게 바로 물어보세요. 다운로드 무료, 광고 없음. 데이터는 내 기기에 보관돼요.",
+    "downloadCta": "App Store에서 다운로드",
+    "downloadMeta": "무료 다운로드 · iOS 15+",
+    "pricingCta": "가격 보기",
+    "pricingMeta": "혼자 쓰면 평생 무료",
+    "phoneAlt": "$555 지출을 음성으로 기록 중인 Manilo 거래 추가 화면",
+    "chips": {
+      "voice": { "label": "음성", "line": "“Blue Bottle에서 커피 $4.50”" },
+      "receipt": { "label": "영수증", "line": "점심 · €18.20" },
+      "telegram": { "label": "Telegram", "line": "주유 · 60 EUR" }
+    }
+  },
+  "trust": {
+    "languages": "14개 언어 지원",
+    "offline": "오프라인 우선. 데이터는 내 기기에."
+  },
+  "how": {
+    "eyebrow": "이렇게 작동해요",
+    "title": "딱 세 단계. 그다음은 잊으세요.",
+    "sub": "그 순간 가장 빠른 방법으로 기록하세요. 나머지는 Manilo가 알아서 해요.",
+    "steps": [
+      { "num": "01", "title": "기록", "body": "시계에 대고 말하거나, 영수증을 찍거나, Telegram으로 문자를 전달하세요." },
+      { "num": "02", "title": "분석", "body": "AI가 내용을 읽고 알맞은 카테고리, 계좌, 그룹을 골라요." },
+      { "num": "03", "title": "어디서든 확인", "body": "iPhone, Apple Watch, 웹 대시보드, 그리고 AI 에이전트(ChatGPT, Claude, Gemini 등)에서." }
+    ]
+  },
+  "surfaces": {
+    "eyebrow": "기록 채널",
+    "title": "방법은 다섯,",
+    "titleAccent": "장부는 하나.",
+    "sub": "가장 가까이 있는 기기가 곧 입력 수단이에요. 모든 기록은 하나의 장부로 모여요.",
+    "cards": {
+      "iphone": { "title": "iPhone", "body": "음성, 사진, 숫자 키패드, 어디서든 붙여넣기. 한 번 탭하고 한마디면 끝." },
+      "watch": { "title": "Apple Watch", "body": "마이크를 누르고 말하세요. 5초면 끝. 시계 컴플리케이션에서 기록 화면으로 바로 연결돼요." },
+      "siri": { "title": "Siri", "body": "“Siri야, Manilo에 지출 기록해 줘.” iOS 16 이상에서 App Intents로 작동해요." },
+      "wallet": { "title": "Apple Wallet", "body": "Apple Pay 결제가 자동으로 기록돼요. 카드마다 AI 규칙을 따로 정할 수 있어요(예: “2026 여행 태그 붙이기”)." },
+      "telegram": { "title": "Telegram 봇", "body": "채팅으로 텍스트, 사진, 음성을 보내세요. 인라인 버튼으로 두 번만 탭하면 뭐든 고칠 수 있어요." },
+      "aiAgent": { "title": "AI 에이전트", "body": "쓰고 있는 AI 에이전트(ChatGPT, Claude, Gemini 등)에게 기록할 내용을 말하기만 하세요." }
+    }
+  },
+  "smart": {
+    "eyebrow": "기본부터 스마트",
+    "title": "돈 관리의 귀찮은 부분, 알아서 해결.",
+    "ai": {
+      "title": "내 생활을 배우는 AI",
+      "body": "기본 카테고리, 나만의 카테고리, 나만의 규칙까지. 카드별 Wallet 규칙으로 ‘여행용’ Visa에는 언제나 ‘2026 여행’ 태그가 붙어요.",
+      "checklist": [
+        "기본 카테고리 14개 + 무제한 커스텀",
+        "Apple Pay 카드별 규칙",
+        "수정하면 지난 거래도 다시 분석"
+      ],
+      "alt": "자동으로 분류된 Manilo 거래 목록"
+    },
+    "budgets": {
+      "title": "나를 지켜주는 예산",
+      "body": "카테고리별로도, 전체로도. 주간 / 월간 / 분기 / 연간. 한도를 넘는 순간 빨갛게 알려줘요. 뜻밖의 지출 걱정 끝.",
+      "checklist": [
+        "4가지 예산 주기, 자유롭게 조합",
+        "느슨한 한도와 엄격한 한도",
+        "한도에 가까워지면 알림"
+      ]
+    },
+    "budgetMock": {
+      "food": { "name": "식비", "sub": "$600 중 $612" },
+      "groceries": { "name": "식료품", "sub": "$500 중 $384" },
+      "transport": { "name": "교통", "sub": "$250 중 $142" }
+    },
+    "fx": {
+      "title": "계산 없는 다중 통화",
+      "body": "실시간 환율. 금액을 길게 누르면 바로 환산돼요. 기본 통화를 정해 두면 합계는 Manilo가 알아서 바꿔 줘요.",
+      "checklist": [
+        "신뢰할 수 있는 출처에서 매일 갱신되는 환율",
+        "계좌마다 다른 통화, 맨 위엔 기본 통화",
+        "해외에서는 여행 모드"
+      ]
+    },
+    "fxMock": {
+      "trip": "여행 · 유럽",
+      "primary": "기본 · USD",
+      "rate": "€1 = $1.0808 · 오늘"
+    },
+    "receipts": {
+      "title": "영수증은 있어야 할 자리에",
+      "body": "사진으로 첨부하세요. 공유 그룹 멤버 모두에게 서버에서 복제되고, 내 공간에 격리 보관되며, 원할 때 바로 삭제돼요.",
+      "checklist": [
+        "카메라나 앨범에서 한 번의 탭으로 첨부",
+        "금액과 가맹점으로 검색",
+        "저장 시 암호화, 사용자별 격리 보관"
+      ]
+    },
+    "receiptMock": {
+      "store": "Blue Bottle Coffee",
+      "item1": "코르타도",
+      "item2": "아몬드 크루아상",
+      "totalLabel": "합계",
+      "date": "2026년 5월 9일 · 09:17",
+      "category": "커피·차"
+    }
+  },
+  "mcp": {
+    "eyebrow": "돈과 대화하세요",
+    "titlePre": "내 지출,",
+    "titleAccent": "ChatGPT, Claude, Cursor에게",
+    "titlePost": "물어보세요.",
+    "sub": "즐겨 쓰는 AI 챗에 Manilo를 연결하세요. “지난달 커피에 얼마 썼지?”처럼 평소 말투로 물어보면 내 데이터를 바탕으로 답해줘요. 복사·붙여넣기도, 스프레드시트도 필요 없어요.",
+    "viz": {
+      "hub": "Manilo",
+      "claude": "Claude",
+      "chatgpt": "ChatGPT",
+      "cursor": "Cursor",
+      "more": "그리고 더"
+    },
+    "prompts": [
+      "“지난달 커피에 얼마 썼지?”",
+      "“식료품 예산, 잘 지키고 있어?”",
+      "“최근 90일을 카테고리별 그래프로 그려 줘.”",
+      "“5월에 €100 넘는 거래 전부 찾아 줘.”"
+    ],
+    "note": "한 번만 연결하면 뭐든 물어볼 수 있어요. AI는 내가 허용한 것만 볼 수 있고, 주도권은 언제나 나에게 있어요. 연결 해제도 언제든 가능해요.",
+    "setupCta": "ChatGPT, Claude, Cursor 설정하기 →",
+    "chatgptCta": "채팅으로 은행 거래 내역 가져오기 →"
+  },
+  "sharing": {
+    "eyebrow": "공유를 위한 설계",
+    "titlePre": "소유는 나,",
+    "titleAccent": "공유는 그룹.",
+    "sub": "가족 예산이나 여행 그룹에 참여해도 내 거래는 영원히 내 것이에요. 공유는 누가 볼 수 있는지만 정할 뿐, 소유는 바뀌지 않아요. 그룹을 나가도 기록은 그대로 남아요.",
+    "cta": "공유 기능 가격 보기 →",
+    "groupNode": {
+      "title": "가족 · 멤버 3명",
+      "sub": "함께 보기"
+    }
+  },
+  "devices": {
+    "eyebrow": "손목 · 주머니 · 브라우저",
+    "title": "기록은 손목에서, 분석은 브라우저에서.",
+    "sub": "어느 기기에서나 장부는 하나. 시계는 지금을, 대시보드는 나중을 위해 있어요.",
+    "watch": {
+      "listening": "듣고 있어요…",
+      "title": "Apple Watch",
+      "body": "Digital Crown을 누른 채 말하세요. 손목을 내리기도 전에 거래는 이미 iPhone에 도착해 있어요."
+    },
+    "dashboard": {
+      "alt": "월간 요약, 카테고리별 지출, 예산을 보여주는 Manilo 웹 대시보드",
+      "title": "웹 대시보드",
+      "body": "트렌드, 상세 분석, 내보내기. 기록이 인사이트가 되는 곳이에요."
+    }
+  },
+  "numbers": [
+    { "value": "14", "label": "완전히 번역된 언어" },
+    { "value": "29", "label": "자동 인식되는 CSV 가져오기 언어" },
+    { "value": "30+", "label": "AI 에이전트용 MCP 도구" },
+    { "value": "5", "label": "기록 채널 · 장부는 하나" }
+  ],
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "모두가 묻는 여덟 가지 질문.",
+    "items": [
+      {
+        "id": "free",
+        "q": "Manilo는 무료인가요?",
+        "a": "네 — 혼자 기록하는 기능은 전부 평생 무료예요. Cloud를 구독하면 여러 기기 동기화, 공유, AI 음성·사진 기록, Siri, Apple Watch 기록, Telegram 봇, Apple Wallet 자동화, 웹 대시보드가 열려요."
+      },
+      {
+        "id": "price",
+        "q": "Cloud는 얼마인가요?",
+        "a": "$2.99/월 또는 $22.99/년(월 약 $1.92). 7일 무료 체험. 언제든 해지할 수 있어요."
+      },
+      {
+        "id": "android",
+        "q": "Android 버전도 있나요?",
+        "a": "아직은요. 지금 Manilo는 iOS 전용이에요. Android는 로드맵에 있어요 — 출시 소식을 받고 싶다면 연락 주세요."
+      },
+      {
+        "id": "offline",
+        "q": "Manilo는 오프라인에서도 되나요?",
+        "a": "네. 모든 화면은 폰 안의 로컬 SQLite 데이터베이스에서 데이터를 읽어요. 새 거래는 즉시 나타나고, 다시 온라인이 되면 백그라운드에서 동기화돼요."
+      },
+      {
+        "id": "shared-data",
+        "q": "공유 그룹을 나가면 제 데이터는 어떻게 되나요?",
+        "a": "아무 일도 없어요. 거래는 온전히 내 소유예요 — 공유는 누가 볼 수 있는지만 정해요. 그룹을 나가도 기록은 그대로 남아요."
+      },
+      {
+        "id": "voice",
+        "q": "제 음성이 서버로 전송되나요?",
+        "a": "아니요. 음성은 Apple의 온디바이스 음성 인식으로 기기 안에서 텍스트로 변환돼요. AI에는 변환된 텍스트만 분석용으로 전송돼요."
+      },
+      {
+        "id": "import",
+        "q": "Mint / YNAB / 다른 앱에서 가져올 수 있나요?",
+        "a": "네. CSV 가져오기 마법사가 29개 언어의 열 제목, 통화 기호, 카테고리 이름을 자동으로 인식해요. 지난 기록을 전부 옮겨 오세요."
+      },
+      {
+        "id": "languages",
+        "anchor": "faq-languages",
+        "q": "어떤 언어를 지원하나요?",
+        "a": "14개 언어가 완전히 번역되어 있어요: 영어, 독일어, 스페인어(멕시코), 프랑스어, 힌디어, 이탈리아어, 일본어, 한국어, 폴란드어, 포르투갈어(브라질), 러시아어, 터키어, 우크라이나어, 중국어 간체."
+      }
+    ]
+  },
+  "ctaBand": {
+    "title": "기록은 이제 게으르게.",
+    "sub": "혼자 쓰는 데 필요한 기능은 전부 무료예요. Cloud를 구독하면 모든 기기, 모든 기록 채널, 모든 공유 그룹이 열려요.",
+    "download": "App Store에서 다운로드",
+    "pricing": "가격 보기"
+  }
+}

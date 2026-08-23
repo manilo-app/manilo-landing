@@ -22,7 +22,7 @@ export const LOCALE_NAMES: Record<Locale, string> = {
 // Which logical pages exist in which locales. Single source of truth for
 // getStaticPaths, hreflang alternates, the sitemap, and the language switcher.
 export const PAGE_LOCALES: Record<string, readonly Locale[]> = {
-  '/': ['en', 'uk'],
+  '/': LOCALES,
   '/integrations': ['en'],
   '/chatgpt': ['en'],
   '/support': ['en'],

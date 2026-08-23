@@ -1,0 +1,30 @@
+{
+  "skipLink": "跳转到主要内容",
+  "nav": { "home": "首页", "pricing": "价格", "support": "支持" },
+  "header": {
+    "brandAria": "Manilo 首页",
+    "openDashboard": "打开仪表盘",
+    "downloadAppStore": "在 App Store 下载"
+  },
+  "footer": {
+    "tagline": "支出，自己记自己。iOS 上的 AI 记账应用——现已上架 App Store。",
+    "product": "产品",
+    "home": "首页",
+    "pricing": "价格",
+    "integrations": "集成",
+    "chatgpt": "ChatGPT 中的 Manilo",
+    "openDashboard": "打开仪表盘",
+    "downloadAppStore": "在 App Store 下载",
+    "developers": "开发者",
+    "apiRef": "API v1 参考",
+    "mcp": "MCP 集成",
+    "support": "支持",
+    "helpCenter": "帮助中心",
+    "legal": "法律",
+    "privacy": "隐私",
+    "terms": "条款",
+    "copyright": "© 2026 Manilo",
+    "status": "所有系统运行正常",
+    "language": "语言"
+  }
+}
