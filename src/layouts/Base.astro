@@ -2,12 +2,15 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE, SITE_NAME, APP_STORE_ID } from '../consts';
+import { PAGE_LOCALES, DEFAULT_LOCALE, localeUrl, BANNER_MESSAGES, type Locale } from '../i18n/config';
+import { getDict } from '../i18n';
 
 interface Props {
   title: string;
   description: string;
-  /** Canonical path, e.g. "/" or "/privacy" */
+  /** Logical page path, e.g. "/" or "/privacy" — locale prefix is added automatically */
   path: string;
+  locale?: Locale;
   ogTitle?: string;
   ogDescription?: string;
   ogType?: string;
@@ -24,6 +27,7 @@ const {
   title,
   description,
   path,
+  locale = DEFAULT_LOCALE,
   ogTitle = title,
   ogDescription = description,
   ogType = 'website',
@@ -33,11 +37,22 @@ const {
   robots,
 } = Astro.props;
 
-const canonical = SITE + path;
+const chrome = getDict<{ skipLink: string }>(locale, 'chrome');
+const canonical = SITE + localeUrl(locale, path);
 const ogImage = `${SITE}/assets/og-image.png`;
+const pageLocales = PAGE_LOCALES[path] ?? [DEFAULT_LOCALE];
+
+const bannerData =
+  pageLocales.length > 1
+    ? JSON.stringify({
+        current: locale,
+        urls: Object.fromEntries(pageLocales.map((l) => [l, localeUrl(l, path)])),
+        messages: Object.fromEntries(pageLocales.map((l) => [l, BANNER_MESSAGES[l]])),
+      })
+    : null;
 ---
 <!DOCTYPE html>
-<html lang={Astro.currentLocale ?? 'en'}>
+<html lang={locale}>
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,8 +60,8 @@ const ogImage = `${SITE}/assets/og-image.png`;
 <meta name="description" content={description} />
 {robots && <meta name="robots" content={robots} />}
 <link rel="canonical" href={canonical} />
-{!robots && <link rel="alternate" hreflang="en" href={canonical} />}
-{!robots && <link rel="alternate" hreflang="x-default" href={canonical} />}
+{!robots && pageLocales.map((l) => <link rel="alternate" hreflang={l} href={SITE + localeUrl(l, path)} />)}
+{!robots && <link rel="alternate" hreflang="x-default" href={SITE + localeUrl(DEFAULT_LOCALE, path)} />}
 <meta name="apple-itunes-app" content={`app-id=${APP_STORE_ID}`} />
 <meta name="theme-color" content="#0a0a14" />
 <meta property="og:site_name" content={SITE_NAME} />
@@ -66,18 +81,55 @@ const ogImage = `${SITE}/assets/og-image.png`;
 <script src="/assets/analytics.js" defer is:inline></script>
 </head>
 <body data-screen-label={screenLabel}>
-<a href="#main" class="skip-link">Skip to content</a>
+<a href="#main" class="skip-link">{chrome.skipLink}</a>
 <div class="starfield" aria-hidden="true"></div>
 
-<Header />
+<Header locale={locale} path={path} />
 
 <main id="main">
 <slot />
 </main>
 
-<Footer />
+<Footer locale={locale} path={path} />
 
 <script src="/assets/site.js" defer is:inline></script>
 {js.map((src) => <script src={src} defer is:inline></script>)}
+{bannerData && (
+  <script is:inline data-i18n={bannerData}>
+(function () {
+  try {
+    var KEY = 'manilo-lang-banner-off';
+    if (localStorage.getItem(KEY)) return;
+    var data = JSON.parse(document.currentScript.dataset.i18n);
+    var prefs = (navigator.languages || [navigator.language || 'en']).map(function (l) {
+      return String(l).slice(0, 2).toLowerCase();
+    });
+    var target = null;
+    for (var i = 0; i < prefs.length; i++) {
+      if (prefs[i] === data.current) break;
+      if (data.urls[prefs[i]]) { target = prefs[i]; break; }
+    }
+    if (!target) return;
+    var bar = document.createElement('div');
+    bar.setAttribute('style', 'position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:1000;display:flex;align-items:center;gap:12px;padding:10px 18px;border-radius:999px;background:rgba(18,16,38,0.94);border:1px solid rgba(123,98,255,0.45);box-shadow:0 8px 32px rgba(0,0,0,0.5);font-size:14px;max-width:calc(100vw - 32px);');
+    var a = document.createElement('a');
+    a.href = data.urls[target];
+    a.textContent = data.messages[target];
+    a.setAttribute('style', 'color:#E8EBF0;text-decoration:none;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;');
+    var x = document.createElement('button');
+    x.textContent = '✕';
+    x.setAttribute('aria-label', 'Dismiss');
+    x.setAttribute('style', 'background:none;border:none;color:#9C96F6;cursor:pointer;font-size:14px;padding:2px;line-height:1;');
+    x.addEventListener('click', function () {
+      try { localStorage.setItem(KEY, '1'); } catch (e) {}
+      bar.remove();
+    });
+    bar.appendChild(a);
+    bar.appendChild(x);
+    document.body.appendChild(bar);
+  } catch (e) {}
+})();
+  </script>
+)}
 </body>
 </html>

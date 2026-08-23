@@ -1,0 +1,30 @@
+{
+  "skipLink": "До вмісту",
+  "nav": { "home": "Головна", "pricing": "Ціни", "support": "Підтримка" },
+  "header": {
+    "brandAria": "Manilo — на головну",
+    "openDashboard": "Відкрити дашборд",
+    "downloadAppStore": "Завантажити в App Store"
+  },
+  "footer": {
+    "tagline": "Витрати, що записують себе самі. AI-трекер витрат для iOS — уже в App Store.",
+    "product": "Продукт",
+    "home": "Головна",
+    "pricing": "Ціни",
+    "integrations": "Інтеграції",
+    "chatgpt": "Manilo в ChatGPT",
+    "openDashboard": "Відкрити дашборд",
+    "downloadAppStore": "Завантажити в App Store",
+    "developers": "Розробникам",
+    "apiRef": "Довідник API v1",
+    "mcp": "Інтеграція MCP",
+    "support": "Підтримка",
+    "helpCenter": "Центр допомоги",
+    "legal": "Правове",
+    "privacy": "Конфіденційність",
+    "terms": "Умови",
+    "copyright": "© 2026 Manilo",
+    "status": "Усі системи працюють",
+    "language": "Мова"
+  }
+}

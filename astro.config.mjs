@@ -8,7 +8,7 @@ export default defineConfig({
   compressHTML: false,
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'de', 'fr', 'it', 'pl', 'uk'],
+    locales: ['en', 'de', 'es', 'fr', 'hi', 'it', 'ja', 'ko', 'pl', 'pt', 'ru', 'tr', 'uk', 'zh'],
     routing: { prefixDefaultLocale: false },
   },
 });

@@ -1,25 +1,33 @@
 ---
 import { APP_STORE_URL, DASHBOARD_URL } from '../consts';
+import { DEFAULT_LOCALE, navUrl, type Locale } from '../i18n/config';
+import { getDict } from '../i18n';
 
-const path = Astro.url.pathname.replace(/index\.html$/, '').replace(/\.html$/, '') || '/';
+interface Props {
+  locale?: Locale;
+  path?: string;
+}
+
+const { locale = DEFAULT_LOCALE, path = '/' } = Astro.props;
+const t = getDict<any>(locale, 'chrome');
 const active = (p: string) => (path === p ? 'page' : undefined);
 ---
 <header class="site-header">
   <div class="container site-header__inner">
-    <a href="/" class="brand-lockup" aria-label="Manilo home">
+    <a href={navUrl(locale, '/')} class="brand-lockup" aria-label={t.header.brandAria}>
       <img src="/assets/manilo-icon.svg" alt="" class="brand-icon" />
       <span class="brand-word brand-word--text">manilo</span>
     </a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="/" aria-current={active('/')}>Home</a>
-      <a href={`${DASHBOARD_URL}/upgrade`} target="_blank" rel="noopener noreferrer">Pricing</a>
-      <a href="/support" aria-current={active('/support')}>Support</a>
+      <a href={navUrl(locale, '/')} aria-current={active('/')}>{t.nav.home}</a>
+      <a href={`${DASHBOARD_URL}/upgrade`} target="_blank" rel="noopener noreferrer">{t.nav.pricing}</a>
+      <a href={navUrl(locale, '/support')} aria-current={active('/support')}>{t.nav.support}</a>
     </nav>
     <div class="site-header__cta">
-      <a class="btn btn--ghost" href={DASHBOARD_URL} target="_blank" rel="noopener noreferrer">Open dashboard</a>
+      <a class="btn btn--ghost" href={DASHBOARD_URL} target="_blank" rel="noopener noreferrer">{t.header.openDashboard}</a>
       <a class="btn btn--primary" href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" data-cta="Download on App Store" data-cta-position="header">
         <i class="fa-brands fa-apple" aria-hidden="true"></i>
-        Download on the App Store
+        {t.header.downloadAppStore}
       </a>
     </div>
   </div>

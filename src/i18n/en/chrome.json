@@ -1,0 +1,30 @@
+{
+  "skipLink": "Skip to content",
+  "nav": { "home": "Home", "pricing": "Pricing", "support": "Support" },
+  "header": {
+    "brandAria": "Manilo home",
+    "openDashboard": "Open dashboard",
+    "downloadAppStore": "Download on the App Store"
+  },
+  "footer": {
+    "tagline": "Expenses that track themselves. AI expense tracker for iOS — now on the App Store.",
+    "product": "Product",
+    "home": "Home",
+    "pricing": "Pricing",
+    "integrations": "Integrations",
+    "chatgpt": "Manilo in ChatGPT",
+    "openDashboard": "Open dashboard",
+    "downloadAppStore": "Download on the App Store",
+    "developers": "Developers",
+    "apiRef": "API v1 reference",
+    "mcp": "MCP integration",
+    "support": "Support",
+    "helpCenter": "Help center",
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "copyright": "© 2026 Manilo",
+    "status": "All systems operational",
+    "language": "Language"
+  }
+}
