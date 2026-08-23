@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "Gizlilik Politikası — Manilo",
+    "description": "Manilo Gizlilik Politikası. Yerel öncelikli, her kullanıcı için yalıtılmış, GDPR uyumlu. Reklam yok. Veri simsarı yok. Takip SDK'sı yok.",
+    "ogDescription": "Yerel öncelikli, GDPR uyumlu. Reklam yok, veri simsarı yok, takip SDK'sı yok."
+  },
+  "jsonLd": {
+    "breadcrumbName": "Gizlilik Politikası"
+  },
+  "hero": {
+    "eyebrow": "Yasal",
+    "title": "Gizlilik Politikası",
+    "lastUpdated": "Son güncelleme: 10 Mayıs 2026"
+  },
+  "toc": {
+    "ariaLabel": "İçindekiler",
+    "title": "İçindekiler"
+  },
+  "summary": {
+    "heading": "Özet",
+    "calloutLead": "Kısaca:",
+    "calloutBody": "Manilo (eski adıyla Ledgy) yerel önceliklidir. İşlemleriniz cihazınızda durur. Cloud'u açarsanız, diğer cihazlarınızın ve paylaşılan grupların görebilmesi için şifrelenmiş bir kopya sunucularımıza senkronize edilir. Verilerinizi asla satmayız, işlemlerinize asla bakmayız ve bunları yapay zeka eğitmek için asla kullanmayız.",
+    "introBeforeLink": "Bu Gizlilik Politikası; Manilo iOS uygulamasını,",
+    "introAfterLink": " adresindeki Manilo web panelini, Manilo Telegram botunu ve ilgili diğer hizmetleri (topluca \"Hizmet\") kullandığınızda Manilo'nun (\"biz\", \"bize\") hangi verileri topladığını açıklar. Sade bir dille yazılmıştır ve GDPR (AB 2016/679) ile Apple App Store gereklilikleriyle uyumludur."
+  },
+  "whatWeCollect": {
+    "heading": "Neleri topluyoruz",
+    "account": {
+      "heading": "Hesap verileri (Cloud'a kaydolduğunuzda)",
+      "items": [
+        "E-posta adresi — hesabınızı tanımlamak ve size işlemsel e-posta göndermek için kullanılır.",
+        "Kimlik doğrulama belirteçleri — Apple Sign-In tarafından ya da kendi kimlik doğrulama akışımız tarafından verilir.",
+        "Abonelik durumu — etkin bir Cloud hakkınızın olup olmadığı; RevenueCat tarafından sağlanır."
+      ]
+    },
+    "application": {
+      "heading": "Uygulama verileri (Cloud'u kullandığınızda)",
+      "items": [
+        "İşlemler, hesaplar, kategoriler, etiketler, bütçeler, yinelenen kurallar, grup üyelikleri ve kategori kuralları.",
+        "Eklediğiniz fiş fotoğrafları.",
+        "Ses kayıtları — <strong>saklanmaz.</strong> Konuşma, Apple'ın cihaz üzerinde çalışan konuşma tanıma çatısıyla cihazınızda yazıya dökülür. Çözümleme için yapay zekamıza yalnızca ortaya çıkan metin gönderilir.",
+        "Telegram kullanıcıları için: Manilo hesabınıza bağlanma anahtarı olarak kullanılan Telegram kullanıcı kimliğiniz.",
+        "Apple Wallet kullanıcıları için: iletmeyi seçtiğiniz işlem bildirimleri — işletme, tutar, para birimi ve zaman damgası. Kart numaralarını asla almayız."
+      ]
+    },
+    "diagnostics": {
+      "heading": "Tanılama verileri",
+      "items": [
+        "Çökme raporları — anonimleştirilmiş olarak, Apple'ın standart çökme raporlaması üzerinden gönderilir (iOS Ayarlar'dan kapatabilirsiniz).",
+        "Toplu kullanım olayları — sayfa görüntülemeleri ve tıklama olayları; kişisel içerik yok. Takip çerezi yerleştirmeyen ve siteler arası profil oluşturmayan, gizliliğe saygılı bir analitik sağlayıcı kullanıyoruz."
+      ]
+    }
+  },
+  "whatWeDont": {
+    "heading": "Asla toplamadıklarımız",
+    "items": [
+      "Banka kimlik bilgileriniz, kart numaralarınız veya bankacılık oturumlarınız. Manilo banka hesaplarına bağlanmaz.",
+      "Kişileriniz, fotoğraf kitaplığınız, takviminiz veya konumunuz.",
+      "Reklamcılar için Tanımlayıcı (IDFA). Manilo reklam göstermez.",
+      "Ses kaydı. Konuşmadan metne dönüştürme cihazınızda çalışır.",
+      "Yukarıdaki özellikleri sunmak için kesinlikle gerekmeyen hiçbir şey."
+    ]
+  },
+  "howWeUse": {
+    "heading": "Verileri nasıl kullanıyoruz",
+    "intro": "Yukarıdaki verileri yalnızca şu amaçlarla kullanırız:",
+    "purposes": [
+      "Defterinizi kendi cihazlarınız arasında senkronize etmek.",
+      "Paylaşılan bir kaynağa açıkça davet ettiğiniz kişilerle görünürlüğü paylaşmak.",
+      "Sesinizden, fotoğrafınızdan veya SMS'inizden gelen metni bir işleme dönüştürmek (yapay zekayla çözümleme).",
+      "Size işlemsel e-posta göndermek — oturum açma bağlantıları, faturalar, güvenlik bildirimleri, hesap değişiklikleri.",
+      "Çökmeleri teşhis etmek ve ürünü iyileştirmek."
+    ],
+    "doNot": "<strong>Verilerinizi satmıyoruz</strong>, reklam amacıyla paylaşmıyoruz ve üçüncü taraf yapay zeka modellerini eğitmek için kullanmıyoruz.",
+    "mcp": {
+      "heading": "Yapay zeka asistanları ve Model Context Protocol (MCP)",
+      "beforeLink": "Manilo'yu bir yapay zeka asistanına (Claude, ChatGPT, Cursor veya MCP uyumlu herhangi bir istemci)",
+      "linkText": "entegrasyonlar",
+      "afterLink": "sayfamız üzerinden bağlarsanız, o asistan sorgularınızı yanıtlamak için gereken verileri alır — genellikle işlem alıntıları, kategori adları, hesap bakiyeleri veya toplulaştırılmış tutarlar. Neyin sorgulanacağını siz denetlersiniz: asistan yalnızca sizin adınıza açıkça talep ettiği verileri görür. Asistanın ayarlarından dilediğiniz zaman bağlantıyı kesebilirsiniz; erişim iptali anında geçerli olur. Bağlantı kurulduğunda defterinizin tamamını asistana göndermeyiz."
+    }
+  },
+  "thirdParties": {
+    "heading": "Alt işleyiciler",
+    "intro": "Hizmet'i sunabilmek için aşağıdaki sağlayıcılardan yararlanıyoruz. Her biri bir Veri İşleme Sözleşmesi ile bağlıdır ve verileri yalnızca bizim talimatlarımız doğrultusunda işler.",
+    "providers": [
+      { "name": "Hetzner", "desc": "arka uç sistemimizi ve veritabanımızı Almanya'da (AB) barındırır." },
+      { "name": "OpenAI / Anthropic", "desc": "işlem metninin yapay zekayla çözümlenmesi. Yazıya dökülen mesajınız çözümleme için gönderilir; API koşulları gereği çıktılar kendi modellerini eğitmek için kullanılmaz. Manilo'yu Model Context Protocol üzerinden Claude'a bağladığınızda Anthropic aynı zamanda yapay zeka asistanı rolünü üstlenir; sorgulanan veriler konuşma süresince Anthropic'e gönderilir ve API koşulları gereği model eğitiminde kullanılmaz." },
+      { "name": "RevenueCat", "desc": "iOS'ta abonelik durumu." },
+      { "name": "Apple", "desc": "uygulama içi abonelikler için ödeme işlemleri ve çökme raporlaması." },
+      { "name": "Resend", "desc": "işlemsel e-posta gönderimi." },
+      { "name": "Telegram", "desc": "Telegram üzerinden kayıt seçeneğini açan kullanıcılar için bot aktarımı." }
+    ],
+    "dpaBeforeEmail": "Alt işleyicilerin alt konumlarının listesini veya DPA kopyalarını isterseniz şu adrese yazın:",
+    "dpaAfterEmail": "."
+  },
+  "retention": {
+    "heading": "Saklama ve silme",
+    "items": [
+      "Oluşturduğunuz işlemler ve fişler, siz onları silene ya da hesabınızı silene kadar saklanır.",
+      "Cloud'u iptal ederseniz yerel kopyanız cihazınızda kalır. Cloud'daki kopya 30 gün saklanır, ardından silinir.",
+      "Hesap silme: Ayarlar → Hesap → Hesabı sil yolunu izleyin. Sunucudaki her şey 7 gün içinde temizlenir. Yedekler 30 gün içinde tamamen silinir."
+    ]
+  },
+  "rights": {
+    "heading": "Haklarınız",
+    "bodyBeforeEmail": "AB'de, Birleşik Krallık'ta veya Kaliforniya'da bulunuyorsanız; kişisel verilerinize erişme, bunları düzeltme, taşıma, silme veya işlenmesine itiraz etme haklarına sahipsiniz. Bu hakların tümünü uygulama içinde Ayarlar → Hesap bölümünden ya da şu adrese e-posta göndererek kullanabilirsiniz:",
+    "bodyAfterEmail": ". 30 gün içinde yanıt veriyoruz.",
+    "complaint": "Ayrıca yerel veri koruma denetim makamınıza şikâyette bulunma hakkına da sahipsiniz."
+  },
+  "children": {
+    "heading": "Çocuklar",
+    "body": "Manilo, 13 yaşın (AEA'da 16 yaşın) altındaki çocuklara yönelik değildir. Reşit olmayanlardan bilerek veri toplamayız. Bir çocuğun kaydolduğunu düşünüyorsanız bize ulaşın, hesabı silelim."
+  },
+  "changes": {
+    "heading": "Değişiklikler",
+    "body": "Bu politikayı, verilerinizi işleme biçimimizi etkileyecek şekilde değiştirirsek, değişiklik yürürlüğe girmeden en az 14 gün önce sizi uygulama içinde ve e-postayla bilgilendiririz. Değişiklikten sonra Hizmet'i kullanmaya devam etmeniz, değişikliği kabul ettiğiniz anlamına gelir."
+  },
+  "contact": {
+    "heading": "İletişim",
+    "emailLabel": "E-posta:"
+  }
+}

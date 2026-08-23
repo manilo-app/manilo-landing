@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "Termos de Serviço — Manilo",
+    "description": "Termos de Serviço do Manilo, app de controle de gastos."
+  },
+  "jsonLd": {
+    "breadcrumbName": "Termos de Serviço"
+  },
+  "hero": {
+    "eyebrow": "Legal",
+    "title": "Termos de Serviço",
+    "updated": "Última atualização em 10 de maio de 2026"
+  },
+  "toc": {
+    "ariaLabel": "Sumário",
+    "heading": "Conteúdo",
+    "toggle": "Conteúdo",
+    "items": {
+      "agreement": "Acordo",
+      "account": "Sua conta",
+      "subscription": "Assinatura e pagamento",
+      "trial": "Teste grátis",
+      "use": "Uso aceitável",
+      "data": "Seus dados",
+      "beta": "Recursos beta",
+      "warranty": "Sem garantia",
+      "liability": "Responsabilidade",
+      "termination": "Rescisão",
+      "law": "Lei aplicável",
+      "contact": "Contato"
+    }
+  },
+  "sections": {
+    "agreement": {
+      "heading": "Acordo",
+      "p": [
+        "Estes Termos de Serviço (“Termos”) regem o seu uso do Manilo (antes Ledgy) — o app para iOS, o painel web em dashboard.manilo.app, o bot do Manilo no Telegram e os serviços relacionados (o “Serviço”). Ao criar uma conta ou baixar o app, você concorda com estes Termos. Se não concordar, não use o Serviço.",
+        "O Serviço é operado pela equipe por trás do Manilo, doravante “nós”."
+      ]
+    },
+    "account": {
+      "heading": "Sua conta",
+      "p": [
+        "Você é responsável por tudo o que acontece na sua conta, inclusive por manter as suas credenciais de acesso em segurança. Apenas uma pessoa pode usar cada conta; compartilhar o seu login anula o propósito do compartilhamento em grupo (que já vem incluído e é grátis com o Cloud).",
+        "Você precisa ter pelo menos 13 anos (ou 16 no EEE) para usar o Serviço."
+      ]
+    },
+    "subscription": {
+      "heading": "Assinatura e pagamento",
+      "p": [
+        "O Cloud é oferecido como assinatura recorrente, cobrada por mês ou por ano. O preço exibido no momento da compra é o preço final que você paga. As assinaturas são processadas pela Apple por meio da sua conta da App Store."
+      ],
+      "autoRenew": "A sua assinatura é renovada automaticamente ao fim de cada período, a menos que seja cancelada pelo menos 24 horas antes da renovação.",
+      "cancel": "Você pode cancelar a qualquer momento em <em>Ajustes → [Seu Nome] → Assinaturas</em> no iPhone.",
+      "refundsPre": "Os reembolsos são administrados pela Apple em ",
+      "refundsPost": ".",
+      "rateChange": "Se você fizer upgrade, downgrade ou mudar o período de cobrança, o novo valor passa a valer na próxima renovação."
+    },
+    "trial": {
+      "heading": "Teste grátis",
+      "p": [
+        "Novos assinantes podem receber um teste grátis de 7 dias. Você não é cobrado até o teste terminar. Se cancelar antes do fim do teste, você não deve nada. O teste é oferecido uma vez por Apple ID."
+      ]
+    },
+    "use": {
+      "heading": "Uso aceitável",
+      "p": [
+        "O uso do Serviço deve ser lícito e razoável. Você concorda em não:"
+      ],
+      "items": [
+        "Fazer engenharia reversa, descompilar ou tentar extrair o código-fonte, exceto quando permitido por lei.",
+        "Usar o Serviço para violar a privacidade ou os direitos de outras pessoas.",
+        "Executar abuso automatizado, scraping ou ataques de negação de serviço contra a nossa infraestrutura.",
+        "Revender ou sublicenciar o acesso ao Cloud sem autorização por escrito."
+      ]
+    },
+    "data": {
+      "heading": "Seus dados",
+      "p1Pre": "As suas transações pertencem a você. Não reivindicamos propriedade sobre os dados que você cria usando o Serviço. Nós os tratamos apenas para entregar os recursos que você ativou, conforme descrito na nossa ",
+      "p1Link": "Política de Privacidade",
+      "p1Post": ".",
+      "p2": "Você pode exportar todo o seu registro financeiro em CSV a qualquer momento em Configurações → Exportar. Se você excluir a sua conta, excluímos os dados associados em até 7 dias; os backups expiram em até 30 dias."
+    },
+    "beta": {
+      "heading": "Recursos beta",
+      "callout": "Alguns recursos do Manilo são lançados com a marcação “Beta” dentro do app. Eles podem produzir resultados incorretos, mudar ou ser removidos sem aviso. Não conte com eles como fonte única de verdade — mantenha sempre uma exportação periódica do seu registro financeiro.",
+      "p": [
+        "Os recursos marcados como “Beta” dentro do app são experimentais, podem produzir resultados incorretos e podem ser removidos sem aviso."
+      ]
+    },
+    "warranty": {
+      "heading": "Sem garantia",
+      "p": [
+        "O Serviço é fornecido “no estado em que se encontra”, sem garantias de qualquer natureza, expressas ou implícitas, incluindo comercialização, adequação a uma finalidade específica e não violação de direitos, na máxima extensão permitida por lei. A interpretação por IA, a conversão de moedas e a sugestão de categorias podem cometer erros — revise antes de confiar nelas.",
+        "O Manilo não constitui aconselhamento financeiro, tributário ou contábil."
+      ]
+    },
+    "liability": {
+      "heading": "Limitação de responsabilidade",
+      "p": [
+        "Na máxima extensão permitida por lei, a nossa responsabilidade agregada por qualquer reivindicação relacionada ao Serviço está limitada ao valor que você nos pagou nos 12 meses anteriores à reivindicação. Não somos responsáveis por danos indiretos, consequenciais ou incidentais — incluindo lucros cessantes, perda de dados ou interrupção de negócios.",
+        "Nada nestes Termos limita a responsabilidade por fraude, culpa grave ou qualquer responsabilidade que não possa ser excluída pela legislação aplicável."
+      ]
+    },
+    "termination": {
+      "heading": "Rescisão",
+      "p": [
+        "Você pode parar de usar o Serviço e excluir a sua conta a qualquer momento. Podemos suspender ou encerrar contas que violem estes Termos, com aviso prévio sempre que for razoavelmente possível. Com a rescisão, as seções que por sua natureza subsistem (dados, responsabilidade, lei aplicável) continuam a valer."
+      ]
+    },
+    "law": {
+      "heading": "Lei aplicável",
+      "p": [
+        "As disputas estão sujeitas às normas obrigatórias de proteção ao consumidor do seu país de residência; fora isso, a lei aplicável e o foro serão definidos em uma atualização futura destes Termos."
+      ]
+    },
+    "contact": {
+      "heading": "Contato"
+    }
+  }
+}
