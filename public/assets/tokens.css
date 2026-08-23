@@ -1,12 +1,12 @@
 /* ============================================================
    Manilo — Colors & Type
    Source of truth: reference/styleguide.html (live codebase export)
-   Primary font: Inter (local TTF in /fonts), fallback system stack
+   Primary font: Inter (local woff2 subset in /assets), fallback system stack
    ============================================================ */
 
 @font-face {
   font-family: 'Inter';
-  src: url('./fonts/Inter.ttf') format('truetype-variations');
+  src: url('./Inter.woff2') format('woff2-variations');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;

@@ -1,28 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Manilo</title>
-<meta name="description" content="Privacy Policy for Manilo. Local-first, isolated per user, GDPR-aligned. No ads. No data brokers. No tracking SDKs.">
-<link rel="canonical" href="https://manilo.app/privacy">
-<link rel="alternate" hreflang="en" href="https://manilo.app/privacy">
-<link rel="alternate" hreflang="x-default" href="https://manilo.app/privacy">
-<meta name="apple-itunes-app" content="app-id=6761738170">
-<meta name="theme-color" content="#0a0a14">
-<meta property="og:site_name" content="Manilo">
-<meta property="og:title" content="Privacy Policy — Manilo">
-<meta property="og:description" content="Local-first, GDPR-aligned. No ads, no data brokers, no tracking SDKs.">
-<meta property="og:image" content="https://manilo.app/assets/og-image.png">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://manilo.app/privacy">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://manilo.app/assets/og-image.png">
-<link rel="icon" type="image/svg+xml" href="assets/manilo-icon.svg">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
-<link rel="stylesheet" href="assets/site.css">
-<link rel="stylesheet" href="assets/doc.css">
-<script type="application/ld+json">
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Privacy Policy — Manilo"
+  description="Privacy Policy for Manilo. Local-first, isolated per user, GDPR-aligned. No ads. No data brokers. No tracking SDKs."
+  path="/privacy"
+  ogDescription="Local-first, GDPR-aligned. No ads, no data brokers, no tracking SDKs."
+  screenLabel="03 Privacy"
+  css={['/assets/doc.css']}
+  js={['/assets/doc.js']}
+>
+<Fragment slot="head">
+<script type="application/ld+json" is:inline>
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -32,28 +21,8 @@
   ]
 }
 </script>
-<script src="assets/analytics.js" defer></script>
-</head>
-<body data-screen-label="03 Privacy">
-<a href="#main" class="skip-link">Skip to content</a>
-<div class="starfield" aria-hidden="true"></div>
+</Fragment>
 
-<header class="site-header">
-  <div class="container site-header__inner">
-    <a href="index.html" class="brand-lockup"><img src="assets/manilo-icon.svg" alt="" class="brand-icon"><span class="brand-word brand-word--text">manilo</span></a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer">Pricing</a>
-      <a href="support.html">Support</a>
-    </nav>
-    <div class="site-header__cta">
-      <a class="btn btn--ghost" href="https://dashboard.manilo.app" target="_blank" rel="noopener noreferrer">Open dashboard</a>
-      <a class="btn btn--primary" href="https://apps.apple.com/app/id6761738170" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-apple"></i> Download on the App Store</a>
-    </div>
-  </div>
-</header>
-
-<main id="main">
 <section class="doc-hero">
   <div class="container">
     <span class="t-eyebrow">Legal</span>
@@ -148,7 +117,7 @@
       <p><strong>We do not</strong> sell your data, share it for advertising, or use it to train third-party AI models.</p>
 
       <h3>AI Assistants &amp; Model Context Protocol (MCP)</h3>
-      <p>If you connect Manilo to an AI assistant (Claude, ChatGPT, Cursor, or any MCP-compatible client) via our <a href="integrations.html">integrations</a> page, that assistant receives the data necessary to answer your queries — typically transaction excerpts, category names, account balances, or aggregated totals. You control what is queried: the assistant only sees data it explicitly requests on your behalf. You can disconnect at any time from the assistant's settings; revoking access takes effect immediately. We do not push your full ledger to the assistant on connection.</p>
+      <p>If you connect Manilo to an AI assistant (Claude, ChatGPT, Cursor, or any MCP-compatible client) via our <a href="/integrations">integrations</a> page, that assistant receives the data necessary to answer your queries — typically transaction excerpts, category names, account balances, or aggregated totals. You control what is queried: the assistant only sees data it explicitly requests on your behalf. You can disconnect at any time from the assistant's settings; revoking access takes effect immediately. We do not push your full ledger to the assistant on connection.</p>
     </section>
 
     <section id="third-parties">
@@ -197,25 +166,4 @@
   </article>
 </div>
 </div>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="site-footer__grid">
-      <div>
-        <a href="index.html" class="brand-lockup" style="margin-bottom: 14px;"><img src="assets/manilo-icon.svg" alt="" class="brand-icon"><span class="brand-word brand-word--text">manilo</span></a>
-        <p class="site-footer__about">Expenses that track themselves.</p>
-      </div>
-      <div><h4>Product</h4><ul><li><a href="index.html">Home</a></li><li><a href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer">Pricing</a></li><li><a href="integrations.html">Integrations</a></li><li><a href="chatgpt.html">Manilo in ChatGPT</a></li><li><a href="https://dashboard.manilo.app" target="_blank" rel="noopener noreferrer">Dashboard</a></li></ul></div>
-      <div><h4>Developers</h4><ul><li><a href="api-v1.html">API v1 reference</a></li><li><a href="integrations.html">MCP integration</a></li></ul></div>
-      <div><h4>Support</h4><ul><li><a href="support.html">Help center</a></li><li><a href="mailto:support@manilo.app">support@manilo.app</a></li></ul></div>
-      <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
-    </div>
-    <div class="site-footer__legal"><span>© 2026 Manilo</span></div>
-  </div>
-</footer>
-
-<script src="assets/site.js" defer></script>
-<script src="assets/doc.js" defer></script>
-</body>
-</html>
+</Base>

@@ -1,35 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChatGPT Expense Tracker: Import Bank Statements | Manilo</title>
-<meta name="description" content="Drop a bank statement into ChatGPT or Claude and get categorized expenses plus a live dashboard. Connect Manilo in three steps. 7-day free trial, no ads.">
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="ChatGPT Expense Tracker: Import Bank Statements | Manilo"
+  description="Drop a bank statement into ChatGPT or Claude and get categorized expenses plus a live dashboard. Connect Manilo in three steps. 7-day free trial, no ads."
+  path="/chatgpt"
+  ogTitle="Manilo + ChatGPT: import bank statements by chat"
+  ogDescription="Upload a statement into ChatGPT or Claude. Manilo turns it into categorized expenses and a live dashboard. Free iOS app, no ads. 7-day free trial for the AI connection."
+  ogType="article"
+  screenLabel="08 ChatGPT"
+  css={['/assets/doc.css', '/assets/chatgpt.css']}
+  js={['/assets/doc.js']}
+>
+<Fragment slot="head">
 <meta name="keywords" content="chatgpt expense tracker, import bank statement chatgpt, claude expense tracker, ai bank statement import, categorize bank statement ai, chatgpt personal finance, mcp expense tracker">
-<link rel="canonical" href="https://manilo.app/chatgpt">
-<link rel="alternate" hreflang="en" href="https://manilo.app/chatgpt">
-<link rel="alternate" hreflang="x-default" href="https://manilo.app/chatgpt">
-<meta name="apple-itunes-app" content="app-id=6761738170">
-<meta name="theme-color" content="#0a0a14">
-<meta property="og:site_name" content="Manilo">
-<meta property="og:title" content="Manilo + ChatGPT: import bank statements by chat">
-<meta property="og:description" content="Upload a statement into ChatGPT or Claude. Manilo turns it into categorized expenses and a live dashboard. Free iOS app, no ads. 7-day free trial for the AI connection.">
-<meta property="og:image" content="https://manilo.app/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://manilo.app/chatgpt">
-<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Manilo + ChatGPT: import bank statements by chat">
 <meta name="twitter:description" content="Upload a statement into ChatGPT or Claude. Manilo turns it into categorized expenses and a live dashboard. Free iOS app, no ads. 7-day free trial for the AI connection.">
-<meta name="twitter:image" content="https://manilo.app/assets/og-image.png">
-<link rel="icon" type="image/svg+xml" href="assets/manilo-icon.svg">
-<link rel="apple-touch-icon" href="assets/manilo-icon.svg">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
-<link rel="stylesheet" href="assets/site.css">
-<link rel="stylesheet" href="assets/doc.css">
-<link rel="stylesheet" href="assets/chatgpt.css">
-<script type="application/ld+json">
+<script type="application/ld+json" is:inline>
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
@@ -59,7 +48,7 @@
   }
 }
 </script>
-<script type="application/ld+json">
+<script type="application/ld+json" is:inline>
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -69,7 +58,7 @@
   ]
 }
 </script>
-<script type="application/ld+json">
+<script type="application/ld+json" is:inline>
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -117,28 +106,8 @@
   ]
 }
 </script>
-<script src="assets/analytics.js" defer></script>
-</head>
-<body data-screen-label="08 ChatGPT">
-<a href="#main" class="skip-link">Skip to content</a>
-<div class="starfield" aria-hidden="true"></div>
+</Fragment>
 
-<header class="site-header">
-  <div class="container site-header__inner">
-    <a href="index.html" class="brand-lockup"><img src="assets/manilo-icon.svg" alt="" class="brand-icon"><span class="brand-word brand-word--text">manilo</span></a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer">Pricing</a>
-      <a href="support.html">Support</a>
-    </nav>
-    <div class="site-header__cta">
-      <a class="btn btn--ghost" href="https://dashboard.manilo.app" target="_blank" rel="noopener noreferrer">Open dashboard</a>
-      <a class="btn btn--primary" href="https://apps.apple.com/app/id6761738170" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-apple"></i> Download on the App Store</a>
-    </div>
-  </div>
-</header>
-
-<main id="main">
 <section class="doc-hero" id="hero">
   <div class="container">
     <span class="t-eyebrow">Talk to your money</span>
@@ -150,8 +119,8 @@
       <span><i class="fa-brands fa-apple"></i> The iOS app is free with no ads.</span>
     </p>
     <div class="cg-hero-ctas">
-      <a class="btn btn--primary" href="integrations.html#chatgpt" data-cta="Connect ChatGPT" data-cta-position="hero">Connect ChatGPT</a>
-      <a class="btn btn--secondary" href="integrations.html#claude" data-cta="Connect Claude" data-cta-position="hero">Connect Claude</a>
+      <a class="btn btn--primary" href="/integrations#chatgpt" data-cta="Connect ChatGPT" data-cta-position="hero">Connect ChatGPT</a>
+      <a class="btn btn--secondary" href="/integrations#claude" data-cta="Connect Claude" data-cta-position="hero">Connect Claude</a>
     </div>
   </div>
 </section>
@@ -192,11 +161,11 @@
     <section id="connect-chatgpt">
       <span id="claude" style="scroll-margin-top: 100px;"></span>
       <h2 data-num="02">Connect your assistant</h2>
-      <p>Setup takes about a minute, and every path lives on one page — pick ChatGPT, Claude, Cursor, or any other MCP client on the <a href="integrations.html">integrations page</a> and follow two steps.</p>
+      <p>Setup takes about a minute, and every path lives on one page — pick ChatGPT, Claude, Cursor, or any other MCP client on the <a href="/integrations">integrations page</a> and follow two steps.</p>
       <div class="cg-hero-ctas">
-        <a class="btn btn--primary" href="integrations.html#chatgpt" data-cta="Connect ChatGPT" data-cta-position="connect">Connect ChatGPT</a>
-        <a class="btn btn--secondary" href="integrations.html#claude" data-cta="Connect Claude" data-cta-position="connect">Connect Claude</a>
-        <a class="btn btn--secondary" href="integrations.html#cursor" data-cta="Connect Cursor" data-cta-position="connect">Cursor &amp; other clients</a>
+        <a class="btn btn--primary" href="/integrations#chatgpt" data-cta="Connect ChatGPT" data-cta-position="connect">Connect ChatGPT</a>
+        <a class="btn btn--secondary" href="/integrations#claude" data-cta="Connect Claude" data-cta-position="connect">Connect Claude</a>
+        <a class="btn btn--secondary" href="/integrations#cursor" data-cta="Connect Cursor" data-cta-position="connect">Cursor &amp; other clients</a>
       </div>
       <div class="callout"><i class="fa-solid fa-circle-info"></i><span>ChatGPT shows a confirmation prompt (<strong>Allow once</strong> / <strong>Always</strong>) before any write, so nothing lands in your ledger without your OK.</span></div>
     </section>
@@ -238,32 +207,11 @@
       <p>Grab any statement export you already have, connect, and drop it into the chat. Three steps, then never again.</p>
       <p>Manilo is built by one indie developer. If your statement format trips it up, or anything else feels off, email <a href="mailto:support@manilo.app">support@manilo.app</a>. Feedback genuinely shapes what gets built next.</p>
       <div class="cg-hero-ctas">
-        <a class="btn btn--primary" href="integrations.html#chatgpt" data-cta="Connect ChatGPT" data-cta-position="closing">Connect ChatGPT</a>
+        <a class="btn btn--primary" href="/integrations#chatgpt" data-cta="Connect ChatGPT" data-cta-position="closing">Connect ChatGPT</a>
         <a class="btn btn--secondary" href="https://apps.apple.com/app/id6761738170" target="_blank" rel="noopener noreferrer" data-cta="Get the iOS app" data-cta-position="closing"><i class="fa-brands fa-apple" aria-hidden="true"></i> Get the iOS app</a>
       </div>
     </section>
   </article>
 </div>
 </div>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="site-footer__grid">
-      <div>
-        <a href="index.html" class="brand-lockup" style="margin-bottom: 14px;"><img src="assets/manilo-icon.svg" alt="" class="brand-icon"><span class="brand-word brand-word--text">manilo</span></a>
-        <p class="site-footer__about">Expenses that track themselves.</p>
-      </div>
-      <div><h4>Product</h4><ul><li><a href="index.html">Home</a></li><li><a href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer">Pricing</a></li><li><a href="integrations.html">Integrations</a></li><li><a href="chatgpt.html">Manilo in ChatGPT</a></li><li><a href="https://dashboard.manilo.app" target="_blank" rel="noopener noreferrer">Dashboard</a></li></ul></div>
-      <div><h4>Developers</h4><ul><li><a href="api-v1.html">API v1 reference</a></li><li><a href="integrations.html">MCP integration</a></li></ul></div>
-      <div><h4>Support</h4><ul><li><a href="support.html">Help center</a></li><li><a href="mailto:support@manilo.app">support@manilo.app</a></li></ul></div>
-      <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
-    </div>
-    <div class="site-footer__legal"><span>© 2026 Manilo</span></div>
-  </div>
-</footer>
-
-<script src="assets/site.js" defer></script>
-<script src="assets/doc.js" defer></script>
-</body>
-</html>
+</Base>

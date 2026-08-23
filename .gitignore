@@ -3,3 +3,6 @@
 .claude/**
 docs/**
 .nojekyll
+node_modules/
+dist/
+.astro/
