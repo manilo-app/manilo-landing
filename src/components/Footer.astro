@@ -1,0 +1,54 @@
+---
+import { APP_STORE_URL, DASHBOARD_URL, SUPPORT_EMAIL } from '../consts';
+---
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <a href="/" class="brand-lockup" style="margin-bottom: 14px;">
+          <img src="/assets/manilo-icon.svg" alt="" class="brand-icon" />
+          <span class="brand-word brand-word--text">manilo</span>
+        </a>
+        <p class="site-footer__about">Expenses that track themselves. AI expense tracker for iOS — now on the App Store.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href={`${DASHBOARD_URL}/upgrade`} target="_blank" rel="noopener noreferrer">Pricing</a></li>
+          <li><a href="/integrations">Integrations</a></li>
+          <li><a href="/chatgpt">Manilo in ChatGPT</a></li>
+          <li><a href={DASHBOARD_URL} target="_blank" rel="noopener noreferrer">Open dashboard</a></li>
+          <li><a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">Download on the App Store</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Developers</h4>
+        <ul>
+          <li><a href="/api-v1">API v1 reference</a></li>
+          <li><a href="/integrations">MCP integration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="/support">Help center</a></li>
+          <li><a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/terms">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__legal">
+      <span>© 2026 Manilo</span>
+      <div class="site-footer__legal-links">
+        <span class="pill pill--success" style="font-size:11px;"><span class="dot"></span> All systems operational</span>
+      </div>
+    </div>
+  </div>
+</footer>

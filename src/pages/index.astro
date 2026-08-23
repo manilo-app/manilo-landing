@@ -1,35 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Manilo — Multi-currency expense tracker for iOS</title>
-<meta name="description" content="Multi-currency expense tracker for iOS. Multi-currency, on-device speech, no ads. Talk to Manilo from Claude, ChatGPT, and any AI assistant via MCP. Free on the App Store.">
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Manilo — Multi-currency expense tracker for iOS"
+  description="Multi-currency expense tracker for iOS. Multi-currency, on-device speech, no ads. Talk to Manilo from Claude, ChatGPT, and any AI assistant via MCP. Free on the App Store."
+  path="/"
+  ogDescription="Track any expense in any currency. Free, no ads. Talk to Manilo from Claude, ChatGPT, and any AI assistant via MCP."
+  screenLabel="01 Home"
+  css={['/assets/home.css']}
+>
+<Fragment slot="head">
 <meta name="keywords" content="multi-currency expense tracker, multi currency expense, expense tracker no ads, mcp expense tracker, claude expense tracker, apple watch expense tracker, siri expense logger">
-<link rel="canonical" href="https://manilo.app/">
-<link rel="alternate" hreflang="en" href="https://manilo.app/">
-<link rel="alternate" hreflang="x-default" href="https://manilo.app/">
-<meta name="apple-itunes-app" content="app-id=6761738170">
-<meta name="theme-color" content="#0a0a14">
-<meta property="og:site_name" content="Manilo">
-<meta property="og:title" content="Manilo — Multi-currency expense tracker for iOS">
-<meta property="og:description" content="Track any expense in any currency. Free, no ads. Talk to Manilo from Claude, ChatGPT, and any AI assistant via MCP.">
-<meta property="og:image" content="https://manilo.app/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Manilo — multi-currency expense tracker for iOS">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://manilo.app/">
-<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Manilo — Multi-currency expense tracker for iOS">
 <meta name="twitter:description" content="Track any expense in any currency. Free, no ads. Works with Claude, ChatGPT, and any AI via MCP.">
-<meta name="twitter:image" content="https://manilo.app/assets/og-image.png">
-<link rel="icon" type="image/svg+xml" href="assets/manilo-icon.svg">
-<link rel="apple-touch-icon" href="assets/manilo-icon.svg">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-<link rel="stylesheet" href="assets/site.css">
-<link rel="stylesheet" href="assets/home.css">
-<script type="application/ld+json">
+<script type="application/ld+json" is:inline>
 {
   "@context": "https://schema.org",
   "@type": "MobileApplication",
@@ -97,7 +84,7 @@
   }
 }
 </script>
-<script type="application/ld+json">
+<script type="application/ld+json" is:inline>
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -125,7 +112,7 @@
   ]
 }
 </script>
-<script type="application/ld+json">
+<script type="application/ld+json" is:inline>
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -139,7 +126,7 @@
   }
 }
 </script>
-<script type="application/ld+json">
+<script type="application/ld+json" is:inline>
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -212,35 +199,7 @@
   ]
 }
 </script>
-<script src="assets/analytics.js" defer></script>
-</head>
-<body data-screen-label="01 Home">
-<a href="#main" class="skip-link">Skip to content</a>
-<div class="starfield" aria-hidden="true"></div>
-
-<!-- ===== Header ===== -->
-<header class="site-header">
-  <div class="container site-header__inner">
-    <a href="index.html" class="brand-lockup" aria-label="Manilo home">
-      <img src="assets/manilo-icon.svg" alt="" class="brand-icon">
-      <span class="brand-word brand-word--text">manilo</span>
-    </a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer">Pricing</a>
-      <a href="support.html">Support</a>
-    </nav>
-    <div class="site-header__cta">
-      <a class="btn btn--ghost" href="https://dashboard.manilo.app" target="_blank" rel="noopener noreferrer">Open dashboard</a>
-      <a class="btn btn--primary" href="https://apps.apple.com/app/id6761738170" target="_blank" rel="noopener noreferrer" data-cta="Download on App Store" data-cta-position="header">
-        <i class="fa-brands fa-apple" aria-hidden="true"></i>
-        Download on the App Store
-      </a>
-    </div>
-  </div>
-</header>
-
-<main id="main">
+</Fragment>
 
 <!-- ===== Hero ===== -->
 <section class="hero">
@@ -271,7 +230,7 @@
       <div class="hero__phone">
         <div class="hero__phone-frame">
           <div class="hero__phone-screen">
-            <img src="assets/screens/manilo-add.webp" alt="The Manilo add-transaction screen with a $555 expense being voice-logged" loading="eager" width="394" height="852">
+            <img src="/assets/screens/manilo-add.webp" alt="The Manilo add-transaction screen with a $555 expense being voice-logged" loading="eager" width="394" height="852">
           </div>
           <div class="hero__phone-notch" aria-hidden="true"></div>
         </div>
@@ -411,7 +370,7 @@
       </div>
       <div class="row__visual">
         <div class="phone-frame phone-frame--small">
-          <img src="assets/screens/manilo-home.webp" alt="Manilo transaction list categorized automatically" loading="lazy" width="394" height="852">
+          <img src="/assets/screens/manilo-home.webp" alt="Manilo transaction list categorized automatically" loading="lazy" width="394" height="852">
         </div>
       </div>
     </div>
@@ -545,7 +504,7 @@
     <div class="mcp__inner glass">
       <div class="mcp__viz" aria-hidden="true">
         <div class="mcp__hub">
-          <img src="assets/manilo-icon.svg" alt="">
+          <img src="/assets/manilo-icon.svg" alt="">
           <span>Manilo</span>
         </div>
         <div class="mcp__client mcp__client--claude">
@@ -580,8 +539,8 @@
           <li><i class="fa-solid fa-quote-left"></i> "Find every transaction over €100 in May."</li>
         </ul>
         <p class="mcp__note">Connect once, ask anything. Your AI only sees what you allow — you’re always in control, and you can disconnect any time.</p>
-        <a class="btn btn--secondary" href="integrations.html" data-cta="Set up your assistant" data-cta-position="mcp">Set up ChatGPT, Claude, or Cursor →</a>
-        <a class="btn btn--ghost" href="chatgpt.html" data-cta="Open ChatGPT page" data-cta-position="mcp">Import bank statements by chat →</a>
+        <a class="btn btn--secondary" href="/integrations" data-cta="Set up your assistant" data-cta-position="mcp">Set up ChatGPT, Claude, or Cursor →</a>
+        <a class="btn btn--ghost" href="/chatgpt" data-cta="Open ChatGPT page" data-cta-position="mcp">Import bank statements by chat →</a>
       </div>
     </div>
   </div>
@@ -654,7 +613,7 @@
       <div class="devices__card glass">
         <div class="laptop-frame" aria-hidden="true">
           <div class="laptop-frame__screen">
-            <img src="assets/screens/web-dash.webp" alt="The Manilo web dashboard showing monthly summary, spend by category, and budgets" loading="lazy">
+            <img src="/assets/screens/web-dash.webp" alt="The Manilo web dashboard showing monthly summary, spend by category, and budgets" loading="lazy">
           </div>
           <div class="laptop-frame__base"></div>
         </div>
@@ -751,61 +710,4 @@
   </div>
 </section>
 
-</main>
-
-<!-- ===== Footer ===== -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="site-footer__grid">
-      <div>
-        <a href="index.html" class="brand-lockup" style="margin-bottom: 14px;">
-          <img src="assets/manilo-icon.svg" alt="" class="brand-icon">
-          <span class="brand-word brand-word--text">manilo</span>
-        </a>
-        <p class="site-footer__about">Expenses that track themselves. AI expense tracker for iOS — now on the App Store.</p>
-      </div>
-      <div>
-        <h4>Product</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer">Pricing</a></li>
-          <li><a href="integrations.html">Integrations</a></li>
-          <li><a href="chatgpt.html">Manilo in ChatGPT</a></li>
-          <li><a href="https://dashboard.manilo.app" target="_blank" rel="noopener noreferrer">Open dashboard</a></li>
-          <li><a href="https://apps.apple.com/app/id6761738170" target="_blank" rel="noopener noreferrer">Download on the App Store</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Developers</h4>
-        <ul>
-          <li><a href="api-v1.html">API v1 reference</a></li>
-          <li><a href="integrations.html">MCP integration</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Support</h4>
-        <ul>
-          <li><a href="support.html">Help center</a></li>
-          <li><a href="mailto:support@manilo.app">support@manilo.app</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="privacy.html">Privacy</a></li>
-          <li><a href="terms.html">Terms</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="site-footer__legal">
-      <span>© 2026 Manilo</span>
-      <div class="site-footer__legal-links">
-        <span class="pill pill--success" style="font-size:11px;"><span class="dot"></span> All systems operational</span>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="assets/site.js" defer></script>
-</body>
-</html>
+</Base>

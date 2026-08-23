@@ -1,28 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Support — Manilo</title>
-<meta name="description" content="Get help with Manilo. FAQs, troubleshooting, voice expense logging tips, MCP integration support, and direct contact.">
-<link rel="canonical" href="https://manilo.app/support">
-<link rel="alternate" hreflang="en" href="https://manilo.app/support">
-<link rel="alternate" hreflang="x-default" href="https://manilo.app/support">
-<meta name="apple-itunes-app" content="app-id=6761738170">
-<meta name="theme-color" content="#0a0a14">
-<meta property="og:site_name" content="Manilo">
-<meta property="og:title" content="Support — Manilo">
-<meta property="og:description" content="Help with Manilo: voice logging, MCP integration, multi-currency, and contact.">
-<meta property="og:image" content="https://manilo.app/assets/og-image.png">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://manilo.app/support">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://manilo.app/assets/og-image.png">
-<link rel="icon" type="image/svg+xml" href="assets/manilo-icon.svg">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
-<link rel="stylesheet" href="assets/site.css">
-<link rel="stylesheet" href="assets/doc.css">
-<script type="application/ld+json">
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Support — Manilo"
+  description="Get help with Manilo. FAQs, troubleshooting, voice expense logging tips, MCP integration support, and direct contact."
+  path="/support"
+  ogDescription="Help with Manilo: voice logging, MCP integration, multi-currency, and contact."
+  screenLabel="05 Support"
+  css={['/assets/doc.css']}
+  js={['/assets/doc.js']}
+>
+<Fragment slot="head">
+<script type="application/ld+json" is:inline>
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -32,7 +21,7 @@
   ]
 }
 </script>
-<script type="application/ld+json">
+<script type="application/ld+json" is:inline>
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -146,28 +135,8 @@
   ]
 }
 </script>
-<script src="assets/analytics.js" defer></script>
-</head>
-<body data-screen-label="05 Support">
-<a href="#main" class="skip-link">Skip to content</a>
-<div class="starfield" aria-hidden="true"></div>
+</Fragment>
 
-<header class="site-header">
-  <div class="container site-header__inner">
-    <a href="index.html" class="brand-lockup"><img src="assets/manilo-icon.svg" alt="" class="brand-icon"><span class="brand-word brand-word--text">manilo</span></a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer">Pricing</a>
-      <a href="support.html" aria-current="page">Support</a>
-    </nav>
-    <div class="site-header__cta">
-      <a class="btn btn--ghost" href="https://dashboard.manilo.app" target="_blank" rel="noopener noreferrer">Open dashboard</a>
-      <a class="btn btn--primary" href="https://apps.apple.com/app/id6761738170" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-apple"></i> Download on the App Store</a>
-    </div>
-  </div>
-</header>
-
-<main id="main">
 <section class="doc-hero">
   <div class="container">
     <span class="t-eyebrow">Help center</span>
@@ -303,7 +272,7 @@
       <h3>Delete your account</h3>
       <p>Settings → Account → Delete Account. We delete server data within 7 days and backups within 30. Local data is wiped immediately when you log out.</p>
 
-      <p>For more, read our <a href="privacy.html">Privacy Policy</a>.</p>
+      <p>For more, read our <a href="/privacy">Privacy Policy</a>.</p>
     </section>
 
     <section id="troubleshooting">
@@ -341,25 +310,4 @@
   </div>
 </section>
 </div>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="site-footer__grid">
-      <div>
-        <a href="index.html" class="brand-lockup" style="margin-bottom: 14px;"><img src="assets/manilo-icon.svg" alt="" class="brand-icon"><span class="brand-word brand-word--text">manilo</span></a>
-        <p class="site-footer__about">Expenses that track themselves.</p>
-      </div>
-      <div><h4>Product</h4><ul><li><a href="index.html">Home</a></li><li><a href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer">Pricing</a></li><li><a href="integrations.html">Integrations</a></li><li><a href="chatgpt.html">Manilo in ChatGPT</a></li><li><a href="https://dashboard.manilo.app" target="_blank" rel="noopener noreferrer">Dashboard</a></li></ul></div>
-      <div><h4>Developers</h4><ul><li><a href="api-v1.html">API v1 reference</a></li><li><a href="integrations.html">MCP integration</a></li></ul></div>
-      <div><h4>Support</h4><ul><li><a href="support.html">Help center</a></li><li><a href="mailto:support@manilo.app">support@manilo.app</a></li></ul></div>
-      <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
-    </div>
-    <div class="site-footer__legal"><span>© 2026 Manilo</span></div>
-  </div>
-</footer>
-
-<script src="assets/site.js" defer></script>
-<script src="assets/doc.js" defer></script>
-</body>
-</html>
+</Base>

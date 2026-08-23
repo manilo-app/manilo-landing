@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Page not found — Manilo"
+  description="That page does not exist. Head back to the Manilo home for multi-currency expense tracking on iOS."
+  path="/404"
+  robots="noindex, follow"
+  screenLabel="404"
+>
+<Fragment slot="head">
+<style is:inline>
+  .nf { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 4rem 1rem; }
+  .nf__inner { max-width: 640px; text-align: center; }
+  .nf__code { font-size: 8rem; font-weight: 800; line-height: 1; background: linear-gradient(135deg, #FFFFFF 0%, #9C96F6 100%); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 0 0 1rem 0; letter-spacing: -0.05em; }
+  .nf__title { font-size: 2rem; font-weight: 700; margin: 0 0 1rem 0; color: var(--fg1, #E8EBF0); }
+  .nf__copy { font-size: 1.05rem; color: var(--fg2, hsl(220,10%,60%)); margin: 0 0 2rem 0; line-height: 1.6; }
+  .nf__links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+  .nf__link { padding: 0.65rem 1.1rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); background: rgba(96, 65, 255, 0.08); color: var(--fg1, #E8EBF0); text-decoration: none; font-size: 0.95rem; transition: all 0.2s; }
+  .nf__link:hover { background: rgba(96, 65, 255, 0.2); border-color: #7B62FF; }
+  .nf__link--primary { background: #6042FE; color: white; border-color: #6042FE; }
+  .nf__link--primary:hover { background: #7B62FF; }
+</style>
+</Fragment>
+
+  <section class="nf">
+    <div class="nf__inner">
+      <p class="nf__code">404</p>
+      <h1 class="nf__title">That page wandered off.</h1>
+      <p class="nf__copy">
+        We can't find what you were looking for. Head back to the home page, or try one of the links below.
+      </p>
+      <div class="nf__links">
+        <a class="nf__link nf__link--primary" href="/">← Home</a>
+        <a class="nf__link" href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer">Pricing</a>
+        <a class="nf__link" href="/integrations">Integrations</a>
+        <a class="nf__link" href="/chatgpt">ChatGPT</a>
+        <a class="nf__link" href="/api-v1">API v1</a>
+        <a class="nf__link" href="/support">Support</a>
+        <a class="nf__link" href="https://apps.apple.com/app/id6761738170" target="_blank" rel="noopener noreferrer">App Store</a>
+      </div>
+    </div>
+  </section>
+</Base>

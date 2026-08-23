@@ -1,30 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>API v1 Reference — Manilo for Developers</title>
-<meta name="description" content="Manilo REST API v1 reference. Authenticate with a Personal Access Token and manage accounts, categories, budgets, groups, and transactions over HTTPS. Built for developers and AI agents via MCP.">
-<link rel="canonical" href="https://manilo.app/api-v1">
-<link rel="alternate" hreflang="en" href="https://manilo.app/api-v1">
-<link rel="alternate" hreflang="x-default" href="https://manilo.app/api-v1">
-<meta name="apple-itunes-app" content="app-id=6761738170">
-<meta name="theme-color" content="#0a0a14">
-<meta property="og:site_name" content="Manilo">
-<meta property="og:title" content="API v1 Reference — Manilo for Developers">
-<meta property="og:description" content="REST API for Manilo. PAT auth, manage accounts/categories/budgets/groups/transactions. Built for devs and AI agents via MCP.">
-<meta property="og:image" content="https://manilo.app/assets/og-image.png">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://manilo.app/api-v1">
-<meta name="twitter:card" content="summary_large_image">
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="API v1 Reference — Manilo for Developers"
+  description="Manilo REST API v1 reference. Authenticate with a Personal Access Token and manage accounts, categories, budgets, groups, and transactions over HTTPS. Built for developers and AI agents via MCP."
+  path="/api-v1"
+  ogDescription="REST API for Manilo. PAT auth, manage accounts/categories/budgets/groups/transactions. Built for devs and AI agents via MCP."
+  ogType="article"
+  screenLabel="07 API v1 Reference"
+  css={['/assets/doc.css']}
+  js={['/assets/doc.js']}
+>
+<Fragment slot="head">
 <meta name="twitter:title" content="API v1 Reference — Manilo for Developers">
 <meta name="twitter:description" content="REST API for Manilo. PAT auth. Built for devs and AI agents via MCP.">
-<meta name="twitter:image" content="https://manilo.app/assets/og-image.png">
-<link rel="icon" type="image/svg+xml" href="assets/manilo-icon.svg">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
-<link rel="stylesheet" href="assets/site.css">
-<link rel="stylesheet" href="assets/doc.css">
-<script type="application/ld+json">
+<script type="application/ld+json" is:inline>
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -34,7 +24,7 @@
   ]
 }
 </script>
-<script type="application/ld+json">
+<script type="application/ld+json" is:inline>
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
@@ -60,28 +50,8 @@
   "proficiencyLevel": "Expert"
 }
 </script>
-<script src="assets/analytics.js" defer></script>
-</head>
-<body data-screen-label="07 API v1 Reference">
-<a href="#main" class="skip-link">Skip to content</a>
-<div class="starfield" aria-hidden="true"></div>
+</Fragment>
 
-<header class="site-header">
-  <div class="container site-header__inner">
-    <a href="index.html" class="brand-lockup"><img src="assets/manilo-icon.svg" alt="" class="brand-icon"><span class="brand-word brand-word--text">manilo</span></a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer">Pricing</a>
-      <a href="support.html">Support</a>
-    </nav>
-    <div class="site-header__cta">
-      <a class="btn btn--ghost" href="https://dashboard.manilo.app" target="_blank" rel="noopener noreferrer">Open dashboard</a>
-      <a class="btn btn--primary" href="https://apps.apple.com/app/id6761738170" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-apple"></i> Download on the App Store</a>
-    </div>
-  </div>
-</header>
-
-<main id="main">
 <section class="doc-hero">
   <div class="container">
     <span class="t-eyebrow">Developers</span>
@@ -147,7 +117,7 @@
       <div class="callout">
         <i class="fa-solid fa-flask"></i>
         <div>
-          <strong>Looking for an AI assistant?</strong> If you want Claude, ChatGPT, or Cursor to talk to Manilo on your behalf, use the Model Context Protocol endpoint at <code>https://api.manilo.app/mcp</code> — see <a href="integrations.html">Integrations</a>. The REST API documented here is for code you write yourself.
+          <strong>Looking for an AI assistant?</strong> If you want Claude, ChatGPT, or Cursor to talk to Manilo on your behalf, use the Model Context Protocol endpoint at <code>https://api.manilo.app/mcp</code> — see <a href="/integrations">Integrations</a>. The REST API documented here is for code you write yourself.
         </div>
       </div>
     </section>
@@ -179,7 +149,7 @@ curl <span class="c-str">"https://api.manilo.app/api/v1/accounts"</span> \
       <h3>3. Inspect the response</h3>
       <div class="code-block">
         <div class="code-block__header"><span class="code-block__lang">200 OK</span><span class="code-block__caption">application/json</span></div>
-<pre>{
+<pre is:raw>{
   <span class="c-key">"items"</span>: [
     {
       <span class="c-key">"id"</span>: <span class="c-str">"acc_01HK8V…"</span>,
@@ -271,7 +241,7 @@ curl <span class="c-str">"https://api.manilo.app/api/v1/accounts"</span> \
       <p>All v1 endpoints — including read-only ones — require the calling user to have an <strong>active Manilo Cloud subscription</strong>. If the subscription has lapsed, expired, or never been started, the API responds with:</p>
       <div class="code-block">
         <div class="code-block__header"><span class="code-block__lang">403 Forbidden</span></div>
-<pre>HTTP/1.1 403 Forbidden
+<pre is:raw>HTTP/1.1 403 Forbidden
 X-Subscription-Required: true
 Content-Type: application/json
 
@@ -288,7 +258,7 @@ Content-Type: application/json
       <p>Errors use standard HTTP status codes. The response body is a single-field JSON object:</p>
       <div class="code-block">
         <div class="code-block__header"><span class="code-block__lang">JSON</span></div>
-<pre>{ <span class="c-key">"error"</span>: <span class="c-str">"Human-readable message"</span> }</pre>
+<pre is:raw>{ <span class="c-key">"error"</span>: <span class="c-str">"Human-readable message"</span> }</pre>
       </div>
       <p>Status codes you should handle:</p>
       <dl class="status-grid">
@@ -362,7 +332,7 @@ Content-Type: application/json
       <div class="endpoint" id="acc-get">
         <div class="endpoint__head">
           <span class="method-badge method-badge--get">GET</span>
-          <code class="endpoint__path">/api/v1/accounts/<span class="var">{id}</span></code>
+          <code class="endpoint__path">/api/v1/accounts/<span class="var" is:raw>{id}</span></code>
           <span class="endpoint__scope">accounts:read</span>
           <p class="endpoint__desc">Fetch one account by id. <code>404</code> if not found.</p>
         </div>
@@ -394,7 +364,7 @@ Content-Type: application/json
         <div class="code-pair">
           <div class="code-block">
             <div class="code-block__header"><span class="code-block__lang">Request</span></div>
-<pre>POST /api/v1/accounts
+<pre is:raw>POST /api/v1/accounts
 {
   <span class="c-key">"name"</span>: <span class="c-str">"Cash"</span>,
   <span class="c-key">"currencyCode"</span>: <span class="c-str">"EUR"</span>,
@@ -406,7 +376,7 @@ Content-Type: application/json
           </div>
           <div class="code-block">
             <div class="code-block__header"><span class="code-block__lang">201 Created</span></div>
-<pre>{
+<pre is:raw>{
   <span class="c-key">"id"</span>: <span class="c-str">"acc_01HK8V…"</span>,
   <span class="c-key">"name"</span>: <span class="c-str">"Cash"</span>,
   <span class="c-key">"currencyCode"</span>: <span class="c-str">"EUR"</span>,
@@ -427,7 +397,7 @@ Content-Type: application/json
       <div class="endpoint" id="acc-update">
         <div class="endpoint__head">
           <span class="method-badge method-badge--put">PUT</span>
-          <code class="endpoint__path">/api/v1/accounts/<span class="var">{id}</span></code>
+          <code class="endpoint__path">/api/v1/accounts/<span class="var" is:raw>{id}</span></code>
           <span class="endpoint__scope">accounts:write</span>
           <p class="endpoint__desc">Replace an existing account. Body is identical to <a href="#acc-create">Create</a>; all fields must be provided.</p>
         </div>
@@ -437,7 +407,7 @@ Content-Type: application/json
       <div class="endpoint" id="acc-delete">
         <div class="endpoint__head">
           <span class="method-badge method-badge--delete">DELETE</span>
-          <code class="endpoint__path">/api/v1/accounts/<span class="var">{id}</span></code>
+          <code class="endpoint__path">/api/v1/accounts/<span class="var" is:raw>{id}</span></code>
           <span class="endpoint__scope">accounts:write</span>
           <p class="endpoint__desc">Soft-delete an account. Decide what happens to its transactions via the <code>action</code> query parameter.</p>
         </div>
@@ -485,7 +455,7 @@ Content-Type: application/json
       <div class="endpoint" id="cat-get">
         <div class="endpoint__head">
           <span class="method-badge method-badge--get">GET</span>
-          <code class="endpoint__path">/api/v1/categories/<span class="var">{id}</span></code>
+          <code class="endpoint__path">/api/v1/categories/<span class="var" is:raw>{id}</span></code>
           <span class="endpoint__scope">categories:read</span>
           <p class="endpoint__desc">Fetch one user category by id.</p>
         </div>
@@ -518,7 +488,7 @@ Content-Type: application/json
       <div class="endpoint" id="cat-update">
         <div class="endpoint__head">
           <span class="method-badge method-badge--put">PUT</span>
-          <code class="endpoint__path">/api/v1/categories/<span class="var">{id}</span></code>
+          <code class="endpoint__path">/api/v1/categories/<span class="var" is:raw>{id}</span></code>
           <span class="endpoint__scope">categories:write</span>
           <p class="endpoint__desc">Replace a user category. Body is identical to <a href="#cat-create">Create</a>.</p>
         </div>
@@ -527,7 +497,7 @@ Content-Type: application/json
       <div class="endpoint" id="cat-delete">
         <div class="endpoint__head">
           <span class="method-badge method-badge--delete">DELETE</span>
-          <code class="endpoint__path">/api/v1/categories/<span class="var">{id}</span></code>
+          <code class="endpoint__path">/api/v1/categories/<span class="var" is:raw>{id}</span></code>
           <span class="endpoint__scope">categories:write</span>
           <p class="endpoint__desc">Soft-delete a user category. Transactions are not deleted; their <code>categoryId</code> is cleared.</p>
         </div>
@@ -547,7 +517,7 @@ Content-Type: application/json
       <div class="endpoint" id="cg-get">
         <div class="endpoint__head">
           <span class="method-badge method-badge--get">GET</span>
-          <code class="endpoint__path">/api/v1/categories/groups/<span class="var">{id}</span></code>
+          <code class="endpoint__path">/api/v1/categories/groups/<span class="var" is:raw>{id}</span></code>
           <span class="endpoint__scope">categories:read</span>
           <p class="endpoint__desc">Fetch one category group.</p>
         </div>
@@ -577,7 +547,7 @@ Content-Type: application/json
       <div class="endpoint" id="cg-update">
         <div class="endpoint__head">
           <span class="method-badge method-badge--put">PUT</span>
-          <code class="endpoint__path">/api/v1/categories/groups/<span class="var">{id}</span></code>
+          <code class="endpoint__path">/api/v1/categories/groups/<span class="var" is:raw>{id}</span></code>
           <span class="endpoint__scope">categories:write</span>
           <p class="endpoint__desc">Replace a category group.</p>
         </div>
@@ -586,7 +556,7 @@ Content-Type: application/json
       <div class="endpoint" id="cg-delete">
         <div class="endpoint__head">
           <span class="method-badge method-badge--delete">DELETE</span>
-          <code class="endpoint__path">/api/v1/categories/groups/<span class="var">{id}</span></code>
+          <code class="endpoint__path">/api/v1/categories/groups/<span class="var" is:raw>{id}</span></code>
           <span class="endpoint__scope">categories:write</span>
           <p class="endpoint__desc">Soft-delete a group. Child categories survive — their <code>categoryGroupId</code> is cleared.</p>
         </div>
@@ -612,7 +582,7 @@ Content-Type: application/json
       <div class="endpoint" id="bdg-get">
         <div class="endpoint__head">
           <span class="method-badge method-badge--get">GET</span>
-          <code class="endpoint__path">/api/v1/budgets/<span class="var">{id}</span></code>
+          <code class="endpoint__path">/api/v1/budgets/<span class="var" is:raw>{id}</span></code>
           <span class="endpoint__scope">budgets:read</span>
           <p class="endpoint__desc">Fetch one budget.</p>
         </div>
@@ -647,7 +617,7 @@ Content-Type: application/json
       <div class="endpoint" id="bdg-update">
         <div class="endpoint__head">
           <span class="method-badge method-badge--put">PUT</span>
-          <code class="endpoint__path">/api/v1/budgets/<span class="var">{id}</span></code>
+          <code class="endpoint__path">/api/v1/budgets/<span class="var" is:raw>{id}</span></code>
           <span class="endpoint__scope">budgets:write</span>
           <p class="endpoint__desc">Replace a budget.</p>
         </div>
@@ -656,7 +626,7 @@ Content-Type: application/json
       <div class="endpoint" id="bdg-delete">
         <div class="endpoint__head">
           <span class="method-badge method-badge--delete">DELETE</span>
-          <code class="endpoint__path">/api/v1/budgets/<span class="var">{id}</span></code>
+          <code class="endpoint__path">/api/v1/budgets/<span class="var" is:raw>{id}</span></code>
           <span class="endpoint__scope">budgets:write</span>
           <p class="endpoint__desc">Soft-delete a budget.</p>
         </div>
@@ -682,7 +652,7 @@ Content-Type: application/json
       <div class="endpoint" id="grp-get">
         <div class="endpoint__head">
           <span class="method-badge method-badge--get">GET</span>
-          <code class="endpoint__path">/api/v1/groups/<span class="var">{id}</span></code>
+          <code class="endpoint__path">/api/v1/groups/<span class="var" is:raw>{id}</span></code>
           <span class="endpoint__scope">groups:read</span>
           <p class="endpoint__desc">Fetch one group.</p>
         </div>
@@ -712,7 +682,7 @@ Content-Type: application/json
       <div class="endpoint" id="grp-update">
         <div class="endpoint__head">
           <span class="method-badge method-badge--put">PUT</span>
-          <code class="endpoint__path">/api/v1/groups/<span class="var">{id}</span></code>
+          <code class="endpoint__path">/api/v1/groups/<span class="var" is:raw>{id}</span></code>
           <span class="endpoint__scope">groups:write</span>
           <p class="endpoint__desc">Replace a group's metadata.</p>
         </div>
@@ -721,7 +691,7 @@ Content-Type: application/json
       <div class="endpoint" id="grp-delete">
         <div class="endpoint__head">
           <span class="method-badge method-badge--delete">DELETE</span>
-          <code class="endpoint__path">/api/v1/groups/<span class="var">{id}</span></code>
+          <code class="endpoint__path">/api/v1/groups/<span class="var" is:raw>{id}</span></code>
           <span class="endpoint__scope">groups:write</span>
           <p class="endpoint__desc">Soft-delete a group. Members lose visibility; underlying transactions revert to personal.</p>
         </div>
@@ -761,7 +731,7 @@ Content-Type: application/json
         </div>
         <div class="code-block">
           <div class="code-block__header"><span class="code-block__lang">200 OK</span></div>
-<pre>{
+<pre is:raw>{
   <span class="c-key">"items"</span>: [ <span class="c-cmt">/* TransactionDto[] */</span> ],
   <span class="c-key">"totalCount"</span>: <span class="c-num">317</span>,
   <span class="c-key">"nextCursor"</span>: <span class="c-str">"eyJrIjoiMjAyNi0wNS0xM1QxMDoz…"</span>
@@ -773,7 +743,7 @@ Content-Type: application/json
       <div class="endpoint" id="tx-get">
         <div class="endpoint__head">
           <span class="method-badge method-badge--get">GET</span>
-          <code class="endpoint__path">/api/v1/transactions/<span class="var">{id}</span></code>
+          <code class="endpoint__path">/api/v1/transactions/<span class="var" is:raw>{id}</span></code>
           <span class="endpoint__scope">transactions:read</span>
           <p class="endpoint__desc">Fetch one transaction.</p>
         </div>
@@ -808,7 +778,7 @@ Content-Type: application/json
         </div>
         <div class="code-block">
           <div class="code-block__header"><span class="code-block__lang">Request</span><span class="code-block__caption">€8.50 coffee yesterday on Wise</span></div>
-<pre>POST /api/v1/transactions
+<pre is:raw>POST /api/v1/transactions
 {
   <span class="c-key">"type"</span>: <span class="c-str">"expense"</span>,
   <span class="c-key">"amount"</span>: <span class="c-num">8.50</span>,
@@ -826,7 +796,7 @@ Content-Type: application/json
       <div class="endpoint" id="tx-update">
         <div class="endpoint__head">
           <span class="method-badge method-badge--put">PUT</span>
-          <code class="endpoint__path">/api/v1/transactions/<span class="var">{id}</span></code>
+          <code class="endpoint__path">/api/v1/transactions/<span class="var" is:raw>{id}</span></code>
           <span class="endpoint__scope">transactions:write</span>
           <p class="endpoint__desc">Replace a transaction. Body is identical to <a href="#tx-create">Create</a>.</p>
         </div>
@@ -836,7 +806,7 @@ Content-Type: application/json
       <div class="endpoint" id="tx-delete">
         <div class="endpoint__head">
           <span class="method-badge method-badge--delete">DELETE</span>
-          <code class="endpoint__path">/api/v1/transactions/<span class="var">{id}</span></code>
+          <code class="endpoint__path">/api/v1/transactions/<span class="var" is:raw>{id}</span></code>
           <span class="endpoint__scope">transactions:write</span>
           <p class="endpoint__desc">Soft-delete one transaction.</p>
         </div>
@@ -880,7 +850,7 @@ Content-Type: application/json
         </div>
         <div class="code-block">
           <div class="code-block__header"><span class="code-block__lang">200 OK</span></div>
-<pre>{
+<pre is:raw>{
   <span class="c-key">"items"</span>: [ <span class="c-cmt">/* successful TransactionDto[] */</span> ],
   <span class="c-key">"errors"</span>: [
     { <span class="c-key">"index"</span>: <span class="c-num">3</span>, <span class="c-key">"error"</span>: <span class="c-str">"Invalid currency code"</span> }
@@ -916,7 +886,7 @@ Content-Type: application/json
         </div>
         <div class="code-block">
           <div class="code-block__header"><span class="code-block__lang">200 OK</span></div>
-<pre>{
+<pre is:raw>{
   <span class="c-key">"deleted"</span>: <span class="c-num">97</span>,
   <span class="c-key">"notFound"</span>: [ <span class="c-str">"tx_old1"</span>, <span class="c-str">"tx_old2"</span>, <span class="c-str">"tx_old3"</span> ]
 }</pre>
@@ -964,7 +934,7 @@ Content-Type: application/json
         </div>
         <div class="code-block">
           <div class="code-block__header"><span class="code-block__lang">200 OK</span></div>
-<pre>{
+<pre is:raw>{
   <span class="c-key">"version"</span>: <span class="c-str">"2026.05.10"</span>,
   <span class="c-key">"library"</span>: <span class="c-str">"font-awesome-6"</span>,
   <span class="c-key">"categories"</span>: [
@@ -1000,32 +970,11 @@ Content-Type: application/json
          ============================================================ -->
     <section id="support">
       <h2 data-num="16">Support</h2>
-      <p>Found a bug, want an endpoint, or hit something undocumented? Open the <a href="support.html">help center</a> or email <a href="mailto:support@manilo.app">support@manilo.app</a> — please include the request id (echoed in the <code>X-Request-Id</code> response header) when reporting an issue.</p>
+      <p>Found a bug, want an endpoint, or hit something undocumented? Open the <a href="/support">help center</a> or email <a href="mailto:support@manilo.app">support@manilo.app</a> — please include the request id (echoed in the <code>X-Request-Id</code> response header) when reporting an issue.</p>
       <p>For security-sensitive disclosures (a token leak, a permission bypass, an unauthorized read) write to <a href="mailto:security@manilo.app">security@manilo.app</a>.</p>
     </section>
 
   </article>
 </div>
 </div>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="site-footer__grid">
-      <div>
-        <a href="index.html" class="brand-lockup" style="margin-bottom: 14px;"><img src="assets/manilo-icon.svg" alt="" class="brand-icon"><span class="brand-word brand-word--text">manilo</span></a>
-        <p class="site-footer__about">Expenses that track themselves.</p>
-      </div>
-      <div><h4>Product</h4><ul><li><a href="index.html">Home</a></li><li><a href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer">Pricing</a></li><li><a href="integrations.html">Integrations</a></li><li><a href="chatgpt.html">Manilo in ChatGPT</a></li><li><a href="https://dashboard.manilo.app" target="_blank" rel="noopener noreferrer">Dashboard</a></li></ul></div>
-      <div><h4>Developers</h4><ul><li><a href="api-v1.html">API v1 reference</a></li><li><a href="integrations.html">MCP integration</a></li></ul></div>
-      <div><h4>Support</h4><ul><li><a href="support.html">Help center</a></li><li><a href="mailto:support@manilo.app">support@manilo.app</a></li></ul></div>
-      <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
-    </div>
-    <div class="site-footer__legal"><span>© 2026 Manilo</span></div>
-  </div>
-</footer>
-
-<script src="assets/site.js" defer></script>
-<script src="assets/doc.js" defer></script>
-</body>
-</html>
+</Base>
