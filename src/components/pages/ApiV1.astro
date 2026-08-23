@@ -1,0 +1,990 @@
+---
+import Base from '../../layouts/Base.astro';
+import { navUrl, type Locale } from '../../i18n/config';
+import { getDict } from '../../i18n';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const d = getDict<any>(lang, 'api');
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: d.jsonLd.breadcrumbHome, item: 'https://manilo.app/' },
+    { '@type': 'ListItem', position: 2, name: d.jsonLd.breadcrumbApi, item: 'https://manilo.app/api-v1' },
+  ],
+};
+
+const techArticleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: d.jsonLd.headline,
+  description: d.jsonLd.description,
+  url: 'https://manilo.app/api-v1',
+  inLanguage: lang,
+  datePublished: '2026-05-19',
+  dateModified: '2026-05-26',
+  image: 'https://manilo.app/assets/og-image.png',
+  author: { '@type': 'Person', name: 'Borys Harholinskyi' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Manilo',
+    logo: { '@type': 'ImageObject', url: 'https://manilo.app/assets/manilo-icon.svg' },
+  },
+  about: {
+    '@type': 'MobileApplication',
+    name: 'Manilo',
+    operatingSystem: 'iOS 15.0',
+    applicationCategory: 'FinanceApplication',
+  },
+  proficiencyLevel: 'Expert',
+};
+---
+<Base
+  title={d.meta.title}
+  description={d.meta.description}
+  path="/api-v1"
+  locale={lang}
+  ogDescription={d.meta.ogDescription}
+  ogType="article"
+  screenLabel="07 API v1 Reference"
+  css={['/assets/doc.css']}
+  js={['/assets/doc.js']}
+>
+<Fragment slot="head">
+<meta name="twitter:title" content={d.meta.twitterTitle}>
+<meta name="twitter:description" content={d.meta.twitterDescription}>
+<script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(techArticleLd)} />
+</Fragment>
+
+<section class="doc-hero">
+  <div class="container">
+    <span class="t-eyebrow">{d.hero.eyebrow}</span>
+    <h1>{d.hero.title}</h1>
+    <p class="doc-meta">
+      <span><i class="fa-solid fa-code"></i> {d.hero.stack}</span>
+      <span><i class="fa-solid fa-server"></i> <code>https://api.manilo.app</code></span>
+      <span><i class="fa-solid fa-circle-check"></i> {d.hero.stability}</span>
+    </p>
+  </div>
+</section>
+
+<div class="container">
+<div class="doc">
+  <aside class="doc__toc doc__toc--collapsible" aria-label={d.toc.ariaLabel}>
+    <h4>{d.toc.heading}</h4>
+    <button class="doc__toc-toggle" type="button" aria-expanded="false" aria-controls="toc-list">
+      <i class="fa-solid fa-bars"></i> {d.toc.toggle} <i class="fa-solid fa-chevron-down doc__toc-chev"></i>
+    </button>
+    <ol id="toc-list">
+      <li class="toc-group">{d.toc.groups.gettingStarted}</li>
+      <li><a href="#overview">{d.toc.items.overview}</a></li>
+      <li><a href="#quickstart">{d.toc.items.quickstart}</a></li>
+      <li><a href="#authentication">{d.toc.items.authentication}</a></li>
+      <li><a href="#scopes">{d.toc.items.scopes}</a></li>
+      <li><a href="#subscription">{d.toc.items.subscription}</a></li>
+
+      <li class="toc-group">{d.toc.groups.conventions}</li>
+      <li><a href="#errors">{d.toc.items.errors}</a></li>
+      <li><a href="#pagination">{d.toc.items.pagination}</a></li>
+      <li><a href="#types">{d.toc.items.types}</a></li>
+
+      <li class="toc-group">{d.toc.groups.resources}</li>
+      <li><a href="#accounts">{d.toc.items.accounts}</a></li>
+      <li><a href="#categories">{d.toc.items.categories}</a></li>
+      <li><a href="#budgets">{d.toc.items.budgets}</a></li>
+      <li><a href="#groups">{d.toc.items.groups}</a></li>
+      <li><a href="#transactions">{d.toc.items.transactions}</a></li>
+      <li><a href="#icons">{d.toc.items.icons}</a></li>
+
+      <li class="toc-group">{d.toc.groups.more}</li>
+      <li><a href="#changelog">{d.toc.items.changelog}</a></li>
+      <li><a href="#support">{d.toc.items.support}</a></li>
+    </ol>
+  </aside>
+
+  <article class="doc__body">
+
+    <!-- ============================================================
+         OVERVIEW
+         ============================================================ -->
+    <section id="overview">
+      <h2 data-num="01">{d.overview.title}</h2>
+      <p>{d.overview.intro}</p>
+      <ul>
+        <li><strong>{d.overview.bullets.baseUrl.label}</strong> <code>https://api.manilo.app</code>{d.overview.bullets.baseUrl.t1}<code>api.ledgy.app</code>{d.overview.bullets.baseUrl.t2}</li>
+        <li><strong>{d.overview.bullets.versionPrefix.label}</strong>{d.overview.bullets.versionPrefix.t1}<code>/api/v1/</code>{d.overview.bullets.versionPrefix.t2}</li>
+        <li><strong>{d.overview.bullets.transport.label}</strong>{d.overview.bullets.transport.t1}</li>
+        <li><strong>{d.overview.bullets.encoding.label}</strong>{d.overview.bullets.encoding.t1}<code>camelCase</code>{d.overview.bullets.encoding.t2}</li>
+        <li><strong>{d.overview.bullets.auth.label}</strong> <code>Authorization: Bearer …</code>{d.overview.bullets.auth.t1}</li>
+        <li><strong>{d.overview.bullets.subscription.label}</strong>{d.overview.bullets.subscription.t1}<a href="#subscription">{d.overview.bullets.subscription.link}</a>{d.overview.bullets.subscription.t2}</li>
+      </ul>
+      <div class="callout">
+        <i class="fa-solid fa-flask"></i>
+        <div>
+          <strong>{d.overview.callout.strong}</strong>{d.overview.callout.t1}<code>https://api.manilo.app/mcp</code>{d.overview.callout.t2}<a href={navUrl(lang, '/integrations')}>{d.overview.callout.link}</a>{d.overview.callout.t3}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         QUICKSTART
+         ============================================================ -->
+    <section id="quickstart">
+      <h2 data-num="02">{d.quickstart.title}</h2>
+      <p>{d.quickstart.intro}</p>
+
+      <h3>{d.quickstart.mintTitle}</h3>
+      <ol>
+        <li>{d.quickstart.steps.signIn.t1}<a href="https://dashboard.manilo.app" target="_blank" rel="noopener noreferrer">{d.quickstart.steps.signIn.link}</a>{d.quickstart.steps.signIn.t2}<strong>{d.quickstart.steps.signIn.strong}</strong>{d.quickstart.steps.signIn.t3}</li>
+        <li>{d.quickstart.steps.newToken.t1}<strong>{d.quickstart.steps.newToken.strong}</strong>{d.quickstart.steps.newToken.t2}</li>
+        <li>{d.quickstart.steps.nameIt.t1}<em>{d.quickstart.steps.nameIt.em}</em>{d.quickstart.steps.nameIt.t2}<a href="#scopes">{d.quickstart.steps.nameIt.link}</a>{d.quickstart.steps.nameIt.t3}</li>
+        <li>{d.quickstart.steps.copyIt.t1}<em>{d.quickstart.steps.copyIt.em}</em>{d.quickstart.steps.copyIt.t2}<code>lgpat_</code>{d.quickstart.steps.copyIt.t3}</li>
+      </ol>
+      <p>{d.quickstart.tokensPage}</p>
+
+      <h3>{d.quickstart.requestTitle}</h3>
+      <div class="code-block">
+        <div class="code-block__header"><span class="code-block__lang">cURL</span><span class="code-block__caption">{d.quickstart.curlCaption}</span></div>
+<pre><span class="c-cmt"># Replace lgpat_… with your token</span>
+curl <span class="c-str">"https://api.manilo.app/api/v1/accounts"</span> \
+  -H <span class="c-str">"Authorization: Bearer lgpat_a1b2c3d4e5…"</span></pre>
+      </div>
+
+      <h3>{d.quickstart.responseTitle}</h3>
+      <div class="code-block">
+        <div class="code-block__header"><span class="code-block__lang">200 OK</span><span class="code-block__caption">application/json</span></div>
+<pre is:raw>{
+  <span class="c-key">"items"</span>: [
+    {
+      <span class="c-key">"id"</span>: <span class="c-str">"acc_01HK8V…"</span>,
+      <span class="c-key">"name"</span>: <span class="c-str">"Wise EUR"</span>,
+      <span class="c-key">"currencyCode"</span>: <span class="c-str">"EUR"</span>,
+      <span class="c-key">"initialBalance"</span>: <span class="c-num">1240.50</span>,
+      <span class="c-key">"icon"</span>: <span class="c-str">"wallet"</span>,
+      <span class="c-key">"color"</span>: <span class="c-str">"#4A90E2"</span>,
+      <span class="c-key">"order"</span>: <span class="c-num">0</span>,
+      <span class="c-key">"createdAt"</span>: <span class="c-str">"2026-04-12T08:13:09Z"</span>,
+      <span class="c-key">"updatedAt"</span>: <span class="c-str">"2026-05-01T17:02:31Z"</span>
+    }
+  ],
+  <span class="c-key">"totalCount"</span>: <span class="c-num">1</span>
+}</pre>
+      </div>
+
+      <div class="callout">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div><strong>{d.quickstart.callout.strong1}</strong>{d.quickstart.callout.t1}<strong>{d.quickstart.callout.strong2}</strong>{d.quickstart.callout.t2}</div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         AUTHENTICATION
+         ============================================================ -->
+    <section id="authentication">
+      <h2 data-num="03">{d.authentication.title}</h2>
+      <p>{d.authentication.intro.t1}<code>/api/v1/</code>{d.authentication.intro.t2}<code>Authorization</code>{d.authentication.intro.t3}</p>
+      <ul>
+        <li><strong>{d.authentication.pat.strong1}</strong>{d.authentication.pat.t1}<strong>{d.authentication.pat.strong2}</strong>{d.authentication.pat.t2}<code>lgpat_</code>{d.authentication.pat.t3}<strong>{d.authentication.pat.strong3}</strong></li>
+        <li><strong>{d.authentication.jwt.strong}</strong>{d.authentication.jwt.t1}</li>
+      </ul>
+
+      <h3>{d.authentication.headerTitle}</h3>
+      <div class="code-block">
+        <div class="code-block__header"><span class="code-block__lang">HTTP</span></div>
+<pre>Authorization: Bearer lgpat_a1b2c3d4e5f6…</pre>
+      </div>
+
+      <h3>{d.authentication.limitsTitle}</h3>
+      <ul>
+        <li>{d.authentication.limits.count.t1}<strong>{d.authentication.limits.count.strong}</strong>{d.authentication.limits.count.t2}</li>
+        <li>{d.authentication.limits.expiry.t1}<code>401 Unauthorized</code>{d.authentication.limits.expiry.t2}</li>
+        <li>{d.authentication.limits.revoked}</li>
+      </ul>
+
+      <h3>{d.authentication.failuresTitle}</h3>
+      <dl class="status-grid">
+        <dt class="s4xx">401</dt><dd>{d.authentication.failures.s401}</dd>
+        <dt class="s4xx">403</dt><dd>{d.authentication.failures.s403}</dd>
+      </dl>
+    </section>
+
+    <!-- ============================================================
+         SCOPES
+         ============================================================ -->
+    <section id="scopes">
+      <h2 data-num="04">{d.scopes.title}</h2>
+      <p>{d.scopes.intro.t1}<strong>{d.scopes.intro.strong}</strong>{d.scopes.intro.t2}<code>403 Forbidden</code>{d.scopes.intro.t3}</p>
+
+      <p>{d.scopes.available}</p>
+      <div class="scope-list">
+        <code>accounts:read</code>
+        <code>accounts:write</code>
+        <code>categories:read</code>
+        <code>categories:write</code>
+        <code>budgets:read</code>
+        <code>budgets:write</code>
+        <code>groups:read</code>
+        <code>groups:write</code>
+        <code>transactions:read</code>
+        <code>transactions:write</code>
+        <code>tags:read</code>
+        <code>tags:write</code>
+        <code>recurring:read</code>
+        <code>recurring:write</code>
+        <code>settings:read</code>
+        <code>settings:write</code>
+      </div>
+      <p>{d.scopes.chips.t1}<em>:write</em>{d.scopes.chips.t2}<em>:read</em>{d.scopes.chips.t3}</p>
+    </section>
+
+    <!-- ============================================================
+         SUBSCRIPTION GATE
+         ============================================================ -->
+    <section id="subscription">
+      <h2 data-num="05">{d.subscription.title}</h2>
+      <p>{d.subscription.intro.t1}<strong>{d.subscription.intro.strong}</strong>{d.subscription.intro.t2}</p>
+      <div class="code-block">
+        <div class="code-block__header"><span class="code-block__lang">403 Forbidden</span></div>
+<pre is:raw>HTTP/1.1 403 Forbidden
+X-Subscription-Required: true
+Content-Type: application/json
+
+{ <span class="c-key">"error"</span>: <span class="c-str">"Active cloud subscription required"</span> }</pre>
+      </div>
+      <p>{d.subscription.outro.t1}<code>X-Subscription-Required</code>{d.subscription.outro.t2}<a href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer">dashboard.manilo.app/upgrade</a>{d.subscription.outro.t3}</p>
+    </section>
+
+    <!-- ============================================================
+         ERRORS
+         ============================================================ -->
+    <section id="errors">
+      <h2 data-num="06">{d.errors.title}</h2>
+      <p>{d.errors.intro}</p>
+      <div class="code-block">
+        <div class="code-block__header"><span class="code-block__lang">JSON</span></div>
+<pre is:raw>{ <span class="c-key">"error"</span>: <span class="c-str">"Human-readable message"</span> }</pre>
+      </div>
+      <p>{d.errors.handle}</p>
+      <dl class="status-grid">
+        <dt class="s2xx">200</dt><dd>{d.errors.statuses.s200}</dd>
+        <dt class="s2xx">201</dt><dd>{d.errors.statuses.s201.t1}<code>Location</code>{d.errors.statuses.s201.t2}</dd>
+        <dt class="s2xx">204</dt><dd>{d.errors.statuses.s204}</dd>
+        <dt class="s4xx">400</dt><dd>{d.errors.statuses.s400}</dd>
+        <dt class="s4xx">401</dt><dd>{d.errors.statuses.s401.t1}<a href="#authentication">{d.errors.statuses.s401.link}</a>{d.errors.statuses.s401.t2}</dd>
+        <dt class="s4xx">403</dt><dd>{d.errors.statuses.s403}</dd>
+        <dt class="s4xx">404</dt><dd>{d.errors.statuses.s404}</dd>
+        <dt class="s4xx">409</dt><dd>{d.errors.statuses.s409}</dd>
+        <dt class="s5xx">5xx</dt><dd>{d.errors.statuses.s5xx}</dd>
+      </dl>
+    </section>
+
+    <!-- ============================================================
+         PAGINATION & FILTERS
+         ============================================================ -->
+    <section id="pagination">
+      <h2 data-num="07">{d.pagination.title}</h2>
+      <p>{d.pagination.intro}</p>
+
+      <h3>{d.pagination.cursorTitle}</h3>
+      <div class="code-block">
+        <div class="code-block__header"><span class="code-block__lang">cURL</span><span class="code-block__caption">{d.pagination.caption}</span></div>
+<pre>curl <span class="c-str">"https://api.manilo.app/api/v1/transactions?limit=50&amp;type=expense&amp;dateFrom=2026-01-01"</span> \
+  -H <span class="c-str">"Authorization: Bearer lgpat_…"</span></pre>
+      </div>
+      <p>{d.pagination.response.t1}<code>nextCursor</code>{d.pagination.response.t2}<code>cursor</code>{d.pagination.response.t3}<code>nextCursor</code>{d.pagination.response.t4}<code>null</code>{d.pagination.response.t5}</p>
+      <ul>
+        <li><code>limit</code>{d.pagination.params.limit.t1}<code>1..200</code>{d.pagination.params.limit.t2}<code>50</code>{d.pagination.params.limit.t3}</li>
+        <li><code>cursor</code>{d.pagination.params.cursor}</li>
+        <li><code>type</code>, <code>dateFrom</code>, <code>dateTo</code>, <code>categoryId</code>, <code>accountId</code>, <code>groupId</code>{d.pagination.params.filters.t1}<a href="#tx-list">{d.pagination.params.filters.link}</a>{d.pagination.params.filters.t2}</li>
+      </ul>
+    </section>
+
+    <!-- ============================================================
+         TYPES & FORMATS
+         ============================================================ -->
+    <section id="types">
+      <h2 data-num="08">{d.types.title}</h2>
+      <ul>
+        <li><strong>{d.types.ids.strong}</strong>{d.types.ids.t1}</li>
+        <li><strong>{d.types.timestamps.strong}</strong>{d.types.timestamps.t1}<code>Z</code>{d.types.timestamps.t2}<code>"2026-05-13T10:30:00Z"</code>{d.types.timestamps.t3}</li>
+        <li><strong>{d.types.dates.strong}</strong>{d.types.dates.t1}<code>date</code>{d.types.dates.t2}</li>
+        <li><strong>{d.types.money.strong1}</strong>{d.types.money.t1}<strong>{d.types.money.strong2}</strong>{d.types.money.t2}<code>12.50</code>{d.types.money.t3}<code>currencyCode</code>{d.types.money.t4}</li>
+        <li><strong>{d.types.currencyCodes.strong}</strong>{d.types.currencyCodes.t1}<code>"EUR"</code>, <code>"USD"</code>, <code>"GBP"</code>{d.types.currencyCodes.t2}</li>
+        <li><strong>{d.types.deletes.strong1}</strong>{d.types.deletes.t1}<strong>{d.types.deletes.strong2}</strong>{d.types.deletes.t2}</li>
+        <li><strong>{d.types.sideEffects.strong}</strong>{d.types.sideEffects.t1}<a href="#acc-delete">{d.types.sideEffects.link}</a>{d.types.sideEffects.t2}</li>
+      </ul>
+    </section>
+
+    <!-- ============================================================
+         ACCOUNTS
+         ============================================================ -->
+    <section id="accounts">
+      <h2 data-num="09">{d.accounts.title}</h2>
+      <p class="resource-intro">{d.accounts.intro}</p>
+
+      <!-- LIST -->
+      <div class="endpoint" id="acc-list">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--get">GET</span>
+          <code class="endpoint__path">/api/v1/accounts</code>
+          <span class="endpoint__scope">accounts:read</span>
+          <p class="endpoint__desc">{d.accounts.list.desc}</p>
+        </div>
+      </div>
+
+      <!-- GET -->
+      <div class="endpoint" id="acc-get">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--get">GET</span>
+          <code class="endpoint__path">/api/v1/accounts/<span class="var" is:raw>{id}</span></code>
+          <span class="endpoint__scope">accounts:read</span>
+          <p class="endpoint__desc">{d.accounts.get.desc.t1}<code>404</code>{d.accounts.get.desc.t2}</p>
+        </div>
+      </div>
+
+      <!-- CREATE -->
+      <div class="endpoint" id="acc-create">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--post">POST</span>
+          <code class="endpoint__path">/api/v1/accounts</code>
+          <span class="endpoint__scope">accounts:write</span>
+          <p class="endpoint__desc">{d.accounts.create.desc.t1}<code>201</code>{d.accounts.create.desc.t2}<code>Location</code>{d.accounts.create.desc.t3}</p>
+        </div>
+        <div class="params">
+          <span class="params__title">{d.common.requestBody}</span>
+          <table class="params-table">
+            <thead><tr><th>{d.common.field}</th><th>{d.common.type}</th><th>{d.common.description}</th></tr></thead>
+            <tbody>
+              <tr><td class="name">name</td><td class="type">string</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.accounts.create.fields.name}</td></tr>
+              <tr><td class="name">currencyCode</td><td class="type">string</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.accounts.create.fields.currencyCode}</td></tr>
+              <tr><td class="name">initialBalance</td><td class="type">number</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.accounts.create.fields.initialBalance.t1}<code>currencyCode</code>{d.accounts.create.fields.initialBalance.t2}</td></tr>
+              <tr><td class="name">order</td><td class="type">integer</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.accounts.create.fields.order}</td></tr>
+              <tr><td class="name">icon</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.accounts.create.fields.icon.t1}<a href="#icons">/api/v1/icons</a>{d.accounts.create.fields.icon.t2}</td></tr>
+              <tr><td class="name">color</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.accounts.create.fields.color.t1}<code>"#4A90E2"</code>{d.accounts.create.fields.color.t2}</td></tr>
+              <tr><td class="name">iconColor</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.accounts.create.fields.iconColor}</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="code-pair">
+          <div class="code-block">
+            <div class="code-block__header"><span class="code-block__lang">{d.common.requestLabel}</span></div>
+<pre is:raw>POST /api/v1/accounts
+{
+  <span class="c-key">"name"</span>: <span class="c-str">"Cash"</span>,
+  <span class="c-key">"currencyCode"</span>: <span class="c-str">"EUR"</span>,
+  <span class="c-key">"initialBalance"</span>: <span class="c-num">50.00</span>,
+  <span class="c-key">"order"</span>: <span class="c-num">2</span>,
+  <span class="c-key">"icon"</span>: <span class="c-str">"wallet"</span>,
+  <span class="c-key">"color"</span>: <span class="c-str">"#22C55E"</span>
+}</pre>
+          </div>
+          <div class="code-block">
+            <div class="code-block__header"><span class="code-block__lang">201 Created</span></div>
+<pre is:raw>{
+  <span class="c-key">"id"</span>: <span class="c-str">"acc_01HK8V…"</span>,
+  <span class="c-key">"name"</span>: <span class="c-str">"Cash"</span>,
+  <span class="c-key">"currencyCode"</span>: <span class="c-str">"EUR"</span>,
+  <span class="c-key">"initialBalance"</span>: <span class="c-num">50.00</span>,
+  <span class="c-key">"order"</span>: <span class="c-num">2</span>,
+  <span class="c-key">"icon"</span>: <span class="c-str">"wallet"</span>,
+  <span class="c-key">"color"</span>: <span class="c-str">"#22C55E"</span>,
+  <span class="c-key">"iconColor"</span>: <span class="c-null">null</span>,
+  <span class="c-key">"shareInviteToken"</span>: <span class="c-null">null</span>,
+  <span class="c-key">"createdAt"</span>: <span class="c-str">"2026-05-13T10:30:00Z"</span>,
+  <span class="c-key">"updatedAt"</span>: <span class="c-str">"2026-05-13T10:30:00Z"</span>
+}</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- UPDATE -->
+      <div class="endpoint" id="acc-update">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--put">PUT</span>
+          <code class="endpoint__path">/api/v1/accounts/<span class="var" is:raw>{id}</span></code>
+          <span class="endpoint__scope">accounts:write</span>
+          <p class="endpoint__desc">{d.accounts.update.desc.t1}<a href="#acc-create">{d.accounts.update.desc.link}</a>{d.accounts.update.desc.t2}</p>
+        </div>
+      </div>
+
+      <!-- DELETE -->
+      <div class="endpoint" id="acc-delete">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--delete">DELETE</span>
+          <code class="endpoint__path">/api/v1/accounts/<span class="var" is:raw>{id}</span></code>
+          <span class="endpoint__scope">accounts:write</span>
+          <p class="endpoint__desc">{d.accounts.delete.desc.t1}<code>action</code>{d.accounts.delete.desc.t2}</p>
+        </div>
+        <div class="params">
+          <span class="params__title">{d.common.queryParams}</span>
+          <table class="params-table">
+            <thead><tr><th>{d.common.field}</th><th>{d.common.type}</th><th>{d.common.description}</th></tr></thead>
+            <tbody>
+              <tr><td class="name">action</td><td class="type">enum</td><td class="desc"><span class="tag opt">{d.common.optional}</span><code>Detach</code>{d.accounts.delete.fields.action.t1}<code>Move</code>{d.accounts.delete.fields.action.t2}<code>moveTargetAccountId</code>{d.accounts.delete.fields.action.t3}<code>DeleteAll</code>{d.accounts.delete.fields.action.t4}</td></tr>
+              <tr><td class="name">moveTargetAccountId</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.accounts.delete.fields.moveTargetAccountId.t1}<code>action=Move</code>{d.accounts.delete.fields.moveTargetAccountId.t2}</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CATEGORIES
+         ============================================================ -->
+    <section id="categories">
+      <h2 data-num="10">{d.categories.title}</h2>
+      <p class="resource-intro">{d.categories.intro}</p>
+
+      <!-- SYSTEM -->
+      <div class="endpoint" id="cat-system">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--get">GET</span>
+          <code class="endpoint__path">/api/v1/categories/system-categories</code>
+          <span class="endpoint__scope">categories:read</span>
+          <p class="endpoint__desc">{d.categories.system.desc.t1}<code>version</code>{d.categories.system.desc.t2}</p>
+        </div>
+      </div>
+
+      <h3>{d.categories.userTitle}</h3>
+
+      <div class="endpoint" id="cat-list">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--get">GET</span>
+          <code class="endpoint__path">/api/v1/categories</code>
+          <span class="endpoint__scope">categories:read</span>
+          <p class="endpoint__desc">{d.categories.list.desc}</p>
+        </div>
+      </div>
+
+      <div class="endpoint" id="cat-get">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--get">GET</span>
+          <code class="endpoint__path">/api/v1/categories/<span class="var" is:raw>{id}</span></code>
+          <span class="endpoint__scope">categories:read</span>
+          <p class="endpoint__desc">{d.categories.get.desc}</p>
+        </div>
+      </div>
+
+      <div class="endpoint" id="cat-create">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--post">POST</span>
+          <code class="endpoint__path">/api/v1/categories</code>
+          <span class="endpoint__scope">categories:write</span>
+          <p class="endpoint__desc">{d.categories.create.desc}</p>
+        </div>
+        <div class="params">
+          <span class="params__title">{d.common.requestBody}</span>
+          <table class="params-table">
+            <thead><tr><th>{d.common.field}</th><th>{d.common.type}</th><th>{d.common.description}</th></tr></thead>
+            <tbody>
+              <tr><td class="name">name</td><td class="type">string</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.categories.create.fields.name}</td></tr>
+              <tr><td class="name">type</td><td class="type">string</td><td class="desc"><span class="tag req">{d.common.required}</span><code>"income"</code>{d.categories.create.fields.type.t1}<code>"expense"</code>{d.categories.create.fields.type.t2}</td></tr>
+              <tr><td class="name">order</td><td class="type">integer</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.categories.create.fields.order}</td></tr>
+              <tr><td class="name">isPinned</td><td class="type">boolean</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.categories.create.fields.isPinned}</td></tr>
+              <tr><td class="name">categoryGroupId</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.categories.create.fields.categoryGroupId.t1}<code>null</code>{d.categories.create.fields.categoryGroupId.t2}</td></tr>
+              <tr><td class="name">icon</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.categories.create.fields.icon}</td></tr>
+              <tr><td class="name">color</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.categories.create.fields.color}</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="endpoint" id="cat-update">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--put">PUT</span>
+          <code class="endpoint__path">/api/v1/categories/<span class="var" is:raw>{id}</span></code>
+          <span class="endpoint__scope">categories:write</span>
+          <p class="endpoint__desc">{d.categories.update.desc.t1}<a href="#cat-create">{d.categories.update.desc.link}</a>{d.categories.update.desc.t2}</p>
+        </div>
+      </div>
+
+      <div class="endpoint" id="cat-delete">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--delete">DELETE</span>
+          <code class="endpoint__path">/api/v1/categories/<span class="var" is:raw>{id}</span></code>
+          <span class="endpoint__scope">categories:write</span>
+          <p class="endpoint__desc">{d.categories.delete.desc.t1}<code>categoryId</code>{d.categories.delete.desc.t2}</p>
+        </div>
+      </div>
+
+      <h3>{d.categories.groupsTitle}</h3>
+
+      <div class="endpoint" id="cg-list">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--get">GET</span>
+          <code class="endpoint__path">/api/v1/categories/groups</code>
+          <span class="endpoint__scope">categories:read</span>
+          <p class="endpoint__desc">{d.categories.cgList.desc}</p>
+        </div>
+      </div>
+
+      <div class="endpoint" id="cg-get">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--get">GET</span>
+          <code class="endpoint__path">/api/v1/categories/groups/<span class="var" is:raw>{id}</span></code>
+          <span class="endpoint__scope">categories:read</span>
+          <p class="endpoint__desc">{d.categories.cgGet.desc}</p>
+        </div>
+      </div>
+
+      <div class="endpoint" id="cg-create">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--post">POST</span>
+          <code class="endpoint__path">/api/v1/categories/groups</code>
+          <span class="endpoint__scope">categories:write</span>
+          <p class="endpoint__desc">{d.categories.cgCreate.desc}</p>
+        </div>
+        <div class="params">
+          <span class="params__title">{d.common.requestBody}</span>
+          <table class="params-table">
+            <thead><tr><th>{d.common.field}</th><th>{d.common.type}</th><th>{d.common.description}</th></tr></thead>
+            <tbody>
+              <tr><td class="name">name</td><td class="type">string</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.categories.cgCreate.fields.name}</td></tr>
+              <tr><td class="name">order</td><td class="type">integer</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.categories.cgCreate.fields.order}</td></tr>
+              <tr><td class="name">icon</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.categories.cgCreate.fields.icon}</td></tr>
+              <tr><td class="name">color</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.categories.cgCreate.fields.color}</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="endpoint" id="cg-update">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--put">PUT</span>
+          <code class="endpoint__path">/api/v1/categories/groups/<span class="var" is:raw>{id}</span></code>
+          <span class="endpoint__scope">categories:write</span>
+          <p class="endpoint__desc">{d.categories.cgUpdate.desc}</p>
+        </div>
+      </div>
+
+      <div class="endpoint" id="cg-delete">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--delete">DELETE</span>
+          <code class="endpoint__path">/api/v1/categories/groups/<span class="var" is:raw>{id}</span></code>
+          <span class="endpoint__scope">categories:write</span>
+          <p class="endpoint__desc">{d.categories.cgDelete.desc.t1}<code>categoryGroupId</code>{d.categories.cgDelete.desc.t2}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         BUDGETS
+         ============================================================ -->
+    <section id="budgets">
+      <h2 data-num="11">{d.budgets.title}</h2>
+      <p class="resource-intro">{d.budgets.intro.t1}<code>categoryId</code>{d.budgets.intro.t2}<code>groupId</code>{d.budgets.intro.t3}</p>
+
+      <div class="endpoint" id="bdg-list">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--get">GET</span>
+          <code class="endpoint__path">/api/v1/budgets</code>
+          <span class="endpoint__scope">budgets:read</span>
+          <p class="endpoint__desc">{d.budgets.list.desc}</p>
+        </div>
+      </div>
+
+      <div class="endpoint" id="bdg-get">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--get">GET</span>
+          <code class="endpoint__path">/api/v1/budgets/<span class="var" is:raw>{id}</span></code>
+          <span class="endpoint__scope">budgets:read</span>
+          <p class="endpoint__desc">{d.budgets.get.desc}</p>
+        </div>
+      </div>
+
+      <div class="endpoint" id="bdg-create">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--post">POST</span>
+          <code class="endpoint__path">/api/v1/budgets</code>
+          <span class="endpoint__scope">budgets:write</span>
+          <p class="endpoint__desc">{d.budgets.create.desc}</p>
+        </div>
+        <div class="params">
+          <span class="params__title">{d.common.requestBody}</span>
+          <table class="params-table">
+            <thead><tr><th>{d.common.field}</th><th>{d.common.type}</th><th>{d.common.description}</th></tr></thead>
+            <tbody>
+              <tr><td class="name">amount</td><td class="type">number</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.budgets.create.fields.amount}</td></tr>
+              <tr><td class="name">currencyCode</td><td class="type">string</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.budgets.create.fields.currencyCode}</td></tr>
+              <tr><td class="name">period</td><td class="type">integer</td><td class="desc"><span class="tag req">{d.common.required}</span><code>0</code>{d.budgets.create.fields.period.t1}<code>1</code>{d.budgets.create.fields.period.t2}<code>2</code>{d.budgets.create.fields.period.t3}<code>3</code>{d.budgets.create.fields.period.t4}</td></tr>
+              <tr><td class="name">startDate</td><td class="type">string (ISO-8601)</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.budgets.create.fields.startDate}</td></tr>
+              <tr><td class="name">isActive</td><td class="type">boolean</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.budgets.create.fields.isActive}</td></tr>
+              <tr><td class="name">endDate</td><td class="type">string (ISO-8601)</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.budgets.create.fields.endDate}</td></tr>
+              <tr><td class="name">name</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.budgets.create.fields.name}</td></tr>
+              <tr><td class="name">categoryId</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.budgets.create.fields.categoryId}</td></tr>
+              <tr><td class="name">groupId</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.budgets.create.fields.groupId}</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="endpoint" id="bdg-update">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--put">PUT</span>
+          <code class="endpoint__path">/api/v1/budgets/<span class="var" is:raw>{id}</span></code>
+          <span class="endpoint__scope">budgets:write</span>
+          <p class="endpoint__desc">{d.budgets.update.desc}</p>
+        </div>
+      </div>
+
+      <div class="endpoint" id="bdg-delete">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--delete">DELETE</span>
+          <code class="endpoint__path">/api/v1/budgets/<span class="var" is:raw>{id}</span></code>
+          <span class="endpoint__scope">budgets:write</span>
+          <p class="endpoint__desc">{d.budgets.delete.desc}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         GROUPS
+         ============================================================ -->
+    <section id="groups">
+      <h2 data-num="12">{d.groups.title}</h2>
+      <p class="resource-intro">{d.groups.intro}</p>
+
+      <div class="endpoint" id="grp-list">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--get">GET</span>
+          <code class="endpoint__path">/api/v1/groups</code>
+          <span class="endpoint__scope">groups:read</span>
+          <p class="endpoint__desc">{d.groups.list.desc}</p>
+        </div>
+      </div>
+
+      <div class="endpoint" id="grp-get">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--get">GET</span>
+          <code class="endpoint__path">/api/v1/groups/<span class="var" is:raw>{id}</span></code>
+          <span class="endpoint__scope">groups:read</span>
+          <p class="endpoint__desc">{d.groups.get.desc}</p>
+        </div>
+      </div>
+
+      <div class="endpoint" id="grp-create">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--post">POST</span>
+          <code class="endpoint__path">/api/v1/groups</code>
+          <span class="endpoint__scope">groups:write</span>
+          <p class="endpoint__desc">{d.groups.create.desc}</p>
+        </div>
+        <div class="params">
+          <span class="params__title">{d.common.requestBody}</span>
+          <table class="params-table">
+            <thead><tr><th>{d.common.field}</th><th>{d.common.type}</th><th>{d.common.description}</th></tr></thead>
+            <tbody>
+              <tr><td class="name">name</td><td class="type">string</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.groups.create.fields.name}</td></tr>
+              <tr><td class="name">description</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.groups.create.fields.description}</td></tr>
+              <tr><td class="name">icon</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.groups.create.fields.icon}</td></tr>
+              <tr><td class="name">color</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.groups.create.fields.color}</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="endpoint" id="grp-update">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--put">PUT</span>
+          <code class="endpoint__path">/api/v1/groups/<span class="var" is:raw>{id}</span></code>
+          <span class="endpoint__scope">groups:write</span>
+          <p class="endpoint__desc">{d.groups.update.desc}</p>
+        </div>
+      </div>
+
+      <div class="endpoint" id="grp-delete">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--delete">DELETE</span>
+          <code class="endpoint__path">/api/v1/groups/<span class="var" is:raw>{id}</span></code>
+          <span class="endpoint__scope">groups:write</span>
+          <p class="endpoint__desc">{d.groups.delete.desc}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TRANSACTIONS
+         ============================================================ -->
+    <section id="transactions">
+      <h2 data-num="13">{d.transactions.title}</h2>
+      <p class="resource-intro">{d.transactions.intro.t1}<code>income</code>, <code>expense</code>, <code>transfer</code>{d.transactions.intro.t2}<code>adjustment</code>{d.transactions.intro.t3}</p>
+
+      <!-- LIST -->
+      <div class="endpoint" id="tx-list">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--get">GET</span>
+          <code class="endpoint__path">/api/v1/transactions</code>
+          <span class="endpoint__scope">transactions:read</span>
+          <p class="endpoint__desc">{d.transactions.list.desc}</p>
+        </div>
+        <div class="params">
+          <span class="params__title">{d.common.queryParams}</span>
+          <table class="params-table">
+            <thead><tr><th>{d.common.field}</th><th>{d.common.type}</th><th>{d.common.description}</th></tr></thead>
+            <tbody>
+              <tr><td class="name">limit</td><td class="type">integer</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.transactions.list.fields.limit.t1}<code>1..200</code>{d.transactions.list.fields.limit.t2}<code>50</code>{d.transactions.list.fields.limit.t3}</td></tr>
+              <tr><td class="name">cursor</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.transactions.list.fields.cursor}</td></tr>
+              <tr><td class="name">type</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span><code>"income"</code>, <code>"expense"</code>, <code>"transfer"</code>{d.transactions.list.fields.type.t1}<code>"adjustment"</code>{d.transactions.list.fields.type.t2}</td></tr>
+              <tr><td class="name">dateFrom</td><td class="type">string (ISO-8601)</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.transactions.list.fields.dateFrom}</td></tr>
+              <tr><td class="name">dateTo</td><td class="type">string (ISO-8601)</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.transactions.list.fields.dateTo}</td></tr>
+              <tr><td class="name">categoryId</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.transactions.list.fields.categoryId}</td></tr>
+              <tr><td class="name">accountId</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.transactions.list.fields.accountId}</td></tr>
+              <tr><td class="name">groupId</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.transactions.list.fields.groupId}</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="code-block">
+          <div class="code-block__header"><span class="code-block__lang">200 OK</span></div>
+<pre is:raw>{
+  <span class="c-key">"items"</span>: [ <span class="c-cmt">/* TransactionDto[] */</span> ],
+  <span class="c-key">"totalCount"</span>: <span class="c-num">317</span>,
+  <span class="c-key">"nextCursor"</span>: <span class="c-str">"eyJrIjoiMjAyNi0wNS0xM1QxMDoz…"</span>
+}</pre>
+        </div>
+      </div>
+
+      <!-- GET -->
+      <div class="endpoint" id="tx-get">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--get">GET</span>
+          <code class="endpoint__path">/api/v1/transactions/<span class="var" is:raw>{id}</span></code>
+          <span class="endpoint__scope">transactions:read</span>
+          <p class="endpoint__desc">{d.transactions.get.desc}</p>
+        </div>
+      </div>
+
+      <!-- CREATE -->
+      <div class="endpoint" id="tx-create">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--post">POST</span>
+          <code class="endpoint__path">/api/v1/transactions</code>
+          <span class="endpoint__scope">transactions:write</span>
+          <p class="endpoint__desc">{d.transactions.create.desc.t1}<a href="#tx-transfer">/transfer</a>{d.transactions.create.desc.t2}</p>
+        </div>
+        <div class="params">
+          <span class="params__title">{d.common.requestBody}</span>
+          <table class="params-table">
+            <thead><tr><th>{d.common.field}</th><th>{d.common.type}</th><th>{d.common.description}</th></tr></thead>
+            <tbody>
+              <tr><td class="name">type</td><td class="type">string</td><td class="desc"><span class="tag req">{d.common.required}</span><code>"income"</code>{d.transactions.create.fields.type.t1}<code>"expense"</code>{d.transactions.create.fields.type.t2}</td></tr>
+              <tr><td class="name">amount</td><td class="type">number</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.transactions.create.fields.amount.t1}<code>currencyCode</code>{d.transactions.create.fields.amount.t2}</td></tr>
+              <tr><td class="name">currencyCode</td><td class="type">string</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.transactions.create.fields.currencyCode}</td></tr>
+              <tr><td class="name">date</td><td class="type">string (ISO-8601)</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.transactions.create.fields.date}</td></tr>
+              <tr><td class="name">accountId</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.transactions.create.fields.accountId}</td></tr>
+              <tr><td class="name">categoryId</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.transactions.create.fields.categoryId}</td></tr>
+              <tr><td class="name">payee</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.transactions.create.fields.payee}</td></tr>
+              <tr><td class="name">note</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.transactions.create.fields.note}</td></tr>
+              <tr><td class="name">groupId</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.transactions.create.fields.groupId}</td></tr>
+              <tr><td class="name">exchangeRate</td><td class="type">number</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.transactions.create.fields.exchangeRate.t1}<code>currencyCode</code>{d.transactions.create.fields.exchangeRate.t2}</td></tr>
+              <tr><td class="name">convertedAmount</td><td class="type">number</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.transactions.create.fields.convertedAmount}</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="code-block">
+          <div class="code-block__header"><span class="code-block__lang">{d.common.requestLabel}</span><span class="code-block__caption">{d.transactions.create.exampleCaption}</span></div>
+<pre is:raw>POST /api/v1/transactions
+{
+  <span class="c-key">"type"</span>: <span class="c-str">"expense"</span>,
+  <span class="c-key">"amount"</span>: <span class="c-num">8.50</span>,
+  <span class="c-key">"currencyCode"</span>: <span class="c-str">"EUR"</span>,
+  <span class="c-key">"date"</span>: <span class="c-str">"2026-05-12T09:14:00Z"</span>,
+  <span class="c-key">"accountId"</span>: <span class="c-str">"acc_01HK8V…"</span>,
+  <span class="c-key">"categoryId"</span>: <span class="c-str">"cat_food_drinks"</span>,
+  <span class="c-key">"payee"</span>: <span class="c-str">"Pret"</span>,
+  <span class="c-key">"note"</span>: <span class="c-str">"Flat white"</span>
+}</pre>
+        </div>
+      </div>
+
+      <!-- UPDATE -->
+      <div class="endpoint" id="tx-update">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--put">PUT</span>
+          <code class="endpoint__path">/api/v1/transactions/<span class="var" is:raw>{id}</span></code>
+          <span class="endpoint__scope">transactions:write</span>
+          <p class="endpoint__desc">{d.transactions.update.desc.t1}<a href="#tx-create">{d.transactions.update.desc.link}</a>{d.transactions.update.desc.t2}</p>
+        </div>
+      </div>
+
+      <!-- DELETE -->
+      <div class="endpoint" id="tx-delete">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--delete">DELETE</span>
+          <code class="endpoint__path">/api/v1/transactions/<span class="var" is:raw>{id}</span></code>
+          <span class="endpoint__scope">transactions:write</span>
+          <p class="endpoint__desc">{d.transactions.delete.desc}</p>
+        </div>
+      </div>
+
+      <!-- TRANSFER -->
+      <div class="endpoint" id="tx-transfer">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--post">POST</span>
+          <code class="endpoint__path">/api/v1/transactions/transfer</code>
+          <span class="endpoint__scope">transactions:write</span>
+          <p class="endpoint__desc">{d.transactions.transfer.desc.t1}<code>exchangeRate</code>{d.transactions.transfer.desc.t2}<code>convertedAmount</code>{d.transactions.transfer.desc.t3}</p>
+        </div>
+        <div class="params">
+          <span class="params__title">{d.common.requestBody}</span>
+          <table class="params-table">
+            <thead><tr><th>{d.common.field}</th><th>{d.common.type}</th><th>{d.common.description}</th></tr></thead>
+            <tbody>
+              <tr><td class="name">fromAccountId</td><td class="type">string</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.transactions.transfer.fields.fromAccountId}</td></tr>
+              <tr><td class="name">toAccountId</td><td class="type">string</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.transactions.transfer.fields.toAccountId}</td></tr>
+              <tr><td class="name">amount</td><td class="type">number</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.transactions.transfer.fields.amount.t1}<code>currencyCode</code>{d.transactions.transfer.fields.amount.t2}</td></tr>
+              <tr><td class="name">currencyCode</td><td class="type">string</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.transactions.transfer.fields.currencyCode}</td></tr>
+              <tr><td class="name">date</td><td class="type">string (ISO-8601)</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.transactions.transfer.fields.date}</td></tr>
+              <tr><td class="name">exchangeRate</td><td class="type">number</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.transactions.transfer.fields.exchangeRate}</td></tr>
+              <tr><td class="name">convertedAmount</td><td class="type">number</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.transactions.transfer.fields.convertedAmount}</td></tr>
+              <tr><td class="name">note</td><td class="type">string</td><td class="desc"><span class="tag opt">{d.common.optional}</span>{d.transactions.transfer.fields.note}</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h3>{d.transactions.bulkTitle}</h3>
+      <p>{d.transactions.bulkIntro.t1}<strong>{d.transactions.bulkIntro.strong1}</strong>{d.transactions.bulkIntro.t2}<strong>{d.transactions.bulkIntro.strong2}</strong>{d.transactions.bulkIntro.t3}</p>
+
+      <div class="endpoint" id="tx-bulk-create">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--post">POST</span>
+          <code class="endpoint__path">/api/v1/transactions/bulk</code>
+          <span class="endpoint__scope">transactions:write</span>
+          <p class="endpoint__desc">{d.transactions.bulkCreate.desc}</p>
+        </div>
+        <div class="code-block">
+          <div class="code-block__header"><span class="code-block__lang">200 OK</span></div>
+<pre is:raw>{
+  <span class="c-key">"items"</span>: [ <span class="c-cmt">/* successful TransactionDto[] */</span> ],
+  <span class="c-key">"errors"</span>: [
+    { <span class="c-key">"index"</span>: <span class="c-num">3</span>, <span class="c-key">"error"</span>: <span class="c-str">"Invalid currency code"</span> }
+  ]
+}</pre>
+        </div>
+      </div>
+
+      <div class="endpoint" id="tx-bulk-update">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--put">PUT</span>
+          <code class="endpoint__path">/api/v1/transactions/bulk</code>
+          <span class="endpoint__scope">transactions:write</span>
+          <p class="endpoint__desc">{d.transactions.bulkUpdate.desc.t1}<code>id</code>{d.transactions.bulkUpdate.desc.t2}</p>
+        </div>
+      </div>
+
+      <div class="endpoint" id="tx-bulk-delete">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--post">POST</span>
+          <code class="endpoint__path">/api/v1/transactions/bulk-delete</code>
+          <span class="endpoint__scope">transactions:write</span>
+          <p class="endpoint__desc">{d.transactions.bulkDelete.desc.t1}<code>POST</code>{d.transactions.bulkDelete.desc.t2}<code>DELETE</code>{d.transactions.bulkDelete.desc.t3}</p>
+        </div>
+        <div class="params">
+          <span class="params__title">{d.common.requestBody}</span>
+          <table class="params-table">
+            <thead><tr><th>{d.common.field}</th><th>{d.common.type}</th><th>{d.common.description}</th></tr></thead>
+            <tbody>
+              <tr><td class="name">ids</td><td class="type">string[]</td><td class="desc"><span class="tag req">{d.common.required}</span>{d.transactions.bulkDelete.fields.ids}</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="code-block">
+          <div class="code-block__header"><span class="code-block__lang">200 OK</span></div>
+<pre is:raw>{
+  <span class="c-key">"deleted"</span>: <span class="c-num">97</span>,
+  <span class="c-key">"notFound"</span>: [ <span class="c-str">"tx_old1"</span>, <span class="c-str">"tx_old2"</span>, <span class="c-str">"tx_old3"</span> ]
+}</pre>
+        </div>
+      </div>
+
+      <h3>{d.transactions.objectTitle}</h3>
+      <table class="params-table">
+        <thead><tr><th>{d.common.field}</th><th>{d.common.type}</th><th>{d.common.description}</th></tr></thead>
+        <tbody>
+          <tr><td class="name">id</td><td class="type">string</td><td class="desc">{d.transactions.object.id}</td></tr>
+          <tr><td class="name">type</td><td class="type">string</td><td class="desc"><code>income</code> · <code>expense</code> · <code>transfer</code> · <code>adjustment</code>.</td></tr>
+          <tr><td class="name">amount</td><td class="type">number</td><td class="desc">{d.transactions.object.amount.t1}<code>currencyCode</code>{d.transactions.object.amount.t2}</td></tr>
+          <tr><td class="name">currencyCode</td><td class="type">string</td><td class="desc">{d.transactions.object.currencyCode}</td></tr>
+          <tr><td class="name">exchangeRate</td><td class="type">number | null</td><td class="desc">{d.transactions.object.exchangeRate}</td></tr>
+          <tr><td class="name">convertedAmount</td><td class="type">number | null</td><td class="desc">{d.transactions.object.convertedAmount}</td></tr>
+          <tr><td class="name">date</td><td class="type">string</td><td class="desc">{d.transactions.object.date}</td></tr>
+          <tr><td class="name">accountId</td><td class="type">string | null</td><td class="desc">{d.transactions.object.accountId}</td></tr>
+          <tr><td class="name">toAccountId</td><td class="type">string | null</td><td class="desc">{d.transactions.object.toAccountId}</td></tr>
+          <tr><td class="name">categoryId</td><td class="type">string | null</td><td class="desc">{d.transactions.object.categoryId}</td></tr>
+          <tr><td class="name">groupId</td><td class="type">string | null</td><td class="desc">{d.transactions.object.groupId}</td></tr>
+          <tr><td class="name">payee</td><td class="type">string | null</td><td class="desc">{d.transactions.object.payee}</td></tr>
+          <tr><td class="name">note</td><td class="type">string | null</td><td class="desc">{d.transactions.object.note}</td></tr>
+          <tr><td class="name">receiptImagePath</td><td class="type">string | null</td><td class="desc">{d.transactions.object.receiptImagePath}</td></tr>
+          <tr><td class="name">recurringTransactionId</td><td class="type">string | null</td><td class="desc">{d.transactions.object.recurringTransactionId}</td></tr>
+          <tr><td class="name">source</td><td class="type">string</td><td class="desc">{d.transactions.object.source.t1}<code>api</code>, <code>mobile</code>, <code>web</code>, <code>import</code>{d.transactions.object.source.t2}</td></tr>
+          <tr><td class="name">createdAt</td><td class="type">string</td><td class="desc">{d.transactions.object.createdAt}</td></tr>
+          <tr><td class="name">updatedAt</td><td class="type">string</td><td class="desc">{d.transactions.object.updatedAt}</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============================================================
+         ICONS
+         ============================================================ -->
+    <section id="icons">
+      <h2 data-num="14">{d.icons.title}</h2>
+      <p class="resource-intro">{d.icons.intro}</p>
+
+      <div class="endpoint" id="ico-list">
+        <div class="endpoint__head">
+          <span class="method-badge method-badge--get">GET</span>
+          <code class="endpoint__path">/api/v1/icons</code>
+          <p class="endpoint__desc">{d.icons.list.desc.t1}<code>version</code>{d.icons.list.desc.t2}</p>
+        </div>
+        <div class="code-block">
+          <div class="code-block__header"><span class="code-block__lang">200 OK</span></div>
+<pre is:raw>{
+  <span class="c-key">"version"</span>: <span class="c-str">"2026.05.10"</span>,
+  <span class="c-key">"library"</span>: <span class="c-str">"font-awesome-6"</span>,
+  <span class="c-key">"categories"</span>: [
+    {
+      <span class="c-key">"id"</span>: <span class="c-str">"finance"</span>,
+      <span class="c-key">"name"</span>: <span class="c-str">"Finance"</span>,
+      <span class="c-key">"icons"</span>: [ <span class="c-str">"wallet"</span>, <span class="c-str">"credit-card"</span>, <span class="c-str">"piggy-bank"</span> ]
+    }
+  ],
+  <span class="c-key">"colors"</span>: [
+    { <span class="c-key">"name"</span>: <span class="c-str">"Blue"</span>, <span class="c-key">"hex"</span>: <span class="c-str">"#4A90E2"</span> },
+    { <span class="c-key">"name"</span>: <span class="c-str">"Green"</span>, <span class="c-key">"hex"</span>: <span class="c-str">"#22C55E"</span> }
+  ]
+}</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CHANGELOG / VERSIONING
+         ============================================================ -->
+    <section id="changelog">
+      <h2 data-num="15">{d.versioning.title}</h2>
+      <ul>
+        <li><strong>{d.versioning.noBreaking.strong}</strong>{d.versioning.noBreaking.t1}</li>
+        <li><strong>{d.versioning.enums.strong}</strong>{d.versioning.enums.t1}<code>type</code>, <code>source</code>{d.versioning.enums.t2}<code>action</code>{d.versioning.enums.t3}<em>{d.versioning.enums.em}</em>{d.versioning.enums.t4}</li>
+        <li><strong>{d.versioning.v2.strong}</strong>{d.versioning.v2.t1}<code>/api/v2/</code>{d.versioning.v2.t2}</li>
+      </ul>
+    </section>
+
+    <!-- ============================================================
+         SUPPORT
+         ============================================================ -->
+    <section id="support">
+      <h2 data-num="16">{d.support.title}</h2>
+      <p>{d.support.p1.t1}<a href={navUrl(lang, '/support')}>{d.support.p1.link}</a>{d.support.p1.t2}<a href="mailto:support@manilo.app">support@manilo.app</a>{d.support.p1.t3}<code>X-Request-Id</code>{d.support.p1.t4}</p>
+      <p>{d.support.p2.t1}<a href="mailto:security@manilo.app">security@manilo.app</a>{d.support.p2.t2}</p>
+    </section>
+
+  </article>
+</div>
+</div>
+</Base>

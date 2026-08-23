@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "Privacy Policy — Manilo",
+    "description": "Privacy Policy for Manilo. Local-first, isolated per user, GDPR-aligned. No ads. No data brokers. No tracking SDKs.",
+    "ogDescription": "Local-first, GDPR-aligned. No ads, no data brokers, no tracking SDKs."
+  },
+  "jsonLd": {
+    "breadcrumbName": "Privacy Policy"
+  },
+  "hero": {
+    "eyebrow": "Legal",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated May 10, 2026"
+  },
+  "toc": {
+    "ariaLabel": "Table of contents",
+    "title": "Contents"
+  },
+  "summary": {
+    "heading": "Summary",
+    "calloutLead": "The short version:",
+    "calloutBody": "Manilo (formerly Ledgy) is local-first. Your transactions live on your device. If you turn on Cloud, an encrypted copy syncs to our servers so other devices and shared groups can see it. We never sell your data, never look at your transactions, and never use them to train AI.",
+    "introBeforeLink": "This Privacy Policy explains what data Manilo (\"we\", \"us\") collects when you use the Manilo iOS app, the Manilo web dashboard at",
+    "introAfterLink": ", the Manilo Telegram bot, and any related services (collectively, the \"Service\"). It is written in plain English and aligned with the GDPR (EU 2016/679) and Apple App Store requirements."
+  },
+  "whatWeCollect": {
+    "heading": "What we collect",
+    "account": {
+      "heading": "Account data (when you sign up for Cloud)",
+      "items": [
+        "Email address — used to identify your account and send you transactional email.",
+        "Authentication tokens — issued by Apple Sign-In or our own auth flow.",
+        "Subscription status — whether you have an active Cloud entitlement, supplied by RevenueCat."
+      ]
+    },
+    "application": {
+      "heading": "Application data (when you use Cloud)",
+      "items": [
+        "Transactions, accounts, categories, tags, budgets, recurring rules, group memberships, and category rules.",
+        "Receipt photos you attach.",
+        "Voice recordings — <strong>not stored.</strong> Speech is transcribed on your device by Apple's on-device speech framework. Only the resulting text is sent to our AI for parsing.",
+        "For Telegram users: your Telegram user ID, used as the join key for your Manilo account.",
+        "For Apple Wallet users: transaction notifications you choose to forward — merchant, amount, currency, and timestamp. We never receive card numbers."
+      ]
+    },
+    "diagnostics": {
+      "heading": "Diagnostic data",
+      "items": [
+        "Crash reports — anonymized, sent through Apple's standard crash reporting (which you can opt out of in iOS Settings).",
+        "Aggregate usage events — page views and click events, no personal content. We use a privacy-respecting analytics provider that does not set tracking cookies and does not build cross-site profiles."
+      ]
+    }
+  },
+  "whatWeDont": {
+    "heading": "What we never collect",
+    "items": [
+      "Your bank credentials, card numbers, or banking sessions. Manilo does not connect to bank accounts.",
+      "Your contacts, photos library, calendar, or location.",
+      "Identifiers For Advertisers (IDFA). Manilo does not show ads.",
+      "Voice audio. Speech-to-text runs on your device.",
+      "Anything we don't strictly need to deliver the features above."
+    ]
+  },
+  "howWeUse": {
+    "heading": "How we use it",
+    "intro": "We use the data above only for the following purposes:",
+    "purposes": [
+      "Sync your ledger across your own devices.",
+      "Share visibility with people you have explicitly invited to a shared resource.",
+      "Parse the text from your voice/photo/SMS into a transaction (AI processing).",
+      "Send you transactional email — sign-in links, invoices, security notices, account changes.",
+      "Diagnose crashes and improve the product."
+    ],
+    "doNot": "<strong>We do not</strong> sell your data, share it for advertising, or use it to train third-party AI models.",
+    "mcp": {
+      "heading": "AI Assistants & Model Context Protocol (MCP)",
+      "beforeLink": "If you connect Manilo to an AI assistant (Claude, ChatGPT, Cursor, or any MCP-compatible client) via our",
+      "linkText": "integrations",
+      "afterLink": "page, that assistant receives the data necessary to answer your queries — typically transaction excerpts, category names, account balances, or aggregated totals. You control what is queried: the assistant only sees data it explicitly requests on your behalf. You can disconnect at any time from the assistant's settings; revoking access takes effect immediately. We do not push your full ledger to the assistant on connection."
+    }
+  },
+  "thirdParties": {
+    "heading": "Subprocessors",
+    "intro": "To deliver the Service we rely on the following providers. Each is bound by a Data Processing Agreement and processes data only on our instructions.",
+    "providers": [
+      { "name": "Hetzner", "desc": "hosting our backend and database in Germany (EU)." },
+      { "name": "OpenAI / Anthropic", "desc": "AI parsing of transaction text. Your transcribed message is sent for parsing; outputs are not used to train their models per their API terms. Anthropic also acts as the AI assistant when you connect Manilo to Claude via the Model Context Protocol; queried data is sent to Anthropic for the duration of the conversation and not used for model training under their API terms." },
+      { "name": "RevenueCat", "desc": "subscription state on iOS." },
+      { "name": "Apple", "desc": "payment processing for in-app subscriptions and crash reporting." },
+      { "name": "Resend", "desc": "transactional email delivery." },
+      { "name": "Telegram", "desc": "bot relay for users who opt into the Telegram intake." }
+    ],
+    "dpaBeforeEmail": "If you'd like a list of subprocessor sub-locations or DPA copies, write to",
+    "dpaAfterEmail": "."
+  },
+  "retention": {
+    "heading": "Retention & deletion",
+    "items": [
+      "Transactions and receipts you create are kept until you delete them or delete your account.",
+      "If you cancel Cloud, your local copy stays on your device. The Cloud copy is retained for 30 days, then deleted.",
+      "Account deletion: open Settings → Account → Delete account. Everything on the server is wiped within 7 days. Backups roll off within 30 days."
+    ]
+  },
+  "rights": {
+    "heading": "Your rights",
+    "bodyBeforeEmail": "If you're in the EU, UK, or California you have rights to access, correct, port, delete, or object to the processing of your personal data. You can exercise all of these from inside the app under Settings → Account, or by emailing",
+    "bodyAfterEmail": ". We respond within 30 days.",
+    "complaint": "You also have the right to lodge a complaint with your local data protection supervisory authority."
+  },
+  "children": {
+    "heading": "Children",
+    "body": "Manilo is not directed at children under 13 (or under 16 in the EEA). We do not knowingly collect data from minors. If you believe a child has signed up, contact us and we'll delete the account."
+  },
+  "changes": {
+    "heading": "Changes",
+    "body": "If we change this policy in a way that affects how we handle your data, we'll notify you in-app and by email at least 14 days before the change takes effect. Continued use of the Service after the change constitutes acceptance."
+  },
+  "contact": {
+    "heading": "Contact",
+    "emailLabel": "Email:"
+  }
+}

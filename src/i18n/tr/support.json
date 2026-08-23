@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Destek — Manilo",
+    "description": "Manilo için yardım. SSS, sorun giderme, sesle harcama kaydı ipuçları, MCP entegrasyonu desteği ve doğrudan iletişim.",
+    "ogDescription": "Manilo yardımı: sesle kayıt, MCP entegrasyonu, çoklu para birimi ve iletişim."
+  },
+  "breadcrumb": {
+    "home": "Ana sayfa",
+    "support": "Destek"
+  },
+  "faqLd": {
+    "name": "Manilo Yardım Merkezi",
+    "items": [
+      {
+        "q": "Manilo ücretsiz mi?",
+        "a": "Evet. Bireysel takibin her özelliği sonsuza dek ücretsiz — sınırsız işlem, hesap, kategori, bütçe, çoklu para birimi, CSV içe ve dışa aktarma ve fişler. Manilo Cloud ($2.99/ay veya $22.99/yıl) şunları ekler: yapay zekayla ses ve fotoğraf kaydı, cihazlar arası senkronizasyon, Siri kısayolları, Apple Watch'tan kayıt, Telegram botu, Apple Wallet otomasyonu, web paneli, aile ve grup paylaşımı ve Claude ile ChatGPT için MCP entegrasyonu."
+      },
+      {
+        "q": "Manilo çoklu para birimi takibi yapıyor mu?",
+        "a": "Evet. Manilo, kutudan çıktığı gibi çoklu para birimli hesapları destekler. Her hesabın kendi para birimi vardır. Döviz kurları güvenilir kaynaklardan (ECB verileriyle uyumlu) her gün yenilenir. Ana para birimindeki karşılığını görmek için herhangi bir tutara basılı tut. Gezi modu, yurt dışındayken geçiş yapmayı kolaylaştırır."
+      },
+      {
+        "q": "Harcamalarımı sesle kaydedebilir miyim?",
+        "a": "Evet — sesle kayıt, Manilo Cloud'un temel özelliklerinden biri. iPhone'da mikrofona dokun ya da Apple Watch'ta Digital Crown'u basılı tut ve doğal biçimde konuş: \"Pret'te öğle yemeğine on iki elli.\" Manilo tutarı, işletmeyi ve kategoriyi kendiliğinden çözer. Konuşmanın yazıya dökülmesi, Apple'ın cihaz üzerindeki konuşma tanıyıcısıyla cihazda çalışır; çözümleme için yapay zekaya yalnızca ortaya çıkan metin gönderilir. Sesle kaydı Siri üzerinden de başlatabilirsin: \"Hey Siri, Manilo'ya harcama kaydet.\""
+      },
+      {
+        "q": "Manilo çevrimdışı çalışır mı?",
+        "a": "Evet. Manilo çevrimdışı önceliklidir. Her ekran, iPhone'undaki yerel SQLite veritabanından okur. Yeni işlemler, internet bağlantısı olmadığında bile anında görünür. Cloud senkronizasyonu, bağlantı geri geldiğinde arka planda gerçekleşir."
+      },
+      {
+        "q": "Manilo Android'de var mı?",
+        "a": "Hayır. Manilo lansmanda yalnızca iOS için. Android sürümü yol haritasında. Android çıktığında haber almak istersen support@manilo.app adresine yaz."
+      },
+      {
+        "q": "Manilo reklam gösteriyor mu?",
+        "a": "Hayır. Manilo'da reklam yok, veri satan aracı yok, reklam takip SDK'sı yok. Ücretsiz plan, reklam geliriyle değil, isteğe bağlı Cloud aboneliğiyle destekleniyor. Manilo, Reklamcılar için Tanımlayıcı (IDFA) bilgini toplamaz."
+      },
+      {
+        "q": "Manilo gizliliğe saygılı mı? Verilerimi satıyor mu?",
+        "a": "Manilo yerel önceliklidir. İşlemlerin, iPhone'undaki yerel bir SQLite veritabanında durur. Cloud'u açarsan şifrelenmiş bir kopya, Almanya'da (Hetzner) barındırılan Manilo sunucularına senkronize edilir. Manilo verilerini asla satmaz, reklam için kullanmaz ve yapay zeka modellerini eğitmekte kullanmaz. Ses kaydı cihazda yazıya dökülür ve asla saklanmaz. Ayrıntıların tamamı için https://manilo.app/privacy adresindeki Gizlilik Politikası'na bak."
+      },
+      {
+        "q": "Manilo, Splitwise gibi hesabı bölüşüyor mu?",
+        "a": "Hayır. Manilo borç kapatma hesabı yapmaz, tutarları kişiler arasında bölmez. Sunduğu şey ortak harcama görünürlüğü: paylaşılan bir gruba ya da hesaba katıldığında tüm üyeler birbirlerinin işlemlerini gerçekleştiği anda görebilir. Bu, herkesin kendi harcamasını kaydettiği ev bütçeleri ve geziler için işe yarar. Kimin kime ne kadar borçlu olduğunun hesabına ihtiyacın varsa Splitwise hâlâ doğru araç."
+      },
+      {
+        "q": "Manilo MCP sunucusu nedir?",
+        "a": "MCP, Model Context Protocol'ün kısaltması — Claude, ChatGPT ve Cursor gibi yapay zeka asistanlarının dış veri kaynaklarına bağlanmasını sağlayan açık bir standart. Manilo, https://api.manilo.app/mcp adresinde bir MCP sunucusu çalıştırır. Bağlandıktan sonra yapay zeka asistanına \"Geçen ay kahveye ne kadar harcadım?\" ya da \"Market bütçem yolunda gidiyor mu?\" gibi sorular sorabilirsin — cevabı gerçek Manilo verilerinden gelir. Asistan yalnızca senin adına açıkça istediği verileri görür. Asistanın ayarlarından bağlantıyı istediğin an kesebilirsin. MCP entegrasyonu için etkin bir Manilo Cloud aboneliği gerekir."
+      },
+      {
+        "q": "Manilo Apple Watch'ta çalışıyor mu?",
+        "a": "Evet. Manilo'nun yerel bir Apple Watch uygulaması var. Digital Crown'u basılı tut, harcamanı söyle — \"kahve dört elli\" — ve işlem, sen bileğini indirmeden iPhone'unda görünür. Saat komplikasyonları doğrudan kayıt ekranına götürür. Apple Watch'tan kayıt için Manilo Cloud aboneliği gerekir."
+      },
+      {
+        "q": "Çoklu para birimi çevirisi nasıl çalışıyor?",
+        "a": "Manilo'da her hesabın kendi para birimi var. Bir ana para birimi belirlersin (örneğin USD) ve Manilo, yabancı para birimindeki tüm bakiyeleri ve toplamları her gün yenilenen kurlarla ana para birimine çevirir. Kurlar, ECB referans kurlarıyla uyumlu güvenilir finansal veri sağlayıcılarından alınır. Canlı çeviriyi görmek için herhangi bir tutara basılı tut. Gezi modunda, etkin seyahat hesabın en üstte öne çıkar."
+      },
+      {
+        "q": "CSV'den içe aktarabilir miyim?",
+        "a": "Evet. Manilo'nun CSV içe aktarma sihirbazı 29 dilde sütun başlıklarını otomatik algılar, para birimi simgelerini tanır ve kategori adlarını kendiliğinden eşler. Bir sütunu yanlış anlarsa, onaylamadan önce sürükleyip bırakarak yeniden eşleyebilirsin. Mint, YNAB, Apple Numbers ve diğer birçok kişisel finans uygulamasının dışa aktarımlarıyla çalışır. Manilo uygulamasında Ayarlar → İçe aktar → CSV yolunu izle."
+      },
+      {
+        "q": "Manilo Cloud ne kadar?",
+        "a": "Manilo Cloud ayda $2.99 ya da yılda $22.99 (ayda yaklaşık $1.92; aylık plana kıyasla %36 tasarruf). 7 günlük ücretsiz deneme dahildir — deneme bitene kadar ücret alınmaz. iPhone'da Ayarlar → [Adın] → Abonelikler yolundan istediğin an iptal edebilirsin. Abonelikler Apple tarafından yönetilir."
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "Yardım merkezi",
+    "title": "Nasıl yardımcı olabiliriz?",
+    "replyTime": "1 iş günü içinde yanıtlıyoruz"
+  },
+  "grid": {
+    "learnMore": "Daha fazlası →"
+  },
+  "toc": {
+    "ariaLabel": "İçindekiler",
+    "heading": "Makaleler"
+  },
+  "sections": {
+    "gettingStarted": {
+      "title": "Başlarken",
+      "cardSub": "Kur, giriş yap ve mevcut verilerini içe aktar.",
+      "install": {
+        "title": "Manilo'yu yükle",
+        "pre": "iPhone'unda ",
+        "linkText": "Manilo App Store sayfasını",
+        "post": " aç ve Al'a dokun. iOS 15 veya sonrası gerekir."
+      },
+      "signIn": {
+        "title": "Giriş yap",
+        "body": "İlk açılışta Apple ile giriş yap. Hesap kimliğin olarak iCloud e-posta adresin kullanılır; Apple ID şifreni asla görmeyiz."
+      },
+      "import": {
+        "title": "Mevcut verileri içe aktar",
+        "body": "Ayarlar → İçe aktar → CSV yolundan Mint, YNAB, Apple Numbers ya da başka bir kaynaktan aldığın dışa aktarma dosyasını yükle. Sihirbaz 29 dilde sütun başlıklarını otomatik algılar — bir sütunu yanlış anlarsa sürükleyip bırakarak yeniden eşle."
+      }
+    },
+    "capture": {
+      "title": "Kayıt kanalları",
+      "cardSub": "Ses, fotoğraf, Siri, Watch, Telegram, Wallet.",
+      "voice": {
+        "title": "Ses",
+        "body": "iPhone'da mikrofona dokun ya da Apple Watch'ta Digital Crown'u basılı tut. Doğal biçimde konuş — \"Pret'te öğle yemeğine on iki elli\" — Manilo tutarı, işletmeyi ve kategoriyi çözer. Konuşmanın yazıya dökülmesi cihazda gerçekleşir; yapay zeka çözümlemesine yalnızca ortaya çıkan metin gönderilir."
+      },
+      "photo": {
+        "title": "Fotoğraf",
+        "body": "Kamera düğmesine dokun ya da Fotoğraflar'dan iOS Paylaş sayfasını kullan. Fiş görüntüsü çözümleyicimize gönderilir; sonuç, kaydetmeden önce düzenlenebilir."
+      },
+      "siri": {
+        "title": "Siri",
+        "body": "\"Hey Siri, Manilo'ya harcama kaydet\" — Siri kısayolumuzu açar ve tek soruluk bir akışta sana yol gösterir. Tek dokunuşla erişim için Ayarlar → Kısayollar altından Siri Kısayolları'nı ekle."
+      },
+      "telegram": {
+        "title": "Telegram",
+        "pre": "Telegram'da Manilo botunu (",
+        "post": ") ara, Başlat'a dokun ve Ayarlar → Telegram'da görünen 6 haneli kodla eşle. Yazı, fotoğraf ya da sesli mesaj gönder. Bot, her şeyi iki dokunuşta düzeltebilmen için satır içi düğmelerle yanıt verir."
+      },
+      "wallet": {
+        "title": "Apple Wallet",
+        "body": "Ayarlar → Apple Wallet → Apple Pay'i otomatik kaydet'i aç. Her kartın kendi yapay zeka kuralı olabilir (örn. \"bu benim Gezi 2026 kartım → buna göre etiketle\"). Kart numaranı asla almayız — yalnızca satın alma bildirimindeki işletme, tutar ve saat bize gelir."
+      }
+    },
+    "sharing": {
+      "title": "Paylaşım ve gruplar",
+      "cardSub": "Davetler, grup bütçeleri, geçmişini kaybetmeden ayrılma.",
+      "body": "Herhangi bir hesabı, grubu ya da bütçeyi aç → Paylaş'a dokun → bir davet kodu veya QR oluştur. Karşı taraf bir kez dokunur ve kaynak, içinde senin işlemlerin görünür durumda onun uygulamasında belirir.",
+      "important": "Önemli:",
+      "importantBody": "Paylaşım görünürlüğe karar verir — sahipliğe asla. İşlemlerin her zaman senin. Bir gruptan ayrılırsan tüm geçmişin seninle gelir."
+    },
+    "billing": {
+      "title": "Ödeme ve abonelik",
+      "cardSub": "Deneme, iptal, iade, satın alımı geri yükleme.",
+      "trial": {
+        "title": "Deneme başlat",
+        "body": "Ayarlar → Cloud → Denemeyi başlat yolunu izle. 7 gün boyunca Cloud'un tamamına erişirsin. Deneme bitene kadar ücret almıyoruz."
+      },
+      "cancel": {
+        "title": "İptal et",
+        "body": "Ödemeleri bizim adımıza iOS yürütür. İptal etmek için: Ayarlar uygulamasını aç → adına dokun → Abonelikler → Manilo → Aboneliği İptal Et. Mevcut dönemin sonuna kadar erişimin sürer."
+      },
+      "refund": {
+        "title": "Bir ödeme için iade iste",
+        "pre": "İadeleri Apple yürütür. ",
+        "post": " adresine git, Manilo tahsilatını bul ve iade talebinde bulun."
+      },
+      "restore": {
+        "title": "Yeni bir cihazda satın alımı geri yükle",
+        "body": "Ayarlar → Cloud → Satın Alımı Geri Yükle. Aynı Apple ID ile giriş yaptığın sürece aboneliğin algılanır."
+      }
+    },
+    "data": {
+      "title": "Veriler ve gizlilik",
+      "cardSub": "Verilerin nerede durduğu, nasıl dışa aktarılacağı ve nasıl silineceği.",
+      "intro": "Manilo yerel önceliklidir. Her ekran, cihazındaki bir SQLite veritabanından okur. Cloud, bu veritabanının şifrelenmiş bir kopyasını arka ucumuza senkronize eder; böylece diğer cihazların ve grup üyeleri de görebilir.",
+      "export": {
+        "title": "Verilerini dışa aktar",
+        "body": "Ayarlar → Dışa aktar → CSV veya JSON. Dışa aktarma dosyası; oluşturduğun her işlemi, hesabı, kategoriyi, etiketi ve bütçeyi içerir."
+      },
+      "delete": {
+        "title": "Hesabını sil",
+        "body": "Ayarlar → Hesap → Hesabı Sil. Sunucu verilerini 7 gün, yedekleri 30 gün içinde sileriz. Yerel veriler, çıkış yaptığın anda temizlenir."
+      },
+      "privacy": {
+        "pre": "Daha fazlası için ",
+        "linkText": "Gizlilik Politikamızı",
+        "post": " oku."
+      }
+    },
+    "troubleshooting": {
+      "title": "Sorun giderme",
+      "cardSub": "Senkronizasyon sorunları, ses çalışmıyor, eksik işlemler.",
+      "sync": {
+        "title": "Senkronizasyon yetişemiyor",
+        "body": "Ana ekranda aşağı çekip yenile. Başka bir cihazda oluşturulan bir işlem 30 saniye sonra da görünmediyse Manilo'yu zorla kapatıp yeniden aç. Hâlâ eski bir durum görüyorsan Ayarlar → Cloud → Zorla Yeniden Senkronize Et."
+      },
+      "voice": {
+        "title": "Sesli kayıt \"çözümlenemedi\" diyor",
+        "body": "Cihaz üzerindeki yazıya dökücü yanlış duymuş olabilir. Ham metni görmek ve yeniden çözümlemeden önce düzenlemek için uygulama içi gelen kutusundaki mesaja dokun."
+      },
+      "wallet": {
+        "title": "Apple Wallet işlemleri otomatik kaydedilmiyor",
+        "body": "iOS, bir güncellemenin ardından bildirim yetkilerini zaman zaman geri alıyor. Ayarlar → Apple Wallet → Yeniden yetkilendir. Ayrıca iOS Ayarlar → Bildirimler → Wallet yolundan Wallet'ın kendi bildirimlerini açman gerekebilir."
+      },
+      "telegram": {
+        "title": "Telegram botu yanıt vermiyor",
+        "pre": "Bota ",
+        "mid": " yaz — Manilo Telegram botu (",
+        "post": "). Ardından 6 haneli kod istemini izle. Telegram zaman zaman webhook token'larını yeniler."
+      },
+      "callout": {
+        "pre": "Hâlâ takıldıysan ",
+        "post": " adresine bir ekran görüntüsü ve sorunun yaşandığı yaklaşık saatle birlikte yaz. Genellikle bir iş günü içinde yanıtlıyoruz."
+      }
+    }
+  },
+  "contact": {
+    "title": "İnsanla mı konuşmak istiyorsun?",
+    "body": "Elinden geldiğince ayrıntı vererek bize yaz — ekran görüntüleri çok işe yarar. Hafta içi her gün, bir iş günü içinde yanıtlıyoruz.",
+    "cta": "support@manilo.app adresine yaz"
+  }
+}

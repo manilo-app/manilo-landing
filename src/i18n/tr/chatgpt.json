@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "title": "ChatGPT ile Harcama Takibi: Banka Ekstresi İçe Aktarma | Manilo",
+    "description": "Banka ekstreni ChatGPT'ye veya Claude'a bırak; kategorilenmiş harcamalar ve canlı bir panel al. Manilo'yu üç adımda bağla. 7 gün ücretsiz deneme, reklamsız.",
+    "ogTitle": "Manilo + ChatGPT: banka ekstresini sohbetle içe aktar",
+    "ogDescription": "Ekstreyi ChatGPT'ye veya Claude'a yükle. Manilo onu kategorilenmiş harcamalara ve canlı bir panele dönüştürür. Ücretsiz iOS uygulaması, reklamsız. Yapay zeka bağlantısı için 7 gün ücretsiz deneme.",
+    "keywords": "chatgpt harcama takibi, chatgpt banka ekstresi içe aktarma, claude harcama takibi, yapay zeka banka ekstresi aktarımı, banka ekstresi kategorilendirme, chatgpt kişisel finans, mcp harcama takibi",
+    "twitterTitle": "Manilo + ChatGPT: banka ekstresini sohbetle içe aktar",
+    "twitterDescription": "Ekstreyi ChatGPT'ye veya Claude'a yükle. Manilo onu kategorilenmiş harcamalara ve canlı bir panele dönüştürür. Ücretsiz iOS uygulaması, reklamsız. Yapay zeka bağlantısı için 7 gün ücretsiz deneme."
+  },
+  "jsonLd": {
+    "articleHeadline": "ChatGPT ile Harcama Takibi: Manilo ile Banka Ekstresi İçe Aktarma",
+    "articleDescription": "Manilo'yu ChatGPT'ye veya Claude'a bağlama, banka ekstresini sohbetle içe aktarma ve kategorilenmiş harcamalarla canlı bir panel alma rehberi.",
+    "breadcrumbHome": "Ana sayfa",
+    "breadcrumbChatgpt": "ChatGPT'de Manilo"
+  },
+  "ctas": {
+    "connectChatgpt": "ChatGPT'yi bağla",
+    "connectClaude": "Claude'u bağla",
+    "cursorClients": "Cursor ve diğer istemciler",
+    "getIosApp": "iOS uygulamasını indir"
+  },
+  "hero": {
+    "eyebrow": "Paranla konuş",
+    "title": "Banka ekstreni ChatGPT'ye bırak. Harcamaların kategorilensin, üstüne bir panel gelsin.",
+    "lead1": "Uğraştıran dışa aktarmalar, sütun eşleme, elle giriş — hiçbiri yok. Ekstre dosyasını sohbete yükle; Manilo onu canlı bir panelde görebileceğin kategorilenmiş işlemlere dönüştürür.",
+    "lead2": "Bu akışı biz icat etmedik. Temmuz 2026'da dört ülkeden dört kişi, kimse istemeden, dört farklı formatla bunu kendi kendine yaptı: banka PDF ekstreleri, bir banka dışa aktarma dosyası, bir Amex ekstresi ve PDF formatında bir aile bütçesi. Hepsinde çalıştı. Biz de ona düzgün bir giriş kapısı yaptık.",
+    "metaClients": "ChatGPT, Claude ve diğer MCP istemcileriyle çalışır.",
+    "metaApp": "iOS uygulaması ücretsiz ve reklamsız."
+  },
+  "toc": {
+    "ariaLabel": "İçindekiler",
+    "heading": "İçindekiler",
+    "toggle": "İçindekiler",
+    "demo": "Nasıl görünüyor",
+    "connect": "Asistanını bağla",
+    "capabilities": "Neler yapabilirsin",
+    "faq": "Sorular",
+    "closing": "Dene"
+  },
+  "demo": {
+    "title": "Nasıl görünüyor",
+    "intro": "Ekstreyi yükleyip “bunu içe aktar” diyorsun. Asistan dosyayı okur, her satırı kategorilerinle eşler ve hepsini tek seferde oluşturur. Tipik bir yanıt şöyle görünür:",
+    "you": "Sen:",
+    "prompt": "“Bunu içe aktar.”",
+    "file": "statement-march.pdf",
+    "reply": [
+      "Mart ekstrenden 87 işlem içe aktarıldı.",
+      "İlk kategoriler: Market, Kira, Ulaşım.",
+      "İki satır kategorilerinle tam eşleşmedi. Düzeltmemi ister misin?"
+    ],
+    "replyLinkPre": "Tam döküm:",
+    "replyLinkEm": "Mart için panel bağlantın",
+    "outro": "Sonraki ay yalnızca yeni ekstreyi gönderiyorsun. Bütün akış bu.",
+    "disclaimer": "Açık olalım: asistan, ona verdiğin dosyayı okur. Manilo bankana bağlanmaz."
+  },
+  "connect": {
+    "title": "Asistanını bağla",
+    "introPre": "Kurulum yaklaşık bir dakika sürer ve tüm yollar tek sayfada —",
+    "introLink": "entegrasyonlar sayfasından",
+    "introPost": "ChatGPT, Claude, Cursor veya başka bir MCP istemcisini seç ve iki adımı izle.",
+    "calloutPre": "ChatGPT her yazma işleminden önce bir onay istemi gösterir (",
+    "calloutPost": "); onayın olmadan defterine hiçbir şey işlenmez."
+  },
+  "capabilities": {
+    "title": "Bağlandıktan sonra neler yapabilirsin",
+    "intro": "Manilo; ChatGPT ve Claude içinde (MCP ile) çalışan eksiksiz bir harcama takip ve bütçe uygulaması. Asistanına işlemler, hesaplar, kategoriler, bütçeler, gruplar, etiketler, tekrarlayan ödemeler, fişler, para birimi ve ayarlar genelinde 30'dan fazla araç sunar. Pratikte:",
+    "items": [
+      {
+        "strong": "Ekstre ve fiş içe aktar.",
+        "body": "PDF, CSV veya dışa aktarma dosyası yükle; asistan satırları mevcut kategorilerinle eşler ve tek seferde oluşturur."
+      },
+      {
+        "strong": "Harcamalarını sor.",
+        "body": "“Temmuzda markete ne kadar harcadım?” Cevap tahminden değil, kendi verilerinden gelir."
+      },
+      {
+        "strong": "Sıkıcı kısımları yönet.",
+        "body": "Hesaplar, bütçeler, tekrarlayan işlemler, etiketler, kategoriler ve paylaşılan gruplar — hepsi kendi cümlelerinle."
+      },
+      {
+        "strong": "Canlı ECB kurlarıyla para birimi çevir.",
+        "body": "Manilo çoklu para birimlidir; panel toplamların ana para biriminde gösterilir."
+      },
+      {
+        "strong": "Her şeyi canlı panelde gör.",
+        "body": "Her değişiklik anında dashboard.manilo.app'e, kullanıyorsan iOS uygulamasına da senkronize olur."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Gerçekten sorulan sorular",
+    "items": [
+      {
+        "id": "security",
+        "q": "Güvenli mi? ChatGPT veya Claude gerçekte neye erişebiliyor?",
+        "a": "Giriş, OAuth 2.1 ve PKCE ile Manilo'nun kendi onay sayfasında yapılır — Apple, Google veya e-posta ile. Asistan şifreni asla görmez. Bağlandıktan sonra verilerini okuyabilir ve sen istediğinde kayıt oluşturabilir, düzenleyebilir veya silebilir; ChatGPT her yazma işleminden önce onay istemi gösterir. Veriler Almanya'da (Hetzner) ve Google Cloud Firestore'da saklanır. İşlem tutarları analitik servislerine asla gönderilmez. Bağlantıyı kesmek için ChatGPT veya Claude ayarlarından bağlayıcıyı kaldır. Güvenlik iletişimi:"
+      },
+      {
+        "id": "trial",
+        "q": "Ücretsiz deneme nedir, ne zaman başlar?",
+        "a": "Bağlanmak ücretsiz. 7 günlük deneme, Manilo'yu sohbette gerçekten ilk kullandığın anda başlar — yani ilk içe aktarma ya da ilk soruda, bağlantı anında değil. Bu 7 gün boyunca web paneli dahil ürünün tamamını kullanırsın. Sonrasında Manilo Cloud $2.99/ay veya $22.99/yıl (USD).",
+        "linkText": "Fiyatları gör"
+      },
+      {
+        "id": "trial-end",
+        "q": "Deneme bitince verilerime ne olur?",
+        "a": "Hiçbir şey silinmez. Verilerin kayıtlı kalır. Sohbet araçları çalışmayı durdurur ve seni dashboard.manilo.app/upgrade adresine yönlendirir; orada App Store üzerinden abone olarak devam edebilirsin (bugün bunun için bir Apple cihazı gerekiyor)."
+      },
+      {
+        "id": "formats",
+        "q": "Hangi ekstre formatları çalışıyor?",
+        "a": "Asistanın okuyabildiği her şey. Temmuz 2026'da gerçek kullanıcılar banka PDF ekstreleri, bir banka dışa aktarma dosyası, bir Amex ekstresi ve PDF formatında bir aile bütçesi aktardı. Ekstreyi sohbete yükler ya da yapıştırırsın; yapay zeka satırları kategorilerinle eşler ve tek seferde oluşturur. Banka bağlantısı yoktur; yapay zeka ona verdiğin dosyayı okur."
+      },
+      {
+        "id": "bank-link",
+        "q": "Bankama otomatik bağlanıyor mu?",
+        "a": "Hayır. Banka hesabı bağlama yok, bankandan veri çeken bir şey de yok. Ekstreyi kendin gönderirsin. Sonraki ay da yalnızca yenisini gönderirsin."
+      },
+      {
+        "id": "ios-app",
+        "q": "iOS uygulaması gerekli mi?",
+        "a": "Hayır. Bağlantı akışında Apple, Google veya e-posta ile kaydolursun; deneme, web panelinin tamamını içerir. Deneme bitince App Store üzerinden abone olabilirsin — bugün bunun için bir Apple cihazı gerekiyor; ayrıntılar dashboard.manilo.app/upgrade adresinde. iOS uygulaması isteğe bağlıdır; sesle kayıt, Apple Watch'tan kayıt ve daha fazlasını ekler."
+      },
+      {
+        "id": "plans",
+        "q": "Hangi ChatGPT planı gerekiyor? Ücretsiz plan çalışır mı?",
+        "a": "ChatGPT'deki Manilo uygulaması, uygulama bağlantısından özel bir kurulum gerektirmeden bağlanır; ChatGPT uygulamalarının sunulduğu yerlerde ücretsiz plan çalışır. Elle Developer-mode yolu ChatGPT Plus, Pro veya Business gerektirir. Claude özel bağlayıcıları claude.ai ve Claude Desktop'ta çalışır. Uzak sunucuları OAuth ile destekleyen Cursor, Windsurf ve diğer MCP istemcileri de çalışır."
+      },
+      {
+        "id": "more",
+        "q": "Ekstre aktarmak dışında başka ne yapabiliyor?",
+        "a": "“Temmuzda markete ne kadar harcadım?” gibi sorular sor; cevaplar kendi verilerinden hesaplansın. Hesapları, bütçeleri, tekrarlayan işlemleri, etiketleri, kategorileri ve paylaşılan grupları yönet. Canlı ECB kurlarıyla para birimi çevir. Her şey anında web paneline, kullanıyorsan iOS uygulamasına da senkronize olur."
+      }
+    ]
+  },
+  "closing": {
+    "title": "Geçen ayın ekstresiyle dene",
+    "body1": "Elinde olan herhangi bir ekstre dosyasını al, bağlan ve sohbete bırak. Üç adım, sonra bir daha uğraşmak yok.",
+    "body2Pre": "Manilo'yu tek başına bir bağımsız geliştirici yapıyor. Ekstre formatın takılırsa ya da bir şey ters gelirse şu adrese yaz:",
+    "body2Post": ". Geri bildirimler bundan sonra ne yapılacağını gerçekten belirliyor."
+  }
+}

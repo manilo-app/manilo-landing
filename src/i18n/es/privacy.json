@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "Política de Privacidad — Manilo",
+    "description": "Política de Privacidad de Manilo. Local primero, aislada por usuario y alineada con el RGPD. Sin anuncios, sin intermediarios de datos, sin SDK de rastreo.",
+    "ogDescription": "Local primero y alineada con el RGPD. Sin anuncios, sin intermediarios de datos, sin SDK de rastreo."
+  },
+  "jsonLd": {
+    "breadcrumbName": "Política de Privacidad"
+  },
+  "hero": {
+    "eyebrow": "Legal",
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización: 10 de mayo de 2026"
+  },
+  "toc": {
+    "ariaLabel": "Índice de contenidos",
+    "title": "Contenido"
+  },
+  "summary": {
+    "heading": "Resumen",
+    "calloutLead": "La versión corta:",
+    "calloutBody": "Manilo (antes Ledgy) guarda todo primero en su dispositivo. Sus transacciones viven en su dispositivo. Si activa Cloud, una copia cifrada se sincroniza con nuestros servidores para que otros dispositivos y los grupos compartidos puedan verla. Nunca vendemos sus datos, nunca miramos sus transacciones y nunca las usamos para entrenar IA.",
+    "introBeforeLink": "Esta Política de Privacidad explica qué datos recopila Manilo (“nosotros”) cuando usted usa la app de Manilo para iOS, el panel web de Manilo en",
+    "introAfterLink": ", el bot de Manilo en Telegram y cualquier servicio relacionado (en conjunto, el “Servicio”). Está redactada en lenguaje claro y alineada con el RGPD (UE 2016/679) y los requisitos del App Store de Apple."
+  },
+  "whatWeCollect": {
+    "heading": "Qué recopilamos",
+    "account": {
+      "heading": "Datos de la cuenta (cuando se registra en Cloud)",
+      "items": [
+        "Dirección de correo — se usa para identificar su cuenta y enviarle correos transaccionales.",
+        "Tokens de autenticación — emitidos por el inicio de sesión con Apple o por nuestro propio flujo de autenticación.",
+        "Estado de la suscripción — si tiene acceso activo a Cloud, dato que proporciona RevenueCat."
+      ]
+    },
+    "application": {
+      "heading": "Datos de la aplicación (cuando usa Cloud)",
+      "items": [
+        "Transacciones, cuentas, categorías, etiquetas, presupuestos, reglas recurrentes, pertenencia a grupos y reglas de categorías.",
+        "Las fotos de recibos que usted adjunte.",
+        "Grabaciones de voz — <strong>no se almacenan.</strong> El habla se transcribe en su dispositivo con el framework de voz local de Apple. Solo el texto resultante se envía a nuestra IA para interpretarlo.",
+        "Para usuarios de Telegram: su ID de usuario de Telegram, que se usa como clave de vinculación con su cuenta de Manilo.",
+        "Para usuarios de Apple Wallet: las notificaciones de transacciones que usted elija reenviar — comercio, monto, moneda y fecha y hora. Nunca recibimos números de tarjeta."
+      ]
+    },
+    "diagnostics": {
+      "heading": "Datos de diagnóstico",
+      "items": [
+        "Reportes de fallos — anonimizados, enviados mediante el sistema estándar de reportes de fallos de Apple (que usted puede desactivar en la Configuración de iOS).",
+        "Eventos de uso agregados — vistas de página y clics, sin contenido personal. Usamos un proveedor de analítica respetuoso de la privacidad que no coloca cookies de rastreo ni construye perfiles entre sitios."
+      ]
+    }
+  },
+  "whatWeDont": {
+    "heading": "Qué nunca recopilamos",
+    "items": [
+      "Sus credenciales bancarias, números de tarjeta o sesiones bancarias. Manilo no se conecta a cuentas bancarias.",
+      "Sus contactos, su galería de fotos, su calendario ni su ubicación.",
+      "Identificadores para Anunciantes (IDFA). Manilo no muestra anuncios.",
+      "Audio de voz. La conversión de voz a texto ocurre en su dispositivo.",
+      "Cualquier cosa que no necesitemos estrictamente para ofrecer las funciones anteriores."
+    ]
+  },
+  "howWeUse": {
+    "heading": "Cómo los usamos",
+    "intro": "Usamos los datos anteriores únicamente para los siguientes fines:",
+    "purposes": [
+      "Sincronizar su registro entre sus propios dispositivos.",
+      "Compartir la visibilidad con las personas a las que usted haya invitado explícitamente a un recurso compartido.",
+      "Interpretar el texto de su voz, foto o SMS y convertirlo en una transacción (procesamiento con IA).",
+      "Enviarle correos transaccionales — enlaces de inicio de sesión, facturas, avisos de seguridad y cambios en la cuenta.",
+      "Diagnosticar fallos y mejorar el producto."
+    ],
+    "doNot": "<strong>No</strong> vendemos sus datos, no los compartimos con fines publicitarios ni los usamos para entrenar modelos de IA de terceros.",
+    "mcp": {
+      "heading": "Asistentes de IA y Model Context Protocol (MCP)",
+      "beforeLink": "Si conecta Manilo a un asistente de IA (Claude, ChatGPT, Cursor o cualquier cliente compatible con MCP) a través de nuestra",
+      "linkText": "página de integraciones",
+      "afterLink": "— ese asistente recibe los datos necesarios para responder sus consultas: normalmente extractos de transacciones, nombres de categorías, saldos de cuentas o totales agregados. Usted controla qué se consulta: el asistente solo ve los datos que solicita explícitamente en su nombre. Puede desconectarlo en cualquier momento desde la configuración del asistente; la revocación del acceso surte efecto de inmediato. No enviamos su registro completo al asistente al momento de conectar."
+    }
+  },
+  "thirdParties": {
+    "heading": "Subencargados del tratamiento",
+    "intro": "Para ofrecer el Servicio recurrimos a los siguientes proveedores. Cada uno está sujeto a un Acuerdo de Tratamiento de Datos y trata los datos únicamente conforme a nuestras instrucciones.",
+    "providers": [
+      { "name": "Hetzner", "desc": "alojamiento de nuestro backend y de la base de datos en Alemania (UE)." },
+      { "name": "OpenAI / Anthropic", "desc": "interpretación con IA del texto de las transacciones. Su mensaje transcrito se envía para su interpretación; conforme a sus términos de API, los resultados no se usan para entrenar sus modelos. Anthropic también actúa como el asistente de IA cuando usted conecta Manilo a Claude mediante el Model Context Protocol; los datos consultados se envían a Anthropic por la duración de la conversación y, conforme a sus términos de API, no se usan para entrenar modelos." },
+      { "name": "RevenueCat", "desc": "estado de la suscripción en iOS." },
+      { "name": "Apple", "desc": "procesamiento de pagos de las suscripciones dentro de la app y reportes de fallos." },
+      { "name": "Resend", "desc": "entrega de correos transaccionales." },
+      { "name": "Telegram", "desc": "retransmisión del bot para los usuarios que optan por la captura vía Telegram." }
+    ],
+    "dpaBeforeEmail": "Si desea una lista de las sububicaciones de los subencargados o copias de los Acuerdos de Tratamiento de Datos, escriba a",
+    "dpaAfterEmail": "."
+  },
+  "retention": {
+    "heading": "Conservación y eliminación",
+    "items": [
+      "Las transacciones y los recibos que usted cree se conservan hasta que los elimine o elimine su cuenta.",
+      "Si cancela Cloud, su copia local permanece en su dispositivo. La copia en Cloud se conserva 30 días y después se elimina.",
+      "Eliminación de la cuenta: abra Configuración → Cuenta → Eliminar cuenta. Todo lo que está en el servidor se borra en un plazo de 7 días. Los respaldos se depuran en un plazo de 30 días."
+    ]
+  },
+  "rights": {
+    "heading": "Sus derechos",
+    "bodyBeforeEmail": "Si se encuentra en la Unión Europea, el Reino Unido o California, tiene derecho a acceder, corregir, portar, eliminar u oponerse al tratamiento de sus datos personales. Puede ejercer todos estos derechos desde la propia app, en Configuración → Cuenta, o escribiendo a",
+    "bodyAfterEmail": ". Respondemos en un plazo de 30 días.",
+    "complaint": "También tiene derecho a presentar una reclamación ante la autoridad de control en materia de protección de datos que le corresponda."
+  },
+  "children": {
+    "heading": "Menores de edad",
+    "body": "Manilo no está dirigida a menores de 13 años (ni de 16 en el Espacio Económico Europeo). No recopilamos a sabiendas datos de menores. Si cree que un menor se registró, contáctenos y eliminaremos la cuenta."
+  },
+  "changes": {
+    "heading": "Cambios",
+    "body": "Si modificamos esta política de una manera que afecte la forma en que manejamos sus datos, se lo notificaremos dentro de la app y por correo al menos 14 días antes de que el cambio entre en vigor. El uso continuado del Servicio después del cambio constituye su aceptación."
+  },
+  "contact": {
+    "heading": "Contacto",
+    "emailLabel": "Correo:"
+  }
+}

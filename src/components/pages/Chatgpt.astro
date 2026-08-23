@@ -1,0 +1,186 @@
+---
+import Base from '../../layouts/Base.astro';
+import { navUrl, type Locale } from '../../i18n/config';
+import { getDict } from '../../i18n';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const d = getDict<any>(lang, 'chatgpt');
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: d.jsonLd.articleHeadline,
+  description: d.jsonLd.articleDescription,
+  url: 'https://manilo.app/chatgpt',
+  inLanguage: lang,
+  datePublished: '2026-07-31',
+  author: {
+    '@type': 'Person',
+    name: 'Borys Harholinskyi',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Manilo',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://manilo.app/assets/manilo-icon.svg',
+    },
+  },
+  about: {
+    '@type': 'SoftwareApplication',
+    name: 'Manilo',
+    operatingSystem: 'iOS 15+',
+    applicationCategory: 'FinanceApplication',
+    url: 'https://apps.apple.com/app/id6761738170',
+  },
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: d.jsonLd.breadcrumbHome, item: 'https://manilo.app/' },
+    { '@type': 'ListItem', position: 2, name: d.jsonLd.breadcrumbChatgpt, item: 'https://manilo.app/chatgpt' },
+  ],
+};
+
+// The 'security' answer stops before the email so the visible FAQ can wrap it in a mailto link.
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: d.faq.items.map((f: any) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: f.id === 'security' ? `${f.a} security@manilo.app.` : f.a,
+    },
+  })),
+};
+---
+<Base
+  title={d.meta.title}
+  description={d.meta.description}
+  path="/chatgpt"
+  locale={lang}
+  ogTitle={d.meta.ogTitle}
+  ogDescription={d.meta.ogDescription}
+  ogType="article"
+  screenLabel="08 ChatGPT"
+  css={['/assets/doc.css', '/assets/chatgpt.css']}
+  js={['/assets/doc.js']}
+>
+<Fragment slot="head">
+<meta name="keywords" content={d.meta.keywords}>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:title" content={d.meta.twitterTitle}>
+<meta name="twitter:description" content={d.meta.twitterDescription}>
+<script type="application/ld+json" is:inline set:html={JSON.stringify(articleLd)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(faqLd)} />
+</Fragment>
+
+<section class="doc-hero" id="hero">
+  <div class="container">
+    <span class="t-eyebrow">{d.hero.eyebrow}</span>
+    <h1>{d.hero.title}</h1>
+    <p class="cg-lead">{d.hero.lead1}</p>
+    <p class="cg-lead">{d.hero.lead2}</p>
+    <p class="doc-meta">
+      <span><i class="fa-solid fa-plug"></i> {d.hero.metaClients}</span>
+      <span><i class="fa-brands fa-apple"></i> {d.hero.metaApp}</span>
+    </p>
+    <div class="cg-hero-ctas">
+      <a class="btn btn--primary" href={navUrl(lang, '/integrations') + '#chatgpt'} data-cta="Connect ChatGPT" data-cta-position="hero">{d.ctas.connectChatgpt}</a>
+      <a class="btn btn--secondary" href={navUrl(lang, '/integrations') + '#claude'} data-cta="Connect Claude" data-cta-position="hero">{d.ctas.connectClaude}</a>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+<div class="doc">
+  <aside class="doc__toc doc__toc--collapsible" aria-label={d.toc.ariaLabel}>
+    <h4>{d.toc.heading}</h4>
+    <button class="doc__toc-toggle" type="button" aria-expanded="false" aria-controls="toc-list">
+      <i class="fa-solid fa-bars"></i> {d.toc.toggle} <i class="fa-solid fa-chevron-down doc__toc-chev"></i>
+    </button>
+    <ol id="toc-list">
+      <li><a href="#demo">{d.toc.demo}</a></li>
+      <li><a href="#connect-chatgpt">{d.toc.connect}</a></li>
+      <li><a href="#capabilities">{d.toc.capabilities}</a></li>
+      <li><a href="#faq">{d.toc.faq}</a></li>
+      <li><a href="#closing">{d.toc.closing}</a></li>
+    </ol>
+  </aside>
+
+  <article class="doc__body">
+    <section id="demo">
+      <h2 data-num="01">{d.demo.title}</h2>
+      <p>{d.demo.intro}</p>
+      <div class="glass-flat cg-demo" id="demo-media">
+        <p class="cg-demo__you"><strong>{d.demo.you}</strong> {d.demo.prompt} <span class="cg-demo__file"><i class="fa-solid fa-paperclip" aria-hidden="true"></i> {d.demo.file}</span></p>
+        <blockquote>
+          {d.demo.reply.map((line: string) => <p>{line}</p>)}
+          <p>{d.demo.replyLinkPre} <em>{d.demo.replyLinkEm}</em></p>
+        </blockquote>
+      </div>
+      <p>{d.demo.outro}</p>
+      <p>{d.demo.disclaimer}</p>
+    </section>
+
+    <section id="connect-chatgpt">
+      <span id="claude" style="scroll-margin-top: 100px;"></span>
+      <h2 data-num="02">{d.connect.title}</h2>
+      <p>{d.connect.introPre} <a href={navUrl(lang, '/integrations')}>{d.connect.introLink}</a> {d.connect.introPost}</p>
+      <div class="cg-hero-ctas">
+        <a class="btn btn--primary" href={navUrl(lang, '/integrations') + '#chatgpt'} data-cta="Connect ChatGPT" data-cta-position="connect">{d.ctas.connectChatgpt}</a>
+        <a class="btn btn--secondary" href={navUrl(lang, '/integrations') + '#claude'} data-cta="Connect Claude" data-cta-position="connect">{d.ctas.connectClaude}</a>
+        <a class="btn btn--secondary" href={navUrl(lang, '/integrations') + '#cursor'} data-cta="Connect Cursor" data-cta-position="connect">{d.ctas.cursorClients}</a>
+      </div>
+      <div class="callout"><i class="fa-solid fa-circle-info"></i><span>{d.connect.calloutPre}<strong>Allow once</strong> / <strong>Always</strong>{d.connect.calloutPost}</span></div>
+    </section>
+
+    <section id="capabilities">
+      <h2 data-num="03">{d.capabilities.title}</h2>
+      <p>{d.capabilities.intro}</p>
+      <ul>
+        {d.capabilities.items.map((item: { strong: string; body: string }) => (
+          <li><strong>{item.strong}</strong> {item.body}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section id="faq">
+      <h2 data-num="04">{d.faq.title}</h2>
+      {d.faq.items.map((f: any) => (
+        <>
+          <h3>{f.q}</h3>
+          {f.id === 'security' ? (
+            <p>{f.a} <a href="mailto:security@manilo.app">security@manilo.app</a>.</p>
+          ) : f.id === 'trial' ? (
+            <p>{f.a} <a href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer" data-cta="See pricing" data-cta-position="faq">{f.linkText}</a>.</p>
+          ) : (
+            <p>{f.a}</p>
+          )}
+        </>
+      ))}
+    </section>
+
+    <section id="closing">
+      <h2 data-num="05">{d.closing.title}</h2>
+      <p>{d.closing.body1}</p>
+      <p>{d.closing.body2Pre} <a href="mailto:support@manilo.app">support@manilo.app</a>{d.closing.body2Post}</p>
+      <div class="cg-hero-ctas">
+        <a class="btn btn--primary" href={navUrl(lang, '/integrations') + '#chatgpt'} data-cta="Connect ChatGPT" data-cta-position="closing">{d.ctas.connectChatgpt}</a>
+        <a class="btn btn--secondary" href="https://apps.apple.com/app/id6761738170" target="_blank" rel="noopener noreferrer" data-cta="Get the iOS app" data-cta-position="closing"><i class="fa-brands fa-apple" aria-hidden="true"></i> {d.ctas.getIosApp}</a>
+      </div>
+    </section>
+  </article>
+</div>
+</div>
+</Base>

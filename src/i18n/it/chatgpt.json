@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "title": "Tracker spese ChatGPT: importa gli estratti conto | Manilo",
+    "description": "Carica un estratto conto in ChatGPT o Claude: ottieni spese categorizzate e dashboard live. Collega Manilo in tre passaggi. 7 giorni di prova, senza pubblicità.",
+    "ogTitle": "Manilo + ChatGPT: importa gli estratti conto via chat",
+    "ogDescription": "Carica un estratto conto in ChatGPT o Claude. Manilo lo trasforma in spese categorizzate e in una dashboard live. App iOS gratuita, senza pubblicità. 7 giorni di prova gratuita per il collegamento IA.",
+    "keywords": "tracker spese chatgpt, importare estratto conto chatgpt, tracker spese claude, importazione estratto conto con ia, categorizzare estratto conto con ia, finanze personali chatgpt, tracker spese mcp",
+    "twitterTitle": "Manilo + ChatGPT: importa gli estratti conto via chat",
+    "twitterDescription": "Carica un estratto conto in ChatGPT o Claude. Manilo lo trasforma in spese categorizzate e in una dashboard live. App iOS gratuita, senza pubblicità. 7 giorni di prova gratuita per il collegamento IA."
+  },
+  "jsonLd": {
+    "articleHeadline": "Tracker spese ChatGPT: importa gli estratti conto con Manilo",
+    "articleDescription": "Come collegare Manilo a ChatGPT o Claude, importare un estratto conto via chat e ottenere spese categorizzate più una dashboard live.",
+    "breadcrumbHome": "Home",
+    "breadcrumbChatgpt": "Manilo in ChatGPT"
+  },
+  "ctas": {
+    "connectChatgpt": "Collega ChatGPT",
+    "connectClaude": "Collega Claude",
+    "cursorClients": "Cursor e altri client",
+    "getIosApp": "Scarica l’app iOS"
+  },
+  "hero": {
+    "eyebrow": "Parla con i tuoi soldi",
+    "title": "Carica il tuo estratto conto in ChatGPT. Ottieni le tue finanze categorizzate, più una dashboard.",
+    "lead1": "Niente esportazioni da sistemare, niente mappatura delle colonne, niente inserimento manuale. Carica il file dell’estratto conto in una chat e Manilo lo trasforma in transazioni categorizzate che puoi vedere su una dashboard live.",
+    "lead2": "Questo flusso non l’abbiamo inventato noi. A luglio 2026 quattro persone da quattro Paesi diversi l’hanno fatto per conto proprio, senza che nessuno lo suggerisse, con quattro formati diversi: estratti conto in PDF della banca, un file di esportazione bancario, un estratto Amex e il PDF di un budget familiare. Ha funzionato per tutti. Così gli abbiamo costruito una porta d’ingresso come si deve.",
+    "metaClients": "Funziona con ChatGPT, Claude e altri client MCP.",
+    "metaApp": "L’app iOS è gratuita e senza pubblicità."
+  },
+  "toc": {
+    "ariaLabel": "Indice dei contenuti",
+    "heading": "Contenuti",
+    "toggle": "Contenuti",
+    "demo": "Come funziona in pratica",
+    "connect": "Collega il tuo assistente",
+    "capabilities": "Cosa puoi fare",
+    "faq": "Domande",
+    "closing": "Provalo"
+  },
+  "demo": {
+    "title": "Come funziona in pratica",
+    "intro": "Carichi un estratto conto e scrivi “importa questo”. L’assistente legge il file, associa ogni riga alle tue categorie e crea tutto in un unico blocco. Una risposta tipica è questa:",
+    "you": "Tu:",
+    "prompt": "“Importa questo.”",
+    "file": "estratto-conto-marzo.pdf",
+    "reply": [
+      "Importate 87 transazioni dal tuo estratto conto di marzo.",
+      "Categorie principali: Spesa, Affitto, Trasporti.",
+      "Due righe non corrispondevano con precisione alle tue categorie. Vuoi che le sistemi?"
+    ],
+    "replyLinkPre": "Dettaglio completo:",
+    "replyLinkEm": "il link alla tua dashboard di marzo",
+    "outro": "Il mese dopo ti basta inviare il nuovo estratto conto. Il flusso è tutto qui.",
+    "disclaimer": "Per essere chiari: l’assistente legge il file che gli dai tu. Manilo non si collega alla tua banca."
+  },
+  "connect": {
+    "title": "Collega il tuo assistente",
+    "introPre": "La configurazione richiede circa un minuto e tutti i percorsi stanno su una sola pagina: scegli ChatGPT, Claude, Cursor o qualsiasi altro client MCP nella",
+    "introLink": "pagina delle integrazioni",
+    "introPost": "e segui due passaggi.",
+    "calloutPre": "ChatGPT mostra una richiesta di conferma (",
+    "calloutPost": ") prima di ogni scrittura, così niente finisce nel tuo registro senza il tuo consenso."
+  },
+  "capabilities": {
+    "title": "Cosa puoi fare una volta collegato",
+    "intro": "Manilo è un tracker di spese e un’app di budget completa che funziona dentro ChatGPT e Claude (via MCP). Espone al tuo assistente 30+ strumenti per transazioni, conti, categorie, budget, gruppi, tag, pagamenti ricorrenti, scontrini, valute e impostazioni. In pratica:",
+    "items": [
+      {
+        "strong": "Importa estratti conto e scontrini.",
+        "body": "Carica un PDF, un CSV o un’esportazione; l’assistente associa le righe alle tue categorie esistenti e le crea in un unico blocco."
+      },
+      {
+        "strong": "Chiedi delle tue spese.",
+        "body": "“Quanto ho speso per la spesa a luglio?” La risposta arriva dai tuoi dati, non è una stima."
+      },
+      {
+        "strong": "Gestisci la parte noiosa.",
+        "body": "Conti, budget, transazioni ricorrenti, tag, categorie e gruppi condivisi, tutto con parole semplici."
+      },
+      {
+        "strong": "Converti le valute con i tassi BCE aggiornati.",
+        "body": "Manilo è multivaluta; i totali della dashboard sono nella tua valuta principale."
+      },
+      {
+        "strong": "Vedi tutto su una dashboard live.",
+        "body": "Ogni modifica si sincronizza all’istante con dashboard.manilo.app e con l’app iOS, se la usi."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Le domande che fanno davvero tutti",
+    "items": [
+      {
+        "id": "security",
+        "q": "È sicuro? A cosa possono accedere davvero ChatGPT o Claude?",
+        "a": "L’accesso usa OAuth 2.1 con PKCE e avviene sulla pagina di consenso di Manilo, con Apple, Google o email. L’assistente non vede mai la tua password. Una volta collegato può leggere i tuoi dati e, quando glielo chiedi, creare, modificare o eliminare voci; ChatGPT mostra una richiesta di conferma prima di ogni scrittura. I dati sono archiviati in Germania (Hetzner) e su Google Cloud Firestore. Gli importi delle transazioni non vengono mai inviati agli strumenti di analisi. Per disconnetterti, rimuovi il connettore dalle impostazioni di ChatGPT o Claude. Contatto per la sicurezza:"
+      },
+      {
+        "id": "trial",
+        "q": "Com’è fatta la prova gratuita e quando inizia?",
+        "a": "Il collegamento è gratuito. I 7 giorni di prova iniziano la prima volta che usi davvero Manilo dalla chat, cioè con la tua prima importazione o domanda, non al momento del collegamento. Durante quei 7 giorni hai il prodotto completo, dashboard web inclusa. Dopodiché Manilo Cloud costa $2.99/mese o $22.99/anno (USD).",
+        "linkText": "Vedi i prezzi"
+      },
+      {
+        "id": "trial-end",
+        "q": "Che fine fanno i miei dati quando la prova finisce?",
+        "a": "Non viene eliminato niente. I tuoi dati restano salvati. Gli strumenti nella chat smettono di funzionare e ti rimandano a dashboard.manilo.app/upgrade, dove puoi continuare abbonandoti tramite App Store (oggi serve un dispositivo Apple)."
+      },
+      {
+        "id": "formats",
+        "q": "Quali formati di estratto conto funzionano?",
+        "a": "Tutti quelli che l’assistente riesce a leggere. A luglio 2026 utenti reali hanno importato estratti conto in PDF della banca, un file di esportazione bancario, un estratto Amex e il PDF di un budget familiare. Carichi o incolli l’estratto conto nella chat; l’IA associa le righe alle tue categorie e le crea in un unico blocco. Non c’è nessun collegamento bancario: l’IA legge il file che le dai tu."
+      },
+      {
+        "id": "bank-link",
+        "q": "Si collega alla mia banca in automatico?",
+        "a": "No. Non c’è nessun collegamento al conto bancario e niente viene prelevato dalla tua banca. L’estratto conto lo invii tu. Il mese dopo ti basta inviare quello nuovo."
+      },
+      {
+        "id": "ios-app",
+        "q": "Mi serve l’app iOS?",
+        "a": "No. Ti registri durante la procedura di collegamento con Apple, Google o email, e la prova include la dashboard web completa. Quando la prova finisce puoi abbonarti tramite App Store — oggi serve un dispositivo Apple; su dashboard.manilo.app/upgrade trovi tutti i dettagli. L’app iOS è opzionale; aggiunge la registrazione a voce, l’inserimento da Apple Watch e altro."
+      },
+      {
+        "id": "plans",
+        "q": "Quale piano ChatGPT mi serve? Funziona con il piano gratuito?",
+        "a": "L’app Manilo in ChatGPT si collega direttamente dal link dell’app, senza configurazioni particolari; dove le app di ChatGPT sono disponibili, funziona anche con il piano gratuito. Il percorso manuale con la Modalità sviluppatore richiede ChatGPT Plus, Pro o Business. I connettori personalizzati di Claude funzionano su claude.ai e in Claude Desktop. Funzionano anche Cursor, Windsurf e gli altri client MCP che supportano server remoti con OAuth."
+      },
+      {
+        "id": "more",
+        "q": "Cos’altro può fare oltre a importare gli estratti conto?",
+        "a": "Puoi fare domande come “quanto ho speso per la spesa a luglio?” e ottenere risposte calcolate dai tuoi dati. Puoi gestire conti, budget, transazioni ricorrenti, tag, categorie e gruppi condivisi. Puoi convertire le valute con i tassi BCE aggiornati. Tutto si sincronizza all’istante con la dashboard web e con l’app iOS, se la usi."
+      }
+    ]
+  },
+  "closing": {
+    "title": "Provalo con l’estratto conto del mese scorso",
+    "body1": "Prendi un’esportazione di estratto conto che hai già, collegati e caricala nella chat. Tre passaggi, e poi mai più.",
+    "body2Pre": "Manilo è sviluppato da un singolo sviluppatore indipendente. Se il formato del tuo estratto conto lo mette in difficoltà, o se qualcosa non ti torna, scrivi a",
+    "body2Post": ". I feedback influenzano davvero ciò che costruiremo dopo."
+  }
+}

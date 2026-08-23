@@ -19,17 +19,31 @@ export const LOCALE_NAMES: Record<Locale, string> = {
   zh: '简体中文',
 };
 
-// Which logical pages exist in which locales. Single source of truth for
-// getStaticPaths, hreflang alternates, the sitemap, and the language switcher.
-export const PAGE_LOCALES: Record<string, readonly Locale[]> = {
-  '/': LOCALES,
-  '/integrations': ['en'],
-  '/chatgpt': ['en'],
-  '/support': ['en'],
-  '/api-v1': ['en'],
-  '/privacy': ['en'],
-  '/terms': ['en'],
+// Page path -> the dictionary that carries its content.
+export const PAGE_DICTS: Record<string, string> = {
+  '/': 'home',
+  '/integrations': 'integrations',
+  '/chatgpt': 'chatgpt',
+  '/support': 'support',
+  '/api-v1': 'api',
+  '/privacy': 'privacy',
+  '/terms': 'terms',
 };
+
+// A locale gets a page only once its dictionary exists — otherwise the per-file
+// fallback would serve English prose under a localized URL. Derived from the
+// files on disk, so routes, hreflang, the sitemap and the switcher all follow
+// automatically as translations land.
+const available = new Set(
+  Object.keys(import.meta.glob('./*/*.json')).map((p) => p.replace('./', '').replace('.json', '')),
+);
+
+export const PAGE_LOCALES: Record<string, readonly Locale[]> = Object.fromEntries(
+  Object.entries(PAGE_DICTS).map(([path, dict]) => [
+    path,
+    LOCALES.filter((l) => l === DEFAULT_LOCALE || available.has(`${l}/${dict}`)),
+  ]),
+);
 
 export function localeUrl(locale: string, path: string): string {
   if (locale === DEFAULT_LOCALE) return path;

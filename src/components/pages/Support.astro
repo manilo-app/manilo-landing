@@ -1,0 +1,222 @@
+---
+import Base from '../../layouts/Base.astro';
+import { navUrl, type Locale } from '../../i18n/config';
+import { getDict } from '../../i18n';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const d = getDict<any>(lang, 'support');
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: d.breadcrumb.home, item: 'https://manilo.app/' },
+    { '@type': 'ListItem', position: 2, name: d.breadcrumb.support, item: 'https://manilo.app/support' },
+  ],
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  name: d.faqLd.name,
+  url: 'https://manilo.app/support',
+  mainEntity: d.faqLd.items.map((f: any) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+---
+<Base
+  title={d.meta.title}
+  description={d.meta.description}
+  path="/support"
+  locale={lang}
+  ogDescription={d.meta.ogDescription}
+  screenLabel="05 Support"
+  css={['/assets/doc.css']}
+  js={['/assets/doc.js']}
+>
+<Fragment slot="head">
+<script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(faqLd)} />
+</Fragment>
+
+<section class="doc-hero">
+  <div class="container">
+    <span class="t-eyebrow">{d.hero.eyebrow}</span>
+    <h1>{d.hero.title}</h1>
+    <p class="doc-meta">
+      <span><i class="fa-solid fa-clock"></i> {d.hero.replyTime}</span>
+      <span><i class="fa-solid fa-envelope"></i> <a href="mailto:support@manilo.app">support@manilo.app</a></span>
+    </p>
+  </div>
+</section>
+
+<div class="container">
+
+<section style="margin-bottom: 56px;">
+  <div class="support-grid">
+    <a class="glass-flat support-card" href="#getting-started">
+      <i class="fa-solid fa-rocket"></i>
+      <h3>{d.sections.gettingStarted.title}</h3>
+      <p>{d.sections.gettingStarted.cardSub}</p>
+      <span class="arrow">{d.grid.learnMore}</span>
+    </a>
+    <a class="glass-flat support-card" href="#capture">
+      <i class="fa-solid fa-microphone"></i>
+      <h3>{d.sections.capture.title}</h3>
+      <p>{d.sections.capture.cardSub}</p>
+      <span class="arrow">{d.grid.learnMore}</span>
+    </a>
+    <a class="glass-flat support-card" href="#sharing">
+      <i class="fa-solid fa-users"></i>
+      <h3>{d.sections.sharing.title}</h3>
+      <p>{d.sections.sharing.cardSub}</p>
+      <span class="arrow">{d.grid.learnMore}</span>
+    </a>
+    <a class="glass-flat support-card" href="#billing">
+      <i class="fa-solid fa-credit-card"></i>
+      <h3>{d.sections.billing.title}</h3>
+      <p>{d.sections.billing.cardSub}</p>
+      <span class="arrow">{d.grid.learnMore}</span>
+    </a>
+    <a class="glass-flat support-card" href="#data">
+      <i class="fa-solid fa-database"></i>
+      <h3>{d.sections.data.title}</h3>
+      <p>{d.sections.data.cardSub}</p>
+      <span class="arrow">{d.grid.learnMore}</span>
+    </a>
+    <a class="glass-flat support-card" href="#troubleshooting">
+      <i class="fa-solid fa-wrench"></i>
+      <h3>{d.sections.troubleshooting.title}</h3>
+      <p>{d.sections.troubleshooting.cardSub}</p>
+      <span class="arrow">{d.grid.learnMore}</span>
+    </a>
+  </div>
+</section>
+
+<div class="doc">
+  <aside class="doc__toc doc__toc--collapsible" aria-label={d.toc.ariaLabel}>
+    <h4>{d.toc.heading}</h4>
+    <button class="doc__toc-toggle" type="button" aria-expanded="false" aria-controls="toc-list">
+      <i class="fa-solid fa-bars"></i> {d.toc.heading} <i class="fa-solid fa-chevron-down doc__toc-chev"></i>
+    </button>
+    <ol id="toc-list">
+      <li><a href="#getting-started">{d.sections.gettingStarted.title}</a></li>
+      <li><a href="#capture">{d.sections.capture.title}</a></li>
+      <li><a href="#sharing">{d.sections.sharing.title}</a></li>
+      <li><a href="#billing">{d.sections.billing.title}</a></li>
+      <li><a href="#data">{d.sections.data.title}</a></li>
+      <li><a href="#troubleshooting">{d.sections.troubleshooting.title}</a></li>
+    </ol>
+  </aside>
+
+  <article class="doc__body">
+    <section id="getting-started">
+      <h2 data-num="01">{d.sections.gettingStarted.title}</h2>
+
+      <h3>{d.sections.gettingStarted.install.title}</h3>
+      <p>{d.sections.gettingStarted.install.pre}<a href="https://apps.apple.com/app/id6761738170" target="_blank" rel="noopener noreferrer">{d.sections.gettingStarted.install.linkText}</a>{d.sections.gettingStarted.install.post}</p>
+
+      <h3>{d.sections.gettingStarted.signIn.title}</h3>
+      <p>{d.sections.gettingStarted.signIn.body}</p>
+
+      <h3>{d.sections.gettingStarted.import.title}</h3>
+      <p>{d.sections.gettingStarted.import.body}</p>
+    </section>
+
+    <section id="capture">
+      <h2 data-num="02">{d.sections.capture.title}</h2>
+
+      <h3>{d.sections.capture.voice.title}</h3>
+      <p>{d.sections.capture.voice.body}</p>
+
+      <h3>{d.sections.capture.photo.title}</h3>
+      <p>{d.sections.capture.photo.body}</p>
+
+      <h3>{d.sections.capture.siri.title}</h3>
+      <p>{d.sections.capture.siri.body}</p>
+
+      <h3>{d.sections.capture.telegram.title}</h3>
+      <p>{d.sections.capture.telegram.pre}<code>@LedgyBot</code>{d.sections.capture.telegram.post}</p>
+
+      <h3>{d.sections.capture.wallet.title}</h3>
+      <p>{d.sections.capture.wallet.body}</p>
+    </section>
+
+    <section id="sharing">
+      <h2 data-num="03">{d.sections.sharing.title}</h2>
+      <p>{d.sections.sharing.body}</p>
+      <p><strong>{d.sections.sharing.important}</strong> {d.sections.sharing.importantBody}</p>
+    </section>
+
+    <section id="billing">
+      <h2 data-num="04">{d.sections.billing.title}</h2>
+
+      <h3>{d.sections.billing.trial.title}</h3>
+      <p>{d.sections.billing.trial.body}</p>
+
+      <h3>{d.sections.billing.cancel.title}</h3>
+      <p>{d.sections.billing.cancel.body}</p>
+
+      <h3>{d.sections.billing.refund.title}</h3>
+      <p>{d.sections.billing.refund.pre}<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer">reportaproblem.apple.com</a>{d.sections.billing.refund.post}</p>
+
+      <h3>{d.sections.billing.restore.title}</h3>
+      <p>{d.sections.billing.restore.body}</p>
+    </section>
+
+    <section id="data">
+      <h2 data-num="05">{d.sections.data.title}</h2>
+      <p>{d.sections.data.intro}</p>
+
+      <h3>{d.sections.data.export.title}</h3>
+      <p>{d.sections.data.export.body}</p>
+
+      <h3>{d.sections.data.delete.title}</h3>
+      <p>{d.sections.data.delete.body}</p>
+
+      <p>{d.sections.data.privacy.pre}<a href={navUrl(lang, '/privacy')}>{d.sections.data.privacy.linkText}</a>{d.sections.data.privacy.post}</p>
+    </section>
+
+    <section id="troubleshooting">
+      <h2 data-num="06">{d.sections.troubleshooting.title}</h2>
+
+      <h3>{d.sections.troubleshooting.sync.title}</h3>
+      <p>{d.sections.troubleshooting.sync.body}</p>
+
+      <h3>{d.sections.troubleshooting.voice.title}</h3>
+      <p>{d.sections.troubleshooting.voice.body}</p>
+
+      <h3>{d.sections.troubleshooting.wallet.title}</h3>
+      <p>{d.sections.troubleshooting.wallet.body}</p>
+
+      <h3>{d.sections.troubleshooting.telegram.title}</h3>
+      <p>{d.sections.troubleshooting.telegram.pre}<code>/relink</code>{d.sections.troubleshooting.telegram.mid}<code>@LedgyBot</code>{d.sections.troubleshooting.telegram.post}</p>
+
+      <div class="callout" style="margin-top: 32px;">
+        <i class="fa-solid fa-life-ring"></i>
+        <div>{d.sections.troubleshooting.callout.pre}<a href="mailto:support@manilo.app">support@manilo.app</a>{d.sections.troubleshooting.callout.post}</div>
+      </div>
+    </section>
+  </article>
+</div>
+
+<section style="margin: 80px 0 40px;">
+  <div class="glass contact-card">
+    <div>
+      <h2>{d.contact.title}</h2>
+      <p>{d.contact.body}</p>
+    </div>
+    <a class="btn btn--primary btn--lg" href="mailto:support@manilo.app" data-cta="Email support" data-cta-position="support-contact">
+      <i class="fa-solid fa-envelope"></i> {d.contact.cta}
+    </a>
+  </div>
+</section>
+</div>
+</Base>

@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "title": "将 Manilo 连接到 ChatGPT、Claude 和 Cursor — MCP 记账应用",
+    "description": "Manilo 是自带原生 MCP 服务器的记账应用。ChatGPT 和 Cursor 一键连接，Claude 及任何 MCP 客户端复制粘贴 URL 即可。约 1 分钟完成设置。",
+    "ogDescription": "选择你的 AI 助手，约一分钟连接 Manilo——ChatGPT 和 Cursor 一键搞定，Claude 及其他客户端复制粘贴 MCP URL 即可。",
+    "keywords": "MCP 记账, Manilo 连接 ChatGPT, Claude 记账, Cursor MCP 服务器, MCP 服务器设置, 模型上下文协议 记账, AI 记账, 用 Claude 记支出",
+    "twitterTitle": "将 Manilo 连接到 ChatGPT、Claude 和 Cursor — MCP 记账应用",
+    "twitterDescription": "自带原生 MCP 服务器的记账应用。选好助手，约一分钟连接，然后直接问你的钱。"
+  },
+  "jsonLd": {
+    "techArticle": {
+      "headline": "将 Manilo 连接到 ChatGPT、Claude 和 Cursor — MCP 记账应用",
+      "description": "如何将 Manilo 记账应用连接到 ChatGPT、Claude、Cursor 或任何支持 Model Context Protocol 的 AI 助手。"
+    },
+    "breadcrumb": {
+      "home": "首页",
+      "integrations": "集成"
+    },
+    "howtoChatgpt": {
+      "name": "如何将 Manilo 连接到 ChatGPT",
+      "description": "两步将 Manilo 记账应用连接到 ChatGPT。",
+      "steps": [
+        { "name": "将 Manilo 连接到 ChatGPT", "text": "在 ChatGPT 中打开 Manilo 应用并点击“连接”。" },
+        { "name": "按提示操作", "text": "使用 Apple、Google 或邮箱登录并授权。之后在任意聊天中提到 Manilo 即可。" }
+      ]
+    },
+    "howtoClaude": {
+      "name": "如何将 Manilo 连接到 Claude",
+      "description": "将 Manilo 记账应用作为自定义 MCP 连接器添加到 Claude。",
+      "steps": [
+        { "name": "打开连接器设置", "text": "在 claude.ai 或 Claude Desktop 中，前往设置 → 连接器 → 添加自定义连接器。" },
+        { "name": "粘贴 Manilo 服务器 URL", "text": "名称：Manilo。服务器 URL：https://api.manilo.app/mcp。" },
+        { "name": "添加并登录", "text": "点击“添加”，使用 Apple、Google 或邮箱登录，然后在任意聊天的连接器菜单中启用 Manilo。" }
+      ]
+    },
+    "howtoCursor": {
+      "name": "如何将 Manilo 连接到 Cursor",
+      "description": "一键在 Cursor 中安装 Manilo MCP 服务器。",
+      "steps": [
+        { "name": "将 Manilo 添加到 Cursor", "text": "使用一键安装链接，或将 https://api.manilo.app/mcp 添加到 mcp.json。" },
+        { "name": "按提示操作", "text": "Cursor 打开后点击 Install，然后在浏览器中完成登录。" }
+      ]
+    }
+  },
+  "hero": {
+    "eyebrow": "集成",
+    "title": "将 Manilo 连接到 ChatGPT、Claude 或 Cursor",
+    "lead": "Manilo 是唯一自带原生 MCP 服务器的记账应用。在任何支持 Model Context Protocol 的 AI 助手里，用一句大白话就能记支出、查消费、转账。",
+    "badges": {
+      "time": "约一分钟完成设置",
+      "oauth": "OAuth 登录——密码绝不共享",
+      "anyClient": "适用于任何 MCP 客户端"
+    }
+  },
+  "picker": {
+    "eyebrow": "设置",
+    "title": "你在用哪个 AI 助手？",
+    "timeBadge": "约一分钟",
+    "copy": "复制",
+    "copyAria": "复制服务器 URL",
+    "tabs": {
+      "chatgpt": { "name": "ChatGPT", "hint": "2 步 · 一键连接" },
+      "claude": { "name": "Claude", "hint": "3 步 · 复制一个 URL" },
+      "cursor": { "name": "Cursor", "hint": "2 步 · 一键连接" },
+      "other": { "name": "其他", "hint": "Windsurf、VS Code 等" }
+    },
+    "chatgpt": {
+      "title": "将 Manilo 连接到 ChatGPT",
+      "step1": {
+        "title": "将 Manilo 连接到 ChatGPT",
+        "body": "点按按钮，在 ChatGPT 内打开 Manilo 应用。",
+        "cta": "将 Manilo 连接到 ChatGPT"
+      },
+      "step2": {
+        "title": "按提示操作",
+        "bodyHtml": "点击<strong>连接</strong>，使用 Apple、Google 或邮箱登录并授权。"
+      },
+      "done": {
+        "title": "就这样——直接聊",
+        "bodyHtml": "在任意聊天里提到 Manilo，或直接问起你的钱——<em>“7 月我买菜花了多少？”</em>ChatGPT 会自动调起这个应用。"
+      },
+      "manual": {
+        "summary": "你的套餐或地区不可用，或想手动设置？",
+        "introHtml": "开启<strong>设置 → 应用 → 高级设置 → 开发者模式</strong>（需要 ChatGPT Plus、Pro 或 Business），点击<strong>创建</strong>，然后填写：",
+        "nameLabel": "名称：",
+        "urlLabel": "MCP 服务器 URL：",
+        "authLabel": "身份验证："
+      },
+      "morePre": "完整的账单导入教程见",
+      "moreLink": "ChatGPT 中的 Manilo",
+      "morePost": "页面。"
+    },
+    "claude": {
+      "title": "将 Manilo 连接到 Claude",
+      "step1": {
+        "title": "打开连接器设置",
+        "pre": "在",
+        "mid": "或 Claude Desktop 中，前往",
+        "settingsPath": "设置 → 连接器",
+        "addConnector": "添加自定义连接器",
+        "end": "。"
+      },
+      "step2": {
+        "title": "粘贴 Manilo 服务器 URL",
+        "nameLabel": "名称：",
+        "serverLabel": "服务器 URL：",
+        "legacyPre": "已经通过旧地址",
+        "legacyPost": "连接过？它仍然有效——无需重新连接。"
+      },
+      "step3": {
+        "title": "添加并登录",
+        "bodyHtml": "点击<strong>添加</strong>，使用 Apple、Google 或邮箱登录，然后在任意聊天的连接器菜单中启用 <strong>Manilo</strong>。"
+      },
+      "done": {
+        "title": "就这样——直接问",
+        "bodyHtml": "<em>“我 4 月的支出和 3 月相比怎么样？”</em>Claude 会根据你自己的数据回答。"
+      },
+      "morePre": "你也可以把银行账单直接丢进 Claude 完成导入——参见",
+      "moreLink": "图文教程",
+      "morePost": "；同样的流程在 Claude 中一样适用。"
+    },
+    "cursor": {
+      "title": "将 Manilo 连接到 Cursor",
+      "step1": {
+        "title": "将 Manilo 添加到 Cursor",
+        "body": "一键搞定——按钮会打开 Cursor 并预填好 Manilo MCP 服务器。",
+        "cta": "将 Manilo 添加到 Cursor"
+      },
+      "step2": {
+        "title": "按提示操作",
+        "bodyHtml": "Cursor 打开后点击 <strong>Install</strong>，然后在浏览器中完成登录。"
+      },
+      "done": {
+        "title": "就这样——直接吩咐",
+        "bodyHtml": "<em>“把我刚付的 €14 团队午餐记上。”</em>聊天和 Composer 里都能用。"
+      },
+      "manual": {
+        "summary": "想手动添加？",
+        "introPre": "把以下内容添加到你的",
+        "introPost": "文件（Cursor Settings → MCP）中，然后在提示时完成 OAuth 登录："
+      },
+      "morePre": "在 Cursor 中记录的支出会即时同步到",
+      "moreLink": "网页仪表盘",
+      "morePost": "和 iOS 应用。"
+    },
+    "other": {
+      "title": "连接任何 MCP 客户端",
+      "step1": {
+        "title": "添加远程 MCP 服务器",
+        "body": "在 Windsurf、VS Code、Continue、Zed 或你自己开发的智能体中添加远程服务器，并指向："
+      },
+      "step2": {
+        "title": "在提示时登录",
+        "pre": "你的客户端会完成 OAuth 2.1（含 PKCE）。支持动态客户端注册（RFC 7591），因此无需手动配置",
+        "post": "或交换凭证。"
+      },
+      "done": {
+        "title": "就这样——各处工具一致",
+        "body": "每个 MCP 客户端都获得同样的 30 多个工具，覆盖交易、账户、预算等。"
+      },
+      "clientsAria": "已验证可用的 MCP 客户端",
+      "clients": ["Windsurf", "VS Code", "Continue", "Zed", "自定义智能体"],
+      "morePre": "想在代码里构建自己的集成？请改用",
+      "moreLink": "REST API v1",
+      "morePost": "接口。"
+    }
+  },
+  "prompts": {
+    "eyebrow": "日常使用",
+    "title": "你可以这样问",
+    "sub": "每个答案都由你自己的数据算出——不是估计。",
+    "items": [
+      { "q": "上个月我在咖啡上花了多少？", "a": "任意日期范围内按分类汇总。" },
+      { "q": "把昨天在 Pret 的 €12 午餐记到我的 Wise 账户。", "a": "自动解析商家、金额、币种和日期。" },
+      { "q": "从 Wise Personal 转 200 EUR 到 Cash。", "a": "跨账户转账，含跨币种汇率换算。" },
+      { "q": "我 4 月的支出和 3 月相比怎么样？", "a": "以你的主币种做多周期对比。" },
+      { "q": "找出 5 月所有超过 €100 的交易。", "a": "带筛选条件的交易搜索。" },
+      { "q": "看看我这个季度的前 5 大分类。", "a": "Top-N 聚合。" },
+      { "q": "我的 Santander 现在余额多少？", "a": "实时余额——与移动应用同一套公式。" },
+      { "q": "把 Santander 对账到 616 EUR——我银行 app 显示这个数。", "a": "一次性调整，对齐外部数字。" }
+    ]
+  },
+  "capabilities": {
+    "eyebrow": "能力",
+    "title": "连接后 Manilo 能做什么",
+    "sub": "MCP 服务器向你的助手开放 30 多个工具。",
+    "cards": {
+      "read": { "title": "读取一切", "body": "账户、交易、分类、预算、群组和标签。" },
+      "edit": { "title": "添加与编辑", "body": "交易、账户、分类、预算和周期性规则。" },
+      "move": { "title": "转移资金", "body": "账户间转账，含跨币种汇率换算。" },
+      "convert": { "title": "货币换算", "body": "实时欧洲央行汇率；仪表盘总额以你的主币种显示。" },
+      "receipts": { "title": "处理小票", "body": "从公开 URL 附加小票，并获取带签名的下载链接。" },
+      "reconcile": { "title": "余额与对账", "body": "实时账户余额，以及对照银行数字的一次性对账。" }
+    }
+  },
+  "privacy": {
+    "eyebrow": "信任",
+    "title": "隐私与控制",
+    "items": {
+      "scope": { "title": "只看得到你问到的", "body": "助手只获得回答你问题所需的数据。连接时我们不会把你的完整账本推送给 Anthropic 或 OpenAI。" },
+      "password": { "title": "密码始终是你的", "body": "你在 Manilo 自己的授权页面用 Apple、Google 或邮箱登录。助手永远看不到你的密码。" },
+      "disconnect": { "title": "随时断开", "body": "在客户端设置中移除连接器即可——Claude、ChatGPT 或其他任何客户端。撤销访问立即生效。" }
+    },
+    "notePre": "完整细节见我们的",
+    "noteLink": "隐私政策",
+    "notePost": "。"
+  },
+  "ctaBand": {
+    "title": "准备好和你的钱对话了吗？",
+    "sub": "连接一次，之后想问就问。设置大约一分钟。",
+    "pickCta": "选择你的助手",
+    "iosCta": "获取 iOS 应用",
+    "helpIntro": "卡住了，或缺你在用的客户端？",
+    "helpLink": "帮助中心"
+  }
+}

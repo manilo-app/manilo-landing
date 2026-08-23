@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "title": "Controle de gastos no ChatGPT: importe extratos | Manilo",
+    "description": "Jogue um extrato bancário no ChatGPT ou no Claude e receba gastos categorizados e um painel ao vivo. Conecte o Manilo em 3 passos. 7 dias grátis, sem anúncios.",
+    "ogTitle": "Manilo + ChatGPT: importe extratos bancários pelo chat",
+    "ogDescription": "Envie um extrato no ChatGPT ou no Claude. O Manilo transforma tudo em gastos categorizados e um painel ao vivo. App iOS grátis, sem anúncios. 7 dias grátis na conexão com IA.",
+    "keywords": "controle de gastos chatgpt, importar extrato bancário chatgpt, controle de gastos claude, importar extrato com ia, categorizar extrato com ia, finanças pessoais chatgpt, mcp controle de gastos",
+    "twitterTitle": "Manilo + ChatGPT: importe extratos bancários pelo chat",
+    "twitterDescription": "Envie um extrato no ChatGPT ou no Claude. O Manilo transforma tudo em gastos categorizados e um painel ao vivo. App iOS grátis, sem anúncios. 7 dias grátis na conexão com IA."
+  },
+  "jsonLd": {
+    "articleHeadline": "Controle de gastos no ChatGPT: importe extratos bancários com o Manilo",
+    "articleDescription": "Como conectar o Manilo ao ChatGPT ou ao Claude, importar um extrato bancário pelo chat e receber gastos categorizados e um painel ao vivo.",
+    "breadcrumbHome": "Início",
+    "breadcrumbChatgpt": "Manilo no ChatGPT"
+  },
+  "ctas": {
+    "connectChatgpt": "Conectar o ChatGPT",
+    "connectClaude": "Conectar o Claude",
+    "cursorClients": "Cursor e outros clientes",
+    "getIosApp": "Baixar o app iOS"
+  },
+  "hero": {
+    "eyebrow": "Converse com o seu dinheiro",
+    "title": "Jogue seu extrato bancário no ChatGPT. Receba suas finanças categorizadas e um painel.",
+    "lead1": "Sem exportação para ajustar, sem mapeamento de colunas, sem digitação manual. Envie o arquivo do extrato em um chat e o Manilo transforma tudo em transações categorizadas, visíveis em um painel ao vivo.",
+    "lead2": "Não fomos nós que inventamos esse fluxo. Em julho de 2026, quatro pessoas de quatro países fizeram isso por conta própria, sem ninguém sugerir, com quatro formatos diferentes: extratos bancários em PDF, um arquivo de exportação do banco, uma fatura do Amex e um PDF de orçamento familiar. Funcionou para todas. Então construímos uma porta de entrada de verdade para isso.",
+    "metaClients": "Funciona com ChatGPT, Claude e outros clientes MCP.",
+    "metaApp": "O app iOS é grátis e sem anúncios."
+  },
+  "toc": {
+    "ariaLabel": "Sumário",
+    "heading": "Conteúdo",
+    "toggle": "Conteúdo",
+    "demo": "Como é na prática",
+    "connect": "Conecte seu assistente",
+    "capabilities": "O que você pode fazer",
+    "faq": "Perguntas",
+    "closing": "Experimente"
+  },
+  "demo": {
+    "title": "Como é na prática",
+    "intro": "Você envia um extrato e diz “importa isso”. O assistente lê o arquivo, encaixa cada linha nas suas categorias e cria tudo em um só lote. Uma resposta típica é assim:",
+    "you": "Você:",
+    "prompt": "“Importa isso.”",
+    "file": "extrato-marco.pdf",
+    "reply": [
+      "Importei 87 transações do seu extrato de março.",
+      "Principais categorias: Mercado, Aluguel, Transporte.",
+      "Duas linhas não encaixaram bem nas suas categorias. Quer que eu ajuste?"
+    ],
+    "replyLinkPre": "Detalhamento completo:",
+    "replyLinkEm": "seu link do painel de março",
+    "outro": "No mês seguinte, você só manda o extrato novo. É esse o fluxo inteiro.",
+    "disclaimer": "Só para deixar claro: o assistente lê o arquivo que você entrega. O Manilo não se conecta ao seu banco."
+  },
+  "connect": {
+    "title": "Conecte seu assistente",
+    "introPre": "A configuração leva cerca de um minuto, e todos os caminhos estão em uma só página — escolha ChatGPT, Claude, Cursor ou qualquer outro cliente MCP na",
+    "introLink": "página de integrações",
+    "introPost": "e siga dois passos.",
+    "calloutPre": "O ChatGPT pede uma confirmação (",
+    "calloutPost": ") antes de qualquer gravação, então nada entra no seu histórico sem o seu OK."
+  },
+  "capabilities": {
+    "title": "O que você pode fazer depois de conectar",
+    "intro": "O Manilo é um app completo de controle de gastos e orçamento que funciona dentro do ChatGPT e do Claude (via MCP). Ele expõe mais de 30 ferramentas ao seu assistente, entre transações, contas, categorias, orçamentos, grupos, tags, pagamentos recorrentes, recibos, moedas e configurações. Na prática:",
+    "items": [
+      {
+        "strong": "Importe extratos e recibos.",
+        "body": "Envie um PDF, CSV ou arquivo de exportação; o assistente encaixa as linhas nas categorias que você já tem e cria tudo em um só lote."
+      },
+      {
+        "strong": "Pergunte sobre seus gastos.",
+        "body": "“Quanto gastei com mercado em julho?” A resposta vem dos seus próprios dados, não de uma estimativa."
+      },
+      {
+        "strong": "Cuide da parte chata.",
+        "body": "Contas, orçamentos, transações recorrentes, tags, categorias e grupos compartilhados, tudo em bom português."
+      },
+      {
+        "strong": "Converta moedas com cotações do BCE em tempo real.",
+        "body": "O Manilo é multimoeda; os totais do painel aparecem na sua moeda principal."
+      },
+      {
+        "strong": "Veja tudo em um painel ao vivo.",
+        "body": "Toda mudança sincroniza na hora com o dashboard.manilo.app e com o app iOS, se você usar."
+      }
+    ]
+  },
+  "faq": {
+    "title": "As perguntas que as pessoas realmente fazem",
+    "items": [
+      {
+        "id": "security",
+        "q": "É seguro? O que o ChatGPT ou o Claude conseguem acessar de verdade?",
+        "a": "O login usa OAuth 2.1 com PKCE e acontece na própria página de consentimento do Manilo, com Apple, Google ou e-mail. O assistente nunca vê sua senha. Depois de conectado, ele pode ler seus dados e, quando você pedir, criar, editar ou excluir registros; o ChatGPT pede uma confirmação antes de qualquer gravação. Os dados ficam armazenados na Alemanha (Hetzner) e no Google Cloud Firestore. Valores de transações nunca são enviados para analytics. Para desconectar, remova o conector nas configurações do ChatGPT ou do Claude. Contato de segurança:"
+      },
+      {
+        "id": "trial",
+        "q": "Como funciona o teste grátis e quando ele começa?",
+        "a": "Conectar é grátis. O teste de 7 dias começa na primeira vez que você realmente usa o Manilo pelo chat — ou seja, na sua primeira importação ou pergunta, não no momento da conexão. Nesses 7 dias você tem o produto completo, incluindo o painel web. Depois disso, o Manilo Cloud custa $2.99/mês ou $22.99/ano (USD).",
+        "linkText": "Ver preços"
+      },
+      {
+        "id": "trial-end",
+        "q": "O que acontece com meus dados quando o teste termina?",
+        "a": "Nada é excluído. Seus dados continuam salvos. As ferramentas do chat param de funcionar e apontam para o dashboard.manilo.app/upgrade, onde você pode continuar assinando pela App Store (hoje isso exige um aparelho Apple)."
+      },
+      {
+        "id": "formats",
+        "q": "Quais formatos de extrato funcionam?",
+        "a": "Todos os que o assistente conseguir ler. Em julho de 2026, usuários reais importaram extratos bancários em PDF, um arquivo de exportação do banco, uma fatura do Amex e um PDF de orçamento familiar. Você envia ou cola o extrato no chat; a IA encaixa as linhas nas suas categorias e cria tudo em um só lote. Não existe nenhuma conexão com o banco; a IA lê o arquivo que você entrega."
+      },
+      {
+        "id": "bank-link",
+        "q": "Ele se conecta ao meu banco automaticamente?",
+        "a": "Não. Não existe vínculo com conta bancária, e nada é puxado do seu banco. Você mesmo manda o extrato. No mês seguinte, é só mandar o novo."
+      },
+      {
+        "id": "ios-app",
+        "q": "Preciso do app iOS?",
+        "a": "Não. Você cria a conta durante o fluxo de conexão, com Apple, Google ou e-mail, e o teste inclui o painel web completo. Quando o teste terminar, você pode assinar pela App Store — hoje isso exige um aparelho Apple; os detalhes estão no dashboard.manilo.app/upgrade. O app iOS é opcional; ele acrescenta registro por voz, registro no Apple Watch e mais."
+      },
+      {
+        "id": "plans",
+        "q": "De qual plano do ChatGPT eu preciso? O plano grátis funciona?",
+        "a": "O app do Manilo no ChatGPT conecta direto pelo link do app, sem configuração especial; onde os apps do ChatGPT estão disponíveis, o plano grátis funciona. O caminho manual pelo Modo de desenvolvedor exige ChatGPT Plus, Pro ou Business. Os conectores personalizados do Claude funcionam no claude.ai e no Claude Desktop. Cursor, Windsurf e outros clientes MCP com suporte a servidores remotos com OAuth também funcionam."
+      },
+      {
+        "id": "more",
+        "q": "O que mais ele faz além de importar extratos?",
+        "a": "Faça perguntas como “quanto gastei com mercado em julho?” e receba respostas calculadas com os seus próprios dados. Cuide de contas, orçamentos, transações recorrentes, tags, categorias e grupos compartilhados. Converta moedas com cotações do BCE em tempo real. Tudo sincroniza na hora com o painel web e com o app iOS, se você usar."
+      }
+    ]
+  },
+  "closing": {
+    "title": "Teste com o extrato do mês passado",
+    "body1": "Pegue qualquer extrato que você já tenha, conecte e jogue no chat. Três passos, e nunca mais.",
+    "body2Pre": "O Manilo é feito por um desenvolvedor indie. Se o formato do seu extrato der problema, ou se qualquer outra coisa parecer estranha, escreva para",
+    "body2Post": ". Seu feedback realmente define o que vem depois."
+  }
+}

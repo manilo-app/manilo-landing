@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "title": "Manilo를 ChatGPT, Claude, Cursor에 연결 — MCP 지출 관리",
+    "description": "Manilo는 네이티브 MCP 서버를 갖춘 지출 관리 앱이에요. ChatGPT와 Cursor는 클릭 한 번, Claude 등 다른 MCP 클라이언트는 URL 붙여넣기로 연결돼요. 설정은 약 1분.",
+    "ogDescription": "AI 어시스턴트를 고르고 약 1분 만에 Manilo를 연결하세요 — ChatGPT와 Cursor는 클릭 한 번, Claude와 그 외 클라이언트는 MCP URL 붙여넣기면 돼요.",
+    "keywords": "MCP 지출 관리, ChatGPT 가계부 연동, Claude 지출 관리, Cursor MCP 서버, MCP 서버 설정, AI 가계부, Claude로 지출 기록, ChatGPT 지출 기록",
+    "twitterTitle": "Manilo를 ChatGPT, Claude, Cursor에 연결 — MCP 지출 관리",
+    "twitterDescription": "네이티브 MCP 서버를 갖춘 지출 관리 앱. 어시스턴트를 골라 약 1분 만에 연결하고, 내 돈에 대해 그냥 물어보세요."
+  },
+  "jsonLd": {
+    "techArticle": {
+      "headline": "Manilo를 ChatGPT, Claude, Cursor에 연결 — MCP 지출 관리",
+      "description": "Manilo 지출 관리 앱을 ChatGPT, Claude, Cursor 등 Model Context Protocol을 지원하는 AI 어시스턴트에 연결하는 방법."
+    },
+    "breadcrumb": {
+      "home": "홈",
+      "integrations": "연동"
+    },
+    "howtoChatgpt": {
+      "name": "Manilo를 ChatGPT에 연결하는 방법",
+      "description": "두 단계로 Manilo 지출 관리 앱을 ChatGPT에 연결하세요.",
+      "steps": [
+        { "name": "Manilo를 ChatGPT에 연결", "text": "ChatGPT에서 Manilo 앱을 열고 연결을 클릭하세요." },
+        { "name": "안내 따라가기", "text": "Apple, Google 또는 이메일로 로그인해 접근을 허용하세요. 그다음 아무 채팅에서나 Manilo를 언급하면 돼요." }
+      ]
+    },
+    "howtoClaude": {
+      "name": "Manilo를 Claude에 연결하는 방법",
+      "description": "Manilo 지출 관리 앱을 Claude에 커스텀 MCP 커넥터로 추가하세요.",
+      "steps": [
+        { "name": "커넥터 설정 열기", "text": "claude.ai 또는 Claude Desktop에서 설정 → 커넥터 → 커스텀 커넥터 추가로 이동하세요." },
+        { "name": "Manilo 서버 URL 붙여넣기", "text": "이름: Manilo. 서버 URL: https://api.manilo.app/mcp." },
+        { "name": "추가하고 로그인", "text": "추가를 클릭하고 Apple, Google 또는 이메일로 로그인한 뒤, 아무 채팅에서나 커넥터 메뉴에서 Manilo를 켜세요." }
+      ]
+    },
+    "howtoCursor": {
+      "name": "Manilo를 Cursor에 연결하는 방법",
+      "description": "클릭 한 번으로 Cursor에 Manilo MCP 서버를 설치하세요.",
+      "steps": [
+        { "name": "Cursor에 Manilo 추가", "text": "원클릭 설치 링크를 사용하거나 mcp.json에 https://api.manilo.app/mcp를 추가하세요." },
+        { "name": "안내 따라가기", "text": "Cursor가 열리면 Install을 클릭하고 브라우저에서 로그인을 완료하세요." }
+      ]
+    }
+  },
+  "hero": {
+    "eyebrow": "연동",
+    "title": "Manilo를 ChatGPT, Claude, Cursor에 연결하세요",
+    "lead": "Manilo는 네이티브 MCP 서버를 갖춘 유일한 지출 관리 앱이에요. Model Context Protocol을 지원하는 어떤 AI 어시스턴트에서든 평소 말투로 지출을 기록하고, 소비를 조회하고, 돈을 옮길 수 있어요.",
+    "badges": {
+      "time": "설정은 약 1분",
+      "oauth": "OAuth 로그인 — 비밀번호는 공유되지 않아요",
+      "anyClient": "모든 MCP 클라이언트와 호환"
+    }
+  },
+  "picker": {
+    "eyebrow": "설정",
+    "title": "어떤 AI 어시스턴트를 쓰시나요?",
+    "timeBadge": "약 1분",
+    "copy": "복사",
+    "copyAria": "서버 URL 복사",
+    "tabs": {
+      "chatgpt": { "name": "ChatGPT", "hint": "2단계 · 클릭 한 번" },
+      "claude": { "name": "Claude", "hint": "3단계 · URL 복사" },
+      "cursor": { "name": "Cursor", "hint": "2단계 · 클릭 한 번" },
+      "other": { "name": "기타", "hint": "Windsurf, VS Code 등" }
+    },
+    "chatgpt": {
+      "title": "Manilo를 ChatGPT에 연결",
+      "step1": {
+        "title": "Manilo를 ChatGPT에 연결",
+        "body": "버튼을 누르면 ChatGPT 안에서 Manilo 앱이 열려요.",
+        "cta": "Manilo를 ChatGPT에 연결"
+      },
+      "step2": {
+        "title": "안내 따라가기",
+        "bodyHtml": "<strong>연결</strong>을 클릭하고 Apple, Google 또는 이메일로 로그인해 접근을 허용하세요."
+      },
+      "done": {
+        "title": "끝 — 이제 대화만 하세요",
+        "bodyHtml": "아무 채팅에서나 Manilo를 언급하거나 돈에 대해 물어보세요 — <em>“7월에 식료품에 얼마 썼지?”</em> ChatGPT가 앱을 자동으로 불러와요."
+      },
+      "manual": {
+        "summary": "요금제나 지역 때문에 앱을 쓸 수 없거나, 수동 설정을 선호하시나요?",
+        "introHtml": "<strong>설정 → 앱 → 고급 설정 → 개발자 모드</strong>를 켜고(ChatGPT Plus, Pro 또는 Business 필요) <strong>만들기</strong>를 클릭한 뒤 다음을 입력하세요:",
+        "nameLabel": "이름:",
+        "urlLabel": "MCP 서버 URL:",
+        "authLabel": "인증:"
+      },
+      "morePre": "거래 내역서 가져오기 전체 과정은",
+      "moreLink": "ChatGPT 속 Manilo",
+      "morePost": "페이지에 정리되어 있어요."
+    },
+    "claude": {
+      "title": "Manilo를 Claude에 연결",
+      "step1": {
+        "title": "커넥터 설정 열기",
+        "pre": "먼저",
+        "mid": "또는 Claude Desktop에서",
+        "settingsPath": "설정 → 커넥터",
+        "addConnector": "커스텀 커넥터 추가",
+        "end": "로 이동하세요."
+      },
+      "step2": {
+        "title": "Manilo 서버 URL 붙여넣기",
+        "nameLabel": "이름:",
+        "serverLabel": "서버 URL:",
+        "legacyPre": "예전",
+        "legacyPost": "주소로 이미 연결해 두셨나요? 계속 작동하니 다시 연결할 필요 없어요."
+      },
+      "step3": {
+        "title": "추가하고 로그인",
+        "bodyHtml": "<strong>추가</strong>를 클릭하고 Apple, Google 또는 이메일로 로그인한 뒤, 아무 채팅에서나 커넥터 메뉴에서 <strong>Manilo</strong>를 켜세요."
+      },
+      "done": {
+        "title": "끝 — 이제 물어보세요",
+        "bodyHtml": "<em>“4월 지출은 3월과 비교해 어때?”</em> Claude가 내 데이터를 바탕으로 답해요."
+      },
+      "morePre": "은행 거래 내역서를 올려 통째로 가져올 수도 있어요 —",
+      "moreLink": "가이드",
+      "morePost": "를 참고하세요. 같은 방식이 Claude에서도 그대로 작동해요."
+    },
+    "cursor": {
+      "title": "Manilo를 Cursor에 연결",
+      "step1": {
+        "title": "Cursor에 Manilo 추가",
+        "body": "클릭 한 번 — 버튼을 누르면 Manilo MCP 서버가 미리 입력된 채로 Cursor가 열려요.",
+        "cta": "Cursor에 Manilo 추가"
+      },
+      "step2": {
+        "title": "안내 따라가기",
+        "bodyHtml": "Cursor가 열리면 <strong>Install</strong>을 클릭하고 브라우저에서 로그인을 마치세요."
+      },
+      "done": {
+        "title": "끝 — 에이전트에게 시키세요",
+        "bodyHtml": "<em>“방금 결제한 €14 팀 점심 기록해 줘.”</em> 채팅과 컴포저 모두에서 작동해요."
+      },
+      "manual": {
+        "summary": "직접 추가하고 싶으신가요?",
+        "introPre": "아래 내용을",
+        "introPost": "파일에 추가하고(Cursor 설정 → MCP), 안내가 뜨면 OAuth 로그인을 완료하세요:"
+      },
+      "morePre": "Cursor에서 기록한 지출은 iOS 앱과",
+      "moreLink": "웹 대시보드",
+      "morePost": "모두에 즉시 동기화돼요."
+    },
+    "other": {
+      "title": "어떤 MCP 클라이언트든 연결",
+      "step1": {
+        "title": "원격 MCP 서버 추가",
+        "body": "Windsurf, VS Code, Continue, Zed 또는 직접 만든 에이전트에서 원격 서버를 추가하고 다음 주소를 입력하세요:"
+      },
+      "step2": {
+        "title": "안내가 뜨면 로그인",
+        "pre": "클라이언트가 PKCE 기반 OAuth 2.1을 완료해요. 동적 클라이언트 등록(RFC 7591)을 지원하므로 수동",
+        "post": "설정이나 자격 증명 교환이 필요 없어요."
+      },
+      "done": {
+        "title": "끝 — 어디서나 같은 도구",
+        "body": "모든 MCP 클라이언트가 거래, 계좌, 예산 등 동일한 30개 이상의 도구를 사용해요."
+      },
+      "clientsAria": "검증된 MCP 클라이언트",
+      "clients": ["Windsurf", "VS Code", "Continue", "Zed", "커스텀 에이전트"],
+      "morePre": "코드로 직접 연동을 만들고 있나요? 그럴 땐",
+      "moreLink": "REST API v1",
+      "morePost": "문서를 사용하세요."
+    }
+  },
+  "prompts": {
+    "eyebrow": "일상 사용",
+    "title": "이런 걸 물어볼 수 있어요",
+    "sub": "모든 답은 추정이 아니라 내 데이터에서 계산돼요.",
+    "items": [
+      { "q": "지난달 커피에 얼마 썼지?", "a": "어떤 기간이든 카테고리별 합계를 알려줘요." },
+      { "q": "어제 Pret에서 먹은 점심 €12, Wise 계좌에 추가해 줘.", "a": "가맹점, 금액, 통화, 날짜를 알아서 해석해요." },
+      { "q": "Wise Personal에서 Cash로 200 EUR 이체해 줘.", "a": "계좌 간 이체 — 환율이 적용되는 통화 간 이체도 돼요." },
+      { "q": "4월 지출은 3월과 비교해 어때?", "a": "기본 통화 기준으로 여러 기간을 비교해요." },
+      { "q": "5월에 €100 넘는 거래 전부 찾아 줘.", "a": "조건별 거래 검색." },
+      { "q": "이번 분기 상위 5개 카테고리 보여 줘.", "a": "상위 N개 집계." },
+      { "q": "지금 Santander 잔액이 얼마야?", "a": "실시간 잔액 — 모바일 앱과 같은 계산식이에요." },
+      { "q": "은행 앱에 616 EUR로 나오니까 Santander를 거기에 맞춰 줘.", "a": "외부 수치에 맞춘 일회성 잔액 보정." }
+    ]
+  },
+  "capabilities": {
+    "eyebrow": "기능",
+    "title": "연결하면 Manilo가 할 수 있는 일",
+    "sub": "MCP 서버가 어시스턴트에 30개 이상의 도구를 제공해요.",
+    "cards": {
+      "read": { "title": "모든 것 읽기", "body": "계좌, 거래, 카테고리, 예산, 그룹, 태그." },
+      "edit": { "title": "추가와 수정", "body": "거래, 계좌, 카테고리, 예산, 반복 규칙." },
+      "move": { "title": "돈 옮기기", "body": "계좌 간 이체 — 환율이 적용되는 통화 간 이체 포함." },
+      "convert": { "title": "통화 변환", "body": "실시간 ECB 환율. 대시보드 합계는 기본 통화로 표시돼요." },
+      "receipts": { "title": "영수증 처리", "body": "공개 URL로 첨부하고 서명된 다운로드 링크를 받아요." },
+      "reconcile": { "title": "잔액 확인과 보정", "body": "실시간 계좌 잔액과 은행 기준 일회성 잔액 보정." }
+    }
+  },
+  "privacy": {
+    "eyebrow": "신뢰",
+    "title": "프라이버시와 통제권",
+    "items": {
+      "scope": { "title": "물어본 것만 봐요", "body": "어시스턴트는 질문에 필요한 데이터만 받아요. 연결했다고 전체 장부를 Anthropic이나 OpenAI로 보내지 않아요." },
+      "password": { "title": "비밀번호는 내 것", "body": "로그인은 Manilo의 자체 동의 페이지에서 Apple, Google 또는 이메일로 진행돼요. 어시스턴트는 비밀번호를 절대 볼 수 없어요." },
+      "disconnect": { "title": "언제든 연결 해제", "body": "Claude, ChatGPT 등 클라이언트 설정에서 커넥터를 제거하세요. 접근 권한 철회는 즉시 적용돼요." }
+    },
+    "notePre": "자세한 내용은",
+    "noteLink": "개인정보 처리방침",
+    "notePost": "에서 확인하세요."
+  },
+  "ctaBand": {
+    "title": "돈과 대화할 준비 되셨나요?",
+    "sub": "한 번만 연결하고, 그다음엔 그냥 물어보세요. 설정은 약 1분이면 끝나요.",
+    "pickCta": "어시스턴트 고르기",
+    "iosCta": "iOS 앱 받기",
+    "helpIntro": "막혔거나 원하는 클라이언트가 없나요?",
+    "helpLink": "도움말 센터"
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "title": "ManiloをChatGPT・Claude・Cursorに接続 — MCP対応支出管理",
+    "description": "ManiloはMCPサーバーを標準搭載した支出管理アプリ。ChatGPTやCursorはワンクリック、ClaudeなどのMCPクライアントはURLを貼るだけで接続。セットアップは約1分です。",
+    "ogDescription": "使っているAIアシスタントを選んで、約1分でManiloと接続。ChatGPTとCursorはワンクリック、Claudeやその他のクライアントはMCP URLをコピペするだけです。",
+    "keywords": "MCP 家計簿, ChatGPT 家計簿 連携, Claude 支出管理, Cursor MCPサーバー, MCPサーバー 設定, Model Context Protocol 家計, AI 支出 記録, Claudeから支出を記録",
+    "twitterTitle": "ManiloをChatGPT・Claude・Cursorに接続 — MCP対応支出管理",
+    "twitterDescription": "MCPサーバーを標準搭載した支出管理アプリ。アシスタントを選んで約1分で接続し、あとはお金のことを聞くだけ。"
+  },
+  "jsonLd": {
+    "techArticle": {
+      "headline": "ManiloをChatGPT・Claude・Cursorに接続 — MCP対応支出管理",
+      "description": "支出管理アプリManiloをChatGPT、Claude、Cursor、またはModel Context Protocol対応のAIアシスタントに接続する方法。"
+    },
+    "breadcrumb": {
+      "home": "ホーム",
+      "integrations": "連携"
+    },
+    "howtoChatgpt": {
+      "name": "ManiloをChatGPTに接続する方法",
+      "description": "支出管理アプリManiloを2ステップでChatGPTに接続します。",
+      "steps": [
+        { "name": "ManiloをChatGPTに接続", "text": "ChatGPT内でManiloアプリを開き、「接続」をクリックします。" },
+        { "name": "案内に従う", "text": "Apple、Google、またはメールでサインインしてアクセスを許可します。その後は、どのチャットでもManiloに触れるだけです。" }
+      ]
+    },
+    "howtoClaude": {
+      "name": "ManiloをClaudeに接続する方法",
+      "description": "支出管理アプリManiloをカスタムMCPコネクタとしてClaudeに追加します。",
+      "steps": [
+        { "name": "コネクタ設定を開く", "text": "claude.aiまたはClaude Desktopで、設定 → コネクタ → カスタムコネクタを追加へ進みます。" },
+        { "name": "ManiloのサーバーURLを貼り付ける", "text": "名前: Manilo。サーバーURL: https://api.manilo.app/mcp。" },
+        { "name": "追加してサインイン", "text": "「追加」をクリックし、Apple、Google、またはメールでサインイン。その後、任意のチャットのコネクタメニューからManiloを有効にします。" }
+      ]
+    },
+    "howtoCursor": {
+      "name": "ManiloをCursorに接続する方法",
+      "description": "ワンクリックでCursorにManiloのMCPサーバーをインストールします。",
+      "steps": [
+        { "name": "ManiloをCursorに追加", "text": "ワンクリックインストールのリンクを使うか、https://api.manilo.app/mcp をmcp.jsonに追加します。" },
+        { "name": "案内に従う", "text": "Cursorが開いたら「Install」をクリックし、ブラウザでサインインを完了します。" }
+      ]
+    }
+  },
+  "hero": {
+    "eyebrow": "連携",
+    "title": "ManiloをChatGPT、Claude、Cursorに接続",
+    "lead": "ManiloはMCPサーバーを標準搭載した唯一の支出管理アプリ。Model Context Protocolに対応したAIアシスタントから、普段の言葉で支出を記録し、履歴を調べ、お金を動かせます。",
+    "badges": {
+      "time": "セットアップは約1分",
+      "oauth": "OAuthサインイン — パスワードが共有されることはありません",
+      "anyClient": "あらゆるMCPクライアントで動作"
+    }
+  },
+  "picker": {
+    "eyebrow": "セットアップ",
+    "title": "どのAIアシスタントを使っていますか？",
+    "timeBadge": "約1分",
+    "copy": "コピー",
+    "copyAria": "サーバーURLをコピー",
+    "tabs": {
+      "chatgpt": { "name": "ChatGPT", "hint": "2ステップ · ワンクリック" },
+      "claude": { "name": "Claude", "hint": "3ステップ · URLをコピー" },
+      "cursor": { "name": "Cursor", "hint": "2ステップ · ワンクリック" },
+      "other": { "name": "その他", "hint": "Windsurf、VS Codeなど" }
+    },
+    "chatgpt": {
+      "title": "ManiloをChatGPTに接続",
+      "step1": {
+        "title": "ManiloをChatGPTに接続",
+        "body": "ボタンを押すと、ChatGPT内でManiloアプリが開きます。",
+        "cta": "ManiloをChatGPTに接続"
+      },
+      "step2": {
+        "title": "案内に従う",
+        "bodyHtml": "<strong>接続</strong>をクリックし、Apple、Google、またはメールでサインインしてアクセスを許可します。"
+      },
+      "done": {
+        "title": "これで完了 — あとはチャットするだけ",
+        "bodyHtml": "どのチャットでも、Maniloに触れるか、お金について聞くだけ — <em>「7月に食料品へいくら使った？」</em> ChatGPTが自動でアプリを呼び出します。"
+      },
+      "manual": {
+        "summary": "アプリがプランや地域で使えない場合や、手動で設定したい場合",
+        "introHtml": "<strong>設定 → アプリ → 詳細設定 → 開発者モード</strong>を有効にし（ChatGPT Plus、Pro、またはBusinessが必要）、<strong>作成</strong>をクリックして次を入力します:",
+        "nameLabel": "名前:",
+        "urlLabel": "MCPサーバーURL:",
+        "authLabel": "認証:"
+      },
+      "morePre": "明細インポートの詳しい手順は",
+      "moreLink": "ChatGPTでManilo",
+      "morePost": "のページをご覧ください。"
+    },
+    "claude": {
+      "title": "ManiloをClaudeに接続",
+      "step1": {
+        "title": "コネクタ設定を開く",
+        "pre": "まず",
+        "mid": "または Claude Desktop で",
+        "settingsPath": "設定 → コネクタ",
+        "addConnector": "カスタムコネクタを追加",
+        "end": "を開きます。"
+      },
+      "step2": {
+        "title": "ManiloのサーバーURLを貼り付ける",
+        "nameLabel": "名前:",
+        "serverLabel": "サーバーURL:",
+        "legacyPre": "以前の",
+        "legacyPost": "アドレスで接続済みの場合も、そのまま動きます。再接続は不要です。"
+      },
+      "step3": {
+        "title": "追加してサインイン",
+        "bodyHtml": "<strong>追加</strong>をクリックし、Apple、Google、またはメールでサインイン。その後、任意のチャットのコネクタメニューから<strong>Manilo</strong>を有効にします。"
+      },
+      "done": {
+        "title": "これで完了 — あとは聞くだけ",
+        "bodyHtml": "<em>「4月の支出は3月と比べてどう？」</em> Claudeがあなた自身のデータから答えます。"
+      },
+      "morePre": "銀行明細をClaudeに渡して、そのままインポートすることもできます。手順は",
+      "moreLink": "こちらのガイド",
+      "morePost": "へ。同じ流れがClaudeでもそのまま使えます。"
+    },
+    "cursor": {
+      "title": "ManiloをCursorに接続",
+      "step1": {
+        "title": "ManiloをCursorに追加",
+        "body": "ワンクリック — ボタンを押すと、ManiloのMCPサーバーが入力済みの状態でCursorが開きます。",
+        "cta": "ManiloをCursorに追加"
+      },
+      "step2": {
+        "title": "案内に従う",
+        "bodyHtml": "Cursorが開いたら<strong>Install</strong>をクリックし、ブラウザでサインインを完了します。"
+      },
+      "done": {
+        "title": "これで完了 — エージェントに頼むだけ",
+        "bodyHtml": "<em>「さっき払ったチームランチ€14を記録して。」</em> チャットでもコンポーザーでも使えます。"
+      },
+      "manual": {
+        "summary": "手動で追加したい場合",
+        "introPre": "以下を",
+        "introPost": "に追加し（Cursor設定 → MCP）、表示されたらOAuthサインインを完了してください:"
+      },
+      "morePre": "Cursorから記録した支出は、",
+      "moreLink": "Webダッシュボード",
+      "morePost": "とiOSアプリに即座に同期されます。"
+    },
+    "other": {
+      "title": "任意のMCPクライアントを接続",
+      "step1": {
+        "title": "リモートMCPサーバーを追加",
+        "body": "Windsurf、VS Code、Continue、Zed、または自作エージェントでリモートサーバーを追加し、次のURLを指定します:"
+      },
+      "step2": {
+        "title": "求められたらサインイン",
+        "pre": "クライアントがPKCE付きOAuth 2.1を完了します。Dynamic Client Registration（RFC 7591）に対応しているため、",
+        "post": "の手動設定やクレデンシャルの受け渡しは不要です。"
+      },
+      "done": {
+        "title": "これで完了 — どこでも同じツール",
+        "body": "どのMCPクライアントでも、トランザクション、口座、予算などにわたる同じ30以上のツールが使えます。"
+      },
+      "clientsAria": "動作確認済みのMCPクライアント",
+      "clients": ["Windsurf", "VS Code", "Continue", "Zed", "自作エージェント"],
+      "morePre": "コードで独自の連携を組むなら、",
+      "moreLink": "REST API v1",
+      "morePost": "をご利用ください。"
+    }
+  },
+  "prompts": {
+    "eyebrow": "日々の使い方",
+    "title": "こんなことを聞けます",
+    "sub": "どの答えも、推測ではなくあなた自身のデータから計算されます。",
+    "items": [
+      { "q": "先月、コーヒーにいくら使った？", "a": "任意の期間でカテゴリ別に集計。" },
+      { "q": "昨日のPretのランチ€12をWise口座に追加して。", "a": "店名、金額、通貨、日付を解析します。" },
+      { "q": "Wise PersonalからCashへ200 EUR振り替えて。", "a": "口座間の振替。通貨をまたぐ両替にも対応。" },
+      { "q": "4月の支出は3月と比べてどう？", "a": "メイン通貨での期間比較。" },
+      { "q": "5月の€100を超える取引をぜんぶ探して。", "a": "条件で絞り込んだトランザクション検索。" },
+      { "q": "今四半期のトップ5カテゴリを見せて。", "a": "上位N件の集計。" },
+      { "q": "Santanderの残高、今いくら？", "a": "ライブ残高 — モバイルアプリと同じ計算式。" },
+      { "q": "Santanderを616 EURに合わせて。銀行アプリではそうなってる。", "a": "外部の数字に合わせるワンショット調整。" }
+    ]
+  },
+  "capabilities": {
+    "eyebrow": "できること",
+    "title": "接続したManiloができること",
+    "sub": "MCPサーバーは、30以上のツールをアシスタントに公開します。",
+    "cards": {
+      "read": { "title": "すべて読める", "body": "口座、トランザクション、カテゴリ、予算、グループ、タグ。" },
+      "edit": { "title": "追加・編集", "body": "トランザクション、口座、カテゴリ、予算、定期ルール。" },
+      "move": { "title": "お金を動かす", "body": "口座間の振替。通貨をまたぐ両替にも対応。" },
+      "convert": { "title": "通貨を換算", "body": "ECBのライブレート。ダッシュボードの合計はメイン通貨で表示。" },
+      "receipts": { "title": "レシートを扱う", "body": "公開URLから添付し、署名付きダウンロードリンクを取得。" },
+      "reconcile": { "title": "残高と照合", "body": "ライブの口座残高と、銀行の数字に合わせるワンショット照合。" }
+    }
+  },
+  "privacy": {
+    "eyebrow": "信頼",
+    "title": "プライバシーとコントロール",
+    "items": {
+      "scope": { "title": "見えるのは聞いたことだけ", "body": "アシスタントが受け取るのは、質問に必要なデータだけです。接続時に台帳全体をAnthropicやOpenAIへ送ることはありません。" },
+      "password": { "title": "パスワードはあなたのもの", "body": "サインインはManilo自身の同意ページで、Apple、Google、またはメールを使って行います。アシスタントがパスワードを目にすることはありません。" },
+      "disconnect": { "title": "いつでも切断", "body": "クライアントの設定からコネクタを削除するだけ — Claude、ChatGPT、その他どれでも。アクセスの取り消しは即座に反映されます。" }
+    },
+    "notePre": "詳しくは",
+    "noteLink": "プライバシーポリシー",
+    "notePost": "をご覧ください。"
+  },
+  "ctaBand": {
+    "title": "お金と話す準備はできましたか？",
+    "sub": "接続は一度だけ。あとは聞くだけ。セットアップは約1分です。",
+    "pickCta": "アシスタントを選ぶ",
+    "iosCta": "iOSアプリを入手",
+    "helpIntro": "困ったときや、使いたいクライアントが見つからないときは",
+    "helpLink": "ヘルプセンター"
+  }
+}

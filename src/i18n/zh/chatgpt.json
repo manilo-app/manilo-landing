@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "title": "ChatGPT 记账：聊天导入银行账单 | Manilo",
+    "description": "把银行账单丢进 ChatGPT 或 Claude，得到已分类的支出和实时仪表盘。三步连接 Manilo。7 天免费试用，无广告。",
+    "ogTitle": "Manilo + ChatGPT：聊天导入银行账单",
+    "ogDescription": "把账单上传到 ChatGPT 或 Claude，Manilo 把它变成已分类的支出和实时仪表盘。iOS 应用免费、无广告。AI 连接享 7 天免费试用。",
+    "keywords": "ChatGPT 记账, ChatGPT 导入银行账单, Claude 记账, AI 银行账单导入, AI 账单分类, ChatGPT 个人理财, MCP 记账",
+    "twitterTitle": "Manilo + ChatGPT：聊天导入银行账单",
+    "twitterDescription": "把账单上传到 ChatGPT 或 Claude，Manilo 把它变成已分类的支出和实时仪表盘。iOS 应用免费、无广告。AI 连接享 7 天免费试用。"
+  },
+  "jsonLd": {
+    "articleHeadline": "ChatGPT 记账：用 Manilo 导入银行账单",
+    "articleDescription": "如何将 Manilo 连接到 ChatGPT 或 Claude，通过聊天导入银行账单，得到已分类的支出和实时仪表盘。",
+    "breadcrumbHome": "首页",
+    "breadcrumbChatgpt": "ChatGPT 中的 Manilo"
+  },
+  "ctas": {
+    "connectChatgpt": "连接 ChatGPT",
+    "connectClaude": "连接 Claude",
+    "cursorClients": "Cursor 及其他客户端",
+    "getIosApp": "获取 iOS 应用"
+  },
+  "hero": {
+    "eyebrow": "和你的钱对话",
+    "title": "把银行账单丢进 ChatGPT。支出自动分好类，外加一个仪表盘。",
+    "lead1": "不用整理导出文件，不用映射列，不用手动录入。把账单文件传进聊天，Manilo 就把它变成分好类的交易，在实时仪表盘上一目了然。",
+    "lead2": "这个用法不是我们发明的。2026 年 7 月，来自四个国家的四位用户不约而同、无人提示地这样用了，格式各不相同：银行 PDF 账单、银行导出文件、Amex 账单和一份家庭预算 PDF。全都成功了。于是我们给它修了一扇正门。",
+    "metaClients": "适用于 ChatGPT、Claude 及其他 MCP 客户端。",
+    "metaApp": "iOS 应用免费，无广告。"
+  },
+  "toc": {
+    "ariaLabel": "目录",
+    "heading": "目录",
+    "toggle": "目录",
+    "demo": "实际效果",
+    "connect": "连接你的助手",
+    "capabilities": "能做什么",
+    "faq": "常见问题",
+    "closing": "试一试"
+  },
+  "demo": {
+    "title": "实际效果",
+    "intro": "你上传一份账单，说一句“导入这个”。助手读取文件，把每一行对应到你的分类，然后一次性批量创建。典型回复长这样：",
+    "you": "你：",
+    "prompt": "“导入这个。”",
+    "file": "statement-march.pdf",
+    "reply": [
+      "已从你的 3 月账单导入 87 笔交易。",
+      "支出最多的分类：食品杂货、房租、交通。",
+      "有两行没能准确匹配你的分类，要我调整一下吗？"
+    ],
+    "replyLinkPre": "完整明细：",
+    "replyLinkEm": "你的 3 月仪表盘链接",
+    "outro": "下个月，你只要发来新账单就行。整个流程就这么多。",
+    "disclaimer": "需要说明：助手读取的是你提供的文件。Manilo 不会连接你的银行。"
+  },
+  "connect": {
+    "title": "连接你的助手",
+    "introPre": "设置大约一分钟，所有路径都在同一个页面上——在",
+    "introLink": "集成页面",
+    "introPost": "选择 ChatGPT、Claude、Cursor 或任何其他 MCP 客户端，然后照两步操作。",
+    "calloutPre": "ChatGPT 在任何写入前都会显示确认提示（",
+    "calloutPost": "），没有你的确认，任何内容都不会写进你的账本。"
+  },
+  "capabilities": {
+    "title": "连接之后你能做什么",
+    "intro": "Manilo 是一款完整的记账与预算应用，可在 ChatGPT 和 Claude 中使用（通过 MCP）。它向你的助手开放 30 多个工具，覆盖交易、账户、分类、预算、群组、标签、周期性付款、小票、货币和设置。实际用起来：",
+    "items": [
+      {
+        "strong": "导入账单和小票。",
+        "body": "上传 PDF、CSV 或导出文件；助手把每一行映射到你现有的分类，并一次性批量创建。"
+      },
+      {
+        "strong": "随口问你的支出。",
+        "body": "“7 月我买菜花了多少？”答案来自你自己的数据，不是估计。"
+      },
+      {
+        "strong": "打理那些琐事。",
+        "body": "账户、预算、周期性交易、标签、分类和共享群组，一句大白话全搞定。"
+      },
+      {
+        "strong": "用实时欧洲央行汇率换算货币。",
+        "body": "Manilo 支持多币种；仪表盘总额以你的主币种显示。"
+      },
+      {
+        "strong": "在实时仪表盘上纵览一切。",
+        "body": "每次变动都会即时同步到 dashboard.manilo.app，如果你用 iOS 应用，也会同步过去。"
+      }
+    ]
+  },
+  "faq": {
+    "title": "大家真的会问的问题",
+    "items": [
+      {
+        "id": "security",
+        "q": "安全吗？ChatGPT 或 Claude 到底能访问什么？",
+        "a": "登录使用 OAuth 2.1（含 PKCE），在 Manilo 自己的授权页面完成，支持 Apple、Google 或邮箱。助手永远看不到你的密码。连接后，它可以读取你的数据，并在你要求时创建、编辑或删除条目；ChatGPT 在任何写入前都会显示确认提示。数据存储在德国（Hetzner）及 Google Cloud Firestore。交易金额绝不会发送给分析服务。要断开连接，在 ChatGPT 或 Claude 的设置中移除连接器即可。安全问题请联系："
+      },
+      {
+        "id": "trial",
+        "q": "免费试用是什么？什么时候开始？",
+        "a": "连接本身免费。7 天试用从你第一次真正通过聊天使用 Manilo 时开始计算——也就是你的第一次导入或第一个问题，而不是连接的那一刻。这 7 天里你拥有完整产品，包括网页仪表盘。之后，Manilo Cloud 为 $2.99/月或 $22.99/年（USD）。",
+        "linkText": "查看价格"
+      },
+      {
+        "id": "trial-end",
+        "q": "试用结束后我的数据会怎样？",
+        "a": "什么都不会删除。你的数据原样保存。聊天工具会停止工作，并把你指向 dashboard.manilo.app/upgrade，在那里通过 App Store 订阅即可继续（目前这一步需要一台 Apple 设备）。"
+      },
+      {
+        "id": "formats",
+        "q": "支持哪些账单格式？",
+        "a": "助手读得懂的都行。2026 年 7 月，真实用户导入过银行 PDF 账单、银行导出文件、Amex 账单和一份家庭预算 PDF。你把账单上传或粘贴进聊天；AI 把每一行映射到你的分类并一次性批量创建。全程不涉及银行连接；AI 读取的是你提供的文件。"
+      },
+      {
+        "id": "bank-link",
+        "q": "它会自动连接我的银行吗？",
+        "a": "不会。没有银行账户绑定，也不会从你的银行拉取任何数据。账单由你自己发送。下个月，发新的一份就行。"
+      },
+      {
+        "id": "ios-app",
+        "q": "我需要 iOS 应用吗？",
+        "a": "不需要。你在连接流程中用 Apple、Google 或邮箱注册，试用包含完整的网页仪表盘。试用结束后，可以通过 App Store 订阅——目前这一步需要一台 Apple 设备；详见 dashboard.manilo.app/upgrade。iOS 应用是可选的；它额外提供语音记账、Apple Watch 记录等功能。"
+      },
+      {
+        "id": "plans",
+        "q": "我需要哪个 ChatGPT 套餐？免费版能用吗？",
+        "a": "ChatGPT 中的 Manilo 应用直接通过应用链接连接，无需特殊设置；在 ChatGPT 应用可用的地区，免费版就能用。手动的开发者模式路线需要 ChatGPT Plus、Pro 或 Business。Claude 自定义连接器适用于 claude.ai 和 Claude Desktop。Cursor、Windsurf 以及其他支持带 OAuth 远程服务器的 MCP 客户端也都可以。"
+      },
+      {
+        "id": "more",
+        "q": "除了导入账单，它还能做什么？",
+        "a": "问“7 月我买菜花了多少？”这类问题，答案由你自己的数据算出。管理账户、预算、周期性交易、标签、分类和共享群组。用实时欧洲央行汇率换算货币。一切即时同步到网页仪表盘，如果你用 iOS 应用，也会同步过去。"
+      }
+    ]
+  },
+  "closing": {
+    "title": "用上个月的账单试试",
+    "body1": "找一份你现成的账单导出，连接，然后丢进聊天。三步搞定，从此不用再管。",
+    "body2Pre": "Manilo 由一位独立开发者打造。如果你的账单格式让它出了错，或哪里感觉不对，请发邮件到",
+    "body2Post": "。你的反馈会实实在在地决定接下来做什么。"
+  }
+}

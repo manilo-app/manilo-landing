@@ -1,0 +1,172 @@
+---
+import Base from '../../layouts/Base.astro';
+import { navUrl, type Locale } from '../../i18n/config';
+import { getDict } from '../../i18n';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const d = getDict<any>(lang, 'privacy');
+const chrome = getDict<any>(lang, 'chrome');
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: chrome.nav.home, item: 'https://manilo.app/' },
+    { '@type': 'ListItem', position: 2, name: d.jsonLd.breadcrumbName, item: 'https://manilo.app/privacy' },
+  ],
+};
+---
+<Base
+  title={d.meta.title}
+  description={d.meta.description}
+  path="/privacy"
+  locale={lang}
+  ogDescription={d.meta.ogDescription}
+  screenLabel="03 Privacy"
+  css={['/assets/doc.css']}
+  js={['/assets/doc.js']}
+>
+<Fragment slot="head">
+<script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
+</Fragment>
+
+<section class="doc-hero">
+  <div class="container">
+    <span class="t-eyebrow">{d.hero.eyebrow}</span>
+    <h1>{d.hero.title}</h1>
+    <p class="doc-meta">
+      <span><i class="fa-solid fa-calendar"></i> {d.hero.lastUpdated}</span>
+      <span><i class="fa-solid fa-envelope"></i> <a href="mailto:privacy@manilo.app">privacy@manilo.app</a></span>
+    </p>
+  </div>
+</section>
+
+<div class="container">
+<div class="doc">
+  <aside class="doc__toc doc__toc--collapsible" aria-label={d.toc.ariaLabel}>
+    <h4>{d.toc.title}</h4>
+    <button class="doc__toc-toggle" type="button" aria-expanded="false" aria-controls="toc-list">
+      <i class="fa-solid fa-bars"></i> {d.toc.title} <i class="fa-solid fa-chevron-down doc__toc-chev"></i>
+    </button>
+    <ol id="toc-list">
+      <li><a href="#summary">{d.summary.heading}</a></li>
+      <li><a href="#what-we-collect">{d.whatWeCollect.heading}</a></li>
+      <li><a href="#what-we-dont">{d.whatWeDont.heading}</a></li>
+      <li><a href="#how-we-use">{d.howWeUse.heading}</a></li>
+      <li><a href="#third-parties">{d.thirdParties.heading}</a></li>
+      <li><a href="#retention">{d.retention.heading}</a></li>
+      <li><a href="#rights">{d.rights.heading}</a></li>
+      <li><a href="#children">{d.children.heading}</a></li>
+      <li><a href="#changes">{d.changes.heading}</a></li>
+      <li><a href="#contact">{d.contact.heading}</a></li>
+    </ol>
+  </aside>
+
+  <article class="doc__body">
+    <section id="summary">
+      <h2 data-num="01">{d.summary.heading}</h2>
+      <div class="callout">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div>
+          <strong>{d.summary.calloutLead}</strong> {d.summary.calloutBody}
+        </div>
+      </div>
+      <p>{d.summary.introBeforeLink} <a href="https://dashboard.manilo.app">dashboard.manilo.app</a>{d.summary.introAfterLink}</p>
+    </section>
+
+    <section id="what-we-collect">
+      <h2 data-num="02">{d.whatWeCollect.heading}</h2>
+
+      <h3>{d.whatWeCollect.account.heading}</h3>
+      <ul>
+        {d.whatWeCollect.account.items.map((item: string) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+
+      <h3>{d.whatWeCollect.application.heading}</h3>
+      <ul>
+        {d.whatWeCollect.application.items.map((item: string) => (
+          <li set:html={item} />
+        ))}
+      </ul>
+
+      <h3>{d.whatWeCollect.diagnostics.heading}</h3>
+      <ul>
+        {d.whatWeCollect.diagnostics.items.map((item: string) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section id="what-we-dont">
+      <h2 data-num="03">{d.whatWeDont.heading}</h2>
+      <ul>
+        {d.whatWeDont.items.map((item: string) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section id="how-we-use">
+      <h2 data-num="04">{d.howWeUse.heading}</h2>
+      <p>{d.howWeUse.intro}</p>
+      <ul>
+        {d.howWeUse.purposes.map((item: string) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+      <p set:html={d.howWeUse.doNot} />
+
+      <h3>{d.howWeUse.mcp.heading}</h3>
+      <p>{d.howWeUse.mcp.beforeLink} <a href={navUrl(lang, '/integrations')}>{d.howWeUse.mcp.linkText}</a> {d.howWeUse.mcp.afterLink}</p>
+    </section>
+
+    <section id="third-parties">
+      <h2 data-num="05">{d.thirdParties.heading}</h2>
+      <p>{d.thirdParties.intro}</p>
+      <ul>
+        {d.thirdParties.providers.map((p: { name: string; desc: string }) => (
+          <li><strong>{p.name}</strong> — {p.desc}</li>
+        ))}
+      </ul>
+      <p>{d.thirdParties.dpaBeforeEmail} <a href="mailto:privacy@manilo.app">privacy@manilo.app</a>{d.thirdParties.dpaAfterEmail}</p>
+    </section>
+
+    <section id="retention">
+      <h2 data-num="06">{d.retention.heading}</h2>
+      <ul>
+        {d.retention.items.map((item: string) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section id="rights">
+      <h2 data-num="07">{d.rights.heading}</h2>
+      <p>{d.rights.bodyBeforeEmail} <a href="mailto:privacy@manilo.app">privacy@manilo.app</a>{d.rights.bodyAfterEmail}</p>
+      <p>{d.rights.complaint}</p>
+    </section>
+
+    <section id="children">
+      <h2 data-num="08">{d.children.heading}</h2>
+      <p>{d.children.body}</p>
+    </section>
+
+    <section id="changes">
+      <h2 data-num="09">{d.changes.heading}</h2>
+      <p>{d.changes.body}</p>
+    </section>
+
+    <section id="contact">
+      <h2 data-num="10">{d.contact.heading}</h2>
+      <p>{d.contact.emailLabel} <a href="mailto:privacy@manilo.app">privacy@manilo.app</a></p>
+    </section>
+  </article>
+</div>
+</div>
+</Base>
