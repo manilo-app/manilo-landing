@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "title": "Manilo को ChatGPT, Claude और Cursor से जोड़ें — MCP खर्च ट्रैकर",
+    "description": "Manilo — नेटिव MCP सर्वर वाला खर्च ट्रैकर। ChatGPT या Cursor एक क्लिक में, Claude या कोई भी MCP क्लाइंट कॉपी-पेस्ट URL से जोड़ें। सेटअप में करीब 1 मिनट।",
+    "ogDescription": "अपना AI असिस्टेंट चुनें और Manilo को करीब एक मिनट में कनेक्ट करें — ChatGPT और Cursor के लिए एक क्लिक, Claude और बाकी हर क्लाइंट के लिए कॉपी-पेस्ट MCP URL।",
+    "keywords": "mcp expense tracker, manilo chatgpt कनेक्ट, claude खर्च ट्रैकर, cursor mcp server, mcp server setup hindi, model context protocol finance, ai खर्च ट्रैकर, claude से खर्च दर्ज करना",
+    "twitterTitle": "Manilo को ChatGPT, Claude और Cursor से जोड़ें — MCP खर्च ट्रैकर",
+    "twitterDescription": "नेटिव MCP सर्वर वाला खर्च ट्रैकर। असिस्टेंट चुनें, करीब एक मिनट में कनेक्ट करें, फिर बस अपने पैसों के बारे में पूछें।"
+  },
+  "jsonLd": {
+    "techArticle": {
+      "headline": "Manilo को ChatGPT, Claude और Cursor से जोड़ें — MCP खर्च ट्रैकर",
+      "description": "Manilo खर्च ट्रैकर को ChatGPT, Claude, Cursor या Model Context Protocol बोलने वाले किसी भी AI असिस्टेंट से जोड़ने का तरीका।"
+    },
+    "breadcrumb": {
+      "home": "होम",
+      "integrations": "इंटीग्रेशन"
+    },
+    "howtoChatgpt": {
+      "name": "Manilo को ChatGPT से कैसे जोड़ें",
+      "description": "Manilo खर्च ट्रैकर को दो स्टेप में ChatGPT से जोड़ें।",
+      "steps": [
+        { "name": "Manilo को ChatGPT से कनेक्ट करें", "text": "ChatGPT में Manilo ऐप खोलें और Connect पर क्लिक करें।" },
+        { "name": "निर्देश फ़ॉलो करें", "text": "Apple, Google या ईमेल से साइन इन करके एक्सेस दें। फिर किसी भी चैट में Manilo का ज़िक्र करें।" }
+      ]
+    },
+    "howtoClaude": {
+      "name": "Manilo को Claude से कैसे जोड़ें",
+      "description": "Manilo खर्च ट्रैकर को Claude में कस्टम MCP कनेक्टर की तरह जोड़ें।",
+      "steps": [
+        { "name": "कनेक्टर सेटिंग्स खोलें", "text": "claude.ai या Claude Desktop में Settings → Connectors → Add custom connector खोलें।" },
+        { "name": "Manilo सर्वर URL पेस्ट करें", "text": "Name: Manilo। Server URL: https://api.manilo.app/mcp" },
+        { "name": "Add करके साइन इन करें", "text": "Add पर क्लिक करें, Apple, Google या ईमेल से साइन इन करें, फिर किसी भी चैट में connectors मेन्यू से Manilo चालू करें।" }
+      ]
+    },
+    "howtoCursor": {
+      "name": "Manilo को Cursor से कैसे जोड़ें",
+      "description": "एक क्लिक में Cursor में Manilo MCP सर्वर इंस्टॉल करें।",
+      "steps": [
+        { "name": "Manilo को Cursor में जोड़ें", "text": "वन-क्लिक इंस्टॉल लिंक इस्तेमाल करें, या mcp.json में https://api.manilo.app/mcp जोड़ें।" },
+        { "name": "निर्देश फ़ॉलो करें", "text": "Cursor खुलने पर Install क्लिक करें, फिर ब्राउज़र में साइन-इन पूरा करें।" }
+      ]
+    }
+  },
+  "hero": {
+    "eyebrow": "इंटीग्रेशन",
+    "title": "Manilo को ChatGPT, Claude या Cursor से जोड़ें",
+    "lead": "Manilo इकलौता खर्च ट्रैकर है जिसके पास नेटिव MCP सर्वर है। Model Context Protocol बोलने वाले किसी भी AI असिस्टेंट से सीधी-सादी भाषा में खर्च दर्ज करें, अपने खर्च की पड़ताल करें और पैसे इधर-उधर भेजें।",
+    "badges": {
+      "time": "सेटअप में करीब एक मिनट",
+      "oauth": "OAuth साइन-इन — आपका पासवर्ड कभी शेयर नहीं होता",
+      "anyClient": "किसी भी MCP क्लाइंट के साथ चलता है"
+    }
+  },
+  "picker": {
+    "eyebrow": "सेटअप",
+    "title": "आप कौन-सा AI असिस्टेंट इस्तेमाल करते हैं?",
+    "timeBadge": "करीब एक मिनट",
+    "copy": "कॉपी",
+    "copyAria": "सर्वर URL कॉपी करें",
+    "tabs": {
+      "chatgpt": { "name": "ChatGPT", "hint": "2 स्टेप · एक क्लिक" },
+      "claude": { "name": "Claude", "hint": "3 स्टेप · URL कॉपी करें" },
+      "cursor": { "name": "Cursor", "hint": "2 स्टेप · एक क्लिक" },
+      "other": { "name": "अन्य", "hint": "Windsurf, VS Code वगैरह" }
+    },
+    "chatgpt": {
+      "title": "Manilo को ChatGPT से जोड़ें",
+      "step1": {
+        "title": "Manilo को ChatGPT से कनेक्ट करें",
+        "body": "यह बटन ChatGPT के अंदर Manilo ऐप खोलता है।",
+        "cta": "Manilo को ChatGPT से कनेक्ट करें"
+      },
+      "step2": {
+        "title": "निर्देश फ़ॉलो करें",
+        "bodyHtml": "<strong>Connect</strong> पर क्लिक करें, Apple, Google या ईमेल से साइन इन करें और एक्सेस दें।"
+      },
+      "done": {
+        "title": "बस — अब सिर्फ़ चैट करें",
+        "bodyHtml": "किसी भी चैट में Manilo का ज़िक्र करें या पैसों के बारे में पूछें — <em>“जुलाई में किराने पर कितना गया?”</em> ChatGPT ऐप को अपने-आप उठा लेता है।"
+      },
+      "manual": {
+        "summary": "आपके प्लान या क्षेत्र में ऐप उपलब्ध नहीं, या मैन्युअल सेटअप पसंद है?",
+        "introHtml": "<strong>Settings → Apps → Advanced settings → Developer mode</strong> चालू करें (ChatGPT Plus, Pro या Business चाहिए), <strong>Create</strong> पर क्लिक करें और यह भरें:",
+        "nameLabel": "Name:",
+        "urlLabel": "MCP Server URL:",
+        "authLabel": "Authentication:"
+      },
+      "morePre": "बैंक स्टेटमेंट इंपोर्ट की पूरी गाइड",
+      "moreLink": "ChatGPT में Manilo",
+      "morePost": "पेज पर है।"
+    },
+    "claude": {
+      "title": "Manilo को Claude से जोड़ें",
+      "step1": {
+        "title": "कनेक्टर सेटिंग्स खोलें",
+        "pre": "सबसे पहले",
+        "mid": "या Claude Desktop में",
+        "settingsPath": "Settings → Connectors",
+        "addConnector": "Add custom connector",
+        "end": " खोलें।"
+      },
+      "step2": {
+        "title": "Manilo सर्वर URL पेस्ट करें",
+        "nameLabel": "Name:",
+        "serverLabel": "Server URL:",
+        "legacyPre": "पहले से पुराने",
+        "legacyPost": "एड्रेस से कनेक्टेड हैं? वह चलता रहेगा — दोबारा कनेक्ट करने की ज़रूरत नहीं।"
+      },
+      "step3": {
+        "title": "Add करके साइन इन करें",
+        "bodyHtml": "<strong>Add</strong> पर क्लिक करें, Apple, Google या ईमेल से साइन इन करें, फिर किसी भी चैट में connectors मेन्यू से <strong>Manilo</strong> चालू करें।"
+      },
+      "done": {
+        "title": "बस — अब पूछिए",
+        "bodyHtml": "<em>“मार्च के मुकाबले अप्रैल का खर्च कैसा रहा?”</em> Claude आपके अपने डेटा से जवाब देता है।"
+      },
+      "morePre": "Claude में बैंक स्टेटमेंट डालकर भी इंपोर्ट करवा सकते हैं — देखें",
+      "moreLink": "पूरी गाइड",
+      "morePost": "; वही तरीका Claude में भी चलता है।"
+    },
+    "cursor": {
+      "title": "Manilo को Cursor से जोड़ें",
+      "step1": {
+        "title": "Manilo को Cursor में जोड़ें",
+        "body": "एक क्लिक — बटन Cursor खोलता है, जिसमें Manilo MCP सर्वर पहले से भरा होता है।",
+        "cta": "Manilo को Cursor में जोड़ें"
+      },
+      "step2": {
+        "title": "निर्देश फ़ॉलो करें",
+        "bodyHtml": "Cursor खुलने पर <strong>Install</strong> क्लिक करें, फिर ब्राउज़र में साइन-इन पूरा करें।"
+      },
+      "done": {
+        "title": "बस — एजेंट से कहें",
+        "bodyHtml": "<em>“टीम-लंच के €14 अभी दिए, दर्ज कर लो।”</em> चैट और कंपोज़र, दोनों में चलता है।"
+      },
+      "manual": {
+        "summary": "हाथ से जोड़ना पसंद है?",
+        "introPre": "इसे अपनी",
+        "introPost": "(Cursor Settings → MCP) में जोड़ें, फिर पूछे जाने पर OAuth साइन-इन पूरा करें:"
+      },
+      "morePre": "Cursor से दर्ज खर्च तुरंत",
+      "moreLink": "वेब डैशबोर्ड",
+      "morePost": "और iOS ऐप में सिंक हो जाते हैं।"
+    },
+    "other": {
+      "title": "कोई भी MCP क्लाइंट जोड़ें",
+      "step1": {
+        "title": "Remote MCP सर्वर जोड़ें",
+        "body": "Windsurf, VS Code, Continue, Zed या अपने एजेंट में remote सर्वर जोड़ें और उसे यहाँ पॉइंट करें:"
+      },
+      "step2": {
+        "title": "पूछे जाने पर साइन इन करें",
+        "pre": "आपका क्लाइंट PKCE के साथ OAuth 2.1 पूरा करता है। Dynamic Client Registration (RFC 7591) सपोर्टेड है, इसलिए मैन्युअल",
+        "post": "या क्रेडेंशियल एक्सचेंज की ज़रूरत नहीं।"
+      },
+      "done": {
+        "title": "बस — हर जगह वही टूल",
+        "body": "हर MCP क्लाइंट को वही 30+ टूल मिलते हैं — ट्रांज़ैक्शन, अकाउंट, बजट और बहुत कुछ।"
+      },
+      "clientsAria": "जाँचे-परखे MCP क्लाइंट",
+      "clients": ["Windsurf", "VS Code", "Continue", "Zed", "कस्टम एजेंट"],
+      "morePre": "कोड में अपना इंटीग्रेशन बना रहे हैं? तब",
+      "moreLink": "REST API v1",
+      "morePost": "इस्तेमाल करें।"
+    }
+  },
+  "prompts": {
+    "eyebrow": "रोज़ का इस्तेमाल",
+    "title": "क्या-क्या पूछ सकते हैं",
+    "sub": "हर जवाब आपके अपने डेटा से निकलता है — अंदाज़ा नहीं।",
+    "items": [
+      { "q": "पिछले महीने कॉफ़ी पर कितना खर्च हुआ?", "a": "किसी भी अवधि के लिए कैटेगरी-वार टोटल।" },
+      { "q": "कल का Pret वाला €12 लंच मेरे Wise अकाउंट में जोड़ दो।", "a": "मर्चेंट, रकम, करेंसी और तारीख खुद निकाल लेता है।" },
+      { "q": "Wise Personal से Cash में 200 EUR ट्रांसफ़र करो।", "a": "अकाउंट के बीच ट्रांसफ़र, क्रॉस-करेंसी FX समेत।" },
+      { "q": "मार्च के मुकाबले अप्रैल का खर्च कैसा रहा?", "a": "आपकी मुख्य करेंसी में मल्टी-पीरियड तुलना।" },
+      { "q": "मई के €100 से ऊपर के सारे ट्रांज़ैक्शन ढूँढो।", "a": "फ़िल्टर लगाकर ट्रांज़ैक्शन खोज।" },
+      { "q": "इस तिमाही की मेरी टॉप 5 कैटेगरी दिखाओ।", "a": "टॉप-N एग्रीगेशन।" },
+      { "q": "अभी मेरा Santander बैलेंस कितना है?", "a": "लाइव बैलेंस — वही फ़ॉर्मूला जो मोबाइल ऐप में।" },
+      { "q": "Santander को 616 EUR पर रीकंसाइल करो — बैंक ऐप यही दिखा रहा है।", "a": "बाहरी आँकड़े से मिलाने के लिए एक बार का एडजस्टमेंट।" }
+    ]
+  },
+  "capabilities": {
+    "eyebrow": "क्षमताएँ",
+    "title": "कनेक्ट होने के बाद Manilo क्या-क्या कर सकता है",
+    "sub": "MCP सर्वर आपके असिस्टेंट को 30+ टूल देता है।",
+    "cards": {
+      "read": { "title": "सब कुछ पढ़ें", "body": "अकाउंट, ट्रांज़ैक्शन, कैटेगरी, बजट, ग्रुप और टैग।" },
+      "edit": { "title": "जोड़ें और बदलें", "body": "ट्रांज़ैक्शन, अकाउंट, कैटेगरी, बजट और recurring नियम।" },
+      "move": { "title": "पैसे भेजें", "body": "अकाउंट के बीच ट्रांसफ़र, FX के साथ क्रॉस-करेंसी समेत।" },
+      "convert": { "title": "करेंसी बदलें", "body": "लाइव ECB रेट; डैशबोर्ड के टोटल आपकी मुख्य करेंसी में।" },
+      "receipts": { "title": "रसीदें सँभालें", "body": "पब्लिक URL से अटैच करें और साइन्ड डाउनलोड लिंक पाएँ।" },
+      "reconcile": { "title": "बैलेंस और रीकंसाइल", "body": "लाइव अकाउंट बैलेंस और बैंक से मिलान का एक बार वाला एडजस्टमेंट।" }
+    }
+  },
+  "privacy": {
+    "eyebrow": "भरोसा",
+    "title": "प्राइवेसी और कंट्रोल",
+    "items": {
+      "scope": { "title": "सिर्फ़ वही देखता है जो आप पूछते हैं", "body": "असिस्टेंट को उतना ही डेटा मिलता है जितना आपके सवाल के लिए चाहिए। कनेक्ट होते ही हम आपका पूरा बहीखाता Anthropic या OpenAI को नहीं भेज देते।" },
+      "password": { "title": "पासवर्ड आपका ही रहता है", "body": "साइन-इन Manilo के अपने consent पेज पर होता है — Apple, Google या ईमेल से। असिस्टेंट आपका पासवर्ड कभी नहीं देखता।" },
+      "disconnect": { "title": "जब चाहें डिस्कनेक्ट करें", "body": "अपने क्लाइंट की सेटिंग्स से कनेक्टर हटा दें — Claude, ChatGPT या कोई और। एक्सेस हटते ही बदलाव तुरंत लागू हो जाता है।" }
+    },
+    "notePre": "पूरी जानकारी हमारी",
+    "noteLink": "प्राइवेसी पॉलिसी",
+    "notePost": " में।"
+  },
+  "ctaBand": {
+    "title": "अपने पैसों से बात करने को तैयार?",
+    "sub": "एक बार कनेक्ट करें, फिर बस पूछें। सेटअप में करीब एक मिनट।",
+    "pickCta": "अपना असिस्टेंट चुनें",
+    "iosCta": "iOS ऐप पाएँ",
+    "helpIntro": "अटक गए या आपका क्लाइंट लिस्ट में नहीं?",
+    "helpLink": "हेल्प सेंटर"
+  }
+}

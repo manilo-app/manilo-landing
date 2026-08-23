@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "Nutzungsbedingungen — Manilo",
+    "description": "Nutzungsbedingungen für den Ausgaben-Tracker Manilo."
+  },
+  "jsonLd": {
+    "breadcrumbName": "Nutzungsbedingungen"
+  },
+  "hero": {
+    "eyebrow": "Rechtliches",
+    "title": "Nutzungsbedingungen",
+    "updated": "Zuletzt aktualisiert am 10. Mai 2026"
+  },
+  "toc": {
+    "ariaLabel": "Inhaltsverzeichnis",
+    "heading": "Inhalt",
+    "toggle": "Inhalt",
+    "items": {
+      "agreement": "Vereinbarung",
+      "account": "Dein Konto",
+      "subscription": "Abo & Zahlung",
+      "trial": "Kostenlose Testphase",
+      "use": "Zulässige Nutzung",
+      "data": "Deine Daten",
+      "beta": "Beta-Funktionen",
+      "warranty": "Keine Gewährleistung",
+      "liability": "Haftung",
+      "termination": "Kündigung",
+      "law": "Anwendbares Recht",
+      "contact": "Kontakt"
+    }
+  },
+  "sections": {
+    "agreement": {
+      "heading": "Vereinbarung",
+      "p": [
+        "Diese Nutzungsbedingungen („Bedingungen“) regeln deine Nutzung von Manilo (früher Ledgy) — der iOS-App, des Web-Dashboards unter dashboard.manilo.app, des Manilo-Telegram-Bots und der zugehörigen Dienste (des „Dienstes“). Indem du ein Konto anlegst oder die App herunterlädst, erklärst du dich mit diesen Bedingungen einverstanden. Wenn du nicht einverstanden bist, nutze den Dienst nicht.",
+        "Der Dienst wird vom Team hinter Manilo betrieben, nachfolgend „wir“ oder „uns“."
+      ]
+    },
+    "account": {
+      "heading": "Dein Konto",
+      "p": [
+        "Du bist für alles verantwortlich, was unter deinem Konto geschieht, einschließlich der sicheren Aufbewahrung deiner Anmeldedaten. Ein einzelnes Konto darf nur von einer Person genutzt werden; wer seine Anmeldedaten weitergibt, unterläuft den Sinn des Teilens in Gruppen (das eingebaut und mit Cloud kostenlos ist).",
+        "Um den Dienst zu nutzen, musst du mindestens 13 Jahre alt sein (im EWR 16 Jahre)."
+      ]
+    },
+    "subscription": {
+      "heading": "Abo & Zahlung",
+      "p": [
+        "Cloud wird als wiederkehrendes Abo angeboten und monatlich oder jährlich abgerechnet. Der beim Kauf angezeigte Preis ist der Endpreis, den du zahlst. Abos werden von Apple über dein Konto im App Store abgewickelt."
+      ],
+      "autoRenew": "Dein Abo verlängert sich am Ende jedes Zeitraums automatisch, sofern es nicht mindestens 24 Stunden vor der Verlängerung gekündigt wird.",
+      "cancel": "Du kannst jederzeit auf dem iPhone unter <em>Einstellungen → [Dein Name] → Abonnements</em> kündigen.",
+      "refundsPre": "Rückerstattungen werden von Apple über ",
+      "refundsPost": " abgewickelt.",
+      "rateChange": "Wenn du ein Upgrade oder ein Downgrade durchführst oder den Abrechnungszeitraum änderst, gilt der neue Tarif ab der nächsten Verlängerung."
+    },
+    "trial": {
+      "heading": "Kostenlose Testphase",
+      "p": [
+        "Neue Abonnentinnen und Abonnenten erhalten unter Umständen eine 7-tägige kostenlose Testphase. Bis zum Ende der Testphase wird dir nichts berechnet. Wenn du vor Ablauf der Testphase kündigst, entstehen dir keine Kosten. Die Testphase wird einmal pro Apple ID gewährt."
+      ]
+    },
+    "use": {
+      "heading": "Zulässige Nutzung",
+      "p": [
+        "Die Nutzung des Dienstes muss rechtmäßig und angemessen sein. Du verpflichtest dich, Folgendes zu unterlassen:"
+      ],
+      "items": [
+        "Reverse Engineering zu betreiben, den Dienst zu dekompilieren oder zu versuchen, Quellcode zu extrahieren, außer soweit gesetzlich zulässig.",
+        "Den Dienst zu nutzen, um die Privatsphäre oder die Rechte anderer zu verletzen.",
+        "Automatisierten Missbrauch, Scraping oder Denial-of-Service-Angriffe gegen unsere Infrastruktur auszuführen.",
+        "Den Zugang zu Cloud ohne schriftliche Erlaubnis weiterzuverkaufen oder unterzulizenzieren."
+      ]
+    },
+    "data": {
+      "heading": "Deine Daten",
+      "p1Pre": "Deine Transaktionen gehören dir. Wir erheben keinen Eigentumsanspruch auf Daten, die du mit dem Dienst erstellst. Wir verarbeiten sie ausschließlich, um die von dir aktivierten Funktionen bereitzustellen — so, wie es in unserer ",
+      "p1Link": "Datenschutzerklärung",
+      "p1Post": " beschrieben ist.",
+      "p2": "Du kannst dein vollständiges Haushaltsbuch jederzeit unter Einstellungen → Export als CSV exportieren. Wenn du dein Konto löschst, löschen wir die zugehörigen Daten innerhalb von 7 Tagen; Backups laufen innerhalb von 30 Tagen aus."
+    },
+    "beta": {
+      "heading": "Beta-Funktionen",
+      "callout": "Einige Manilo-Funktionen erscheinen in der App mit der Kennzeichnung „Beta“. Sie können falsche Ergebnisse liefern, sich ändern oder ohne Vorankündigung entfernt werden. Verlass dich nicht als einzige verlässliche Quelle auf sie — halte immer einen regelmäßigen Export deines Haushaltsbuchs bereit.",
+      "p": [
+        "In der App mit „Beta“ gekennzeichnete Funktionen sind experimentell, können falsche Ergebnisse liefern und ohne Vorankündigung entfernt werden."
+      ]
+    },
+    "warranty": {
+      "heading": "Keine Gewährleistung",
+      "p": [
+        "Der Dienst wird „wie besehen“ ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt, einschließlich der Marktgängigkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten Dritter, soweit dies gesetzlich zulässig ist. AI-Auswertung, Währungsumrechnung und Kategorievorschläge können Fehler enthalten — prüfe sie, bevor du dich darauf verlässt.",
+        "Manilo ist keine Finanz-, Steuer- oder Buchhaltungsberatung."
+      ]
+    },
+    "liability": {
+      "heading": "Haftungsbeschränkung",
+      "p": [
+        "Soweit gesetzlich zulässig, ist unsere Gesamthaftung für jeden Anspruch im Zusammenhang mit dem Dienst auf den Betrag begrenzt, den du uns in den 12 Monaten vor dem Anspruch gezahlt hast. Wir haften nicht für mittelbare Schäden, Folgeschäden oder Nebenschäden — einschließlich entgangenen Gewinns, verlorener Daten oder Betriebsunterbrechung.",
+        "Nichts in diesen Bedingungen beschränkt die Haftung für Betrug, grobe Fahrlässigkeit oder eine Haftung, die nach geltendem Recht nicht ausgeschlossen werden kann."
+      ]
+    },
+    "termination": {
+      "heading": "Kündigung",
+      "p": [
+        "Du kannst die Nutzung des Dienstes jederzeit beenden und dein Konto löschen. Wir können Konten, die gegen diese Bedingungen verstoßen, sperren oder kündigen — nach Möglichkeit mit vorheriger Ankündigung. Nach der Beendigung gelten die Abschnitte weiter, die ihrer Natur nach fortbestehen (Daten, Haftung, anwendbares Recht)."
+      ]
+    },
+    "law": {
+      "heading": "Anwendbares Recht",
+      "p": [
+        "Für Streitigkeiten gelten die zwingenden Verbraucherschutzvorschriften deines Wohnsitzlandes; im Übrigen werden anwendbares Recht und Gerichtsstand in einer künftigen Aktualisierung dieser Bedingungen festgelegt."
+      ]
+    },
+    "contact": {
+      "heading": "Kontakt"
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "Regulamin — Manilo",
+    "description": "Regulamin korzystania z Manilo — aplikacji do śledzenia wydatków."
+  },
+  "jsonLd": {
+    "breadcrumbName": "Regulamin"
+  },
+  "hero": {
+    "eyebrow": "Informacje prawne",
+    "title": "Regulamin",
+    "updated": "Ostatnia aktualizacja: 10 maja 2026 r."
+  },
+  "toc": {
+    "ariaLabel": "Spis treści",
+    "heading": "Spis treści",
+    "toggle": "Spis treści",
+    "items": {
+      "agreement": "Umowa",
+      "account": "Twoje konto",
+      "subscription": "Subskrypcja i płatności",
+      "trial": "Bezpłatny okres próbny",
+      "use": "Dopuszczalne korzystanie",
+      "data": "Twoje dane",
+      "beta": "Funkcje w wersji beta",
+      "warranty": "Brak gwarancji",
+      "liability": "Odpowiedzialność",
+      "termination": "Rozwiązanie umowy",
+      "law": "Prawo właściwe",
+      "contact": "Kontakt"
+    }
+  },
+  "sections": {
+    "agreement": {
+      "heading": "Umowa",
+      "p": [
+        "Niniejszy Regulamin („Regulamin”) określa zasady korzystania z Manilo (dawniej Ledgy) — aplikacji na iOS, panelu www pod adresem dashboard.manilo.app, bota Manilo w Telegramie oraz powiązanych usług („Usługa”). Zakładając konto lub pobierając aplikację, akceptujesz niniejszy Regulamin. Jeśli się na niego nie zgadzasz, nie korzystaj z Usługi.",
+        "Usługę prowadzi zespół stojący za Manilo, dalej „my” lub „nas”."
+      ]
+    },
+    "account": {
+      "heading": "Twoje konto",
+      "p": [
+        "Odpowiadasz za wszystko, co dzieje się na Twoim koncie, w tym za bezpieczne przechowywanie danych logowania. Z jednego konta może korzystać tylko jedna osoba; dzielenie się loginem przekreśla sens wspólnych grup (które są wbudowane i bezpłatne w ramach Cloud).",
+        "Aby korzystać z Usługi, musisz mieć ukończone co najmniej 13 lat (lub 16 lat na terenie EOG)."
+      ]
+    },
+    "subscription": {
+      "heading": "Subskrypcja i płatności",
+      "p": [
+        "Cloud jest oferowany w formie subskrypcji odnawialnej, rozliczanej miesięcznie lub rocznie. Cena widoczna przy zakupie jest ceną ostateczną. Subskrypcje obsługuje Apple za pośrednictwem Twojego konta App Store."
+      ],
+      "autoRenew": "Twoja subskrypcja odnawia się automatycznie na koniec każdego okresu, o ile nie zrezygnujesz z niej najpóźniej 24 godziny przed odnowieniem.",
+      "cancel": "Możesz zrezygnować w dowolnej chwili w <em>Ustawienia → [Twoje imię] → Subskrypcje</em> na iPhonie.",
+      "refundsPre": "Zwrotami zajmuje się Apple za pośrednictwem ",
+      "refundsPost": ".",
+      "rateChange": "Jeśli przejdziesz na wyższy lub niższy plan albo zmienisz okres rozliczeniowy, nowa stawka zacznie obowiązywać przy kolejnym odnowieniu."
+    },
+    "trial": {
+      "heading": "Bezpłatny okres próbny",
+      "p": [
+        "Nowi subskrybenci mogą otrzymać 7 dni bezpłatnego okresu próbnego. Nie pobieramy opłaty, dopóki okres próbny się nie skończy. Jeśli zrezygnujesz przed jego zakończeniem, nic nie płacisz. Okres próbny przysługuje raz na jedno Apple ID."
+      ]
+    },
+    "use": {
+      "heading": "Dopuszczalne korzystanie",
+      "p": [
+        "Korzystanie z Usługi musi być zgodne z prawem i rozsądne. Zobowiązujesz się, że nie będziesz:"
+      ],
+      "items": [
+        "Odtwarzać kodu źródłowego, dekompilować go ani próbować pozyskać go w inny sposób, poza przypadkami dozwolonymi przez prawo.",
+        "Wykorzystywać Usługi do naruszania prywatności lub praw innych osób.",
+        "Prowadzić zautomatyzowanych nadużyć, scrapingu ani ataków typu odmowa usługi wymierzonych w naszą infrastrukturę.",
+        "Odsprzedawać dostępu do Cloud ani udzielać na niego sublicencji bez naszej pisemnej zgody."
+      ]
+    },
+    "data": {
+      "heading": "Twoje dane",
+      "p1Pre": "Twoje transakcje należą do Ciebie. Nie rościmy sobie żadnych praw własności do danych, które tworzysz, korzystając z Usługi. Przetwarzamy je wyłącznie po to, by dostarczyć włączone przez Ciebie funkcje, na zasadach opisanych w naszej ",
+      "p1Link": "Polityce prywatności",
+      "p1Post": ".",
+      "p2": "W dowolnej chwili możesz wyeksportować pełną historię transakcji do pliku CSV w sekcji Ustawienia → Eksport. Jeśli usuniesz konto, powiązane z nim dane usuwamy w ciągu 7 dni, a kopie zapasowe wygasają w ciągu 30 dni."
+    },
+    "beta": {
+      "heading": "Funkcje w wersji beta",
+      "callout": "Część możliwości Manilo trafia do aplikacji z etykietą „Beta”. Mogą one zwracać błędne wyniki, zmieniać się lub zostać usunięte bez uprzedzenia. Nie traktuj ich jako jedynego źródła prawdy — regularnie eksportuj swoją historię transakcji.",
+      "p": [
+        "Funkcje oznaczone w aplikacji jako „Beta” mają charakter eksperymentalny, mogą zwracać błędne wyniki i mogą zostać usunięte bez uprzedzenia."
+      ]
+    },
+    "warranty": {
+      "heading": "Brak gwarancji",
+      "p": [
+        "Usługa jest udostępniana „taka, jaka jest”, bez jakichkolwiek gwarancji — wyraźnych ani dorozumianych — w tym gwarancji przydatności handlowej, przydatności do określonego celu oraz nienaruszania praw osób trzecich, w najszerszym zakresie dozwolonym przez prawo. Analiza przez AI, przeliczanie walut i podpowiadanie kategorii mogą zawierać błędy — zweryfikuj wyniki, zanim zaczniesz na nich polegać.",
+        "Manilo nie stanowi porady finansowej, podatkowej ani księgowej."
+      ]
+    },
+    "liability": {
+      "heading": "Ograniczenie odpowiedzialności",
+      "p": [
+        "W najszerszym zakresie dozwolonym przez prawo nasza łączna odpowiedzialność z tytułu jakiegokolwiek roszczenia związanego z Usługą jest ograniczona do kwoty zapłaconej nam przez Ciebie w ciągu 12 miesięcy poprzedzających to roszczenie. Nie odpowiadamy za szkody pośrednie, następcze ani uboczne — w tym za utracone korzyści, utratę danych czy przerwy w działalności.",
+        "Żadne z postanowień niniejszego Regulaminu nie ogranicza odpowiedzialności za oszustwo, rażące niedbalstwo ani żadnej odpowiedzialności, której nie można wyłączyć na mocy obowiązującego prawa."
+      ]
+    },
+    "termination": {
+      "heading": "Rozwiązanie umowy",
+      "p": [
+        "W każdej chwili możesz przestać korzystać z Usługi i usunąć swoje konto. Możemy zawiesić lub zamknąć konta naruszające niniejszy Regulamin, w miarę możliwości z uprzedzeniem. Po rozwiązaniu umowy postanowienia, które ze swojej natury pozostają w mocy (dane, odpowiedzialność, prawo właściwe), obowiązują nadal."
+      ]
+    },
+    "law": {
+      "heading": "Prawo właściwe",
+      "p": [
+        "Spory podlegają bezwzględnie obowiązującym przepisom o ochronie konsumentów obowiązującym w kraju Twojego zamieszkania; w pozostałym zakresie prawo właściwe i sąd właściwy zostaną wskazane w przyszłej aktualizacji niniejszego Regulaminu."
+      ]
+    },
+    "contact": {
+      "heading": "Kontakt"
+    }
+  }
+}

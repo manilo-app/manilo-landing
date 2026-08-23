@@ -476,3 +476,55 @@ a { color: inherit; text-decoration: none; }
 
 /* Interim text wordmark until the designed Manilo logo lands */
 .brand-lockup .brand-word--text { font-weight: 700; font-size: 21px; letter-spacing: -0.02em; color: #E7E7E9; line-height: 1; }
+
+/* Footer language dropdown (opens upward, works without JS) */
+.lang-dropdown { position: relative; display: inline-block; margin-top: 20px; font-size: 14px; }
+.lang-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--foreground-dim);
+  transition: all 0.15s;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.lang-dropdown summary::-webkit-details-marker { display: none; }
+.lang-dropdown summary:hover { color: var(--foreground); border-color: rgba(255, 255, 255, 0.2); }
+.lang-dropdown__chev { font-size: 10px; transition: transform 0.15s; }
+.lang-dropdown[open] .lang-dropdown__chev { transform: rotate(180deg); }
+.lang-dropdown__menu {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 0;
+  z-index: 50;
+  min-width: 200px;
+  max-height: 320px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+.lang-dropdown__menu a {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: var(--foreground-dim);
+  text-decoration: none;
+  font-size: 14px;
+}
+.lang-dropdown__menu a:hover { background: rgba(255, 255, 255, 0.06); color: var(--foreground); }
+.lang-dropdown__menu a[aria-current="true"] {
+  color: var(--foreground);
+  font-weight: 600;
+  background: rgba(96, 65, 255, 0.15);
+}

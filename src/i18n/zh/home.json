@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "title": "Manilo — iOS 多币种记账应用",
+    "description": "Manilo 是 iOS 多币种记账应用：语音、拍小票即可记账，无广告。通过 MCP 连接 Claude 和 ChatGPT，随口一问查支出。App Store 免费下载。",
+    "ogDescription": "任何支出，任何币种，随手记下。免费、无广告。通过 MCP，在 Claude、ChatGPT 或任何 AI 助手里直接使用 Manilo。",
+    "keywords": "记账 app, 语音记账, 多币种记账, iPhone 记账应用, 记账软件, 无广告记账软件, AI 记账, Apple Watch 记账, 支出记录, MCP 记账, Claude 记账, ChatGPT 记账",
+    "ogImageAlt": "Manilo — iOS 多币种记账应用",
+    "twitterTitle": "Manilo — iOS 多币种记账应用",
+    "twitterDescription": "任何支出，任何币种，随手记下。免费、无广告。通过 MCP 支持 Claude、ChatGPT 等任何 AI。"
+  },
+  "jsonLd": {
+    "appAlternateName": "Manilo 语音记账应用",
+    "appDescription": "iOS 多币种记账应用。任何支出、任何币种，都能通过 Siri、Apple Watch 或操作按钮记录。免费、无广告。开通 Cloud 后解锁 AI 小票扫描、与 Claude、ChatGPT 等 AI 助手的 MCP 集成、家庭共享、网页仪表盘和 Telegram 机器人。",
+    "featureList": [
+      "通过 Siri 和操作按钮语音记账",
+      "在 Apple Watch 上记录支出",
+      "多币种账户，欧洲央行实时汇率",
+      "AI 小票扫描与自动分类",
+      "MCP 服务器——连接 Claude、ChatGPT 和任何 AI 助手",
+      "设备端语音转写——语音音频不会离开你的手机",
+      "家庭共享账户",
+      "离线优先，本地 SQLite 数据库",
+      "CSV 和 PDF 导出",
+      "支持 14 种语言",
+      "无广告、不出售数据、无跟踪 SDK",
+      "通过 Telegram 机器人记账",
+      "Apple Wallet 自动记录 Apple Pay 消费",
+      "网页仪表盘，含趋势与报表"
+    ],
+    "websiteDescription": "iOS 多币种记账应用。免费，无广告。"
+  },
+  "hero": {
+    "pillAria": "现已上架 App Store。适用于 iOS。",
+    "pill": "现已上架 App Store · iOS",
+    "title": "任何支出，任何币种，随手记下。",
+    "sub": "和你的钱对话。Manilo（原 Ledgy）是一款 iOS 多币种记账应用：在 iPhone 或 Apple Watch 上语音记账，拍张小票，或直接让 Claude 和 ChatGPT 帮你记。免费下载。无广告。数据留在你的设备上。",
+    "downloadCta": "在 App Store 下载",
+    "downloadMeta": "免费下载 · iOS 15+",
+    "pricingCta": "查看价格",
+    "pricingMeta": "个人使用永久免费",
+    "phoneAlt": "Manilo 添加交易界面，正在用语音记录一笔 $555 支出",
+    "chips": {
+      "voice": { "label": "语音", "line": "“在 Blue Bottle 买了杯咖啡，$4.50”" },
+      "receipt": { "label": "小票", "line": "午餐 · €18.20" },
+      "telegram": { "label": "Telegram", "line": "加满一箱油 · 60 EUR" }
+    }
+  },
+  "trust": {
+    "languages": "支持 14 种语言",
+    "offline": "离线优先。数据留在你的设备上。"
+  },
+  "how": {
+    "eyebrow": "如何运作",
+    "title": "三步搞定，从此不用再管。",
+    "sub": "当下哪种方式最快，就用哪种记。剩下的交给 Manilo。",
+    "steps": [
+      { "num": "01", "title": "记录", "body": "在手表上说一句、拍张小票，或把短信转发进 Telegram。" },
+      { "num": "02", "title": "AI 解析", "body": "AI 读懂内容，自动选好分类、账户和群组。" },
+      { "num": "03", "title": "随处可见", "body": "iPhone、Apple Watch、网页仪表盘，还有你的 AI 助手（ChatGPT、Claude、Gemini 等）。" }
+    ]
+  },
+  "surfaces": {
+    "eyebrow": "记账入口",
+    "title": "五个入口。",
+    "titleAccent": "一本账。",
+    "sub": "哪台设备离你最近，就用哪台记。所有记录最终汇入同一本账。",
+    "cards": {
+      "iphone": { "title": "iPhone", "body": "语音、拍照、数字键盘，或从任意应用粘贴。一点，一说，搞定。" },
+      "watch": { "title": "Apple Watch", "body": "按住麦克风说一句，5 秒搞定。表盘复杂功能一点直达记账。" },
+      "siri": { "title": "Siri", "body": "“嘿 Siri，在 Manilo 里记一笔支出。”基于 App Intents，iOS 16+ 可用。" },
+      "wallet": { "title": "Apple Wallet", "body": "Apple Pay 付款自动入账。每张卡都有专属 AI 规则（如“打上‘2026 旅行’标签”）。" },
+      "telegram": { "title": "Telegram 机器人", "body": "在聊天里发文字、照片或语音。内联按钮两下就能改好任何细节。" },
+      "aiAgent": { "title": "AI 助手", "body": "直接告诉你常用的 AI 助手（ChatGPT、Claude、Gemini 等）要记什么。" }
+    }
+  },
+  "smart": {
+    "eyebrow": "开箱即智能",
+    "title": "管钱的琐事——全都替你搞定。",
+    "ai": {
+      "title": "越用越懂你的 AI",
+      "body": "常用分类、自定义分类、自定义规则，一应俱全。还能为 Wallet 里的每张卡单独设规则——你标为“旅行”的 Visa 卡，笔笔自动打上“2026 旅行”标签。",
+      "checklist": [
+        "14 个默认分类 + 自定义不设限",
+        "为每张 Apple Pay 卡单独设置规则",
+        "你纠正一次，过往交易自动重新解析"
+      ],
+      "alt": "Manilo 交易列表，已自动分类"
+    },
+    "budgets": {
+      "title": "替你盯着的预算",
+      "body": "按分类或整体设置，周 / 月 / 季 / 年任选。刚一越线，立刻标红。没有意外。",
+      "checklist": [
+        "4 种预算周期，随意组合",
+        "软上限与硬上限",
+        "接近上限时本地通知提醒"
+      ]
+    },
+    "budgetMock": {
+      "food": { "name": "餐饮", "sub": "$612 / $600" },
+      "groceries": { "name": "食品杂货", "sub": "$384 / $500" },
+      "transport": { "name": "交通", "sub": "$142 / $250" }
+    },
+    "fx": {
+      "title": "多币种，不用自己算",
+      "body": "实时汇率。长按任意金额即可换算。设好主币种，Manilo 自动折算总额。",
+      "checklist": [
+        "汇率每日更新，来源可靠",
+        "每个账户独立币种，主币种置顶",
+        "出国就用旅行模式"
+      ]
+    },
+    "fxMock": {
+      "trip": "旅行 · 欧洲",
+      "primary": "主币种 · USD",
+      "rate": "€1 = $1.0808 · 今日"
+    },
+    "receipts": {
+      "title": "小票，放在该放的地方",
+      "body": "拍照附上即可。服务器会同步给共享群组的所有成员，小票隔离存放在你自己的空间，你说删就删。",
+      "checklist": [
+        "一键从相机或相册附加",
+        "可按金额和商家搜索",
+        "存储加密，按用户隔离"
+      ]
+    },
+    "receiptMock": {
+      "store": "Blue Bottle Coffee",
+      "item1": "科塔多",
+      "item2": "杏仁可颂",
+      "totalLabel": "合计",
+      "date": "2026年5月9日 · 09:17",
+      "category": "咖啡茶饮"
+    }
+  },
+  "mcp": {
+    "eyebrow": "和你的钱对话",
+    "titlePre": "问问",
+    "titleAccent": "ChatGPT、Claude 或 Cursor",
+    "titlePost": "你的钱花在了哪里。",
+    "sub": "把 Manilo 连接到你常用的 AI 聊天工具，用大白话随便问——“上个月我在咖啡上花了多少？”——它就会根据你自己的数据回答。不用复制粘贴，也不用做表格。",
+    "viz": {
+      "hub": "Manilo",
+      "claude": "Claude",
+      "chatgpt": "ChatGPT",
+      "cursor": "Cursor",
+      "more": "还有更多"
+    },
+    "prompts": [
+      "“上个月我在咖啡上花了多少？”",
+      "“我的食品杂货预算超了吗？”",
+      "“把我最近 90 天的支出按分类画成图。”",
+      "“找出 5 月所有超过 €100 的交易。”"
+    ],
+    "note": "连接一次，随便问。AI 只能看到你允许的内容——主动权始终在你手里，随时可以断开。",
+    "setupCta": "设置 ChatGPT、Claude 或 Cursor →",
+    "chatgptCta": "通过聊天导入银行账单 →"
+  },
+  "sharing": {
+    "eyebrow": "为共享而生",
+    "titlePre": "个人拥有。",
+    "titleAccent": "群组可见。",
+    "sub": "加入家庭预算或旅行群组，你的交易永远属于你。共享只决定谁能看到——从不决定归谁所有。退出群组，历史记录依然是你的。",
+    "cta": "查看共享功能价格 →",
+    "groupNode": {
+      "title": "家庭 · 3 位成员",
+      "sub": "共享可见"
+    }
+  },
+  "devices": {
+    "eyebrow": "手腕 · 口袋 · 浏览器",
+    "title": "在手腕上记录，在浏览器里分析。",
+    "sub": "同一本账，每台设备都同步。手表管当下，仪表盘管复盘。",
+    "watch": {
+      "listening": "正在聆听…",
+      "title": "Apple Watch",
+      "body": "按住数码表冠，开口说。手腕还没放下，交易已经出现在手机上。"
+    },
+    "dashboard": {
+      "alt": "Manilo 网页仪表盘：月度汇总、分类支出和预算",
+      "title": "网页仪表盘",
+      "body": "趋势、明细、导出。账本在这里变成洞察。"
+    }
+  },
+  "numbers": [
+    { "value": "14", "label": "种语言，完整翻译" },
+    { "value": "29", "label": "种 CSV 导入格式，自动识别" },
+    { "value": "30+", "label": "个 MCP 工具，供 AI 助手调用" },
+    { "value": "5", "label": "个记账入口 · 1 本账" }
+  ],
+  "faq": {
+    "eyebrow": "常见问题",
+    "title": "人人都会问的八个问题。",
+    "items": [
+      {
+        "id": "free",
+        "q": "Manilo 免费吗？",
+        "a": "免费——个人记账的每一项功能都永久免费。Cloud 解锁多设备同步、共享、AI 语音/拍照记账、Siri、Apple Watch 记账、Telegram 机器人、Apple Wallet 自动记账和网页仪表盘。"
+      },
+      {
+        "id": "price",
+        "q": "Cloud 多少钱？",
+        "a": "$2.99/月或 $22.99/年（约合 $1.92/月）。7 天免费试用，随时可取消。"
+      },
+      {
+        "id": "android",
+        "q": "有 Android 版吗？",
+        "a": "暂时没有。Manilo 目前仅支持 iOS。Android 已列入计划——想第一时间收到通知，欢迎给我们留言。"
+      },
+      {
+        "id": "offline",
+        "q": "Manilo 能离线使用吗？",
+        "a": "能。每个界面读取的都是手机本地 SQLite 数据库。新交易即时显示；重新联网后，同步在后台自动完成。"
+      },
+      {
+        "id": "shared-data",
+        "q": "退出共享群组后，我的数据会怎样？",
+        "a": "什么都不会发生。你的交易归你个人所有——共享只决定谁能看到。退出群组，历史记录依然是你的。"
+      },
+      {
+        "id": "voice",
+        "q": "我的语音会上传到服务器吗？",
+        "a": "不会。语音在你的设备上由 Apple 设备端语音识别完成转写，只有转写出的文字会发送给我们的 AI 做解析。"
+      },
+      {
+        "id": "import",
+        "q": "能从 Mint、YNAB 或其他应用导入吗？",
+        "a": "能。CSV 导入向导可自动识别 29 种语言的列标题、货币符号和分类别名。把你的全部历史都带过来。"
+      },
+      {
+        "id": "languages",
+        "anchor": "faq-languages",
+        "q": "支持哪些语言？",
+        "a": "14 种完整翻译的语言：英语、德语、西班牙语（墨西哥）、法语、印地语、意大利语、日语、韩语、波兰语、葡萄牙语（巴西）、俄语、土耳其语、乌克兰语和简体中文。"
+      }
+    ]
+  },
+  "ctaBand": {
+    "title": "开始用最懒的方式记账。",
+    "sub": "个人使用需要的一切，Manilo 全部免费。Cloud 解锁每台设备、每个入口、每个共享群组。",
+    "download": "在 App Store 下载",
+    "pricing": "查看价格"
+  }
+}

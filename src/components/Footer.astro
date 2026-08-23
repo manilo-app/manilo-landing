@@ -1,53 +1,78 @@
 ---
 import { APP_STORE_URL, DASHBOARD_URL, SUPPORT_EMAIL } from '../consts';
+import { DEFAULT_LOCALE, PAGE_LOCALES, LOCALE_NAMES, localeUrl, navUrl, type Locale } from '../i18n/config';
+import { getDict } from '../i18n';
+
+interface Props {
+  locale?: Locale;
+  path?: string;
+}
+
+const { locale = DEFAULT_LOCALE, path = '/' } = Astro.props;
+const t = getDict<any>(locale, 'chrome');
+const pageLocales = PAGE_LOCALES[path] ?? [DEFAULT_LOCALE];
 ---
 <footer class="site-footer">
   <div class="container">
     <div class="site-footer__grid">
       <div>
-        <a href="/" class="brand-lockup" style="margin-bottom: 14px;">
+        <a href={navUrl(locale, '/')} class="brand-lockup" style="margin-bottom: 14px;">
           <img src="/assets/manilo-icon.svg" alt="" class="brand-icon" />
           <span class="brand-word brand-word--text">manilo</span>
         </a>
-        <p class="site-footer__about">Expenses that track themselves. AI expense tracker for iOS — now on the App Store.</p>
+        <p class="site-footer__about">{t.footer.tagline}</p>
       </div>
       <div>
-        <h4>Product</h4>
+        <h4>{t.footer.product}</h4>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href={`${DASHBOARD_URL}/upgrade`} target="_blank" rel="noopener noreferrer">Pricing</a></li>
-          <li><a href="/integrations">Integrations</a></li>
-          <li><a href="/chatgpt">Manilo in ChatGPT</a></li>
-          <li><a href={DASHBOARD_URL} target="_blank" rel="noopener noreferrer">Open dashboard</a></li>
-          <li><a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">Download on the App Store</a></li>
+          <li><a href={navUrl(locale, '/')}>{t.footer.home}</a></li>
+          <li><a href={`${DASHBOARD_URL}/upgrade`} target="_blank" rel="noopener noreferrer">{t.footer.pricing}</a></li>
+          <li><a href={navUrl(locale, '/integrations')}>{t.footer.integrations}</a></li>
+          <li><a href={navUrl(locale, '/chatgpt')}>{t.footer.chatgpt}</a></li>
+          <li><a href={DASHBOARD_URL} target="_blank" rel="noopener noreferrer">{t.footer.openDashboard}</a></li>
+          <li><a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">{t.footer.downloadAppStore}</a></li>
         </ul>
       </div>
       <div>
-        <h4>Developers</h4>
+        <h4>{t.footer.developers}</h4>
         <ul>
-          <li><a href="/api-v1">API v1 reference</a></li>
-          <li><a href="/integrations">MCP integration</a></li>
+          <li><a href={navUrl(locale, '/api-v1')}>{t.footer.apiRef}</a></li>
+          <li><a href={navUrl(locale, '/integrations')}>{t.footer.mcp}</a></li>
         </ul>
       </div>
       <div>
-        <h4>Support</h4>
+        <h4>{t.footer.support}</h4>
         <ul>
-          <li><a href="/support">Help center</a></li>
+          <li><a href={navUrl(locale, '/support')}>{t.footer.helpCenter}</a></li>
           <li><a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a></li>
         </ul>
       </div>
       <div>
-        <h4>Legal</h4>
+        <h4>{t.footer.legal}</h4>
         <ul>
-          <li><a href="/privacy">Privacy</a></li>
-          <li><a href="/terms">Terms</a></li>
+          <li><a href={navUrl(locale, '/privacy')}>{t.footer.privacy}</a></li>
+          <li><a href={navUrl(locale, '/terms')}>{t.footer.terms}</a></li>
         </ul>
       </div>
     </div>
+    {pageLocales.length > 1 && (
+      <details class="lang-dropdown">
+        <summary aria-label={t.footer.language}>
+          <i class="fa-solid fa-globe" aria-hidden="true"></i>
+          {LOCALE_NAMES[locale]}
+          <i class="fa-solid fa-chevron-up lang-dropdown__chev" aria-hidden="true"></i>
+        </summary>
+        <ul class="lang-dropdown__menu">
+          {pageLocales.map((l) => (
+            <li><a href={localeUrl(l, path)} hreflang={l} lang={l} aria-current={l === locale ? 'true' : undefined}>{LOCALE_NAMES[l]}</a></li>
+          ))}
+        </ul>
+      </details>
+    )}
     <div class="site-footer__legal">
-      <span>© 2026 Manilo</span>
+      <span>{t.footer.copyright}</span>
       <div class="site-footer__legal-links">
-        <span class="pill pill--success" style="font-size:11px;"><span class="dot"></span> All systems operational</span>
+        <span class="pill pill--success" style="font-size:11px;"><span class="dot"></span> {t.footer.status}</span>
       </div>
     </div>
   </div>

@@ -1,0 +1,30 @@
+{
+  "skipLink": "본문으로 건너뛰기",
+  "nav": { "home": "홈", "pricing": "가격", "support": "지원" },
+  "header": {
+    "brandAria": "Manilo 홈",
+    "openDashboard": "대시보드 열기",
+    "downloadAppStore": "App Store에서 다운로드"
+  },
+  "footer": {
+    "tagline": "알아서 기록되는 지출. iOS용 AI 지출 관리 앱 — 지금 App Store에서 만나보세요.",
+    "product": "제품",
+    "home": "홈",
+    "pricing": "가격",
+    "integrations": "연동",
+    "chatgpt": "ChatGPT 속 Manilo",
+    "openDashboard": "대시보드 열기",
+    "downloadAppStore": "App Store에서 다운로드",
+    "developers": "개발자",
+    "apiRef": "API v1 레퍼런스",
+    "mcp": "MCP 연동",
+    "support": "지원",
+    "helpCenter": "도움말 센터",
+    "legal": "법적 고지",
+    "privacy": "개인정보 처리방침",
+    "terms": "이용약관",
+    "copyright": "© 2026 Manilo",
+    "status": "모든 시스템 정상 작동 중",
+    "language": "언어"
+  }
+}

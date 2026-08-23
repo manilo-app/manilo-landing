@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "title": "Manilo — wielowalutowa aplikacja do śledzenia wydatków na iOS",
+    "description": "Wielowalutowy tracker wydatków na iOS. Zapisuj głosem lub zdjęciem paragonu, bez reklam. Działa z Claude i ChatGPT przez MCP. Za darmo w App Store.",
+    "ogDescription": "Zapisuj każdy wydatek w dowolnej walucie. Za darmo, bez reklam. Rozmawiaj z Manilo z poziomu Claude, ChatGPT i dowolnego asystenta AI przez MCP.",
+    "keywords": "śledzenie wydatków, aplikacja do śledzenia wydatków, aplikacja do wydatków iphone, kontrola wydatków, wydatki głosem, wielowalutowy tracker wydatków, tracker wydatków bez reklam, wydatki Apple Watch, MCP tracker wydatków, aplikacja do budżetu domowego",
+    "ogImageAlt": "Manilo — wielowalutowa aplikacja do śledzenia wydatków na iOS",
+    "twitterTitle": "Manilo — wielowalutowa aplikacja do śledzenia wydatków na iOS",
+    "twitterDescription": "Zapisuj każdy wydatek w dowolnej walucie. Za darmo, bez reklam. Działa z Claude, ChatGPT i dowolnym AI przez MCP."
+  },
+  "jsonLd": {
+    "appAlternateName": "Manilo — głosowy tracker wydatków",
+    "appDescription": "Wielowalutowy tracker wydatków na iOS. Zapisuj każdy wydatek w dowolnej walucie — przez Siri, Apple Watch lub przycisk czynności. Za darmo, bez reklam. Opcjonalny plan Cloud odblokowuje skanowanie paragonów przez AI, integrację MCP z Claude, ChatGPT i innymi asystentami AI, współdzielenie z rodziną, panel www i bota w Telegramie.",
+    "featureList": [
+      "Głosowe zapisywanie wydatków przez Siri i przycisk czynności",
+      "Zapisywanie wydatków z Apple Watch",
+      "Konta wielowalutowe z aktualnymi kursami EBC",
+      "Skanowanie paragonów przez AI i automatyczna kategoryzacja",
+      "Serwer MCP — połącz Claude, ChatGPT i dowolnego asystenta AI",
+      "Rozpoznawanie mowy na urządzeniu — nagranie głosu nigdy nie opuszcza telefonu",
+      "Wspólne konta dla rodziny i domowników",
+      "Pełna praca offline z lokalną bazą SQLite",
+      "Eksport do CSV i PDF",
+      "Obsługa 14 języków",
+      "Bez reklam, bez sprzedaży danych, bez śledzących SDK",
+      "Zapisywanie wydatków przez bota w Telegramie",
+      "Automatyczny zapis płatności Apple Pay przez Apple Wallet",
+      "Panel www z trendami i raportami"
+    ],
+    "websiteDescription": "Wielowalutowy tracker wydatków na iOS. Za darmo, bez reklam."
+  },
+  "hero": {
+    "pillAria": "Już w App Store. Dostępne na iOS.",
+    "pill": "Już w App Store · iOS",
+    "title": "Zapisuj każdy wydatek w dowolnej walucie.",
+    "sub": "Rozmawiaj ze swoimi pieniędzmi. Manilo (dawniej Ledgy) to wielowalutowa aplikacja do śledzenia wydatków na iOS. Zapisuj głosem na iPhonie lub Apple Watch, sfotografuj paragon albo poproś bezpośrednio Claude czy ChatGPT. Pobierzesz za darmo. Bez reklam. Dane zostają na Twoim urządzeniu.",
+    "downloadCta": "Pobierz w App Store",
+    "downloadMeta": "Bezpłatnie · iOS 15+",
+    "pricingCta": "Zobacz cennik",
+    "pricingMeta": "Na własny użytek — za darmo na zawsze",
+    "phoneAlt": "Ekran dodawania transakcji w Manilo z wydatkiem $555 zapisywanym głosem",
+    "chips": {
+      "voice": { "label": "Głos", "line": "„Kawa za $4.50 w Blue Bottle”" },
+      "receipt": { "label": "Paragon", "line": "Lunch · €18.20" },
+      "telegram": { "label": "Telegram", "line": "Pełny bak · 60 EUR" }
+    }
+  },
+  "trust": {
+    "languages": "Dostępne w 14 językach",
+    "offline": "Działa offline. Dane na Twoim urządzeniu."
+  },
+  "how": {
+    "eyebrow": "Jak to działa",
+    "title": "Trzy kroki. I masz to z głowy.",
+    "sub": "Zapisujesz tak, jak w danym momencie najszybciej. Resztą zajmie się Manilo.",
+    "steps": [
+      { "num": "01", "title": "Zapisz", "body": "Głosem na zegarku, zdjęciem paragonu albo przekazanym SMS-em w Telegramie." },
+      { "num": "02", "title": "AI rozpozna", "body": "Odczyta tekst, dobierze właściwą kategorię, konto i grupę." },
+      { "num": "03", "title": "Zobacz wszędzie", "body": "iPhone, Apple Watch, panel www i Twoi agenci AI (ChatGPT, Claude, Gemini i inni)." }
+    ]
+  },
+  "surfaces": {
+    "eyebrow": "Kanały zapisu",
+    "title": "Pięć sposobów.",
+    "titleAccent": "Jedno miejsce.",
+    "sub": "Zapisujesz tym, co akurat masz pod ręką. Wszystko trafia w jedno miejsce.",
+    "cards": {
+      "iphone": { "title": "iPhone", "body": "Głos, zdjęcie, klawiatura albo wklejenie skądkolwiek. Jedno stuknięcie, jedna fraza — gotowe." },
+      "watch": { "title": "Apple Watch", "body": "Przytrzymaj mikrofon. Powiedz. Gotowe w 5 sekund. Komplikacje na tarczy prowadzą prosto do zapisu." },
+      "siri": { "title": "Siri", "body": "„Hej, Siri, zapisz wydatek w Manilo”. App Intents na iOS 16+." },
+      "wallet": { "title": "Apple Wallet", "body": "Płatności Apple Pay zapisują się same. Każda karta ma własną regułę AI (np. „dodaj tag Podróż 2026”)." },
+      "telegram": { "title": "Bot w Telegramie", "body": "Tekst, zdjęcie albo głosówka prosto w czacie. Przyciski inline pozwalają poprawić wszystko dwoma stuknięciami." },
+      "aiAgent": { "title": "Agent AI", "body": "Po prostu powiedz swojemu agentowi AI (ChatGPT, Claude, Gemini lub innemu), co zapisać." }
+    }
+  },
+  "smart": {
+    "eyebrow": "Inteligencja w standardzie",
+    "title": "Nudna strona finansów — załatwiona.",
+    "ai": {
+      "title": "AI, które uczy się Twojego życia",
+      "body": "Standardowe kategorie, Twoje własne i osobiste reguły. Do tego reguły dla każdej karty w Wallet — „podróżna” Visa zawsze dostanie tag Podróż 2026.",
+      "checklist": [
+        "14 standardowych kategorii + własne bez limitu",
+        "Osobne reguły dla każdej karty Apple Pay",
+        "Poprawisz raz — zaktualizuje też wcześniejsze transakcje"
+      ],
+      "alt": "Lista transakcji w Manilo z automatycznie dobranymi kategoriami"
+    },
+    "budgets": {
+      "title": "Budżety, które pilnują za Ciebie",
+      "body": "Dla pojedynczych kategorii i całości, na tydzień / miesiąc / kwartał / rok. Pulsują na czerwono, gdy tylko przekroczysz limit. Zero niespodzianek.",
+      "checklist": [
+        "4 okresy budżetowe — łącz je dowolnie",
+        "Limity miękkie i twarde",
+        "Powiadomienia, gdy zbliżasz się do granicy"
+      ]
+    },
+    "budgetMock": {
+      "food": { "name": "Jedzenie i napoje", "sub": "$612 z $600" },
+      "groceries": { "name": "Zakupy spożywcze", "sub": "$384 z $500" },
+      "transport": { "name": "Transport", "sub": "$142 z $250" }
+    },
+    "fx": {
+      "title": "Wielowalutowość bez matematyki",
+      "body": "Kursy walut na żywo. Przytrzymaj dowolną kwotę, aby ją przeliczyć. Ustaw walutę główną, a Manilo pokaże w niej wszystkie sumy.",
+      "checklist": [
+        "Kursy odświeżane codziennie z wiarygodnego źródła",
+        "Osobna waluta dla każdego konta, główna na górze",
+        "Tryb podróży, gdy jesteś za granicą"
+      ]
+    },
+    "fxMock": {
+      "trip": "Podróż · Europa",
+      "primary": "Główna · USD",
+      "rate": "€1 = $1.0808 · dziś"
+    },
+    "receipts": {
+      "title": "Paragony tam, gdzie ich miejsce",
+      "body": "Dołącz zdjęcie. Kopie trafiają do wszystkich członków wspólnej grupy, są przechowywane w Twojej wydzielonej przestrzeni i usuwane, gdy tak zdecydujesz.",
+      "checklist": [
+        "Jedno stuknięcie, by dodać zdjęcie z aparatu lub biblioteki",
+        "Wyszukiwanie po kwocie i sprzedawcy",
+        "Zaszyfrowane na serwerze, osobno dla każdego użytkownika"
+      ]
+    },
+    "receiptMock": {
+      "store": "Blue Bottle Coffee",
+      "item1": "Cortado",
+      "item2": "Croissant migdałowy",
+      "totalLabel": "Razem",
+      "date": "9 maja 2026 · 09:17",
+      "category": "Kawa i herbata"
+    }
+  },
+  "mcp": {
+    "eyebrow": "Porozmawiaj z pieniędzmi",
+    "titlePre": "Zapytaj",
+    "titleAccent": "ChatGPT, Claude czy Cursor",
+    "titlePost": "o swoje wydatki.",
+    "sub": "Połącz Manilo z ulubionym czatem AI. Pytaj o co chcesz zwykłym językiem — „ile poszło mi na kawę w zeszłym miesiącu?” — a odpowie na podstawie Twoich danych. Bez kopiowania, bez arkuszy.",
+    "viz": {
+      "hub": "Manilo",
+      "claude": "Claude",
+      "chatgpt": "ChatGPT",
+      "cursor": "Cursor",
+      "more": "I inne"
+    },
+    "prompts": [
+      "„Ile poszło na kawę w zeszłym miesiącu?”",
+      "„Czy mieszczę się w budżecie na zakupy spożywcze?”",
+      "„Pokaż wykres ostatnich 90 dni według kategorii”",
+      "„Znajdź wszystkie transakcje powyżej €100 w maju”"
+    ],
+    "note": "Połącz raz — pytaj o wszystko. Twoje AI widzi tylko to, na co pozwolisz: kontrola zawsze jest po Twojej stronie, a odłączyć się możesz w każdej chwili.",
+    "setupCta": "Skonfiguruj ChatGPT, Claude lub Cursor →",
+    "chatgptCta": "Importuj wyciągi bankowe przez czat →"
+  },
+  "sharing": {
+    "eyebrow": "Stworzone do dzielenia się",
+    "titlePre": "Własność — Twoja.",
+    "titleAccent": "Widoczność — grupy.",
+    "sub": "Dołącz do rodzinnego budżetu albo grupy na wyjazd — Twoje transakcje na zawsze zostaną Twoje. Udostępnianie decyduje, kto je widzi, a nie, czyje są. Wyjdziesz z grupy — historia zostaje z Tobą.",
+    "cta": "Wspólne grupy — zobacz cennik →",
+    "groupNode": {
+      "title": "Rodzina · 3 osoby",
+      "sub": "Wspólna widoczność"
+    }
+  },
+  "devices": {
+    "eyebrow": "Nadgarstek · Kieszeń · Przeglądarka",
+    "title": "Zapisuj z nadgarstka. Analizuj w przeglądarce.",
+    "sub": "Te same dane na każdym urządzeniu. Zegarek jest na „teraz”, panel — na „później”.",
+    "watch": {
+      "listening": "Słucham…",
+      "title": "Apple Watch",
+      "body": "Przytrzymaj koronkę Digital Crown i mów. Transakcja będzie na telefonie, zanim opuścisz nadgarstek."
+    },
+    "dashboard": {
+      "alt": "Panel www Manilo: podsumowanie miesiąca, wydatki według kategorii i budżety",
+      "title": "Panel www",
+      "body": "Trendy, szczegółowe analizy, eksport. Tu z zapisów rodzą się wnioski."
+    }
+  },
+  "numbers": [
+    { "value": "14", "label": "Języków — w pełni przetłumaczonych" },
+    { "value": "29", "label": "Wersji językowych CSV wykrywanych automatycznie" },
+    { "value": "30+", "label": "Narzędzi MCP dla agentów AI" },
+    { "value": "5", "label": "Kanałów zapisu · 1 miejsce" }
+  ],
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Osiem pytań, które zadają wszyscy.",
+    "items": [
+      {
+        "id": "free",
+        "q": "Czy Manilo jest za darmo?",
+        "a": "Tak — wszystko do osobistego śledzenia wydatków jest za darmo na zawsze. Cloud odblokowuje synchronizację między urządzeniami, wspólne grupy, zapis głosem i zdjęciem przez AI, Siri, zapis z Apple Watch, bota w Telegramie, automatyzację Apple Wallet i panel www."
+      },
+      {
+        "id": "price",
+        "q": "Ile kosztuje Cloud?",
+        "a": "$2.99/mies. lub $22.99/rok (~$1.92/mies.). 7 dni za darmo. Zrezygnujesz w każdej chwili."
+      },
+      {
+        "id": "android",
+        "q": "Czy jest wersja na Androida?",
+        "a": "Jeszcze nie. Manilo działa dziś tylko na iOS. Android jest w planach — napisz do nas, a damy Ci znać, gdy się pojawi."
+      },
+      {
+        "id": "offline",
+        "q": "Czy Manilo działa offline?",
+        "a": "Tak. Każdy ekran czyta dane z lokalnej bazy SQLite na Twoim telefonie. Nowe transakcje pojawiają się natychmiast, a synchronizacja dzieje się w tle, gdy znowu jesteś online."
+      },
+      {
+        "id": "shared-data",
+        "q": "Co się stanie z moimi danymi, jeśli wyjdę ze wspólnej grupy?",
+        "a": "Nic. Twoje transakcje należą tylko do Ciebie — udostępnianie decyduje jedynie o tym, kto je widzi. Wyjdziesz z grupy — historia zostaje z Tobą."
+      },
+      {
+        "id": "voice",
+        "q": "Czy mój głos jest wysyłany na serwer?",
+        "a": "Nie. Mowa jest zamieniana na tekst bezpośrednio na Twoim urządzeniu przez wbudowane rozpoznawanie mowy Apple. Do naszego AI trafia wyłącznie gotowy tekst do analizy."
+      },
+      {
+        "id": "import",
+        "q": "Czy mogę zaimportować dane z Mint / YNAB / innej aplikacji?",
+        "a": "Tak. Kreator importu CSV sam rozpoznaje nagłówki kolumn w 29 językach, symbole walut i nazwy kategorii. Zabierz ze sobą całą historię."
+      },
+      {
+        "id": "languages",
+        "anchor": "faq-languages",
+        "q": "Jakie języki są obsługiwane?",
+        "a": "14 w pełni przetłumaczonych wersji językowych: angielski, niemiecki, hiszpański (Meksyk), francuski, hindi, włoski, japoński, koreański, polski, portugalski (Brazylia), rosyjski, turecki, ukraiński i chiński uproszczony."
+      }
+    ]
+  },
+  "ctaBand": {
+    "title": "Zacznij zapisywać wydatki na leniwo.",
+    "sub": "Wszystko do osobistego śledzenia wydatków — za darmo. Cloud odblokowuje każde urządzenie, każdy kanał zapisu i każdą wspólną grupę.",
+    "download": "Pobierz w App Store",
+    "pricing": "Zobacz cennik"
+  }
+}

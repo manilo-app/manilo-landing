@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "Terms of Service — Manilo",
+    "description": "Terms of Service for Manilo expense tracker."
+  },
+  "jsonLd": {
+    "breadcrumbName": "Terms of Service"
+  },
+  "hero": {
+    "eyebrow": "Legal",
+    "title": "Terms of Service",
+    "updated": "Last updated May 10, 2026"
+  },
+  "toc": {
+    "ariaLabel": "Table of contents",
+    "heading": "Contents",
+    "toggle": "Contents",
+    "items": {
+      "agreement": "Agreement",
+      "account": "Your account",
+      "subscription": "Subscription & payment",
+      "trial": "Free trial",
+      "use": "Acceptable use",
+      "data": "Your data",
+      "beta": "Beta features",
+      "warranty": "No warranty",
+      "liability": "Liability",
+      "termination": "Termination",
+      "law": "Governing law",
+      "contact": "Contact"
+    }
+  },
+  "sections": {
+    "agreement": {
+      "heading": "Agreement",
+      "p": [
+        "These Terms of Service (\"Terms\") govern your use of Manilo (formerly Ledgy) — the iOS app, web dashboard at dashboard.manilo.app, the Manilo Telegram bot, and related services (the \"Service\"). By creating an account or downloading the app, you agree to these Terms. If you don't agree, don't use the Service.",
+        "The Service is operated by the team behind Manilo, hereinafter \"we\" or \"us\"."
+      ]
+    },
+    "account": {
+      "heading": "Your account",
+      "p": [
+        "You are responsible for everything that happens under your account, including keeping your sign-in credentials safe. Only one person may use a single account; sharing your login defeats the purpose of group sharing (which is built in and free with Cloud).",
+        "You must be at least 13 years old (or 16 in the EEA) to use the Service."
+      ]
+    },
+    "subscription": {
+      "heading": "Subscription & payment",
+      "p": [
+        "Cloud is offered as a recurring subscription, billed monthly or yearly. The price shown at checkout is the final price you pay. Subscriptions are processed by Apple through your App Store account."
+      ],
+      "autoRenew": "Your subscription auto-renews at the end of each period unless cancelled at least 24 hours before renewal.",
+      "cancel": "You can cancel at any time in <em>Settings → [Your Name] → Subscriptions</em> on iPhone.",
+      "refundsPre": "Refunds are administered by Apple via ",
+      "refundsPost": ".",
+      "rateChange": "If you upgrade, downgrade, or change billing period, the new rate takes effect at the next renewal."
+    },
+    "trial": {
+      "heading": "Free trial",
+      "p": [
+        "New subscribers may receive a 7-day free trial. You will not be charged until the trial ends. If you cancel before the trial ends, you owe nothing. The trial is offered once per Apple ID."
+      ]
+    },
+    "use": {
+      "heading": "Acceptable use",
+      "p": [
+        "Use of the Service must be lawful and reasonable. You agree not to:"
+      ],
+      "items": [
+        "Reverse-engineer, decompile, or attempt to extract source code, except as permitted by law.",
+        "Use the Service to violate the privacy or rights of others.",
+        "Run automated abuse, scraping, or denial-of-service attacks against our infrastructure.",
+        "Resell or sublicense access to Cloud without written permission."
+      ]
+    },
+    "data": {
+      "heading": "Your data",
+      "p1Pre": "Your transactions belong to you. We claim no ownership over data you create using the Service. We process it only to deliver the features you've enabled, as described in our ",
+      "p1Link": "Privacy Policy",
+      "p1Post": ".",
+      "p2": "You can export your full ledger as CSV at any time from Settings → Export. If you delete your account, we delete the associated data within 7 days; backups roll off within 30 days."
+    },
+    "beta": {
+      "heading": "Beta features",
+      "callout": "Some Manilo capabilities ship behind a \"Beta\" label inside the app. They may produce incorrect output, change, or be removed without notice. Don't rely on them as a single source of truth — always keep a periodic export of your ledger.",
+      "p": [
+        "Features marked \"Beta\" inside the app are experimental, may produce incorrect output, and may be removed without notice."
+      ]
+    },
+    "warranty": {
+      "heading": "No warranty",
+      "p": [
+        "The Service is provided \"as is\" without warranties of any kind, express or implied, including merchantability, fitness for a particular purpose, and non-infringement, to the maximum extent permitted by law. AI parsing, currency conversion, and category suggestion may produce mistakes — review before relying on them.",
+        "Manilo is not financial, tax, or accounting advice."
+      ]
+    },
+    "liability": {
+      "heading": "Limitation of liability",
+      "p": [
+        "To the maximum extent permitted by law, our aggregate liability for any claim relating to the Service is limited to the amount you paid us in the 12 months preceding the claim. We are not liable for indirect, consequential, or incidental damages — including lost profits, lost data, or business interruption.",
+        "Nothing in these Terms limits liability for fraud, gross negligence, or any liability that cannot be excluded under applicable law."
+      ]
+    },
+    "termination": {
+      "heading": "Termination",
+      "p": [
+        "You can stop using the Service and delete your account at any time. We may suspend or terminate accounts that violate these Terms, with notice where reasonably possible. On termination, sections that by their nature survive (data, liability, governing law) continue to apply."
+      ]
+    },
+    "law": {
+      "heading": "Governing law",
+      "p": [
+        "Disputes are subject to the mandatory consumer protection rules of your country of residence; otherwise governing law and venue will be set out in a future update to these Terms."
+      ]
+    },
+    "contact": {
+      "heading": "Contact"
+    }
+  }
+}

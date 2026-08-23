@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "Hizmet Koşulları — Manilo",
+    "description": "Manilo harcama takip uygulamasının Hizmet Koşulları."
+  },
+  "jsonLd": {
+    "breadcrumbName": "Hizmet Koşulları"
+  },
+  "hero": {
+    "eyebrow": "Yasal",
+    "title": "Hizmet Koşulları",
+    "updated": "Son güncelleme: 10 Mayıs 2026"
+  },
+  "toc": {
+    "ariaLabel": "İçindekiler",
+    "heading": "İçindekiler",
+    "toggle": "İçindekiler",
+    "items": {
+      "agreement": "Sözleşme",
+      "account": "Hesabınız",
+      "subscription": "Abonelik ve ödeme",
+      "trial": "Ücretsiz deneme",
+      "use": "Kabul edilebilir kullanım",
+      "data": "Verileriniz",
+      "beta": "Beta özellikler",
+      "warranty": "Garanti verilmemesi",
+      "liability": "Sorumluluk",
+      "termination": "Fesih",
+      "law": "Geçerli hukuk",
+      "contact": "İletişim"
+    }
+  },
+  "sections": {
+    "agreement": {
+      "heading": "Sözleşme",
+      "p": [
+        "Bu Hizmet Koşulları (\"Koşullar\"), Manilo'yu (eski adıyla Ledgy) — iOS uygulamasını, dashboard.manilo.app adresindeki web panelini, Manilo Telegram botunu ve ilgili hizmetleri (\"Hizmet\") — kullanımınızı düzenler. Bir hesap oluşturarak veya uygulamayı indirerek bu Koşulları kabul etmiş olursunuz. Kabul etmiyorsanız Hizmet'i kullanmayın.",
+        "Hizmet, bundan böyle \"biz\" veya \"bize\" olarak anılacak olan Manilo ekibi tarafından işletilmektedir."
+      ]
+    },
+    "account": {
+      "heading": "Hesabınız",
+      "p": [
+        "Oturum açma bilgilerinizi güvende tutmak dahil olmak üzere, hesabınız altında gerçekleşen her şeyden siz sorumlusunuz. Tek bir hesabı yalnızca bir kişi kullanabilir; oturum bilgilerinizi paylaşmak, grup paylaşımının amacını ortadan kaldırır (grup paylaşımı Cloud'da yerleşik olarak ve ücretsiz sunulur).",
+        "Hizmet'i kullanabilmek için en az 13 (AEA'da 16) yaşında olmalısınız."
+      ]
+    },
+    "subscription": {
+      "heading": "Abonelik ve ödeme",
+      "p": [
+        "Cloud, aylık veya yıllık olarak faturalandırılan yinelenen bir abonelik biçiminde sunulur. Ödeme ekranında gösterilen fiyat, ödeyeceğiniz nihai fiyattır. Abonelikler, App Store hesabınız üzerinden Apple tarafından işlenir."
+      ],
+      "autoRenew": "Yenilemeden en az 24 saat önce iptal edilmediği sürece aboneliğiniz her dönemin sonunda kendiliğinden yenilenir.",
+      "cancel": "iPhone'da <em>Ayarlar → [Adınız] → Abonelikler</em> yolundan dilediğiniz zaman iptal edebilirsiniz.",
+      "refundsPre": "İadeler, Apple tarafından ",
+      "refundsPost": " üzerinden yürütülür.",
+      "rateChange": "Aboneliğinizi yükseltir, düşürür veya faturalandırma dönemini değiştirirseniz yeni ücret, bir sonraki yenilemede geçerli olur."
+    },
+    "trial": {
+      "heading": "Ücretsiz deneme",
+      "p": [
+        "Yeni aboneler 7 günlük ücretsiz deneme alabilir. Deneme sona erene kadar sizden ücret alınmaz. Deneme bitmeden iptal ederseniz hiçbir borcunuz olmaz. Deneme, her Apple Kimliği için bir kez sunulur."
+      ]
+    },
+    "use": {
+      "heading": "Kabul edilebilir kullanım",
+      "p": [
+        "Hizmet'in kullanımı hukuka uygun ve makul olmalıdır. Şunları yapmamayı kabul edersiniz:"
+      ],
+      "items": [
+        "Hukukun izin verdiği haller dışında tersine mühendislik yapmak, kaynak koda dönüştürmek veya kaynak kodu elde etmeye çalışmak.",
+        "Hizmet'i başkalarının gizliliğini ya da haklarını ihlal etmek için kullanmak.",
+        "Altyapımıza karşı otomatik kötüye kullanım, veri kazıma veya hizmet dışı bırakma saldırıları yürütmek.",
+        "Cloud erişimini yazılı izin olmaksızın yeniden satmak veya alt lisanslamak."
+      ]
+    },
+    "data": {
+      "heading": "Verileriniz",
+      "p1Pre": "İşlemleriniz size aittir. Hizmet'i kullanarak oluşturduğunuz veriler üzerinde hiçbir mülkiyet iddiamız yoktur. Bu verileri yalnızca etkinleştirdiğiniz özellikleri sunmak için, ",
+      "p1Link": "Gizlilik Politikamızda",
+      "p1Post": " açıklandığı şekilde işleriz.",
+      "p2": "Defterinizin tamamını dilediğiniz zaman Ayarlar → Dışa aktar yolundan CSV olarak dışa aktarabilirsiniz. Hesabınızı silerseniz ilgili verileri 7 gün içinde sileriz; yedekler 30 gün içinde tamamen silinir."
+    },
+    "beta": {
+      "heading": "Beta özellikler",
+      "callout": "Bazı Manilo yetenekleri, uygulama içinde \"Beta\" etiketiyle sunulur. Bunlar hatalı çıktı üretebilir, değişebilir veya haber verilmeksizin kaldırılabilir. Bunlara tek doğruluk kaynağı olarak güvenmeyin — defterinizin düzenli bir dışa aktarımını her zaman saklayın.",
+      "p": [
+        "Uygulama içinde \"Beta\" olarak işaretlenen özellikler deneyseldir, hatalı çıktı üretebilir ve haber verilmeksizin kaldırılabilir."
+      ]
+    },
+    "warranty": {
+      "heading": "Garanti verilmemesi",
+      "p": [
+        "Hizmet, hukukun izin verdiği azami ölçüde; satılabilirlik, belirli bir amaca uygunluk ve ihlal etmeme dahil olmak üzere açık ya da zımni hiçbir garanti verilmeksizin \"olduğu gibi\" sunulur. Yapay zekayla çözümleme, para birimi dönüştürme ve kategori önerisi hata üretebilir — bunlara güvenmeden önce gözden geçirin.",
+        "Manilo; finans, vergi veya muhasebe tavsiyesi niteliğinde değildir."
+      ]
+    },
+    "liability": {
+      "heading": "Sorumluluğun sınırlandırılması",
+      "p": [
+        "Hukukun izin verdiği azami ölçüde, Hizmet'e ilişkin herhangi bir talep bakımından toplam sorumluluğumuz, talebin öncesindeki 12 ay içinde bize ödediğiniz tutarla sınırlıdır. Kâr kaybı, veri kaybı veya iş kesintisi dahil olmak üzere dolaylı, netice kabilinden ya da arızi zararlardan sorumlu değiliz.",
+        "Bu Koşullardaki hiçbir hüküm; hile, ağır ihmal veya yürürlükteki hukuk uyarınca bertaraf edilemeyecek herhangi bir sorumluluğu sınırlamaz."
+      ]
+    },
+    "termination": {
+      "heading": "Fesih",
+      "p": [
+        "Hizmet'i kullanmayı dilediğiniz zaman bırakabilir ve hesabınızı silebilirsiniz. Bu Koşulları ihlal eden hesapları, makul ölçüde mümkün olduğunda bildirimde bulunarak askıya alabilir veya kapatabiliriz. Fesih halinde, niteliği gereği yürürlükte kalan bölümler (veriler, sorumluluk, geçerli hukuk) uygulanmaya devam eder."
+      ]
+    },
+    "law": {
+      "heading": "Geçerli hukuk",
+      "p": [
+        "Uyuşmazlıklar, ikamet ettiğiniz ülkenin emredici tüketici koruma kurallarına tabidir; bunun dışında geçerli hukuk ve yetkili yargı yeri, bu Koşulların ileride yapılacak bir güncellemesinde belirtilecektir."
+      ]
+    },
+    "contact": {
+      "heading": "İletişim"
+    }
+  }
+}

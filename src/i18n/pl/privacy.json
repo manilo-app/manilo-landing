@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "Polityka prywatności — Manilo",
+    "description": "Polityka prywatności Manilo. Dane lokalnie na urządzeniu, oddzielone dla każdego użytkownika, zgodne z RODO. Bez reklam, brokerów danych i śledzących SDK.",
+    "ogDescription": "Dane lokalnie na urządzeniu, zgodnie z RODO. Bez reklam, bez brokerów danych, bez śledzących SDK."
+  },
+  "jsonLd": {
+    "breadcrumbName": "Polityka prywatności"
+  },
+  "hero": {
+    "eyebrow": "Informacje prawne",
+    "title": "Polityka prywatności",
+    "lastUpdated": "Ostatnia aktualizacja: 10 maja 2026 r."
+  },
+  "toc": {
+    "ariaLabel": "Spis treści",
+    "title": "Spis treści"
+  },
+  "summary": {
+    "heading": "Podsumowanie",
+    "calloutLead": "W skrócie:",
+    "calloutBody": "Manilo (dawniej Ledgy) działa przede wszystkim lokalnie. Twoje transakcje są zapisane na Twoim urządzeniu. Jeśli włączysz Cloud, zaszyfrowana kopia synchronizuje się z naszymi serwerami, aby była widoczna na innych urządzeniach i we wspólnych grupach. Nigdy nie sprzedajemy Twoich danych, nigdy nie zaglądamy w Twoje transakcje i nigdy nie wykorzystujemy ich do trenowania AI.",
+    "introBeforeLink": "Niniejsza Polityka prywatności wyjaśnia, jakie dane zbiera Manilo („my”, „nas”), gdy korzystasz z aplikacji Manilo na iOS, z panelu www Manilo pod adresem",
+    "introAfterLink": ", z bota Manilo w Telegramie oraz z wszelkich powiązanych usług (łącznie „Usługa”). Jest napisana prostym językiem i zgodna z RODO (UE 2016/679) oraz z wymogami Apple App Store."
+  },
+  "whatWeCollect": {
+    "heading": "Jakie dane zbieramy",
+    "account": {
+      "heading": "Dane konta (gdy zakładasz konto Cloud)",
+      "items": [
+        "Adres e-mail — służy do identyfikacji Twojego konta i wysyłania Ci wiadomości transakcyjnych.",
+        "Tokeny uwierzytelniające — wydawane przez Apple Sign-In lub nasz własny mechanizm logowania.",
+        "Status subskrypcji — informacja o tym, czy masz aktywny dostęp do Cloud, przekazywana przez RevenueCat."
+      ]
+    },
+    "application": {
+      "heading": "Dane aplikacji (gdy korzystasz z Cloud)",
+      "items": [
+        "Transakcje, konta, kategorie, tagi, budżety, reguły transakcji cyklicznych, członkostwa w grupach i reguły kategoryzacji.",
+        "Zdjęcia paragonów, które załączasz.",
+        "Nagrania głosowe — <strong>nie są przechowywane.</strong> Mowa jest zamieniana na tekst bezpośrednio na Twoim urządzeniu przez wbudowane rozpoznawanie mowy Apple. Do naszego AI trafia wyłącznie powstały w ten sposób tekst.",
+        "W przypadku użytkowników Telegrama: Twój identyfikator użytkownika Telegrama, używany jako klucz powiązania z Twoim kontem Manilo.",
+        "W przypadku użytkowników Apple Wallet: powiadomienia o płatnościach, które zdecydujesz się przekazywać — sprzedawca, kwota, waluta i znacznik czasu. Nigdy nie otrzymujemy numerów kart."
+      ]
+    },
+    "diagnostics": {
+      "heading": "Dane diagnostyczne",
+      "items": [
+        "Raporty o awariach — zanonimizowane, przesyłane standardowym mechanizmem raportowania awarii Apple (możesz z niego zrezygnować w Ustawieniach iOS).",
+        "Zbiorcze zdarzenia użycia — odsłony stron i kliknięcia, bez treści osobistych. Korzystamy z dostawcy analityki szanującego prywatność, który nie zapisuje śledzących plików cookie ani nie buduje profili między witrynami."
+      ]
+    }
+  },
+  "whatWeDont": {
+    "heading": "Czego nigdy nie zbieramy",
+    "items": [
+      "Twoich danych logowania do banku, numerów kart ani sesji bankowych. Manilo nie łączy się z kontami bankowymi.",
+      "Twoich kontaktów, biblioteki zdjęć, kalendarza ani lokalizacji.",
+      "Identyfikatorów dla reklamodawców (IDFA). Manilo nie wyświetla reklam.",
+      "Nagrań dźwiękowych. Zamiana mowy na tekst odbywa się na Twoim urządzeniu.",
+      "Niczego, co nie jest nam bezwzględnie potrzebne do udostępnienia opisanych wyżej funkcji."
+    ]
+  },
+  "howWeUse": {
+    "heading": "Jak je wykorzystujemy",
+    "intro": "Powyższych danych używamy wyłącznie w następujących celach:",
+    "purposes": [
+      "Synchronizacja Twojej historii transakcji między Twoimi urządzeniami.",
+      "Udostępnianie widoczności osobom, które zostały przez Ciebie wyraźnie zaproszone do wspólnego zasobu.",
+      "Przetworzenie tekstu z Twojej wiadomości głosowej, zdjęcia lub SMS-a na transakcję (przetwarzanie przez AI).",
+      "Wysyłanie Ci wiadomości transakcyjnych — linków do logowania, faktur, powiadomień o bezpieczeństwie i o zmianach na koncie.",
+      "Diagnozowanie awarii i ulepszanie produktu."
+    ],
+    "doNot": "<strong>Nie</strong> sprzedajemy Twoich danych, nie udostępniamy ich do celów reklamowych ani nie wykorzystujemy ich do trenowania modeli AI podmiotów trzecich.",
+    "mcp": {
+      "heading": "Asystenci AI i Model Context Protocol (MCP)",
+      "beforeLink": "Jeśli połączysz Manilo z asystentem AI (Claude, ChatGPT, Cursor lub dowolnym klientem zgodnym z MCP) za pośrednictwem naszej strony",
+      "linkText": "Integracje",
+      "afterLink": "— asystent ten otrzymuje dane niezbędne do udzielenia odpowiedzi na Twoje zapytania: zwykle fragmenty transakcji, nazwy kategorii, salda kont lub sumy zbiorcze. To Ty decydujesz, o co pytasz — asystent widzi wyłącznie te dane, o które wyraźnie poprosi w Twoim imieniu. Możesz odłączyć go w dowolnej chwili w ustawieniach asystenta; cofnięcie dostępu działa natychmiast. Przy połączeniu nie przekazujemy asystentowi całej Twojej historii transakcji."
+    }
+  },
+  "thirdParties": {
+    "heading": "Podprocesorzy",
+    "intro": "Aby świadczyć Usługę, korzystamy z następujących dostawców. Każdy z nich jest związany umową powierzenia przetwarzania danych i przetwarza dane wyłącznie zgodnie z naszymi instrukcjami.",
+    "providers": [
+      { "name": "Hetzner", "desc": "hosting naszego backendu i bazy danych w Niemczech (UE)." },
+      { "name": "OpenAI / Anthropic", "desc": "analiza tekstu transakcji przez AI. Twoja przetranskrybowana wiadomość jest wysyłana do przetworzenia; zgodnie z warunkami ich API wyniki nie służą do trenowania ich modeli. Anthropic pełni też rolę asystenta AI, gdy łączysz Manilo z Claude przez Model Context Protocol; dane objęte zapytaniem trafiają do Anthropic na czas trwania rozmowy i — zgodnie z warunkami ich API — nie są wykorzystywane do trenowania modeli." },
+      { "name": "RevenueCat", "desc": "status subskrypcji na iOS." },
+      { "name": "Apple", "desc": "obsługa płatności za subskrypcje w aplikacji oraz raportowanie awarii." },
+      { "name": "Resend", "desc": "dostarczanie transakcyjnych wiadomości e-mail." },
+      { "name": "Telegram", "desc": "przekazywanie wiadomości bota użytkownikom, którzy włączą zapis przez Telegram." }
+    ],
+    "dpaBeforeEmail": "Jeśli potrzebujesz listy lokalizacji podprocesorów albo kopii umów powierzenia (DPA), napisz na",
+    "dpaAfterEmail": "."
+  },
+  "retention": {
+    "heading": "Przechowywanie i usuwanie",
+    "items": [
+      "Utworzone przez Ciebie transakcje i paragony przechowujemy do czasu, aż je usuniesz albo usuniesz swoje konto.",
+      "Jeśli zrezygnujesz z Cloud, lokalna kopia zostaje na Twoim urządzeniu. Kopia w chmurze jest przechowywana przez 30 dni, a potem usuwana.",
+      "Usunięcie konta: wejdź w Ustawienia → Konto → Usuń konto. Wszystko, co znajduje się na serwerze, kasujemy w ciągu 7 dni. Kopie zapasowe wygasają w ciągu 30 dni."
+    ]
+  },
+  "rights": {
+    "heading": "Twoje prawa",
+    "bodyBeforeEmail": "Jeśli przebywasz w UE, Wielkiej Brytanii lub Kalifornii, przysługuje Ci prawo dostępu do swoich danych osobowych, ich sprostowania, przeniesienia i usunięcia, a także prawo sprzeciwu wobec ich przetwarzania. Wszystkie te prawa zrealizujesz w aplikacji w sekcji Ustawienia → Konto albo pisząc na",
+    "bodyAfterEmail": ". Odpowiadamy w ciągu 30 dni.",
+    "complaint": "Masz również prawo wniesienia skargi do właściwego dla Ciebie organu nadzorczego do spraw ochrony danych osobowych."
+  },
+  "children": {
+    "heading": "Dzieci",
+    "body": "Manilo nie jest kierowane do dzieci poniżej 13. roku życia (a na terenie EOG — poniżej 16. roku życia). Świadomie nie zbieramy danych osób niepełnoletnich. Jeśli podejrzewasz, że konto założyło dziecko, skontaktuj się z nami, a je usuniemy."
+  },
+  "changes": {
+    "heading": "Zmiany",
+    "body": "Jeśli zmienimy niniejszą Politykę w sposób wpływający na to, jak postępujemy z Twoimi danymi, powiadomimy Cię w aplikacji i e-mailem co najmniej 14 dni przed wejściem zmiany w życie. Dalsze korzystanie z Usługi po wprowadzeniu zmiany oznacza jej akceptację."
+  },
+  "contact": {
+    "heading": "Kontakt",
+    "emailLabel": "E-mail:"
+  }
+}

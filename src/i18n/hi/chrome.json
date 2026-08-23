@@ -1,0 +1,30 @@
+{
+  "skipLink": "सीधे कंटेंट पर जाएँ",
+  "nav": { "home": "होम", "pricing": "कीमतें", "support": "सपोर्ट" },
+  "header": {
+    "brandAria": "Manilo होम",
+    "openDashboard": "डैशबोर्ड खोलें",
+    "downloadAppStore": "App Store से डाउनलोड करें"
+  },
+  "footer": {
+    "tagline": "खर्च, जो खुद दर्ज हो जाते हैं। iOS के लिए AI खर्च ट्रैकर — अब App Store पर।",
+    "product": "प्रोडक्ट",
+    "home": "होम",
+    "pricing": "कीमतें",
+    "integrations": "इंटीग्रेशन",
+    "chatgpt": "ChatGPT में Manilo",
+    "openDashboard": "डैशबोर्ड खोलें",
+    "downloadAppStore": "App Store से डाउनलोड करें",
+    "developers": "डेवलपर्स",
+    "apiRef": "API v1 रेफ़रेंस",
+    "mcp": "MCP इंटीग्रेशन",
+    "support": "सपोर्ट",
+    "helpCenter": "हेल्प सेंटर",
+    "legal": "कानूनी",
+    "privacy": "प्राइवेसी",
+    "terms": "शर्तें",
+    "copyright": "© 2026 Manilo",
+    "status": "सभी सिस्टम चालू हैं",
+    "language": "भाषा"
+  }
+}

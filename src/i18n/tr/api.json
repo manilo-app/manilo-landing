@@ -1,0 +1,440 @@
+{
+  "meta": {
+    "title": "API v1 referansı — Geliştiriciler için Manilo",
+    "description": "Manilo REST API v1 referansı. PAT ile kimlik doğrulayın; hesap, kategori, bütçe, grup ve işlemleri HTTPS üzerinden yönetin. MCP ile yapay zeka ajanları için.",
+    "ogDescription": "Manilo için REST API. PAT kimlik doğrulama; hesap, kategori, bütçe, grup ve işlem yönetimi. Geliştiriciler ve MCP ile yapay zeka ajanları için.",
+    "twitterTitle": "API v1 referansı — Geliştiriciler için Manilo",
+    "twitterDescription": "Manilo için REST API. PAT kimlik doğrulama. Geliştiriciler ve MCP ile yapay zeka ajanları için."
+  },
+  "jsonLd": {
+    "breadcrumbHome": "Ana sayfa",
+    "breadcrumbApi": "API v1 referansı",
+    "headline": "Manilo REST API v1 — Referans",
+    "description": "Manilo için eksiksiz REST API referansı: hesaplar, kategoriler, bütçeler, gruplar, işlemler, transferler, fişler. Bearer belirteciyle kimlik doğrulama (Kişisel Erişim Belirteci, lgpat_ ön eki). İstek başına en fazla 100 işlemi toplu oluşturma/güncelleme/silme. İmleç tabanlı sayfalama. Cloud aboneliği gerekir."
+  },
+  "hero": {
+    "eyebrow": "Geliştiriciler",
+    "title": "API v1 referansı",
+    "stack": "REST · JSON · OAuth 2.0 Bearer",
+    "stability": "Kararlı — v1 içinde kırıcı değişiklik yok"
+  },
+  "toc": {
+    "ariaLabel": "İçindekiler",
+    "heading": "İçindekiler",
+    "toggle": "İçindekiler",
+    "groups": {
+      "gettingStarted": "Başlangıç",
+      "conventions": "Kurallar",
+      "resources": "Kaynaklar",
+      "more": "Diğer"
+    },
+    "items": {
+      "overview": "Genel bakış",
+      "quickstart": "Hızlı başlangıç",
+      "authentication": "Kimlik doğrulama",
+      "scopes": "Kapsamlar",
+      "subscription": "Abonelik kapısı",
+      "errors": "Hatalar",
+      "pagination": "Sayfalama ve filtreler",
+      "types": "Türler ve biçimler",
+      "accounts": "Hesaplar",
+      "categories": "Kategoriler",
+      "budgets": "Bütçeler",
+      "groups": "Gruplar",
+      "transactions": "İşlemler",
+      "icons": "Simgeler",
+      "changelog": "Sürümleme",
+      "support": "Destek"
+    }
+  },
+  "common": {
+    "field": "Alan",
+    "type": "Tür",
+    "description": "Açıklama",
+    "required": "zorunlu",
+    "optional": "isteğe bağlı",
+    "requestBody": "İstek gövdesi",
+    "queryParams": "Sorgu parametreleri",
+    "requestLabel": "İstek"
+  },
+  "overview": {
+    "title": "Genel bakış",
+    "intro": "Manilo API, iOS uygulamasında kullandığınız defterin aynısını programatik olarak yönetmeye yarayan bir JSON REST API'sidir — hesaplar, kategoriler, bütçeler, paylaşılan gruplar ve işlemler. İçe aktarıcılar, dışa aktarıcılar, senkronizasyon köprüleri ve panolar oluşturmak ya da kendi otomasyonlarınızı çalıştırmak için kullanın.",
+    "bullets": {
+      "baseUrl": { "label": "Temel URL:", "t1": " — önceki temel URL ", "t2": " çalışmaya devam ediyor." },
+      "versionPrefix": { "label": "Sürüm ön eki:", "t1": " bu belgedeki tüm uç noktalar ", "t2": " altında yer alır." },
+      "transport": { "label": "Aktarım:", "t1": " Yalnızca HTTPS. HTTP istekleri kabul edilmez." },
+      "encoding": { "label": "Kodlama:", "t1": " JSON istek ve yanıt gövdeleri. UTF-8. ", "t2": " özellik adları." },
+      "auth": { "label": "Kimlik doğrulama:", "t1": " her istekte gereklidir." },
+      "subscription": { "label": "Cloud aboneliği:", "t1": " tüm v1 uç noktalarında gereklidir. Bkz. ", "link": "Abonelik kapısı", "t2": "." }
+    },
+    "callout": {
+      "strong": "Yapay zeka asistanı mı arıyorsunuz?",
+      "t1": " Claude, ChatGPT veya Cursor'ın sizin adınıza Manilo ile konuşmasını istiyorsanız Model Context Protocol uç noktasını kullanın: ",
+      "t2": " — bkz. ",
+      "link": "Entegrasyonlar",
+      "t3": ". Burada belgelenen REST API, kendi yazdığınız kod içindir."
+    }
+  },
+  "quickstart": {
+    "title": "Hızlı başlangıç",
+    "intro": "İlk kimlik doğrulamalı isteğinize üç adım.",
+    "mintTitle": "1. Kişisel Erişim Belirteci oluşturun",
+    "steps": {
+      "signIn": { "t1": "Önce ", "link": "Manilo panelinize", "t2": " giriş yapın ve ", "strong": "Ayarlar → API Erişimi", "t3": " bölümünü açın." },
+      "newToken": { "t1": "Ardından ", "strong": "+ Yeni belirteç", "t2": " düğmesine tıklayın." },
+      "nameIt": { "t1": "Belirtece açıklayıcı bir ad verin (örn. ", "em": "\"Zapier — haftalık dışa aktarım\"", "t2": "), ihtiyacınız olan kapsamları seçin (bkz. ", "link": "Kapsamlar", "t3": ") ve isteğe bağlı olarak bir son kullanma tarihi belirleyin." },
+      "copyIt": { "t1": "Belirteci kopyalayın. Yalnızca ", "em": "bir kez", "t2": " gösterilir. Belirteçler şu ön ekle başlar: ", "t3": " — ardından 64 onaltılık karakter gelir." }
+    },
+    "tokensPage": "Aynı sayfa, etkin belirteçlerinizi son kullanım zaman damgası ve izin sayısıyla birlikte listeler, \"30 gün içinde sona eriyor\" uyarısını gösterir ve çöp kutusu simgesiyle herhangi bir belirteci anında iptal etmenizi sağlar. Her hesapta aynı anda en fazla 25 etkin belirteç bulunabilir.",
+    "requestTitle": "2. Bir istek yapın",
+    "curlCaption": "Hesapları listele",
+    "responseTitle": "3. Yanıtı inceleyin",
+    "callout": {
+      "strong1": "Belirtecinizi bir parola gibi koruyun.",
+      "t1": " Belirtece sahip olan herkes, verdiğiniz kapsamlar dahilinde defterinizi okuyabilir veya değiştirebilir. Ele geçirilen belirteçleri hemen şuradan iptal edin: ",
+      "strong2": "Ayarlar → API Erişimi",
+      "t2": "."
+    }
+  },
+  "authentication": {
+    "title": "Kimlik doğrulama",
+    "intro": { "t1": "Uç noktaların tamamı ", "t2": " altındadır ve bunlara gönderilen her istek bir ", "t3": " başlığı taşımalıdır. İki belirteç türü kabul edilir:" },
+    "pat": {
+      "strong1": "Kişisel Erişim Belirteci (PAT)",
+      "t1": " — panelin ",
+      "strong2": "Ayarlar → API Erişimi",
+      "t2": " sayfasından oluşturduğunuz, uzun ömürlü bearer belirteci. Biçim: ",
+      "t3": " + 64 onaltılık karakter. Kapsamlıdır, iptal edilebilir, isteğe bağlı olarak süresi dolar. ",
+      "strong3": "Tüm üçüncü taraf entegrasyonları için önerilir."
+    },
+    "jwt": {
+      "strong": "Oturum JWT'si",
+      "t1": " — birinci taraf uygulamalara (iOS, panel) verilen kısa ömürlü belirteç. Kapsam kısıtlaması yoktur. Açık bir oturumdan birini elde edebiliyorsanız tek seferlik testler için kullanabilirsiniz, ancak desteklenen yol PAT'lerdir."
+    },
+    "headerTitle": "Başlık biçimi",
+    "limitsTitle": "Belirteç sınırları",
+    "limits": {
+      "count": { "t1": "Her Manilo hesabı için en fazla ", "strong": "25 etkin PAT", "t2": "." },
+      "expiry": { "t1": "Oluşturma sırasında isteğe bağlı bir son kullanma tarihi belirlenebilir. Süresi dolmuş belirteçler şunu döndürür: ", "t2": "." },
+      "revoked": "İptal edilen belirteçler anında çalışmayı durdurur — Manilo, belirtecin yalnızca SHA-256 özetini saklar, değerini asla saklamaz; bu nedenle sızdırılan bir belirteç kurtarılamaz, yalnızca iptal edilip yenisiyle değiştirilebilir."
+    },
+    "failuresTitle": "Sık görülen kimlik doğrulama hataları",
+    "failures": {
+      "s401": "Eksik, bozuk, süresi dolmuş veya iptal edilmiş belirteç.",
+      "s403": "Belirteç geçerli, ancak istenen uç nokta PAT'inizde bulunmayan bir kapsam gerektiriyor ya da Cloud aboneliğiniz etkin değil."
+    }
+  },
+  "scopes": {
+    "title": "Kapsamlar",
+    "intro": {
+      "t1": "PAT'ler ",
+      "strong": "varsayılan olarak reddet",
+      "t2": " modelini izler. Bir belirteç yalnızca sahip olduğu kapsamı gerektiren uç noktaları çağırabilir; diğer her şey şunu döndürür: ",
+      "t3": ". Entegrasyonunuzun gerçekten ihtiyaç duyduğu en dar kapsam kümesini verin."
+    },
+    "available": "Kullanılabilir kapsamlar:",
+    "chips": { "t1": "Aşağıda listelenen her uç nokta, gerektirdiği kapsamı küçük mor bir rozet olarak gösterir. ", "t2": " kapsamları ", "t3": " kapsamını içermez — ikisine de ihtiyacınız varsa ikisini de isteyin." }
+  },
+  "subscription": {
+    "title": "Abonelik kapısı",
+    "intro": {
+      "t1": "Salt okunur olanlar dahil tüm v1 uç noktaları, çağrıyı yapan kullanıcının ",
+      "strong": "etkin bir Manilo Cloud aboneliği",
+      "t2": " olmasını gerektirir. Abonelik sona ermişse, süresi dolmuşsa veya hiç başlatılmamışsa API şu yanıtı verir:"
+    },
+    "outro": {
+      "t1": "Yanıttaki ",
+      "t2": " başlığı, istemcilerin abonelik engelini genel bir izin reddinden ayırt etmesini sağlar. Erişimi geri kazanmak için Cloud'u iOS uygulamasından ya da şu adresten yeniden etkinleştirin: ",
+      "t3": "."
+    }
+  },
+  "errors": {
+    "title": "Hatalar",
+    "intro": "Hatalar standart HTTP durum kodlarını kullanır. Yanıt gövdesi tek alanlı bir JSON nesnesidir:",
+    "handle": "İşlemeniz gereken durum kodları:",
+    "statuses": {
+      "s200": "OK — kaynak döndürüldü ya da liste döndürüldü.",
+      "s201": { "t1": "Created — yeni kaynak oluşturuldu. ", "t2": " başlığı kanonik URL'yi gösterir." },
+      "s204": "No Content — silme başarılı; gövde yok.",
+      "s400": "Doğrulama başarısız — zorunlu alan eksik, değer aralık dışında ya da bozuk JSON.",
+      "s401": { "t1": "Kimlik doğrulama başarısız — bkz. ", "link": "Kimlik doğrulama", "t2": "." },
+      "s403": "İzin reddedildi — kapsam yetersiz ya da abonelik etkin değil.",
+      "s404": "Kaynak bulunamadı ya da yetkilendirme nedeniyle gizlendi.",
+      "s409": "Çakışma — örneğin benzersizlik kısıtlaması ihlali.",
+      "s5xx": "Sunucu tarafında hata. Idempotent okumalar üstel geri çekilmeyle güvenle yeniden denenebilir."
+    }
+  },
+  "pagination": {
+    "title": "Sayfalama ve filtreler",
+    "intro": "Liste uç noktaları varsayılan olarak eşleşen tüm öğeleri döndürür. Büyüyebilecek tek kaynak olan işlemler, imleç tabanlı sayfalamayı destekler.",
+    "cursorTitle": "İşlem imleci",
+    "caption": "Sayfalanmış liste",
+    "response": {
+      "t1": "Yanıt bir ",
+      "t2": " alanı içerir. Sonraki sayfayı almak için bunu ",
+      "t3": " sorgu parametresi olarak geri gönderin; ",
+      "t4": " değeri ",
+      "t5": " olduğunda sona ulaşmışsınız demektir."
+    },
+    "params": {
+      "limit": { "t1": " — sayfa boyutu, şu aralığa sıkıştırılır: ", "t2": ". Varsayılan: ", "t3": "." },
+      "cursor": " — opak belirteç. Kara kutu olarak değerlendirin.",
+      "filters": { "t1": " — isteğe bağlı filtreler; bkz. ", "link": "İşlemleri listele", "t2": " uç noktası." }
+    }
+  },
+  "types": {
+    "title": "Türler ve biçimler",
+    "ids": { "strong": "Kimlikler", "t1": " — opak dizeler. Bunları ayrıştırmayın; büyük/küçük harfe duyarlı UTF-8 tanımlayıcılar olarak değerlendirin." },
+    "timestamps": { "strong": "Zaman damgaları", "t1": " — UTC cinsinden ISO-8601, sonunda ", "t2": " ile; örn. ", "t3": "." },
+    "dates": { "strong": "Tarihler", "t1": " (örn. işlem ", "t2": " alanı) — aynı ISO-8601 biçimi, ancak yalnızca tarih kısmı anlamlıdır." },
+    "money": {
+      "strong1": "Para",
+      "t1": " — en fazla 4 ondalık basamakla ",
+      "strong2": "ana birim",
+      "t2": " cinsinden JSON sayıları (örn. ",
+      "t3": "). Asla alt birim değil. Her zaman ",
+      "t4": " ile birlikte kullanılır."
+    },
+    "currencyCodes": { "strong": "Para birimi kodları", "t1": " — ISO-4217, tam olarak üç büyük harf (örn. ", "t2": ")." },
+    "deletes": {
+      "strong1": "Silme işlemleri",
+      "t1": " — tüm silme işlemleri ",
+      "strong2": "yumuşak silmedir",
+      "t2": ". Silinen öğeler liste/getirme yanıtlarında görünmez; paylaşım tarafları ve geçmiş fişler korunur."
+    },
+    "sideEffects": {
+      "strong": "Yan etkiler",
+      "t1": " — bir hesabı, kategoriyi veya grubu silmek, bağlı işlemleri olduğu gibi bırakır; yalnızca referansları kaldırılır. ",
+      "link": "Hesabı sil",
+      "t2": " uç noktası açık bir strateji kabul eder."
+    }
+  },
+  "accounts": {
+    "title": "Hesaplar",
+    "intro": "Hesaplar, bakiyeleri tutan kovalardır — bir banka hesabı, bir kredi kartı, bir nakit cüzdan, bir yatırım hesabı. Her işlem bunlardan birine (transferlerde ikisine) bağlıdır.",
+    "list": { "desc": "Kimliği doğrulanmış kullanıcının sahip olduğu ya da erişebildiği tüm hesapları döndürür." },
+    "get": { "desc": { "t1": "Kimliğe göre tek bir hesabı getirir. Bulunamazsa ", "t2": " döndürür." } },
+    "create": {
+      "desc": { "t1": "Yeni bir hesap oluşturur. Oluşturulan nesneyle birlikte ", "t2": " ve bir ", "t3": " başlığı döndürür." },
+      "fields": {
+        "name": "Görünen ad. En fazla 100 karakter.",
+        "currencyCode": "ISO-4217. Tam olarak 3 harf.",
+        "initialBalance": { "t1": "Açılış bakiyesi; birim: ", "t2": "." },
+        "order": "Sıralama konumu. Küçük olan önce gelir.",
+        "icon": { "t1": "Şuradan alınan simge tanımlayıcısı: ", "t2": ". En fazla 50." },
+        "color": { "t1": "Onaltılık renk, örn. ", "t2": ". En fazla 20." },
+        "iconColor": "Simge tonunu geçersiz kılar."
+      }
+    },
+    "update": { "desc": { "t1": "Mevcut bir hesabı değiştirir. Gövde, ", "link": "Oluştur", "t2": " ile aynıdır; tüm alanlar sağlanmalıdır." } },
+    "delete": {
+      "desc": { "t1": "Bir hesabı yumuşak siler. İşlemlerine ne olacağını ", "t2": " sorgu parametresiyle belirleyin." },
+      "fields": {
+        "action": { "t1": " (varsayılan): her işlemdeki hesap referansını temizler. ", "t2": ": işlemleri şuraya taşır: ", "t3": ". ", "t4": ": sahip olduğunuz bağlı tüm işlemleri yumuşak siler." },
+        "moveTargetAccountId": { "t1": "Şu durumda zorunludur: ", "t2": ". Hedef hesabın kimliği." }
+      }
+    }
+  },
+  "categories": {
+    "title": "Kategoriler",
+    "intro": "Kategoriler, bir işlemin ne için olduğunu etiketler (market, kira, serbest çalışma geliri). Sistem kategorileri salt okunurdur ve tüm kullanıcılar tarafından paylaşılır; kullanıcı kategorileri sizin yönetiminizdedir. Kategori grupları, ilişkili kategorileri bir arada toplar.",
+    "system": { "desc": { "t1": "Manilo'nun özenle seçilmiş \"iyi bilinen\" kategori kümesini döndürür — iOS uygulamasıyla birlikte gelen başlangıç kümesi. Bunlar genel olarak sürümlenir ve ", "t2": " alanına göre güvenle önbelleğe alınabilir." } },
+    "userTitle": "Kullanıcı kategorileri",
+    "list": { "desc": "Kullanıcı tanımlı tüm kategorileri listeler." },
+    "get": { "desc": "Kimliğe göre tek bir kullanıcı kategorisini getirir." },
+    "create": {
+      "desc": "Bir kullanıcı kategorisi oluşturur.",
+      "fields": {
+        "name": "Görünen ad. En fazla 100.",
+        "type": { "t1": " veya ", "t2": "." },
+        "order": "Grubu içindeki sıralama konumu.",
+        "isPinned": "Seçicinin en üstüne sabitler.",
+        "categoryGroupId": { "t1": "Üst grubun kimliği; gruplanmamış için ", "t2": "." },
+        "icon": "Simge tanımlayıcısı.",
+        "color": "Onaltılık renk."
+      }
+    },
+    "update": { "desc": { "t1": "Bir kullanıcı kategorisini değiştirir. Gövde, ", "link": "Oluştur", "t2": " ile aynıdır." } },
+    "delete": { "desc": { "t1": "Bir kullanıcı kategorisini yumuşak siler. İşlemler silinmez; yalnızca ", "t2": " alanları temizlenir." } },
+    "groupsTitle": "Kategori grupları",
+    "cgList": { "desc": "Kategori gruplarınızı listeler." },
+    "cgGet": { "desc": "Tek bir kategori grubunu getirir." },
+    "cgCreate": {
+      "desc": "Bir kategori grubu oluşturur.",
+      "fields": {
+        "name": "Görünen ad. En fazla 100.",
+        "order": "Sıralama konumu.",
+        "icon": "Simge tanımlayıcısı.",
+        "color": "Onaltılık renk."
+      }
+    },
+    "cgUpdate": { "desc": "Bir kategori grubunu değiştirir." },
+    "cgDelete": { "desc": { "t1": "Bir grubu yumuşak siler. Alt kategoriler korunur — yalnızca ", "t2": " alanları temizlenir." } }
+  },
+  "budgets": {
+    "title": "Bütçeler",
+    "intro": { "t1": "Bir bütçe, yinelenen bir dönem boyunca bir kategorideki harcamayı sınırlar (", "t2": " null olduğunda defterin tamamını sınırlar). Bir bütçeyi bir grupla paylaşmak için ", "t3": " alanını ayarlayın." },
+    "list": { "desc": "Tüm bütçeleri listeler." },
+    "get": { "desc": "Tek bir bütçeyi getirir." },
+    "create": {
+      "desc": "Bir bütçe oluşturur.",
+      "fields": {
+        "amount": "Dönem başına limit. 0'dan büyük olmalıdır.",
+        "currencyCode": "ISO-4217.",
+        "period": { "t1": " Haftalık · ", "t2": " Aylık · ", "t3": " Üç aylık · ", "t4": " Yıllık." },
+        "startDate": "İlk dönemin başlangıcı.",
+        "isActive": "Bu bütçenin şu anda uygulanıp uygulanmadığı.",
+        "endDate": "Bu tarihten sonra takibi durdurur.",
+        "name": "Etiket. En fazla 200.",
+        "categoryId": "Takip edilecek kategori. Tüm harcamaları bütçelemek için boş bırakın.",
+        "groupId": "Paylaşılacak grup. Kişisel bütçe için boş bırakın."
+      }
+    },
+    "update": { "desc": "Bir bütçeyi değiştirir." },
+    "delete": { "desc": "Bir bütçeyi yumuşak siler." }
+  },
+  "groups": {
+    "title": "Gruplar",
+    "intro": "Gruplar paylaşılan defterlerdir — bir ev, bir gezi, ortak bir daire. Her üye aynı işlemleri görür; sahiplik kişisel kalır. Üyelik ve davetler iOS uygulamasında yönetilir; buradaki API yüzeyi kaynağın kendisidir.",
+    "list": { "desc": "Sahibi ya da üyesi olduğunuz grupları listeler." },
+    "get": { "desc": "Tek bir grubu getirir." },
+    "create": {
+      "desc": "Bir grup oluşturur. Sahibi siz olursunuz; üyeleri iOS uygulamasından davet edin.",
+      "fields": {
+        "name": "Görünen ad. En fazla 100.",
+        "description": "Serbest metin. En fazla 500.",
+        "icon": "Simge tanımlayıcısı.",
+        "color": "Onaltılık renk."
+      }
+    },
+    "update": { "desc": "Bir grubun meta verilerini değiştirir." },
+    "delete": { "desc": "Bir grubu yumuşak siler. Üyeler görünürlüğü kaybeder; ilgili işlemler kişisele döner." }
+  },
+  "transactions": {
+    "title": "İşlemler",
+    "intro": {
+      "t1": "İşlemler, defterin fiilleridir. Dört biçimde gelirler: ",
+      "t2": " (hesaptan hesaba) ve ",
+      "t3": " (tek seferlik yeniden dengeleme). Temel uç nokta gelir/gider oluşturur; transferlerin kendi uç noktası vardır; yüksek hacimli içe aktarıcılar için toplu varyantlar mevcuttur."
+    },
+    "list": {
+      "desc": "İmleç tabanlı sayfalama ve filtrelerle işlemleri listeler.",
+      "fields": {
+        "limit": { "t1": "Sayfa boyutu. ", "t2": ". Varsayılan: ", "t3": "." },
+        "cursor": "Önceki yanıttan gelen opak devam belirteci.",
+        "type": { "t1": " veya ", "t2": "." },
+        "dateFrom": "Dahil alt sınır.",
+        "dateTo": "Dahil üst sınır.",
+        "categoryId": "Tek bir kategoriye göre filtreler.",
+        "accountId": "Tek bir hesaba göre filtreler.",
+        "groupId": "Paylaşılan bir gruba göre filtreler."
+      }
+    },
+    "get": { "desc": "Tek bir işlemi getirir." },
+    "create": {
+      "desc": { "t1": "Tek bir gelir veya gider işlemi oluşturur. Transferler için şunu kullanın: ", "t2": "." },
+      "fields": {
+        "type": { "t1": " veya ", "t2": "." },
+        "amount": { "t1": "Pozitif tutar; birim: ", "t2": "." },
+        "currencyCode": "ISO-4217.",
+        "date": "İşlemin gerçekleştiği an (UTC).",
+        "accountId": "Kaynak/hedef hesap.",
+        "categoryId": "Kategori etiketi.",
+        "payee": "İşletme veya karşı taraf. En fazla 200.",
+        "note": "Serbest biçimli not. En fazla 2000.",
+        "groupId": "Bir grupla paylaşır.",
+        "exchangeRate": { "t1": "Şu durumda döviz kuru: ", "t2": " ≠ kullanıcının ana para birimi." },
+        "convertedAmount": "Kullanıcının ana para birimindeki tutar."
+      },
+      "exampleCaption": "Dün Wise ile 8,50 € kahve"
+    },
+    "update": { "desc": { "t1": "Bir işlemi değiştirir. Gövde, ", "link": "Oluştur", "t2": " ile aynıdır." } },
+    "delete": { "desc": "Tek bir işlemi yumuşak siler." },
+    "transfer": {
+      "desc": { "t1": "İki hesap arasında transfer oluşturur. Kategori yoktur. Farklı para birimleri arasındaki transferlerde ", "t2": " ve hedef para birimi cinsinden ", "t3": " değerlerini sağlayın." },
+      "fields": {
+        "fromAccountId": "Kaynak hesap.",
+        "toAccountId": "Hedef hesap. Kaynaktan farklı olmalıdır.",
+        "amount": { "t1": "Gönderilen tutar; birim: ", "t2": "." },
+        "currencyCode": "Kaynak para birimi, ISO-4217.",
+        "date": "Transfer tarihi.",
+        "exchangeRate": "Kaynak ve hedef para birimleri farklıysa zorunludur.",
+        "convertedAmount": "Hedefe geçen tutar, hedefin para biriminde.",
+        "note": "En fazla 2000."
+      }
+    },
+    "bulkTitle": "Toplu işlemler",
+    "bulkIntro": {
+      "t1": "İçe aktarıcılar için tasarlandı. Her toplu istek en fazla ",
+      "strong1": "100 öğe",
+      "t2": " ile sınırlıdır ve ",
+      "strong2": "en iyi çaba",
+      "t3": " ilkesiyle çalışır: tek bir hatalı satır diğerlerini geri almaz. Başarılı öğeler ve satır bazlı hatalar ayrı ayrı bildirilir; böylece yalnızca başarısız olanları yeniden deneyebilirsiniz."
+    },
+    "bulkCreate": { "desc": "Tek çağrıda en fazla 100 işlem oluşturur." },
+    "bulkUpdate": { "desc": { "t1": "Tek çağrıda en fazla 100 işlemi günceller. Her öğe, tam işlem gövdesiyle birlikte kendi ", "t2": " değerini içermelidir." } },
+    "bulkDelete": {
+      "desc": { "t1": "Tek çağrıda en fazla 100 işlemi yumuşak siler. İstek gövdesinin tüm HTTP istemcilerince kabul edilmesi için ", "t2": " kullanır, ", "t3": " değil." },
+      "fields": {
+        "ids": "1 ila 100 işlem kimliği."
+      }
+    },
+    "objectTitle": "İşlem nesnesi",
+    "object": {
+      "id": "Opak tanımlayıcı.",
+      "amount": { "t1": "Şu birimde: ", "t2": "." },
+      "currencyCode": "ISO-4217.",
+      "exchangeRate": "Farklı para birimli kayıtlarda ayarlanır.",
+      "convertedAmount": "Aynı değerin kullanıcının ana para birimindeki karşılığı.",
+      "date": "ISO-8601 UTC.",
+      "accountId": "Transferlerde bu, kaynak hesaptır.",
+      "toAccountId": "Yalnızca transferlerde hedef hesap.",
+      "categoryId": "Transferlerde null.",
+      "groupId": "Bir grupla paylaşıldıysa ayarlanır.",
+      "payee": "İşletme veya karşı taraf.",
+      "note": "Serbest metin.",
+      "receiptImagePath": "Ekli fişin yolu. Fişler uç noktası üzerinden alınır (v1'den ayrıdır).",
+      "recurringTransactionId": "Bu satır yinelenen bir kuraldan üretildiyse ayarlanır.",
+      "source": { "t1": "Köken etiketi — ", "t2": " vb." },
+      "createdAt": "ISO-8601 UTC.",
+      "updatedAt": "ISO-8601 UTC."
+    }
+  },
+  "icons": {
+    "title": "Simgeler",
+    "intro": "Manilo, her yerde kullanılan özenle seçilmiş bir simge kümesi ve renk paletiyle gelir — hesaplar, kategoriler, gruplar. Kataloğu bir kez alın, önbelleğe koyun ve kaynak oluştururken tanımlayıcıları yeniden kullanın.",
+    "list": { "desc": { "t1": "Kategorilere göre gruplanmış tüm simge kitaplığını, desteklenen renk paletiyle birlikte döndürür. Sürümlenir — ", "t2": " alanına göre güvenle önbelleğe alınabilir." } }
+  },
+  "versioning": {
+    "title": "Sürümleme",
+    "noBreaking": {
+      "strong": "v1 içinde kırıcı değişiklik yok.",
+      "t1": " Yalnızca yeni uç noktalar, yeni isteğe bağlı alanlar ve yeni enum değerleri ekleyeceğiz. Bir alanın türü, null olabilirliği veya zorunluluğu değişmeyecek."
+    },
+    "enums": {
+      "strong": "Yeni enum değerleri kırıcı değildir.",
+      "t1": " Bilinmeyen ",
+      "t2": " veya ",
+      "t3": " değerlerini çökmek yerine ",
+      "em": "\"gösterme\"",
+      "t4": " olarak ele alın — ürün büyüdükçe bunları ekleyeceğiz."
+    },
+    "v2": {
+      "strong": "Tarih sürümlü kırıcı değişiklikler",
+      "t1": " (gerekirse) ",
+      "t2": " altında yayımlanacak; en az 6 ay boyunca paralel kullanılabilirlik ve v1 yanıtlarında bir kullanımdan kaldırma başlığı ile birlikte."
+    }
+  },
+  "support": {
+    "title": "Destek",
+    "p1": {
+      "t1": "Bir hata mı buldunuz, bir uç nokta mı istiyorsunuz ya da belgelenmemiş bir şeyle mi karşılaştınız? ",
+      "link": "Yardım merkezini",
+      "t2": " açın ya da şuraya e-posta gönderin: ",
+      "t3": " — bir sorun bildirirken lütfen istek kimliğini (yanıttaki ",
+      "t4": " başlığında yer alır) ekleyin."
+    },
+    "p2": { "t1": "Güvenlik açısından hassas bildirimler için (belirteç sızıntısı, izin atlatma, yetkisiz okuma) şu adrese yazın: ", "t2": "." }
+  }
+}

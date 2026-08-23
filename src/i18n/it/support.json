@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Supporto — Manilo",
+    "description": "Assistenza per Manilo. FAQ, risoluzione dei problemi, consigli per registrare le spese a voce, supporto per l’integrazione MCP e contatto diretto.",
+    "ogDescription": "Aiuto su Manilo: registrazione a voce, integrazione MCP, multivaluta e contatti."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "support": "Supporto"
+  },
+  "faqLd": {
+    "name": "Centro assistenza Manilo",
+    "items": [
+      {
+        "q": "Manilo è gratis?",
+        "a": "Sì. Tutte le funzioni per l’uso personale sono gratis per sempre — transazioni, conti, categorie e budget illimitati, multivaluta, importazione ed esportazione CSV e scontrini. Manilo Cloud ($2.99/mese o $22.99/anno) aggiunge l’inserimento IA a voce e da foto, la sincronizzazione tra dispositivi, i comandi rapidi di Siri, la registrazione da Apple Watch, il bot Telegram, l’automazione con Apple Wallet, la dashboard web, la condivisione con famiglia e gruppi e l’integrazione MCP con Claude e ChatGPT."
+      },
+      {
+        "q": "Manilo gestisce più valute?",
+        "a": "Sì. Manilo supporta i conti multivaluta senza configurazioni. Ogni conto ha la sua valuta. I tassi di cambio vengono aggiornati ogni giorno da fonti affidabili (allineate ai dati BCE). Tieni premuto qualsiasi importo per vederne l’equivalente nella tua valuta principale. La modalità viaggio rende facile passare da una valuta all’altra quando sei all’estero."
+      },
+      {
+        "q": "Posso registrare le spese a voce?",
+        "a": "Sì — la registrazione a voce è una funzione centrale di Manilo Cloud. Tocca il microfono su iPhone o tieni premuta la Digital Crown su Apple Watch e parla in modo naturale: “dodici e cinquanta di pranzo al Pret”. Manilo riconosce da solo importo, esercente e categoria. La trascrizione avviene sul dispositivo con il riconoscimento vocale di Apple; all’IA viene inviato solo il testo risultante per l’analisi. Puoi anche avviare la registrazione a voce con Siri: “Ehi Siri, registra una spesa su Manilo”."
+      },
+      {
+        "q": "Manilo funziona offline?",
+        "a": "Sì. Manilo è pensato prima di tutto per l’offline. Ogni schermata legge da un database SQLite locale sul tuo iPhone. Le nuove transazioni appaiono all’istante anche senza connessione a internet. La sincronizzazione Cloud avviene in background quando torni online."
+      },
+      {
+        "q": "Manilo è disponibile per Android?",
+        "a": "No. Al lancio Manilo è solo per iOS. Una versione Android è nei piani. Scrivi a support@manilo.app se vuoi essere avvisato quando Android sarà disponibile."
+      },
+      {
+        "q": "Manilo mostra pubblicità?",
+        "a": "No. Manilo non ha pubblicità, non ha broker di dati e non ha SDK di tracciamento pubblicitario. Il piano gratuito è sostenuto dall’abbonamento Cloud opzionale, non dai ricavi pubblicitari. Manilo non raccoglie il tuo Identificativo per gli inserzionisti (IDFA)."
+      },
+      {
+        "q": "Manilo rispetta la privacy? Vende i miei dati?",
+        "a": "Manilo funziona prima di tutto in locale. Le tue transazioni vivono sul tuo iPhone, in un database SQLite locale. Se attivi Cloud, una copia crittografata viene sincronizzata sui server di Manilo ospitati in Germania (Hetzner). Manilo non vende mai i tuoi dati, non li usa mai per la pubblicità e non li usa mai per addestrare modelli di IA. L’audio della voce viene trascritto sul dispositivo e non viene mai conservato. Tutti i dettagli sono nell’Informativa sulla privacy: https://manilo.app/privacy."
+      },
+      {
+        "q": "Manilo divide i conti come Splitwise?",
+        "a": "No. Manilo non calcola il saldo dei debiti né divide gli importi tra le persone. Quello che offre è la visibilità condivisa delle spese: quando entri in un gruppo o in un conto condiviso, tutti i membri vedono le transazioni degli altri man mano che arrivano. È utile per i budget domestici e per i viaggi, dove ognuno registra le proprie spese. Se ti serve il calcolo dei saldi (chi deve quanto a chi), Splitwise resta lo strumento giusto."
+      },
+      {
+        "q": "Cos’è il server MCP di Manilo?",
+        "a": "MCP sta per Model Context Protocol — uno standard aperto che permette ad assistenti IA come Claude, ChatGPT e Cursor di collegarsi a fonti di dati esterne. Manilo mette a disposizione un server MCP all’indirizzo https://api.manilo.app/mcp. Una volta collegato, puoi fare al tuo assistente IA domande come “quanto ho speso in caffè il mese scorso?” o “sto rispettando il budget della spesa?” — e ti risponde con i tuoi dati reali di Manilo. L’assistente vede solo i dati che richiede espressamente per conto tuo. Puoi disconnetterlo in qualsiasi momento dalle impostazioni dell’assistente. L’integrazione MCP richiede un abbonamento Manilo Cloud attivo."
+      },
+      {
+        "q": "Manilo funziona su Apple Watch?",
+        "a": "Sì. Manilo ha un’app nativa per Apple Watch. Tieni premuta la Digital Crown, pronuncia la tua spesa — “caffè quattro e cinquanta” — e la transazione appare sul tuo iPhone prima che tu abbassi il polso. Le complicazioni del quadrante portano direttamente alla schermata di registrazione. La registrazione da Apple Watch richiede un abbonamento Manilo Cloud."
+      },
+      {
+        "q": "Come funziona la conversione multivaluta?",
+        "a": "Ogni conto in Manilo ha la sua valuta. Tu imposti una valuta principale (per esempio USD) e Manilo converte in quella valuta tutti i saldi e i totali in valuta estera, usando tassi di cambio aggiornati ogni giorno. I tassi provengono da fornitori di dati finanziari affidabili, allineati ai tassi di riferimento BCE. Tieni premuto qualsiasi importo per vedere la conversione in tempo reale. In modalità viaggio, il conto di viaggio attivo è messo in evidenza in alto."
+      },
+      {
+        "q": "Posso importare da CSV?",
+        "a": "Sì. La procedura guidata di importazione CSV di Manilo riconosce in automatico le intestazioni delle colonne in 29 lingue, i simboli delle valute e gli alias delle categorie. Se sbaglia una colonna, puoi trascinarla per riassegnarla prima di confermare. Funziona con le esportazioni di Mint, YNAB, Apple Numbers e della maggior parte delle altre app di finanza personale. Vai su Impostazioni → Importa → CSV nell’app Manilo."
+      },
+      {
+        "q": "Quanto costa Manilo Cloud?",
+        "a": "Manilo Cloud costa $2.99 al mese o $22.99 all’anno (circa $1.92 al mese, con un risparmio del 36% rispetto al mensile). Sono inclusi 7 giorni di prova gratuita — non ti viene addebitato niente fino alla fine della prova. Disdici quando vuoi da Impostazioni → [Il tuo nome] → Abbonamenti su iPhone. Gli abbonamenti sono gestiti da Apple."
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "Centro assistenza",
+    "title": "Come possiamo aiutarti?",
+    "replyTime": "Rispondiamo entro 1 giorno lavorativo"
+  },
+  "grid": {
+    "learnMore": "Scopri di più →"
+  },
+  "toc": {
+    "ariaLabel": "Indice dei contenuti",
+    "heading": "Articoli"
+  },
+  "sections": {
+    "gettingStarted": {
+      "title": "Per iniziare",
+      "cardSub": "Installa, accedi e importa i tuoi dati esistenti.",
+      "install": {
+        "title": "Installa Manilo",
+        "pre": "Apri la ",
+        "linkText": "pagina di Manilo su App Store",
+        "post": " dal tuo iPhone e tocca Ottieni. Serve iOS 15 o successivo."
+      },
+      "signIn": {
+        "title": "Accedi",
+        "body": "Al primo avvio accedi con Apple. La tua email iCloud viene usata come identificativo dell’account; non vediamo mai la password del tuo ID Apple."
+      },
+      "import": {
+        "title": "Importa i dati esistenti",
+        "body": "Da Impostazioni → Importa → CSV, carica un’esportazione da Mint, YNAB, Apple Numbers o da qualsiasi altra fonte. La procedura guidata riconosce in automatico le intestazioni delle colonne in 29 lingue — se sbaglia una colonna, trascinala per riassegnarla."
+      }
+    },
+    "capture": {
+      "title": "Canali di registrazione",
+      "cardSub": "Voce, foto, Siri, Watch, Telegram, Wallet.",
+      "voice": {
+        "title": "Voce",
+        "body": "Tocca il microfono su iPhone o tieni premuta la Digital Crown su Apple Watch. Parla in modo naturale — \"dodici e cinquanta di pranzo al Pret\" — e Manilo riconosce importo, esercente e categoria. La trascrizione avviene sul dispositivo; per l’analisi IA viene inviato solo il testo risultante."
+      },
+      "photo": {
+        "title": "Foto",
+        "body": "Tocca il pulsante della fotocamera oppure usa il menu Condividi di iOS da Foto. L’immagine dello scontrino viene inviata al nostro analizzatore; il risultato è modificabile prima di salvare."
+      },
+      "siri": {
+        "title": "Siri",
+        "body": "\"Ehi Siri, registra una spesa su Manilo\" — Siri apre il nostro comando rapido e ti guida in un flusso con una sola domanda. Aggiungi i comandi rapidi di Siri da Impostazioni → Comandi rapidi per accedervi con un tocco."
+      },
+      "telegram": {
+        "title": "Telegram",
+        "pre": "Cerca il bot Telegram di Manilo (",
+        "post": ") su Telegram, tocca Avvia e collegalo con il codice a 6 cifre che trovi in Impostazioni → Telegram. Invia testo, foto o messaggi vocali. Il bot risponde con pulsanti inline per correggere qualsiasi cosa in due tocchi."
+      },
+      "wallet": {
+        "title": "Apple Wallet",
+        "body": "Impostazioni → Apple Wallet → attiva la registrazione automatica di Apple Pay. Ogni carta può avere la sua regola IA (per esempio \"questa è la mia carta Viaggio 2026 → aggiungi il tag corrispondente\"). Non riceviamo mai il numero della tua carta — solo esercente, importo e ora della notifica di pagamento."
+      }
+    },
+    "sharing": {
+      "title": "Condivisione e gruppi",
+      "cardSub": "Inviti, budget di gruppo, uscire senza perdere lo storico.",
+      "body": "Apri un conto, un gruppo o un budget → tocca Condividi → genera un codice di invito o un QR. L’altra persona lo tocca una volta e la risorsa appare nella sua app, con le tue transazioni visibili al suo interno.",
+      "important": "Importante:",
+      "importantBody": "La condivisione decide la visibilità — mai la proprietà. Le tue transazioni sono sempre tue. Se esci da un gruppo, tutto il tuo storico resta con te."
+    },
+    "billing": {
+      "title": "Pagamenti e abbonamento",
+      "cardSub": "Prova, disdetta, rimborsi, ripristino degli acquisti.",
+      "trial": {
+        "title": "Inizia una prova",
+        "body": "Vai su Impostazioni → Cloud → Inizia la prova. Ottieni 7 giorni di accesso completo a Cloud. Non addebitiamo niente fino alla fine della prova."
+      },
+      "cancel": {
+        "title": "Disdici",
+        "body": "I pagamenti sono gestiti da iOS. Per disdire: apri l’app Impostazioni → tocca il tuo nome → Abbonamenti → Manilo → Annulla abbonamento. Mantieni l’accesso fino alla fine del periodo in corso."
+      },
+      "refund": {
+        "title": "Chiedi il rimborso di un addebito",
+        "pre": "I rimborsi passano da Apple. Vai su ",
+        "post": ", trova l’addebito di Manilo e richiedi un rimborso."
+      },
+      "restore": {
+        "title": "Ripristina l’acquisto su un nuovo dispositivo",
+        "body": "Impostazioni → Cloud → Ripristina acquisto. Se accedi con lo stesso ID Apple, il tuo abbonamento viene rilevato."
+      }
+    },
+    "data": {
+      "title": "Dati e privacy",
+      "cardSub": "Dove stanno i tuoi dati, come esportarli e come eliminarli.",
+      "intro": "Manilo funziona prima di tutto in locale. Ogni schermata legge da un database SQLite sul tuo dispositivo. Cloud sincronizza una copia crittografata di quel database sul nostro backend, così gli altri dispositivi e i membri del gruppo possono vederla.",
+      "export": {
+        "title": "Esporta i tuoi dati",
+        "body": "Impostazioni → Esporta → CSV o JSON. L’esportazione contiene tutte le transazioni, i conti, le categorie, i tag e i budget che hai creato."
+      },
+      "delete": {
+        "title": "Elimina il tuo account",
+        "body": "Impostazioni → Account → Elimina account. Eliminiamo i dati sul server entro 7 giorni e i backup entro 30. I dati locali vengono cancellati subito quando esci."
+      },
+      "privacy": {
+        "pre": "Per saperne di più, leggi la nostra ",
+        "linkText": "Informativa sulla privacy",
+        "post": "."
+      }
+    },
+    "troubleshooting": {
+      "title": "Risoluzione dei problemi",
+      "cardSub": "Problemi di sincronizzazione, voce che non funziona, transazioni mancanti.",
+      "sync": {
+        "title": "La sincronizzazione non si aggiorna",
+        "body": "Trascina verso il basso nella schermata principale per aggiornare. Se una transazione creata su un altro dispositivo non appare dopo 30 secondi, chiudi forzatamente Manilo e riaprilo. Se lo stato è ancora vecchio, vai su Impostazioni → Cloud → Forza risincronizzazione."
+      },
+      "voice": {
+        "title": "L’inserimento a voce dice \"non ho capito\"",
+        "body": "Il trascrittore sul dispositivo può aver sentito male. Tocca il messaggio nella casella in-app per vedere la trascrizione originale e modificarla prima di rianalizzarla."
+      },
+      "wallet": {
+        "title": "Le transazioni di Apple Wallet non si registrano da sole",
+        "body": "A volte iOS revoca le autorizzazioni alle notifiche dopo un aggiornamento. Vai su Impostazioni → Apple Wallet → Autorizza di nuovo. Potresti anche dover attivare le notifiche per Wallet stesso in Impostazioni di iOS → Notifiche → Wallet."
+      },
+      "telegram": {
+        "title": "Il bot Telegram non risponde più",
+        "pre": "Invia ",
+        "mid": " al bot Telegram di Manilo (",
+        "post": ") e segui la richiesta del codice a 6 cifre. Telegram a volte ruota i token dei webhook."
+      },
+      "callout": {
+        "pre": "Ancora bloccato? Scrivi a ",
+        "post": " allegando uno screenshot e l’ora approssimativa in cui si è verificato il problema. Di solito rispondiamo entro un giorno lavorativo."
+      }
+    }
+  },
+  "contact": {
+    "title": "Ti serve una persona in carne e ossa?",
+    "body": "Scrivici con tutti i dettagli che puoi — gli screenshot aiutano molto. Rispondiamo entro un giorno lavorativo, tutti i giorni lavorativi.",
+    "cta": "Scrivi a support@manilo.app"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "title": "ChatGPT Expense Tracker: Import Bank Statements | Manilo",
+    "description": "Drop a bank statement into ChatGPT or Claude and get categorized expenses plus a live dashboard. Connect Manilo in three steps. 7-day free trial, no ads.",
+    "ogTitle": "Manilo + ChatGPT: import bank statements by chat",
+    "ogDescription": "Upload a statement into ChatGPT or Claude. Manilo turns it into categorized expenses and a live dashboard. Free iOS app, no ads. 7-day free trial for the AI connection.",
+    "keywords": "chatgpt expense tracker, import bank statement chatgpt, claude expense tracker, ai bank statement import, categorize bank statement ai, chatgpt personal finance, mcp expense tracker",
+    "twitterTitle": "Manilo + ChatGPT: import bank statements by chat",
+    "twitterDescription": "Upload a statement into ChatGPT or Claude. Manilo turns it into categorized expenses and a live dashboard. Free iOS app, no ads. 7-day free trial for the AI connection."
+  },
+  "jsonLd": {
+    "articleHeadline": "ChatGPT Expense Tracker: Import Bank Statements with Manilo",
+    "articleDescription": "How to connect Manilo to ChatGPT or Claude, import a bank statement by chat, and get categorized expenses plus a live dashboard.",
+    "breadcrumbHome": "Home",
+    "breadcrumbChatgpt": "Manilo in ChatGPT"
+  },
+  "ctas": {
+    "connectChatgpt": "Connect ChatGPT",
+    "connectClaude": "Connect Claude",
+    "cursorClients": "Cursor & other clients",
+    "getIosApp": "Get the iOS app"
+  },
+  "hero": {
+    "eyebrow": "Talk to your money",
+    "title": "Drop your bank statement into ChatGPT. Get your finances categorized, plus a dashboard.",
+    "lead1": "No exports to massage, no column mapping, no manual entry. Upload the statement file into a chat, and Manilo turns it into categorized transactions you can see on a live dashboard.",
+    "lead2": "We didn't invent this workflow. In July 2026, four people from four countries did it on their own, unprompted, with four different formats: bank PDF statements, a bank export file, an Amex statement, and a family budget PDF. It worked for all of them. So we built it a proper front door.",
+    "metaClients": "Works with ChatGPT, Claude, and other MCP clients.",
+    "metaApp": "The iOS app is free with no ads."
+  },
+  "toc": {
+    "ariaLabel": "Table of contents",
+    "heading": "Contents",
+    "toggle": "Contents",
+    "demo": "What it looks like",
+    "connect": "Connect your assistant",
+    "capabilities": "What you can do",
+    "faq": "Questions",
+    "closing": "Try it"
+  },
+  "demo": {
+    "title": "What it looks like",
+    "intro": "You upload a statement and say “import this”. The assistant reads the file, maps every row to your categories, and creates everything in one batch. A typical reply looks like this:",
+    "you": "You:",
+    "prompt": "“Import this.”",
+    "file": "statement-march.pdf",
+    "reply": [
+      "Imported 87 transactions from your March statement.",
+      "Top categories: Groceries, Rent, Transport.",
+      "Two rows didn't match your categories cleanly. Want me to adjust them?"
+    ],
+    "replyLinkPre": "Full breakdown:",
+    "replyLinkEm": "your dashboard link for March",
+    "outro": "Next month, you just send the new statement. That's the whole workflow.",
+    "disclaimer": "To be clear: the assistant reads the file you give it. Manilo does not connect to your bank."
+  },
+  "connect": {
+    "title": "Connect your assistant",
+    "introPre": "Setup takes about a minute, and every path lives on one page — pick ChatGPT, Claude, Cursor, or any other MCP client on the",
+    "introLink": "integrations page",
+    "introPost": "and follow two steps.",
+    "calloutPre": "ChatGPT shows a confirmation prompt (",
+    "calloutPost": ") before any write, so nothing lands in your ledger without your OK."
+  },
+  "capabilities": {
+    "title": "What you can do once connected",
+    "intro": "Manilo is a full expense tracker and budget app that works inside ChatGPT and Claude (via MCP). It exposes 30+ tools to your assistant, across transactions, accounts, categories, budgets, groups, tags, recurring payments, receipts, currency, and settings. In practice:",
+    "items": [
+      {
+        "strong": "Import statements and receipts.",
+        "body": "Upload a PDF, CSV, or export; the assistant maps rows to your existing categories and creates them in one batch."
+      },
+      {
+        "strong": "Ask about your spending.",
+        "body": "“How much did I spend on groceries in July?” The answer comes from your own data, not an estimate."
+      },
+      {
+        "strong": "Manage the boring parts.",
+        "body": "Accounts, budgets, recurring transactions, tags, categories, and shared groups, all in plain English."
+      },
+      {
+        "strong": "Convert currencies with live ECB rates.",
+        "body": "Manilo is multi-currency; your dashboard totals show in your primary currency."
+      },
+      {
+        "strong": "See everything on a live dashboard.",
+        "body": "Every change syncs instantly to dashboard.manilo.app, and to the iOS app if you use it."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Questions people actually ask",
+    "items": [
+      {
+        "id": "security",
+        "q": "Is it secure? What can ChatGPT or Claude actually access?",
+        "a": "Sign-in uses OAuth 2.1 with PKCE and happens on Manilo's own consent page, with Apple, Google, or email. The assistant never sees your password. Once connected, it can read your data and, when you ask, create, edit, or delete entries; ChatGPT shows a confirmation prompt before any write. Data is stored in Germany (Hetzner) plus Google Cloud Firestore. Transaction amounts are never sent to analytics. To disconnect, remove the connector in your ChatGPT or Claude settings. Security contact:"
+      },
+      {
+        "id": "trial",
+        "q": "What is the free trial and when does it start?",
+        "a": "Connecting is free. The 7-day trial starts the first time you actually use Manilo through the chat, meaning your first import or question, not at connection time. During those 7 days you get the full product, including the web dashboard. After that, Manilo Cloud is $2.99/month or $22.99/year (USD).",
+        "linkText": "See pricing"
+      },
+      {
+        "id": "trial-end",
+        "q": "What happens to my data when the trial ends?",
+        "a": "Nothing is deleted. Your data stays saved. The chat tools stop working and point you to dashboard.manilo.app/upgrade, where you can continue by subscribing through the App Store (an Apple device is needed for that today)."
+      },
+      {
+        "id": "formats",
+        "q": "Which statement formats work?",
+        "a": "Whatever the assistant can read. In July 2026, real users imported bank PDF statements, a bank export file, an Amex statement, and a family budget PDF. You upload or paste the statement into the chat; the AI maps the rows to your categories and creates them in one batch. There is no bank connection involved; the AI reads the file you give it."
+      },
+      {
+        "id": "bank-link",
+        "q": "Does it connect to my bank automatically?",
+        "a": "No. There is no bank account linking, and nothing pulls from your bank. You send the statement yourself. Next month, you just send the new one."
+      },
+      {
+        "id": "ios-app",
+        "q": "Do I need the iOS app?",
+        "a": "No. You sign up during the connection flow with Apple, Google, or email, and the trial includes the full web dashboard. When the trial ends, you can subscribe through the App Store — an Apple device is needed for that today; dashboard.manilo.app/upgrade has the details. The iOS app is optional; it adds voice logging, Apple Watch capture, and more."
+      },
+      {
+        "id": "plans",
+        "q": "Which ChatGPT plan do I need? Does the free plan work?",
+        "a": "The Manilo app in ChatGPT connects straight from the app link with no special setup; where ChatGPT apps are available, the free plan works. The manual Developer-mode route needs ChatGPT Plus, Pro, or Business. Claude custom connectors work on claude.ai and Claude Desktop. Cursor, Windsurf, and other MCP clients that support remote servers with OAuth work too."
+      },
+      {
+        "id": "more",
+        "q": "What else can it do besides importing statements?",
+        "a": "Ask questions like “how much did I spend on groceries in July?” and get answers computed from your own data. Manage accounts, budgets, recurring transactions, tags, categories, and shared groups. Convert currencies with live ECB rates. Everything syncs instantly to the web dashboard, and to the iOS app if you use it."
+      }
+    ]
+  },
+  "closing": {
+    "title": "Try it with last month's statement",
+    "body1": "Grab any statement export you already have, connect, and drop it into the chat. Three steps, then never again.",
+    "body2Pre": "Manilo is built by one indie developer. If your statement format trips it up, or anything else feels off, email",
+    "body2Post": ". Feedback genuinely shapes what gets built next."
+  }
+}

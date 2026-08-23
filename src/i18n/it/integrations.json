@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "title": "Collega Manilo a ChatGPT, Claude e Cursor — Tracker spese MCP",
+    "description": "Manilo è il tracker di spese con server MCP nativo. Collega ChatGPT o Cursor in un clic, Claude e ogni client MCP con un URL da incollare. Pronto in ~1 minuto.",
+    "ogDescription": "Scegli il tuo assistente IA e collega Manilo in circa un minuto — un clic per ChatGPT e Cursor, un URL MCP da incollare per Claude e ogni altro client.",
+    "keywords": "tracker spese mcp, collegare manilo a chatgpt, tracker spese claude, server mcp cursor, configurare server mcp, model context protocol finanze, registrare spese con ia, registrare spese da claude",
+    "twitterTitle": "Collega Manilo a ChatGPT, Claude e Cursor — Tracker spese MCP",
+    "twitterDescription": "Il tracker di spese con server MCP nativo. Scegli il tuo assistente, collegalo in circa un minuto e poi chiedi qualsiasi cosa sui tuoi soldi."
+  },
+  "jsonLd": {
+    "techArticle": {
+      "headline": "Collega Manilo a ChatGPT, Claude e Cursor — Tracker spese MCP",
+      "description": "Come collegare il tracker di spese Manilo a ChatGPT, Claude, Cursor o a qualsiasi assistente IA che parla il Model Context Protocol."
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "integrations": "Integrazioni"
+    },
+    "howtoChatgpt": {
+      "name": "Come collegare Manilo a ChatGPT",
+      "description": "Collega il tracker di spese Manilo a ChatGPT in due passaggi.",
+      "steps": [
+        { "name": "Collega Manilo a ChatGPT", "text": "Apri l’app Manilo in ChatGPT e fai clic su Connetti." },
+        { "name": "Segui le istruzioni", "text": "Accedi con Apple, Google o email e concedi l’accesso. Poi menziona Manilo in qualsiasi chat." }
+      ]
+    },
+    "howtoClaude": {
+      "name": "Come collegare Manilo a Claude",
+      "description": "Aggiungi il tracker di spese Manilo a Claude come connettore MCP personalizzato.",
+      "steps": [
+        { "name": "Apri le impostazioni dei connettori", "text": "Su claude.ai o in Claude Desktop, vai su Impostazioni → Connettori → Aggiungi connettore personalizzato." },
+        { "name": "Incolla l’URL del server Manilo", "text": "Nome: Manilo. URL del server: https://api.manilo.app/mcp." },
+        { "name": "Aggiungi e accedi", "text": "Fai clic su Aggiungi, accedi con Apple, Google o email, poi attiva Manilo dal menu dei connettori in qualsiasi chat." }
+      ]
+    },
+    "howtoCursor": {
+      "name": "Come collegare Manilo a Cursor",
+      "description": "Installa il server MCP di Manilo in Cursor con un clic.",
+      "steps": [
+        { "name": "Aggiungi Manilo a Cursor", "text": "Usa il link di installazione in un clic, oppure aggiungi https://api.manilo.app/mcp a mcp.json." },
+        { "name": "Segui le istruzioni", "text": "Fai clic su Install quando si apre Cursor, poi completa l’accesso nel browser." }
+      ]
+    }
+  },
+  "hero": {
+    "eyebrow": "Integrazioni",
+    "title": "Collega Manilo a ChatGPT, Claude o Cursor",
+    "lead": "Manilo è l’unico tracker di spese con un server MCP nativo. Registra le spese, interroga i tuoi dati e sposta denaro con parole semplici, da qualsiasi assistente IA che parla il Model Context Protocol.",
+    "badges": {
+      "time": "Configurazione in circa un minuto",
+      "oauth": "Accesso OAuth — la password non viene mai condivisa",
+      "anyClient": "Funziona con qualsiasi client MCP"
+    }
+  },
+  "picker": {
+    "eyebrow": "Configurazione",
+    "title": "Quale assistente IA usi?",
+    "timeBadge": "Circa un minuto",
+    "copy": "Copia",
+    "copyAria": "Copia l’URL del server",
+    "tabs": {
+      "chatgpt": { "name": "ChatGPT", "hint": "2 passaggi · un clic" },
+      "claude": { "name": "Claude", "hint": "3 passaggi · copia un URL" },
+      "cursor": { "name": "Cursor", "hint": "2 passaggi · un clic" },
+      "other": { "name": "Altro", "hint": "Windsurf, VS Code e altri" }
+    },
+    "chatgpt": {
+      "title": "Collega Manilo a ChatGPT",
+      "step1": {
+        "title": "Collega Manilo a ChatGPT",
+        "body": "Il pulsante apre l’app Manilo dentro ChatGPT.",
+        "cta": "Collega Manilo a ChatGPT"
+      },
+      "step2": {
+        "title": "Segui le istruzioni",
+        "bodyHtml": "Fai clic su <strong>Connetti</strong>, accedi con Apple, Google o email e concedi l’accesso."
+      },
+      "done": {
+        "title": "Tutto qui — chatta e basta",
+        "bodyHtml": "Menziona Manilo o chiedi dei tuoi soldi in qualsiasi chat — <em>“Quanto ho speso per la spesa a luglio?”</em> ChatGPT richiama l’app automaticamente."
+      },
+      "manual": {
+        "summary": "L’app non è disponibile nel tuo piano o paese, o preferisci la configurazione manuale?",
+        "introHtml": "Attiva <strong>Impostazioni → App → Impostazioni avanzate → Modalità sviluppatore</strong> (serve ChatGPT Plus, Pro o Business), fai clic su <strong>Crea</strong> e compila:",
+        "nameLabel": "Nome:",
+        "urlLabel": "URL del server MCP:",
+        "authLabel": "Autenticazione:"
+      },
+      "morePre": "Nella pagina",
+      "moreLink": "Manilo in ChatGPT",
+      "morePost": "trovi la guida completa all’importazione degli estratti conto."
+    },
+    "claude": {
+      "title": "Collega Manilo a Claude",
+      "step1": {
+        "title": "Apri le impostazioni dei connettori",
+        "pre": "Su",
+        "mid": "o in Claude Desktop, vai su",
+        "settingsPath": "Impostazioni → Connettori",
+        "addConnector": "Aggiungi connettore personalizzato",
+        "end": "."
+      },
+      "step2": {
+        "title": "Incolla l’URL del server Manilo",
+        "nameLabel": "Nome:",
+        "serverLabel": "URL del server:",
+        "legacyPre": "Già collegato tramite il vecchio indirizzo",
+        "legacyPost": "? Continua a funzionare — non serve ricollegarsi."
+      },
+      "step3": {
+        "title": "Aggiungi e accedi",
+        "bodyHtml": "Fai clic su <strong>Aggiungi</strong>, accedi con Apple, Google o email, poi attiva <strong>Manilo</strong> dal menu dei connettori in qualsiasi chat."
+      },
+      "done": {
+        "title": "Tutto qui — chiedi e basta",
+        "bodyHtml": "<em>“Come sono le mie spese di aprile rispetto a marzo?”</em> Claude risponde con i tuoi dati."
+      },
+      "morePre": "Puoi anche caricare un estratto conto in Claude e farlo importare — vedi",
+      "moreLink": "la guida passo passo",
+      "morePost": ": lo stesso flusso funziona anche in Claude."
+    },
+    "cursor": {
+      "title": "Collega Manilo a Cursor",
+      "step1": {
+        "title": "Aggiungi Manilo a Cursor",
+        "body": "Un clic — il pulsante apre Cursor con il server MCP di Manilo già precompilato.",
+        "cta": "Aggiungi Manilo a Cursor"
+      },
+      "step2": {
+        "title": "Segui le istruzioni",
+        "bodyHtml": "Fai clic su <strong>Install</strong> quando si apre Cursor, poi completa l’accesso nel browser."
+      },
+      "done": {
+        "title": "Tutto qui — chiedi all’agente",
+        "bodyHtml": "<em>“Registra i €14 del pranzo di team che ho appena pagato.”</em> Funziona in chat e nel composer."
+      },
+      "manual": {
+        "summary": "Preferisci aggiungerlo a mano?",
+        "introPre": "Aggiungi questo al tuo",
+        "introPost": "(Cursor Settings → MCP), poi completa l’accesso OAuth quando richiesto:"
+      },
+      "morePre": "Le spese registrate da Cursor si sincronizzano all’istante con la",
+      "moreLink": "dashboard web",
+      "morePost": "e con l’app iOS."
+    },
+    "other": {
+      "title": "Collega qualsiasi client MCP",
+      "step1": {
+        "title": "Aggiungi un server MCP remoto",
+        "body": "In Windsurf, VS Code, Continue, Zed o nel tuo agente, aggiungi un server remoto e puntalo a:"
+      },
+      "step2": {
+        "title": "Accedi quando richiesto",
+        "pre": "Il tuo client completa OAuth 2.1 con PKCE. La Dynamic Client Registration (RFC 7591) è supportata, quindi non servono",
+        "post": "manuali né scambi di credenziali."
+      },
+      "done": {
+        "title": "Tutto qui — gli stessi strumenti ovunque",
+        "body": "Ogni client MCP riceve gli stessi 30+ strumenti per transazioni, conti, budget e altro."
+      },
+      "clientsAria": "Client MCP verificati",
+      "clients": ["Windsurf", "VS Code", "Continue", "Zed", "Agenti personalizzati"],
+      "morePre": "Stai costruendo la tua integrazione in codice? Usa la",
+      "moreLink": "REST API v1",
+      "morePost": "al posto di MCP."
+    }
+  },
+  "prompts": {
+    "eyebrow": "Uso quotidiano",
+    "title": "Cosa puoi chiedere",
+    "sub": "Ogni risposta è calcolata dai tuoi dati — non è una stima.",
+    "items": [
+      { "q": "Quanto ho speso in caffè il mese scorso?", "a": "Totali per categoria su qualsiasi intervallo di date." },
+      { "q": "Aggiungi un pranzo da €12 al Pret di ieri sul mio conto Wise.", "a": "Riconosce esercente, importo, valuta e data." },
+      { "q": "Trasferisci 200 EUR da Wise Personal a Contanti.", "a": "Trasferimenti tra conti, anche tra valute diverse con cambio." },
+      { "q": "Come sono le mie spese di aprile rispetto a marzo?", "a": "Confronto tra periodi nella tua valuta principale." },
+      { "q": "Trova tutte le transazioni oltre €100 a maggio.", "a": "Ricerca filtrata tra le transazioni." },
+      { "q": "Mostrami le mie 5 categorie principali di questo trimestre.", "a": "Aggregazione top-N." },
+      { "q": "Qual è il saldo del mio conto Santander in questo momento?", "a": "Saldo in tempo reale — stessa formula dell’app mobile." },
+      { "q": "Riconcilia Santander a 616 EUR — la mia app bancaria dice così.", "a": "Rettifica una tantum per allinearsi a una cifra esterna." }
+    ]
+  },
+  "capabilities": {
+    "eyebrow": "Funzionalità",
+    "title": "Cosa può fare Manilo una volta collegato",
+    "sub": "Il server MCP espone 30+ strumenti al tuo assistente.",
+    "cards": {
+      "read": { "title": "Legge tutto", "body": "Conti, transazioni, categorie, budget, gruppi e tag." },
+      "edit": { "title": "Aggiunge e modifica", "body": "Transazioni, conti, categorie, budget e regole ricorrenti." },
+      "move": { "title": "Sposta denaro", "body": "Trasferimenti tra conti, anche tra valute diverse con cambio." },
+      "convert": { "title": "Converte le valute", "body": "Tassi BCE aggiornati; totali della dashboard nella tua valuta principale." },
+      "receipts": { "title": "Gestisce gli scontrini", "body": "Allega da un URL pubblico e recupera link di download firmati." },
+      "reconcile": { "title": "Saldi e riconciliazione", "body": "Saldi dei conti in tempo reale e riconciliazione una tantum con la tua banca." }
+    }
+  },
+  "privacy": {
+    "eyebrow": "Fiducia",
+    "title": "Privacy e controllo",
+    "items": {
+      "scope": { "title": "Vede solo ciò che chiedi", "body": "L’assistente riceve i dati necessari alla tua domanda. Non inviamo l’intero registro ad Anthropic o OpenAI al momento del collegamento." },
+      "password": { "title": "La tua password resta tua", "body": "Accedi sulla pagina di consenso di Manilo con Apple, Google o email. L’assistente non vede mai la tua password." },
+      "disconnect": { "title": "Disconnettiti quando vuoi", "body": "Rimuovi il connettore nelle impostazioni del tuo client — Claude, ChatGPT o qualsiasi altro. La revoca dell’accesso ha effetto immediato." }
+    },
+    "notePre": "Tutti i dettagli nella nostra",
+    "noteLink": "Informativa sulla privacy",
+    "notePost": "."
+  },
+  "ctaBand": {
+    "title": "Tutto pronto per parlare con i tuoi soldi?",
+    "sub": "Collega una volta, poi chiedi e basta. La configurazione richiede circa un minuto.",
+    "pickCta": "Scegli il tuo assistente",
+    "iosCta": "Scarica l’app iOS",
+    "helpIntro": "Qualcosa non va o manca un client?",
+    "helpLink": "Centro assistenza"
+  }
+}

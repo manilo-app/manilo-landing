@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "Conditions d’utilisation — Manilo",
+    "description": "Conditions d’utilisation du suivi des dépenses Manilo."
+  },
+  "jsonLd": {
+    "breadcrumbName": "Conditions d’utilisation"
+  },
+  "hero": {
+    "eyebrow": "Légal",
+    "title": "Conditions d’utilisation",
+    "updated": "Dernière mise à jour le 10 mai 2026"
+  },
+  "toc": {
+    "ariaLabel": "Table des matières",
+    "heading": "Sommaire",
+    "toggle": "Sommaire",
+    "items": {
+      "agreement": "Accord",
+      "account": "Votre compte",
+      "subscription": "Abonnement et paiement",
+      "trial": "Essai gratuit",
+      "use": "Utilisation acceptable",
+      "data": "Vos données",
+      "beta": "Fonctionnalités bêta",
+      "warranty": "Absence de garantie",
+      "liability": "Responsabilité",
+      "termination": "Résiliation",
+      "law": "Droit applicable",
+      "contact": "Contact"
+    }
+  },
+  "sections": {
+    "agreement": {
+      "heading": "Accord",
+      "p": [
+        "Les présentes Conditions d’utilisation (les « Conditions ») régissent votre utilisation de Manilo (anciennement Ledgy) — l’application iOS, le tableau de bord web à l’adresse dashboard.manilo.app, le bot Telegram Manilo et les services associés (le « Service »). En créant un compte ou en téléchargeant l’application, vous acceptez les présentes Conditions. Si vous ne les acceptez pas, n’utilisez pas le Service.",
+        "Le Service est exploité par l’équipe à l’origine de Manilo, ci-après « nous »."
+      ]
+    },
+    "account": {
+      "heading": "Votre compte",
+      "p": [
+        "Vous êtes responsable de tout ce qui se produit sous votre compte, y compris de la protection de vos identifiants de connexion. Un même compte ne peut être utilisé que par une seule personne ; partager vos identifiants prive de tout intérêt le partage en groupe (intégré et gratuit avec Cloud).",
+        "Vous devez être âgé d’au moins 13 ans (ou de 16 ans dans l’EEE) pour utiliser le Service."
+      ]
+    },
+    "subscription": {
+      "heading": "Abonnement et paiement",
+      "p": [
+        "Cloud est proposé sous forme d’abonnement reconductible, facturé au mois ou à l’année. Le prix affiché au moment du paiement est le prix final que vous payez. Les abonnements sont traités par Apple via votre compte App Store."
+      ],
+      "autoRenew": "Votre abonnement se renouvelle automatiquement à la fin de chaque période, sauf résiliation au moins 24 heures avant le renouvellement.",
+      "cancel": "Vous pouvez résilier à tout moment dans <em>Réglages → [Votre nom] → Abonnements</em> sur iPhone.",
+      "refundsPre": "Les remboursements sont gérés par Apple via ",
+      "refundsPost": ".",
+      "rateChange": "Si vous passez à une formule supérieure ou inférieure, ou si vous changez de périodicité de facturation, le nouveau tarif s’applique au renouvellement suivant."
+    },
+    "trial": {
+      "heading": "Essai gratuit",
+      "p": [
+        "Les nouveaux abonnés peuvent bénéficier d’un essai gratuit de 7 jours. Aucun montant ne vous est prélevé avant la fin de l’essai. Si vous résiliez avant la fin de l’essai, vous ne devez rien. L’essai est offert une seule fois par Apple ID."
+      ]
+    },
+    "use": {
+      "heading": "Utilisation acceptable",
+      "p": [
+        "L’utilisation du Service doit être licite et raisonnable. Vous vous engagez à ne pas :"
+      ],
+      "items": [
+        "Procéder à de l’ingénierie inverse, décompiler ou tenter d’extraire le code source, sauf dans les limites autorisées par la loi.",
+        "Utiliser le Service pour porter atteinte à la vie privée ou aux droits d’autrui.",
+        "Mener des abus automatisés, du scraping ou des attaques par déni de service contre notre infrastructure.",
+        "Revendre ou sous-licencier l’accès à Cloud sans autorisation écrite."
+      ]
+    },
+    "data": {
+      "heading": "Vos données",
+      "p1Pre": "Vos transactions vous appartiennent. Nous ne revendiquons aucun droit de propriété sur les données que vous créez au moyen du Service. Nous ne les traitons que pour fournir les fonctionnalités que vous avez activées, comme décrit dans notre ",
+      "p1Link": "Politique de confidentialité",
+      "p1Post": ".",
+      "p2": "Vous pouvez exporter l’intégralité de votre registre au format CSV à tout moment depuis Réglages → Exporter. Si vous supprimez votre compte, nous supprimons les données associées sous 7 jours ; les sauvegardes disparaissent sous 30 jours."
+    },
+    "beta": {
+      "heading": "Fonctionnalités bêta",
+      "callout": "Certaines fonctionnalités de Manilo sont proposées dans l’application sous l’étiquette « Bêta ». Elles peuvent produire des résultats erronés, évoluer ou être retirées sans préavis. Ne vous y fiez pas comme à une source unique de vérité — conservez toujours un export périodique de votre registre.",
+      "p": [
+        "Les fonctionnalités marquées « Bêta » dans l’application sont expérimentales, peuvent produire des résultats erronés et peuvent être retirées sans préavis."
+      ]
+    },
+    "warranty": {
+      "heading": "Absence de garantie",
+      "p": [
+        "Le Service est fourni « en l’état », sans garantie d’aucune sorte, expresse ou implicite, y compris de qualité marchande, d’adéquation à un usage particulier et d’absence de contrefaçon, dans toute la mesure permise par la loi. L’analyse par IA, la conversion de devises et la suggestion de catégories peuvent comporter des erreurs — vérifiez-les avant de vous y fier.",
+        "Manilo ne constitue pas un conseil financier, fiscal ou comptable."
+      ]
+    },
+    "liability": {
+      "heading": "Limitation de responsabilité",
+      "p": [
+        "Dans toute la mesure permise par la loi, notre responsabilité globale au titre de toute réclamation liée au Service est limitée au montant que vous nous avez versé au cours des 12 mois précédant la réclamation. Nous ne sommes pas responsables des dommages indirects, consécutifs ou accessoires — y compris la perte de bénéfices, la perte de données ou l’interruption d’activité.",
+        "Aucune disposition des présentes Conditions ne limite la responsabilité en cas de fraude ou de faute lourde, ni aucune responsabilité qui ne peut être exclue en vertu du droit applicable."
+      ]
+    },
+    "termination": {
+      "heading": "Résiliation",
+      "p": [
+        "Vous pouvez cesser d’utiliser le Service et supprimer votre compte à tout moment. Nous pouvons suspendre ou résilier les comptes qui enfreignent les présentes Conditions, avec préavis lorsque cela est raisonnablement possible. En cas de résiliation, les sections qui, par leur nature, survivent (données, responsabilité, droit applicable) continuent de s’appliquer."
+      ]
+    },
+    "law": {
+      "heading": "Droit applicable",
+      "p": [
+        "Les litiges sont soumis aux règles impératives de protection des consommateurs de votre pays de résidence ; à défaut, le droit applicable et la juridiction compétente seront précisés dans une future mise à jour des présentes Conditions."
+      ]
+    },
+    "contact": {
+      "heading": "Contact"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "skipLink": "Перейти к содержимому",
+  "nav": { "home": "Главная", "pricing": "Цены", "support": "Поддержка" },
+  "header": {
+    "brandAria": "Главная Manilo",
+    "openDashboard": "Открыть дашборд",
+    "downloadAppStore": "Загрузить в App Store"
+  },
+  "footer": {
+    "tagline": "Расходы, которые записываются сами. ИИ-трекер расходов для iOS — уже в App Store.",
+    "product": "Продукт",
+    "home": "Главная",
+    "pricing": "Цены",
+    "integrations": "Интеграции",
+    "chatgpt": "Manilo в ChatGPT",
+    "openDashboard": "Открыть дашборд",
+    "downloadAppStore": "Загрузить в App Store",
+    "developers": "Разработчикам",
+    "apiRef": "Справочник API v1",
+    "mcp": "MCP-интеграция",
+    "support": "Поддержка",
+    "helpCenter": "Центр поддержки",
+    "legal": "Правовая информация",
+    "privacy": "Конфиденциальность",
+    "terms": "Условия",
+    "copyright": "© 2026 Manilo",
+    "status": "Все системы работают",
+    "language": "Язык"
+  }
+}

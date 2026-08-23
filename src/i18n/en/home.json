@@ -1,0 +1,248 @@
+{
+  "meta": {
+    "title": "Manilo — Multi-currency expense tracker for iOS",
+    "description": "Multi-currency expense tracker for iOS. Multi-currency, on-device speech, no ads. Talk to Manilo from Claude, ChatGPT, and any AI assistant via MCP. Free on the App Store.",
+    "ogDescription": "Track any expense in any currency. Free, no ads. Talk to Manilo from Claude, ChatGPT, and any AI assistant via MCP.",
+    "keywords": "multi-currency expense tracker, multi currency expense, expense tracker no ads, mcp expense tracker, claude expense tracker, apple watch expense tracker, siri expense logger",
+    "ogImageAlt": "Manilo — multi-currency expense tracker for iOS",
+    "twitterTitle": "Manilo — Multi-currency expense tracker for iOS",
+    "twitterDescription": "Track any expense in any currency. Free, no ads. Works with Claude, ChatGPT, and any AI via MCP."
+  },
+  "jsonLd": {
+    "appAlternateName": "Manilo Voice Expense Tracker",
+    "appDescription": "Multi-currency expense tracker with multi-currency support. Track any expense in any currency — via Siri, Apple Watch, or Action Button. Free, no ads. Optional Cloud sync unlocks AI receipt scanning, MCP integration with Claude, ChatGPT and other AI assistants, family sharing, web dashboard, and Telegram bot.",
+    "featureList": [
+      "Voice expense logging via Siri and Action Button",
+      "Apple Watch expense logging",
+      "Multi-currency accounts with live ECB FX rates",
+      "AI receipt scanning and auto-categorization",
+      "MCP server — connect Claude, ChatGPT, and any AI assistant",
+      "On-device speech transcription — voice audio never leaves your phone",
+      "Family and household shared accounts",
+      "Offline-first with local SQLite database",
+      "CSV and PDF export",
+      "14 languages supported",
+      "No ads, no data brokers, no tracking SDKs",
+      "Telegram bot expense logging",
+      "Apple Wallet auto-log for Apple Pay",
+      "Web dashboard with trends and reports"
+    ],
+    "websiteDescription": "Multi-currency expense tracker for iOS. Free, no ads."
+  },
+  "hero": {
+    "pillAria": "Now on the App Store. Available for iOS.",
+    "pill": "Now on the App Store · iOS",
+    "title": "Track any expense in any currency.",
+    "sub": "Talk to your money. Manilo (formerly Ledgy) is a multi-currency expense tracker for iOS. Log by voice on your iPhone or Apple Watch, snap a receipt, or ask Claude and ChatGPT directly. Free to download. No ads. Your data stays on your device.",
+    "downloadCta": "Download on the App Store",
+    "downloadMeta": "Free download · iOS 15+",
+    "pricingCta": "See pricing",
+    "pricingMeta": "Free forever for solo",
+    "phoneAlt": "The Manilo add-transaction screen with a $555 expense being voice-logged",
+    "chips": {
+      "voice": { "label": "Voice", "line": "\"$4.50 coffee at Blue Bottle\"" },
+      "receipt": { "label": "Receipt", "line": "Lunch · €18.20" },
+      "telegram": { "label": "Telegram", "line": "Tank of gas · 60 EUR" }
+    }
+  },
+  "trust": {
+    "languages": "Available in 14 languages",
+    "offline": "Offline-first. Your data on your device."
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "title": "Three steps. Then never again.",
+    "sub": "Capture is whatever's fastest in the moment. Manilo figures out the rest.",
+    "steps": [
+      { "num": "01", "title": "Capture", "body": "Voice on your watch, photo of a receipt, or a forwarded SMS in Telegram." },
+      { "num": "02", "title": "Parse", "body": "AI reads it, picks the right category, account, and group." },
+      { "num": "03", "title": "See it everywhere", "body": "iPhone, Apple Watch, WEB Dashboard and your AI agents (ChatGPT/Claude/Gemini and others)." }
+    ]
+  },
+  "surfaces": {
+    "eyebrow": "Capture surfaces",
+    "title": "Five ways in.",
+    "titleAccent": "One inbox.",
+    "sub": "Whatever device is closest, that's the one Manilo uses. Everything ends up in the same ledger.",
+    "cards": {
+      "iphone": { "title": "iPhone", "body": "Voice, photo, manual numpad, or paste-from-anywhere. One tap, one verb. Done." },
+      "watch": { "title": "Apple Watch", "body": "Hold the mic. Speak. Done in 5 seconds. Watch complications deep-link straight to record." },
+      "siri": { "title": "Siri", "body": "\"Hey Siri, log expense to Manilo.\" App Intents on iOS 16+." },
+      "wallet": { "title": "Apple Wallet", "body": "Apple Pay payments auto-log. Each card gets its own AI rule (e.g. \"tag with Trip 2026\")." },
+      "telegram": { "title": "Telegram bot", "body": "Text, photo, or voice in your chat. Inline pickers to fix anything in two taps." },
+      "aiAgent": { "title": "AI Agent", "body": "Just say to your any AI agent you use (ChatGPT/Claude/Gemini and others) what to record." }
+    }
+  },
+  "smart": {
+    "eyebrow": "Smart by default",
+    "title": "The boring parts of money — handled.",
+    "ai": {
+      "title": "AI that learns your life",
+      "body": "Well-known categories, your custom ones, custom rules. Per-card Wallet rules so your \"Travel\" Visa always tags as Trip 2026.",
+      "checklist": [
+        "14 default categories + unlimited custom",
+        "Per-card rules for Apple Pay",
+        "Re-parses past transactions when you correct it"
+      ],
+      "alt": "Manilo transaction list categorized automatically"
+    },
+    "budgets": {
+      "title": "Budgets that watch your back",
+      "body": "Per-category and overall, weekly / monthly / quarterly / yearly. They pulse red the moment you cross. No surprises.",
+      "checklist": [
+        "4 budget periods, mix and match",
+        "Soft caps and hard caps",
+        "Local notifications when you're close"
+      ]
+    },
+    "budgetMock": {
+      "food": { "name": "Food & Drink", "sub": "$612 of $600" },
+      "groceries": { "name": "Groceries", "sub": "$384 of $500" },
+      "transport": { "name": "Transport", "sub": "$142 of $250" }
+    },
+    "fx": {
+      "title": "Multi-currency without the math",
+      "body": "Live FX. Tap and hold any amount to convert. Set a primary currency and Manilo translates the totals.",
+      "checklist": [
+        "Daily-refreshed rates from a reliable source",
+        "Per-account currency, primary at the top",
+        "Trip-mode when you're abroad"
+      ]
+    },
+    "fxMock": {
+      "trip": "Trip · Europe",
+      "primary": "Primary · USD",
+      "rate": "€1 = $1.0808 · today"
+    },
+    "receipts": {
+      "title": "Receipts kept where they belong",
+      "body": "Photo attach. Server-cloned to all members of a shared group, isolated to your namespace, deleted when you say so.",
+      "checklist": [
+        "One tap to attach from camera or library",
+        "Searchable by amount and merchant",
+        "Encrypted at rest, isolated per user"
+      ]
+    },
+    "receiptMock": {
+      "store": "Blue Bottle Coffee",
+      "item1": "Cortado",
+      "item2": "Almond croissant",
+      "totalLabel": "Total",
+      "date": "May 9, 2026 · 09:17",
+      "category": "Coffee & Tea"
+    }
+  },
+  "mcp": {
+    "eyebrow": "Talk to your money",
+    "titlePre": "Ask",
+    "titleAccent": "ChatGPT, Claude, or Cursor",
+    "titlePost": "about your spending.",
+    "sub": "Connect Manilo to your favorite AI chat. Ask it anything in plain English — “what did I spend on coffee last month?” — and it answers from your own data. No copy-paste, no spreadsheets.",
+    "viz": {
+      "hub": "Manilo",
+      "claude": "Claude",
+      "chatgpt": "ChatGPT",
+      "cursor": "Cursor",
+      "more": "And more"
+    },
+    "prompts": [
+      "\"What did I spend on coffee last month?\"",
+      "\"Am I on track for my groceries budget?\"",
+      "\"Plot my last 90 days by category.\"",
+      "\"Find every transaction over €100 in May.\""
+    ],
+    "note": "Connect once, ask anything. Your AI only sees what you allow — you’re always in control, and you can disconnect any time.",
+    "setupCta": "Set up ChatGPT, Claude, or Cursor →",
+    "chatgptCta": "Import bank statements by chat →"
+  },
+  "sharing": {
+    "eyebrow": "Built for sharing",
+    "titlePre": "Personally owned.",
+    "titleAccent": "Group-visible.",
+    "sub": "Join a family budget or trip group, and your transactions stay yours forever. Sharing decides who sees them — never who owns them. Leave the group, keep your history.",
+    "cta": "See sharing in pricing →",
+    "groupNode": {
+      "title": "Family · 3 members",
+      "sub": "Shared visibility"
+    }
+  },
+  "devices": {
+    "eyebrow": "Wrist · Pocket · Browser",
+    "title": "Capture on the wrist. Analyze in the browser.",
+    "sub": "Same ledger, every device. The watch is for now, the dashboard is for later.",
+    "watch": {
+      "listening": "Listening…",
+      "title": "Apple Watch",
+      "body": "Hold the digital crown. Speak. The transaction is on your phone before you put your wrist down."
+    },
+    "dashboard": {
+      "alt": "The Manilo web dashboard showing monthly summary, spend by category, and budgets",
+      "title": "Web dashboard",
+      "body": "Trends, drill-downs, exports. Where the ledger turns into insight."
+    }
+  },
+  "numbers": [
+    { "value": "14", "label": "Languages, fully translated" },
+    { "value": "29", "label": "CSV import locales auto-detected" },
+    { "value": "30+", "label": "MCP tools for AI agents" },
+    { "value": "5", "label": "Capture surfaces · 1 inbox" }
+  ],
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "The eight questions everyone asks.",
+    "items": [
+      {
+        "id": "free",
+        "q": "Is Manilo free?",
+        "a": "Yes — every solo-tracking feature is free forever. Cloud unlocks multi-device sync, sharing, AI voice/photo intake, Siri, Apple Watch logging, Telegram bot, Apple Wallet automation, and the web dashboard.",
+        "schemaA": "Yes — every solo-tracking feature is free forever. Cloud unlocks multi-device sync, sharing, AI voice and photo intake, Siri, Apple Watch logging, Telegram bot, Apple Wallet automation, and the web dashboard."
+      },
+      {
+        "id": "price",
+        "q": "How much is Cloud?",
+        "a": "$2.99/month or $22.99/year (~$1.92/mo). 7-day free trial. Cancel anytime.",
+        "schemaA": "$2.99/month or $22.99/year (about $1.92/month). 7-day free trial. Cancel anytime."
+      },
+      {
+        "id": "android",
+        "q": "Is there an Android version?",
+        "a": "Not yet. Manilo is iOS-only today. Android is on the roadmap — drop us a line if you want to be notified.",
+        "schemaA": "Not yet. Manilo is iOS-only today. Android is on the roadmap — contact support@manilo.app if you want to be notified."
+      },
+      {
+        "id": "offline",
+        "q": "Does Manilo work offline?",
+        "a": "Yes. Every screen reads from a local SQLite database on your phone. New transactions appear instantly; sync happens in the background when you're back online.",
+        "schemaA": "Yes. Every screen reads from a local SQLite database on your phone. New transactions appear instantly; sync happens in the background when you are back online."
+      },
+      {
+        "id": "shared-data",
+        "q": "What happens to my data if I leave a shared group?",
+        "a": "Nothing. Your transactions are personally owned — sharing only decides who sees them. Leave the group, keep your history."
+      },
+      {
+        "id": "voice",
+        "q": "Is my voice sent to a server?",
+        "a": "No. Voice is transcribed on your device using Apple's on-device speech recognizer. Only the resulting text is sent to our AI for parsing."
+      },
+      {
+        "id": "import",
+        "q": "Can I import from Mint / YNAB / another app?",
+        "schemaQ": "Can I import from Mint, YNAB, or another app?",
+        "a": "Yes. The CSV import wizard auto-detects column headers in 29 languages, currency symbols, and category aliases. Bring your full history."
+      },
+      {
+        "id": "languages",
+        "anchor": "faq-languages",
+        "q": "What languages do you support?",
+        "a": "14 fully translated locales: English, German, Spanish (Mexico), French, Hindi, Italian, Japanese, Korean, Polish, Portuguese (Brazil), Russian, Turkish, Ukrainian, and Simplified Chinese."
+      }
+    ]
+  },
+  "ctaBand": {
+    "title": "Start logging the lazy way.",
+    "sub": "Manilo is free for everything you'd want as a solo user. Cloud unlocks every device, every surface, every shared group.",
+    "download": "Download on the App Store",
+    "pricing": "See pricing"
+  }
+}

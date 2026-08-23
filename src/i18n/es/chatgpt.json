@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "title": "Control de gastos en ChatGPT: importa estados de cuenta | Manilo",
+    "description": "Suelta un estado de cuenta en ChatGPT o Claude y obtén tus gastos categorizados más un panel en vivo. Conecta Manilo en tres pasos. 7 días gratis, sin anuncios.",
+    "ogTitle": "Manilo + ChatGPT: importa estados de cuenta por chat",
+    "ogDescription": "Sube un estado de cuenta a ChatGPT o Claude. Manilo lo convierte en gastos categorizados y un panel en vivo. App de iOS gratis, sin anuncios. 7 días de prueba gratis para la conexión con IA.",
+    "keywords": "control de gastos con chatgpt, importar estado de cuenta en chatgpt, gastos con claude, importar estado de cuenta con ia, categorizar estado de cuenta con ia, finanzas personales con chatgpt, mcp gastos",
+    "twitterTitle": "Manilo + ChatGPT: importa estados de cuenta por chat",
+    "twitterDescription": "Sube un estado de cuenta a ChatGPT o Claude. Manilo lo convierte en gastos categorizados y un panel en vivo. App de iOS gratis, sin anuncios. 7 días de prueba gratis para la conexión con IA."
+  },
+  "jsonLd": {
+    "articleHeadline": "Control de gastos en ChatGPT: importa estados de cuenta con Manilo",
+    "articleDescription": "Cómo conectar Manilo a ChatGPT o Claude, importar un estado de cuenta por chat y obtener tus gastos categorizados más un panel en vivo.",
+    "breadcrumbHome": "Inicio",
+    "breadcrumbChatgpt": "Manilo en ChatGPT"
+  },
+  "ctas": {
+    "connectChatgpt": "Conectar ChatGPT",
+    "connectClaude": "Conectar Claude",
+    "cursorClients": "Cursor y otros clientes",
+    "getIosApp": "Descargar la app de iOS"
+  },
+  "hero": {
+    "eyebrow": "Habla con tu dinero",
+    "title": "Suelta tu estado de cuenta en ChatGPT. Recibe tus finanzas categorizadas y un panel.",
+    "lead1": "Sin exportaciones que acomodar, sin mapear columnas, sin capturar nada a mano. Sube el archivo del estado de cuenta a un chat y Manilo lo convierte en transacciones categorizadas que puedes ver en un panel en vivo.",
+    "lead2": "No inventamos este flujo. En julio de 2026, cuatro personas de cuatro países lo hicieron por su cuenta, sin que nadie se lo sugiriera, con cuatro formatos distintos: estados de cuenta bancarios en PDF, un archivo de exportación del banco, un estado de cuenta de Amex y el PDF de un presupuesto familiar. Funcionó en los cuatro casos. Así que le construimos una puerta de entrada como se debe.",
+    "metaClients": "Funciona con ChatGPT, Claude y otros clientes MCP.",
+    "metaApp": "La app de iOS es gratis y sin anuncios."
+  },
+  "toc": {
+    "ariaLabel": "Índice de contenidos",
+    "heading": "Contenido",
+    "toggle": "Contenido",
+    "demo": "Cómo se ve",
+    "connect": "Conecta tu asistente",
+    "capabilities": "Qué puedes hacer",
+    "faq": "Preguntas",
+    "closing": "Pruébalo"
+  },
+  "demo": {
+    "title": "Cómo se ve",
+    "intro": "Subes un estado de cuenta y dices “importa esto”. El asistente lee el archivo, asigna cada movimiento a tus categorías y lo crea todo en un solo lote. Una respuesta típica se ve así:",
+    "you": "Tú:",
+    "prompt": "“Importa esto.”",
+    "file": "estado-cuenta-marzo.pdf",
+    "reply": [
+      "Importé 87 transacciones de tu estado de cuenta de marzo.",
+      "Categorías principales: Súper, Renta, Transporte.",
+      "Dos movimientos no encajaron bien con tus categorías. ¿Quieres que los ajuste?"
+    ],
+    "replyLinkPre": "Desglose completo:",
+    "replyLinkEm": "tu enlace al panel de marzo",
+    "outro": "El mes que entra solo mandas el nuevo estado de cuenta. Ese es todo el flujo.",
+    "disclaimer": "Para que quede claro: el asistente lee el archivo que tú le das. Manilo no se conecta a tu banco."
+  },
+  "connect": {
+    "title": "Conecta tu asistente",
+    "introPre": "La configuración toma como un minuto y todos los caminos viven en una sola página: elige ChatGPT, Claude, Cursor o cualquier otro cliente MCP en la",
+    "introLink": "página de integraciones",
+    "introPost": "y sigue dos pasos.",
+    "calloutPre": "ChatGPT muestra un aviso de confirmación (",
+    "calloutPost": ") antes de cualquier escritura, así que nada entra a tu registro sin tu visto bueno."
+  },
+  "capabilities": {
+    "title": "Qué puedes hacer una vez conectado",
+    "intro": "Manilo es una app completa de gastos y presupuestos que funciona dentro de ChatGPT y Claude (vía MCP). Le expone más de 30 herramientas a tu asistente, entre transacciones, cuentas, categorías, presupuestos, grupos, etiquetas, pagos recurrentes, recibos, monedas y ajustes. En la práctica:",
+    "items": [
+      {
+        "strong": "Importa estados de cuenta y recibos.",
+        "body": "Sube un PDF, un CSV o una exportación; el asistente asigna cada movimiento a tus categorías existentes y los crea en un solo lote."
+      },
+      {
+        "strong": "Pregunta por tus gastos.",
+        "body": "“¿Cuánto gasté en el súper en julio?” La respuesta sale de tus propios datos, no es una estimación."
+      },
+      {
+        "strong": "Encárgate de lo aburrido.",
+        "body": "Cuentas, presupuestos, transacciones recurrentes, etiquetas, categorías y grupos compartidos, todo con tus propias palabras."
+      },
+      {
+        "strong": "Convierte monedas con tipos de cambio del BCE al día.",
+        "body": "Manilo es multimoneda; los totales de tu panel se muestran en tu moneda principal."
+      },
+      {
+        "strong": "Ve todo en un panel en vivo.",
+        "body": "Cada cambio se sincroniza al instante con dashboard.manilo.app, y con la app de iOS si la usas."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Las preguntas que la gente sí hace",
+    "items": [
+      {
+        "id": "security",
+        "q": "¿Es seguro? ¿A qué puede acceder de verdad ChatGPT o Claude?",
+        "a": "El inicio de sesión usa OAuth 2.1 con PKCE y ocurre en la propia página de consentimiento de Manilo, con Apple, Google o correo. El asistente nunca ve tu contraseña. Una vez conectado, puede leer tus datos y, cuando se lo pidas, crear, editar o eliminar registros; ChatGPT muestra un aviso de confirmación antes de cualquier escritura. Los datos se guardan en Alemania (Hetzner) más Google Cloud Firestore. Los montos de las transacciones nunca se envían a analítica. Para desconectarlo, elimina el conector en la configuración de ChatGPT o Claude. Contacto de seguridad:"
+      },
+      {
+        "id": "trial",
+        "q": "¿Qué es la prueba gratis y cuándo empieza?",
+        "a": "Conectarlo es gratis. La prueba de 7 días empieza la primera vez que de verdad usas Manilo desde el chat, es decir, con tu primera importación o pregunta, no al momento de conectar. Durante esos 7 días tienes el producto completo, incluido el panel web. Después, Manilo Cloud cuesta $2.99/mes o $22.99/año (USD).",
+        "linkText": "Ver precios"
+      },
+      {
+        "id": "trial-end",
+        "q": "¿Qué pasa con mis datos cuando termina la prueba?",
+        "a": "No se borra nada. Tus datos se quedan guardados. Las herramientas del chat dejan de funcionar y te mandan a dashboard.manilo.app/upgrade, donde puedes continuar suscribiéndote a través del App Store (hoy hace falta un dispositivo Apple para eso)."
+      },
+      {
+        "id": "formats",
+        "q": "¿Qué formatos de estado de cuenta funcionan?",
+        "a": "Los que el asistente pueda leer. En julio de 2026, usuarios reales importaron estados de cuenta bancarios en PDF, un archivo de exportación del banco, un estado de cuenta de Amex y el PDF de un presupuesto familiar. Tú subes o pegas el estado de cuenta en el chat; la IA asigna los movimientos a tus categorías y los crea en un solo lote. No hay ninguna conexión con el banco: la IA lee el archivo que tú le das."
+      },
+      {
+        "id": "bank-link",
+        "q": "¿Se conecta a mi banco automáticamente?",
+        "a": "No. No hay vinculación de cuentas bancarias y nada se descarga de tu banco. El estado de cuenta lo mandas tú. El mes que entra, solo mandas el nuevo."
+      },
+      {
+        "id": "ios-app",
+        "q": "¿Necesito la app de iOS?",
+        "a": "No. Te registras durante el flujo de conexión con Apple, Google o correo, y la prueba incluye el panel web completo. Cuando termina la prueba, puedes suscribirte a través del App Store — hoy hace falta un dispositivo Apple para eso; en dashboard.manilo.app/upgrade están los detalles. La app de iOS es opcional; agrega el registro por voz, la captura desde el Apple Watch y más."
+      },
+      {
+        "id": "plans",
+        "q": "¿Qué plan de ChatGPT necesito? ¿Funciona el plan gratis?",
+        "a": "La app de Manilo en ChatGPT se conecta directo desde el enlace de la app, sin configuración especial; donde las apps de ChatGPT están disponibles, el plan gratis funciona. La ruta manual con el Modo de desarrollador requiere ChatGPT Plus, Pro o Business. Los conectores personalizados de Claude funcionan en claude.ai y Claude Desktop. Cursor, Windsurf y otros clientes MCP que soportan servidores remotos con OAuth también funcionan."
+      },
+      {
+        "id": "more",
+        "q": "¿Qué más puede hacer además de importar estados de cuenta?",
+        "a": "Preguntar cosas como “¿cuánto gasté en el súper en julio?” y recibir respuestas calculadas a partir de tus propios datos. Administrar cuentas, presupuestos, transacciones recurrentes, etiquetas, categorías y grupos compartidos. Convertir monedas con tipos de cambio del BCE al día. Todo se sincroniza al instante con el panel web, y con la app de iOS si la usas."
+      }
+    ]
+  },
+  "closing": {
+    "title": "Pruébalo con el estado de cuenta del mes pasado",
+    "body1": "Toma cualquier exportación de estado de cuenta que ya tengas, conéctate y suéltala en el chat. Tres pasos y nunca más.",
+    "body2Pre": "Manilo lo construye un solo desarrollador independiente. Si tu formato de estado de cuenta lo hace tropezar, o si algo más no se siente bien, escribe a",
+    "body2Post": ". Los comentarios sí definen lo que se construye después."
+  }
+}

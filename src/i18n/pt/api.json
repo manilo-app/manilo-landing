@@ -1,0 +1,440 @@
+{
+  "meta": {
+    "title": "Referência da API v1 — Manilo para Desenvolvedores",
+    "description": "Referência da API REST v1 do Manilo. Autentique com Personal Access Token e gerencie contas, categorias, orçamentos e transações. Para devs e IA via MCP.",
+    "ogDescription": "API REST do Manilo. Autenticação por PAT; gerencie contas, categorias, orçamentos, grupos e transações. Para devs e agentes de IA via MCP.",
+    "twitterTitle": "Referência da API v1 — Manilo para Desenvolvedores",
+    "twitterDescription": "API REST do Manilo. Autenticação por PAT. Para devs e agentes de IA via MCP."
+  },
+  "jsonLd": {
+    "breadcrumbHome": "Início",
+    "breadcrumbApi": "Referência da API v1",
+    "headline": "API REST v1 do Manilo — Referência",
+    "description": "Referência completa da API REST do Manilo: contas, categorias, orçamentos, grupos, transações, transferências e recibos. Autenticação por bearer token (Personal Access Token, prefixo lgpat_). Criação, atualização e exclusão em lote de até 100 transações por requisição. Paginação por cursor. Requer assinatura do Cloud."
+  },
+  "hero": {
+    "eyebrow": "Desenvolvedores",
+    "title": "Referência da API v1",
+    "stack": "REST · JSON · OAuth 2.0 Bearer",
+    "stability": "Estável — sem mudanças incompatíveis dentro da v1"
+  },
+  "toc": {
+    "ariaLabel": "Sumário",
+    "heading": "Conteúdo",
+    "toggle": "Conteúdo",
+    "groups": {
+      "gettingStarted": "Primeiros passos",
+      "conventions": "Convenções",
+      "resources": "Recursos",
+      "more": "Mais"
+    },
+    "items": {
+      "overview": "Visão geral",
+      "quickstart": "Início rápido",
+      "authentication": "Autenticação",
+      "scopes": "Escopos",
+      "subscription": "Exigência de assinatura",
+      "errors": "Erros",
+      "pagination": "Paginação e filtros",
+      "types": "Tipos e formatos",
+      "accounts": "Contas",
+      "categories": "Categorias",
+      "budgets": "Orçamentos",
+      "groups": "Grupos",
+      "transactions": "Transações",
+      "icons": "Ícones",
+      "changelog": "Versionamento",
+      "support": "Suporte"
+    }
+  },
+  "common": {
+    "field": "Campo",
+    "type": "Tipo",
+    "description": "Descrição",
+    "required": "obrigatório",
+    "optional": "opcional",
+    "requestBody": "Corpo da requisição",
+    "queryParams": "Parâmetros de consulta",
+    "requestLabel": "Requisição"
+  },
+  "overview": {
+    "title": "Visão geral",
+    "intro": "A API do Manilo é uma API REST JSON para gerenciar programaticamente o mesmo registro financeiro que você usa no app iOS — contas, categorias, orçamentos, grupos compartilhados e transações. Use-a para criar importadores, exportadores, pontes de sincronização e painéis, ou para alimentar as suas próprias automações.",
+    "bullets": {
+      "baseUrl": { "label": "URL base:", "t1": " — a URL base anterior ", "t2": " continua funcionando." },
+      "versionPrefix": { "label": "Prefixo de versão:", "t1": " todos os endpoints deste documento ficam sob ", "t2": "." },
+      "transport": { "label": "Transporte:", "t1": " somente HTTPS. Requisições HTTP não são aceitas." },
+      "encoding": { "label": "Codificação:", "t1": " corpos de requisição e resposta em JSON. UTF-8. Nomes de propriedades em ", "t2": "." },
+      "auth": { "label": "Autenticação:", "t1": " em todas as requisições." },
+      "subscription": { "label": "Assinatura do Cloud:", "t1": " obrigatória em todos os endpoints da v1. Veja ", "link": "Exigência de assinatura", "t2": "." }
+    },
+    "callout": {
+      "strong": "Procurando um assistente de IA?",
+      "t1": " Se você quer que o Claude, o ChatGPT ou o Cursor conversem com o Manilo em seu nome, use o endpoint do Model Context Protocol em ",
+      "t2": " — veja ",
+      "link": "Integrações",
+      "t3": ". A API REST documentada aqui é para o código que você mesmo escreve."
+    }
+  },
+  "quickstart": {
+    "title": "Início rápido",
+    "intro": "Três passos até a sua primeira requisição autenticada.",
+    "mintTitle": "1. Gere um Token de Acesso Pessoal",
+    "steps": {
+      "signIn": { "t1": "Entre no seu ", "link": "painel do Manilo", "t2": " e abra ", "strong": "Configurações → Acesso à API", "t3": "." },
+      "newToken": { "t1": "Clique em ", "strong": "+ Novo token", "t2": "." },
+      "nameIt": { "t1": "Dê ao token um nome descritivo (por exemplo, ", "em": "“Zapier — exportação semanal”", "t2": "), escolha os escopos necessários (veja ", "link": "Escopos", "t3": ") e, se quiser, defina uma expiração." },
+      "copyIt": { "t1": "Copie o token. Ele é exibido ", "em": "uma única vez", "t2": ". Os tokens começam com o prefixo ", "t3": " seguido de 64 caracteres hexadecimais." }
+    },
+    "tokensPage": "A mesma página lista os seus tokens ativos com a data do último uso e a quantidade de permissões, exibe um aviso de “Expira em 30 dias” e permite revogar qualquer token na hora pelo ícone de lixeira. Cada conta pode ter até 25 tokens ativos ao mesmo tempo.",
+    "requestTitle": "2. Faça uma requisição",
+    "curlCaption": "Listar contas",
+    "responseTitle": "3. Analise a resposta",
+    "callout": {
+      "strong1": "Trate o seu token como uma senha.",
+      "t1": " Qualquer pessoa com o token pode ler ou modificar o seu registro financeiro dentro dos escopos que você concedeu. Revogue tokens comprometidos imediatamente em ",
+      "strong2": "Configurações → Acesso à API",
+      "t2": "."
+    }
+  },
+  "authentication": {
+    "title": "Autenticação",
+    "intro": { "t1": "Toda requisição a ", "t2": " precisa levar um cabeçalho ", "t3": ". Dois tipos de token são aceitos:" },
+    "pat": {
+      "strong1": "Token de Acesso Pessoal (PAT)",
+      "t1": " — bearer token de longa duração que você cria na página ",
+      "strong2": "Configurações → Acesso à API",
+      "t2": " do painel. Formato: ",
+      "t3": " + 64 caracteres hexadecimais. Com escopos, revogável e com expiração opcional. ",
+      "strong3": "Recomendado para todas as integrações de terceiros."
+    },
+    "jwt": {
+      "strong": "JWT de sessão",
+      "t1": " — token de curta duração emitido para os apps próprios (iOS e painel). Não tem restrições de escopo. Você pode usá-lo para um teste pontual, se conseguir extraí-lo de uma sessão autenticada, mas os PATs são o caminho suportado."
+    },
+    "headerTitle": "Formato do cabeçalho",
+    "limitsTitle": "Limites de token",
+    "limits": {
+      "count": { "t1": "Até ", "strong": "25 PATs ativos", "t2": " por conta do Manilo." },
+      "expiry": { "t1": "É possível definir uma expiração opcional no momento da criação. Tokens expirados retornam ", "t2": "." },
+      "revoked": "Tokens revogados param de funcionar imediatamente — o Manilo guarda apenas um hash SHA-256 do token, nunca o valor, então um token vazado não pode ser recuperado, apenas revogado e substituído."
+    },
+    "failuresTitle": "Falhas comuns de autenticação",
+    "failures": {
+      "s401": "Token ausente, malformado, expirado ou revogado.",
+      "s403": "O token é válido, mas o endpoint solicitado exige um escopo que o seu PAT não tem, ou a sua assinatura do Cloud não está ativa."
+    }
+  },
+  "scopes": {
+    "title": "Escopos",
+    "intro": {
+      "t1": "Os PATs seguem um modelo de ",
+      "strong": "negação por padrão",
+      "t2": ". Um token só pode chamar endpoints cujo escopo exigido ele possui; todo o resto retorna ",
+      "t3": ". Conceda o conjunto mais restrito de escopos de que a sua integração realmente precisa."
+    },
+    "available": "Escopos disponíveis:",
+    "chips": { "t1": "Cada endpoint listado abaixo mostra o escopo exigido em uma pequena etiqueta roxa. Escopos ", "t2": " não implicam ", "t3": " — peça os dois se precisar dos dois." }
+  },
+  "subscription": {
+    "title": "Exigência de assinatura",
+    "intro": {
+      "t1": "Todos os endpoints da v1 — inclusive os de somente leitura — exigem que o usuário que faz a chamada tenha uma ",
+      "strong": "assinatura ativa do Manilo Cloud",
+      "t2": ". Se a assinatura foi interrompida, expirou ou nunca foi iniciada, a API responde com:"
+    },
+    "outro": {
+      "t1": "O cabeçalho ",
+      "t2": " permite que os clientes distingam um bloqueio por assinatura de uma negação de permissão genérica. Restaure o acesso reativando o Cloud no app iOS ou em ",
+      "t3": "."
+    }
+  },
+  "errors": {
+    "title": "Erros",
+    "intro": "Os erros usam códigos de status HTTP padrão. O corpo da resposta é um objeto JSON de um único campo:",
+    "handle": "Códigos de status que você deve tratar:",
+    "statuses": {
+      "s200": "OK — recurso retornado, ou lista retornada.",
+      "s201": { "t1": "Created — novo recurso criado. O cabeçalho ", "t2": " aponta para a URL canônica." },
+      "s204": "No Content — exclusão bem-sucedida; sem corpo.",
+      "s400": "Falha de validação — campo obrigatório ausente, valor fora do intervalo, JSON malformado.",
+      "s401": { "t1": "Falha de autenticação — veja ", "link": "Autenticação", "t2": "." },
+      "s403": "Permissão negada — escopo insuficiente ou assinatura inativa.",
+      "s404": "Recurso não encontrado, ou oculto por falta de autorização.",
+      "s409": "Conflito — por exemplo, violação de restrição de unicidade.",
+      "s5xx": "Falha do lado do servidor. É seguro repetir leituras idempotentes com backoff exponencial."
+    }
+  },
+  "pagination": {
+    "title": "Paginação e filtros",
+    "intro": "Por padrão, os endpoints de listagem retornam todos os itens correspondentes. As transações, o único recurso que pode crescer muito, aceitam paginação por cursor.",
+    "cursorTitle": "Cursor de transações",
+    "caption": "Listagem paginada",
+    "response": {
+      "t1": "A resposta inclui um ",
+      "t2": ". Envie-o de volta no parâmetro de consulta ",
+      "t3": " para buscar a próxima página; quando ",
+      "t4": " for ",
+      "t5": ", você chegou ao fim."
+    },
+    "params": {
+      "limit": { "t1": " — tamanho da página, limitado a ", "t2": ". Padrão: ", "t3": "." },
+      "cursor": " — token opaco. Trate-o como uma caixa-preta.",
+      "filters": { "t1": " — filtros opcionais; veja o endpoint ", "link": "Listar transações", "t2": "." }
+    }
+  },
+  "types": {
+    "title": "Tipos e formatos",
+    "ids": { "strong": "IDs", "t1": " — strings opacas. Não faça parsing delas; trate-as como identificadores UTF-8 que diferenciam maiúsculas de minúsculas." },
+    "timestamps": { "strong": "Timestamps", "t1": " — ISO-8601 em UTC com um ", "t2": " no final, por exemplo ", "t3": "." },
+    "dates": { "strong": "Datas", "t1": " (por exemplo, o ", "t2": " da transação) — mesmo formato ISO-8601, mas apenas a parte da data é significativa." },
+    "money": {
+      "strong1": "Valores monetários",
+      "t1": " — números JSON em ",
+      "strong2": "unidades principais",
+      "t2": " com até 4 casas decimais (por exemplo, ",
+      "t3": "). Nunca em unidades menores. Sempre acompanhados de ",
+      "t4": "."
+    },
+    "currencyCodes": { "strong": "Códigos de moeda", "t1": " — ISO-4217, exatamente três letras maiúsculas (por exemplo, ", "t2": ")." },
+    "deletes": {
+      "strong1": "Exclusões",
+      "t1": " — todas as operações de exclusão são ",
+      "strong2": "exclusões reversíveis (soft deletes)",
+      "t2": ". Os itens excluídos deixam de aparecer nas respostas de listagem e de leitura; parceiros de compartilhamento e recibos históricos são preservados."
+    },
+    "sideEffects": {
+      "strong": "Efeitos colaterais",
+      "t1": " — excluir uma conta, categoria ou grupo mantém intactas as transações dependentes; as referências delas são desvinculadas. O endpoint ",
+      "link": "Excluir conta",
+      "t2": " aceita uma estratégia explícita."
+    }
+  },
+  "accounts": {
+    "title": "Contas",
+    "intro": "As contas são os recipientes que guardam saldos — uma conta bancária, um cartão de crédito, uma carteira de dinheiro, uma corretora. Toda transação está ligada a uma (ou a duas, no caso das transferências).",
+    "list": { "desc": "Retorna todas as contas que o usuário autenticado possui ou às quais tem acesso." },
+    "get": { "desc": { "t1": "Busca uma conta pelo id. Retorna ", "t2": " se não for encontrada." } },
+    "create": {
+      "desc": { "t1": "Cria uma conta. Retorna ", "t2": " com o objeto criado e um cabeçalho ", "t3": "." },
+      "fields": {
+        "name": "Nome de exibição. Máx. 100 caracteres.",
+        "currencyCode": "ISO-4217. Exatamente 3 letras.",
+        "initialBalance": { "t1": "Saldo inicial em ", "t2": "." },
+        "order": "Posição de ordenação. Menor vem primeiro.",
+        "icon": { "t1": "Identificador de ícone de ", "t2": ". Máx. 50." },
+        "color": { "t1": "Cor em hexadecimal, por exemplo ", "t2": ". Máx. 20." },
+        "iconColor": "Sobrescreve a cor do ícone."
+      }
+    },
+    "update": { "desc": { "t1": "Substitui uma conta existente. O corpo é idêntico ao de ", "link": "Criar", "t2": "; todos os campos devem ser informados." } },
+    "delete": {
+      "desc": { "t1": "Exclui uma conta de forma reversível. Defina o que acontece com as transações dela pelo parâmetro de consulta ", "t2": "." },
+      "fields": {
+        "action": { "t1": " (padrão): limpa a referência de conta em cada transação. ", "t2": ": reatribui as transações para ", "t3": ". ", "t4": ": exclui de forma reversível todas as transações vinculadas que pertencem a você." },
+        "moveTargetAccountId": { "t1": "Obrigatório quando ", "t2": ". Id da conta de destino." }
+      }
+    }
+  },
+  "categories": {
+    "title": "Categorias",
+    "intro": "As categorias identificam para que serve uma transação (mercado, aluguel, renda de freelance). As categorias do sistema são somente leitura e compartilhadas por todos os usuários; as categorias de usuário são suas para gerenciar. Os grupos de categorias reúnem categorias relacionadas.",
+    "system": { "desc": { "t1": "Retorna o conjunto curado de categorias “conhecidas” do Manilo — o conjunto inicial que vem com o app iOS. Elas são versionadas globalmente e podem ser cacheadas com segurança por ", "t2": "." } },
+    "userTitle": "Categorias de usuário",
+    "list": { "desc": "Lista todas as categorias definidas pelo usuário." },
+    "get": { "desc": "Busca uma categoria de usuário pelo id." },
+    "create": {
+      "desc": "Cria uma categoria de usuário.",
+      "fields": {
+        "name": "Nome de exibição. Máx. 100.",
+        "type": { "t1": " ou ", "t2": "." },
+        "order": "Posição de ordenação dentro do grupo.",
+        "isPinned": "Fixa no topo do seletor.",
+        "categoryGroupId": { "t1": "Id do grupo pai, ou ", "t2": " para ficar sem grupo." },
+        "icon": "Identificador de ícone.",
+        "color": "Cor em hexadecimal."
+      }
+    },
+    "update": { "desc": { "t1": "Substitui uma categoria de usuário. O corpo é idêntico ao de ", "link": "Criar", "t2": "." } },
+    "delete": { "desc": { "t1": "Exclui uma categoria de usuário de forma reversível. As transações não são excluídas; o ", "t2": " delas é limpo." } },
+    "groupsTitle": "Grupos de categorias",
+    "cgList": { "desc": "Lista os seus grupos de categorias." },
+    "cgGet": { "desc": "Busca um grupo de categorias." },
+    "cgCreate": {
+      "desc": "Cria um grupo de categorias.",
+      "fields": {
+        "name": "Nome de exibição. Máx. 100.",
+        "order": "Posição de ordenação.",
+        "icon": "Identificador de ícone.",
+        "color": "Cor em hexadecimal."
+      }
+    },
+    "cgUpdate": { "desc": "Substitui um grupo de categorias." },
+    "cgDelete": { "desc": { "t1": "Exclui um grupo de forma reversível. As categorias filhas sobrevivem — o ", "t2": " delas é limpo." } }
+  },
+  "budgets": {
+    "title": "Orçamentos",
+    "intro": { "t1": "Um orçamento limita os gastos de uma categoria (ou, quando ", "t2": " é nulo, do registro financeiro inteiro) em uma janela recorrente. Compartilhe um orçamento com um grupo definindo ", "t3": "." },
+    "list": { "desc": "Lista todos os orçamentos." },
+    "get": { "desc": "Busca um orçamento." },
+    "create": {
+      "desc": "Cria um orçamento.",
+      "fields": {
+        "amount": "Limite por período. Precisa ser maior que 0.",
+        "currencyCode": "ISO-4217.",
+        "period": { "t1": " Semanal · ", "t2": " Mensal · ", "t3": " Trimestral · ", "t4": " Anual." },
+        "startDate": "Início do primeiro período.",
+        "isActive": "Se este orçamento está em vigor no momento.",
+        "endDate": "Parar de acompanhar depois desta data.",
+        "name": "Rótulo. Máx. 200.",
+        "categoryId": "Categoria a acompanhar. Omita para orçar todos os gastos.",
+        "groupId": "Grupo com quem compartilhar. Omita para deixar pessoal."
+      }
+    },
+    "update": { "desc": "Substitui um orçamento." },
+    "delete": { "desc": "Exclui um orçamento de forma reversível." }
+  },
+  "groups": {
+    "title": "Grupos",
+    "intro": "Os grupos são registros financeiros compartilhados — uma casa, uma viagem, um apartamento dividido. Todos os membros veem as mesmas transações; a propriedade continua pessoal. Participação e convites são gerenciados no app iOS; o que a API expõe aqui é o recurso em si.",
+    "list": { "desc": "Lista os grupos que você possui ou dos quais é membro." },
+    "get": { "desc": "Busca um grupo." },
+    "create": {
+      "desc": "Cria um grupo. Você se torna o dono; convide membros pelo app iOS.",
+      "fields": {
+        "name": "Nome de exibição. Máx. 100.",
+        "description": "Texto livre. Máx. 500.",
+        "icon": "Identificador de ícone.",
+        "color": "Cor em hexadecimal."
+      }
+    },
+    "update": { "desc": "Substitui os metadados de um grupo." },
+    "delete": { "desc": "Exclui um grupo de forma reversível. Os membros perdem a visibilidade; as transações subjacentes voltam a ser pessoais." }
+  },
+  "transactions": {
+    "title": "Transações",
+    "intro": {
+      "t1": "As transações são os verbos do registro financeiro. Elas vêm em quatro formatos: ",
+      "t2": " (de conta para conta) e ",
+      "t3": " (reajuste pontual). O endpoint base cria income/expense; as transferências têm o próprio endpoint; existem variantes em lote para importadores de alto volume."
+    },
+    "list": {
+      "desc": "Lista transações com paginação por cursor e filtros.",
+      "fields": {
+        "limit": { "t1": "Tamanho da página. ", "t2": ". Padrão: ", "t3": "." },
+        "cursor": "Token opaco de continuação, vindo da resposta anterior.",
+        "type": { "t1": " ou ", "t2": "." },
+        "dateFrom": "Limite inferior, inclusivo.",
+        "dateTo": "Limite superior, inclusivo.",
+        "categoryId": "Filtra por uma categoria.",
+        "accountId": "Filtra por uma conta.",
+        "groupId": "Filtra por um grupo compartilhado."
+      }
+    },
+    "get": { "desc": "Busca uma transação." },
+    "create": {
+      "desc": { "t1": "Cria uma única transação de receita ou despesa. Para transferências, use ", "t2": "." },
+      "fields": {
+        "type": { "t1": " ou ", "t2": "." },
+        "amount": { "t1": "Valor positivo em ", "t2": "." },
+        "currencyCode": "ISO-4217.",
+        "date": "Quando a transação ocorreu (UTC).",
+        "accountId": "Conta de origem/destino.",
+        "categoryId": "Rótulo de categoria.",
+        "payee": "Estabelecimento ou contraparte. Máx. 200.",
+        "note": "Observação livre. Máx. 2000.",
+        "groupId": "Compartilhar com um grupo.",
+        "exchangeRate": { "t1": "Taxa de câmbio quando ", "t2": " ≠ moeda principal do usuário." },
+        "convertedAmount": "Valor na moeda principal do usuário."
+      },
+      "exampleCaption": "Café de €8.50 ontem no Wise"
+    },
+    "update": { "desc": { "t1": "Substitui uma transação. O corpo é idêntico ao de ", "link": "Criar", "t2": "." } },
+    "delete": { "desc": "Exclui uma transação de forma reversível." },
+    "transfer": {
+      "desc": { "t1": "Cria uma transferência entre duas contas. Sem categoria. Para transferências entre moedas diferentes, informe ", "t2": " e ", "t3": " na moeda de destino." },
+      "fields": {
+        "fromAccountId": "Conta de origem.",
+        "toAccountId": "Conta de destino. Precisa ser diferente da de origem.",
+        "amount": { "t1": "Valor enviado, em ", "t2": "." },
+        "currencyCode": "Moeda de origem, ISO-4217.",
+        "date": "Data da transferência.",
+        "exchangeRate": "Obrigatório quando as moedas de origem e destino são diferentes.",
+        "convertedAmount": "Valor creditado no destino, na moeda dele.",
+        "note": "Máx. 2000."
+      }
+    },
+    "bulkTitle": "Operações em lote",
+    "bulkIntro": {
+      "t1": "Feitas para importadores. Cada lote é limitado a ",
+      "strong1": "100 itens",
+      "t2": " e roda em modo ",
+      "strong2": "best-effort",
+      "t3": ": uma única linha inválida não desfaz as outras. Os itens bem-sucedidos e os erros por linha são reportados separadamente, para você repetir apenas as falhas."
+    },
+    "bulkCreate": { "desc": "Cria até 100 transações em uma chamada." },
+    "bulkUpdate": { "desc": { "t1": "Atualiza até 100 transações em uma chamada. Cada item precisa incluir o seu ", "t2": " junto com o corpo completo da transação." } },
+    "bulkDelete": {
+      "desc": { "t1": "Exclui de forma reversível até 100 transações em uma chamada. Usa ", "t2": " em vez de ", "t3": " para que o corpo da requisição seja aceito por todos os clientes HTTP." },
+      "fields": {
+        "ids": "De 1 a 100 ids de transação."
+      }
+    },
+    "objectTitle": "O objeto de transação",
+    "object": {
+      "id": "Identificador opaco.",
+      "amount": { "t1": "Em ", "t2": "." },
+      "currencyCode": "ISO-4217.",
+      "exchangeRate": "Definido em lançamentos entre moedas diferentes.",
+      "convertedAmount": "O mesmo valor na moeda principal do usuário.",
+      "date": "ISO-8601 UTC.",
+      "accountId": "Em transferências, esta é a conta de origem.",
+      "toAccountId": "Conta de destino, apenas em transferências.",
+      "categoryId": "Nulo em transferências.",
+      "groupId": "Definido se estiver compartilhado com um grupo.",
+      "payee": "Estabelecimento ou contraparte.",
+      "note": "Texto livre.",
+      "receiptImagePath": "Caminho do recibo anexado. Busque pelo endpoint de recibos (separado da v1).",
+      "recurringTransactionId": "Definido se esta linha foi gerada por uma regra de recorrência.",
+      "source": { "t1": "Etiqueta de origem — ", "t2": ", entre outras." },
+      "createdAt": "ISO-8601 UTC.",
+      "updatedAt": "ISO-8601 UTC."
+    }
+  },
+  "icons": {
+    "title": "Ícones",
+    "intro": "O Manilo vem com um conjunto curado de ícones e uma paleta de cores usados em tudo — contas, categorias e grupos. Busque o catálogo uma vez, guarde em cache e reutilize os identificadores ao criar recursos.",
+    "list": { "desc": { "t1": "Retorna a biblioteca completa de ícones, agrupada em categorias, junto com a paleta de cores suportada. É versionada — pode ser cacheada com segurança pelo campo ", "t2": "." } }
+  },
+  "versioning": {
+    "title": "Versionamento",
+    "noBreaking": {
+      "strong": "Sem mudanças incompatíveis dentro da v1.",
+      "t1": " Vamos apenas acrescentar novos endpoints, novos campos opcionais e novos valores de enum. O tipo, a nulabilidade ou a obrigatoriedade de um campo não vão mudar."
+    },
+    "enums": {
+      "strong": "Novos valores de enum não são mudanças incompatíveis.",
+      "t1": " Trate valores desconhecidos de ",
+      "t2": " ou ",
+      "t3": " como ",
+      "em": "“não renderizar”",
+      "t4": " em vez de quebrar — vamos adicioná-los conforme o produto crescer."
+    },
+    "v2": {
+      "strong": "Mudanças incompatíveis datadas",
+      "t1": " (se algum dia forem necessárias) virão sob ",
+      "t2": " com pelo menos 6 meses de disponibilidade paralela e um cabeçalho de descontinuação nas respostas da v1."
+    }
+  },
+  "support": {
+    "title": "Suporte",
+    "p1": {
+      "t1": "Achou um bug, quer um endpoint ou esbarrou em algo que não está documentado? Abra a ",
+      "link": "central de ajuda",
+      "t2": " ou escreva para ",
+      "t3": " — inclua o id da requisição (devolvido no cabeçalho de resposta ",
+      "t4": ") ao relatar um problema."
+    },
+    "p2": { "t1": "Para divulgações sensíveis de segurança (vazamento de token, contorno de permissão, leitura não autorizada), escreva para ", "t2": "." }
+  }
+}

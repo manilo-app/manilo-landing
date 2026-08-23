@@ -1,0 +1,154 @@
+---
+import Base from '../../layouts/Base.astro';
+import { navUrl, type Locale } from '../../i18n/config';
+import { getDict } from '../../i18n';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const d = getDict<any>(lang, 'terms');
+const chrome = getDict<any>(lang, 'chrome');
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: chrome.nav.home, item: 'https://manilo.app/' },
+    { '@type': 'ListItem', position: 2, name: d.jsonLd.breadcrumbName, item: 'https://manilo.app/terms' },
+  ],
+};
+---
+<Base
+  title={d.meta.title}
+  description={d.meta.description}
+  path="/terms"
+  locale={lang}
+  screenLabel="04 Terms"
+  css={['/assets/doc.css']}
+  js={['/assets/doc.js']}
+>
+<Fragment slot="head">
+<script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
+</Fragment>
+
+<section class="doc-hero">
+  <div class="container">
+    <span class="t-eyebrow">{d.hero.eyebrow}</span>
+    <h1>{d.hero.title}</h1>
+    <p class="doc-meta">
+      <span><i class="fa-solid fa-calendar"></i> {d.hero.updated}</span>
+
+    </p>
+  </div>
+</section>
+
+<div class="container">
+<div class="doc">
+  <aside class="doc__toc doc__toc--collapsible" aria-label={d.toc.ariaLabel}>
+    <h4>{d.toc.heading}</h4>
+    <button class="doc__toc-toggle" type="button" aria-expanded="false" aria-controls="toc-list">
+      <i class="fa-solid fa-bars"></i> {d.toc.toggle} <i class="fa-solid fa-chevron-down doc__toc-chev"></i>
+    </button>
+    <ol id="toc-list">
+      <li><a href="#agreement">{d.toc.items.agreement}</a></li>
+      <li><a href="#account">{d.toc.items.account}</a></li>
+      <li><a href="#subscription">{d.toc.items.subscription}</a></li>
+      <li><a href="#trial">{d.toc.items.trial}</a></li>
+      <li><a href="#use">{d.toc.items.use}</a></li>
+      <li><a href="#data">{d.toc.items.data}</a></li>
+      <li><a href="#beta">{d.toc.items.beta}</a></li>
+      <li><a href="#warranty">{d.toc.items.warranty}</a></li>
+      <li><a href="#liability">{d.toc.items.liability}</a></li>
+      <li><a href="#termination">{d.toc.items.termination}</a></li>
+      <li><a href="#law">{d.toc.items.law}</a></li>
+      <li><a href="#contact">{d.toc.items.contact}</a></li>
+    </ol>
+  </aside>
+
+  <article class="doc__body">
+    <section id="agreement">
+      <h2 data-num="01">{d.sections.agreement.heading}</h2>
+      <p>{d.sections.agreement.p[0]}</p>
+      <p>{d.sections.agreement.p[1]}</p>
+    </section>
+
+    <section id="account">
+      <h2 data-num="02">{d.sections.account.heading}</h2>
+      <p>{d.sections.account.p[0]}</p>
+      <p>{d.sections.account.p[1]}</p>
+    </section>
+
+    <section id="subscription">
+      <h2 data-num="03">{d.sections.subscription.heading}</h2>
+      <p>{d.sections.subscription.p[0]}</p>
+      <ul>
+        <li>{d.sections.subscription.autoRenew}</li>
+        <li set:html={d.sections.subscription.cancel} />
+        <li>{d.sections.subscription.refundsPre}<a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer">reportaproblem.apple.com</a>{d.sections.subscription.refundsPost}</li>
+        <li>{d.sections.subscription.rateChange}</li>
+      </ul>
+    </section>
+
+    <section id="trial">
+      <h2 data-num="04">{d.sections.trial.heading}</h2>
+      <p>{d.sections.trial.p[0]}</p>
+    </section>
+
+    <section id="use">
+      <h2 data-num="05">{d.sections.use.heading}</h2>
+      <p>{d.sections.use.p[0]}</p>
+      <ul>
+        <li>{d.sections.use.items[0]}</li>
+        <li>{d.sections.use.items[1]}</li>
+        <li>{d.sections.use.items[2]}</li>
+        <li>{d.sections.use.items[3]}</li>
+      </ul>
+    </section>
+
+    <section id="data">
+      <h2 data-num="06">{d.sections.data.heading}</h2>
+      <p>{d.sections.data.p1Pre}<a href={navUrl(lang, '/privacy')}>{d.sections.data.p1Link}</a>{d.sections.data.p1Post}</p>
+      <p>{d.sections.data.p2}</p>
+    </section>
+
+    <section id="beta">
+      <h2 data-num="07">{d.sections.beta.heading}</h2>
+      <div class="callout">
+        <i class="fa-solid fa-flask"></i>
+        <div>{d.sections.beta.callout}</div>
+      </div>
+      <p>{d.sections.beta.p[0]}</p>
+    </section>
+
+    <section id="warranty">
+      <h2 data-num="08">{d.sections.warranty.heading}</h2>
+      <p>{d.sections.warranty.p[0]}</p>
+      <p>{d.sections.warranty.p[1]}</p>
+    </section>
+
+    <section id="liability">
+      <h2 data-num="09">{d.sections.liability.heading}</h2>
+      <p>{d.sections.liability.p[0]}</p>
+      <p>{d.sections.liability.p[1]}</p>
+    </section>
+
+    <section id="termination">
+      <h2 data-num="10">{d.sections.termination.heading}</h2>
+      <p>{d.sections.termination.p[0]}</p>
+    </section>
+
+    <section id="law">
+      <h2 data-num="11">{d.sections.law.heading}</h2>
+      <p>{d.sections.law.p[0]}</p>
+    </section>
+
+    <section id="contact">
+      <h2 data-num="12">{d.sections.contact.heading}</h2>
+      <p><a href="mailto:legal@manilo.app">legal@manilo.app</a></p>
+    </section>
+  </article>
+</div>
+</div>
+</Base>

@@ -1,0 +1,496 @@
+---
+import Base from '../../layouts/Base.astro';
+import { navUrl, type Locale } from '../../i18n/config';
+import { getDict } from '../../i18n';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const d = getDict<any>(lang, 'integrations');
+
+const techArticleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: d.jsonLd.techArticle.headline,
+  description: d.jsonLd.techArticle.description,
+  url: 'https://manilo.app/integrations',
+  inLanguage: 'en',
+  datePublished: '2026-05-19',
+  dateModified: '2026-08-16',
+  author: {
+    '@type': 'Person',
+    name: 'Borys Harholinskyi',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Manilo',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://manilo.app/assets/manilo-icon.svg',
+    },
+  },
+  about: {
+    '@type': 'SoftwareApplication',
+    name: 'Manilo',
+    operatingSystem: 'iOS 15+',
+    applicationCategory: 'FinanceApplication',
+    url: 'https://apps.apple.com/app/id6761738170',
+  },
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: d.jsonLd.breadcrumb.home, item: 'https://manilo.app/' },
+    { '@type': 'ListItem', position: 2, name: d.jsonLd.breadcrumb.integrations, item: 'https://manilo.app/integrations' },
+  ],
+};
+
+const howToLd = (h: any, anchor: string) => ({
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: h.name,
+  description: h.description,
+  totalTime: 'PT1M',
+  step: h.steps.map((s: any, i: number) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: s.name,
+    text: s.text,
+    ...(i === 0 && { url: `https://manilo.app/integrations#${anchor}` }),
+  })),
+});
+
+const howtoChatgptLd = howToLd(d.jsonLd.howtoChatgpt, 'chatgpt');
+const howtoClaudeLd = howToLd(d.jsonLd.howtoClaude, 'claude');
+const howtoCursorLd = howToLd(d.jsonLd.howtoCursor, 'cursor');
+---
+<Base
+  title={d.meta.title}
+  description={d.meta.description}
+  path="/integrations"
+  locale={lang}
+  ogDescription={d.meta.ogDescription}
+  ogType="article"
+  screenLabel="06 Integrations"
+  css={['/assets/doc.css', '/assets/integrations.css']}
+>
+<Fragment slot="head">
+<script is:inline>document.documentElement.className += " js";</script>
+<meta name="keywords" content={d.meta.keywords}>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:title" content={d.meta.twitterTitle}>
+<meta name="twitter:description" content={d.meta.twitterDescription}>
+<script type="application/ld+json" is:inline set:html={JSON.stringify(techArticleLd)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(howtoChatgptLd)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(howtoClaudeLd)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(howtoCursorLd)} />
+</Fragment>
+
+<section class="doc-hero">
+  <div class="container">
+    <div class="ig-wrap">
+      <span class="t-eyebrow">{d.hero.eyebrow}</span>
+      <h1>{d.hero.title}</h1>
+      <p class="ig-lead">{d.hero.lead}</p>
+      <p class="doc-meta">
+        <span><i class="fa-solid fa-stopwatch"></i> {d.hero.badges.time}</span>
+        <span><i class="fa-solid fa-shield-halved"></i> {d.hero.badges.oauth}</span>
+        <span><i class="fa-solid fa-plug"></i> {d.hero.badges.anyClient}</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+<div class="ig-wrap">
+
+  <section class="ig-section" id="picker" aria-labelledby="picker-title">
+    <span class="t-eyebrow">{d.picker.eyebrow}</span>
+    <h2 id="picker-title">{d.picker.title}</h2>
+
+    <div class="ig-picker" role="tablist" aria-labelledby="picker-title">
+      <button class="ig-tab ig-tab--chatgpt" id="tab-chatgpt" type="button" role="tab" aria-selected="true" aria-controls="panel-chatgpt" data-assistant="chatgpt">
+        <span class="ig-tab__logo" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></svg></span>
+        <span class="ig-tab__name">{d.picker.tabs.chatgpt.name}</span>
+        <span class="ig-tab__hint">{d.picker.tabs.chatgpt.hint}</span>
+        <i class="fa-solid fa-circle-check ig-tab__check" aria-hidden="true"></i>
+      </button>
+      <button class="ig-tab ig-tab--claude" id="tab-claude" type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-claude" data-assistant="claude">
+        <span class="ig-tab__logo" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg></span>
+        <span class="ig-tab__name">{d.picker.tabs.claude.name}</span>
+        <span class="ig-tab__hint">{d.picker.tabs.claude.hint}</span>
+        <i class="fa-solid fa-circle-check ig-tab__check" aria-hidden="true"></i>
+      </button>
+      <button class="ig-tab ig-tab--cursor" id="tab-cursor" type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-cursor" data-assistant="cursor">
+        <span class="ig-tab__logo" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.503.131 1.891 5.678a.84.84 0 0 0-.42.726v11.188c0 .3.162.575.42.724l9.609 5.55a1 1 0 0 0 .998 0l9.61-5.55a.84.84 0 0 0 .42-.724V6.404a.84.84 0 0 0-.42-.726L12.497.131a1.01 1.01 0 0 0-.996 0M2.657 6.338h18.55c.263 0 .43.287.297.515L12.23 22.918c-.062.107-.229.064-.229-.06V12.335a.59.59 0 0 0-.295-.51l-9.11-5.257c-.109-.063-.064-.23.061-.23"/></svg></span>
+        <span class="ig-tab__name">{d.picker.tabs.cursor.name}</span>
+        <span class="ig-tab__hint">{d.picker.tabs.cursor.hint}</span>
+        <i class="fa-solid fa-circle-check ig-tab__check" aria-hidden="true"></i>
+      </button>
+      <button class="ig-tab ig-tab--other" id="tab-other" type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="panel-other" data-assistant="other">
+        <span class="ig-tab__logo" aria-hidden="true"><i class="fa-solid fa-plug"></i></span>
+        <span class="ig-tab__name">{d.picker.tabs.other.name}</span>
+        <span class="ig-tab__hint">{d.picker.tabs.other.hint}</span>
+        <i class="fa-solid fa-circle-check ig-tab__check" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <section class="ig-panel is-active" id="panel-chatgpt" role="tabpanel" tabindex="0" aria-labelledby="tab-chatgpt">
+      <div class="glass-flat ig-panel__card">
+        <header class="ig-panel__head">
+          <h3>{d.picker.chatgpt.title}</h3>
+          <span class="ig-time"><i class="fa-regular fa-clock"></i> {d.picker.timeBadge}</span>
+        </header>
+        <ol class="ig-steps">
+          <li>
+            <span class="ig-steps__num" aria-hidden="true">1</span>
+            <div class="ig-steps__body">
+              <strong>{d.picker.chatgpt.step1.title}</strong>
+              <p>{d.picker.chatgpt.step1.body}</p>
+              <p class="ig-steps__action"><a class="btn btn--primary" href="https://chatgpt.com/plugins/plugin_asdk_app_6a037e4f480081919938b01d5943dec4" target="_blank" rel="noopener" data-cta="Connect Manilo to ChatGPT" data-cta-position="panel-chatgpt"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></svg> {d.picker.chatgpt.step1.cta}</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="ig-steps__num" aria-hidden="true">2</span>
+            <div class="ig-steps__body">
+              <strong>{d.picker.chatgpt.step2.title}</strong>
+              <p set:html={d.picker.chatgpt.step2.bodyHtml} />
+            </div>
+          </li>
+          <li class="ig-steps__done">
+            <span class="ig-steps__num ig-steps__num--done" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            <div class="ig-steps__body">
+              <strong>{d.picker.chatgpt.done.title}</strong>
+              <p set:html={d.picker.chatgpt.done.bodyHtml} />
+            </div>
+          </li>
+        </ol>
+        <details class="ig-manual">
+          <summary><i class="fa-solid fa-chevron-right"></i> {d.picker.chatgpt.manual.summary}</summary>
+          <div class="ig-manual__body">
+            <p set:html={d.picker.chatgpt.manual.introHtml} />
+            <ul>
+              <li>{d.picker.chatgpt.manual.nameLabel} <code>Manilo</code></li>
+              <li>{d.picker.chatgpt.manual.urlLabel} <code>https://api.manilo.app/mcp</code></li>
+              <li>{d.picker.chatgpt.manual.authLabel} <strong>OAuth</strong></li>
+            </ul>
+          </div>
+        </details>
+        <p class="ig-more">{d.picker.chatgpt.morePre} <a href={navUrl(lang, '/chatgpt')}>{d.picker.chatgpt.moreLink}</a> {d.picker.chatgpt.morePost}</p>
+      </div>
+    </section>
+
+    <section class="ig-panel" id="panel-claude" role="tabpanel" tabindex="0" aria-labelledby="tab-claude">
+      <div class="glass-flat ig-panel__card">
+        <header class="ig-panel__head">
+          <h3>{d.picker.claude.title}</h3>
+          <span class="ig-time"><i class="fa-regular fa-clock"></i> {d.picker.timeBadge}</span>
+        </header>
+        <ol class="ig-steps">
+          <li>
+            <span class="ig-steps__num" aria-hidden="true">1</span>
+            <div class="ig-steps__body">
+              <strong>{d.picker.claude.step1.title}</strong>
+              <p>{d.picker.claude.step1.pre} <strong>claude.ai</strong> {d.picker.claude.step1.mid} <strong>{d.picker.claude.step1.settingsPath}</strong> → <em>{d.picker.claude.step1.addConnector}</em>{d.picker.claude.step1.end}</p>
+            </div>
+          </li>
+          <li>
+            <span class="ig-steps__num" aria-hidden="true">2</span>
+            <div class="ig-steps__body">
+              <strong>{d.picker.claude.step2.title}</strong>
+              <p>{d.picker.claude.step2.nameLabel} <code>Manilo</code>. {d.picker.claude.step2.serverLabel}</p>
+              <div class="ig-copy">
+                <code>https://api.manilo.app/mcp</code>
+                <button class="ig-copy__btn" type="button" data-copy="https://api.manilo.app/mcp" aria-label={d.picker.copyAria}><i class="fa-regular fa-copy" aria-hidden="true"></i><span>{d.picker.copy}</span></button>
+              </div>
+              <p class="t-dim">{d.picker.claude.step2.legacyPre} <code>api.ledgy.app</code> {d.picker.claude.step2.legacyPost}</p>
+            </div>
+          </li>
+          <li>
+            <span class="ig-steps__num" aria-hidden="true">3</span>
+            <div class="ig-steps__body">
+              <strong>{d.picker.claude.step3.title}</strong>
+              <p set:html={d.picker.claude.step3.bodyHtml} />
+            </div>
+          </li>
+          <li class="ig-steps__done">
+            <span class="ig-steps__num ig-steps__num--done" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            <div class="ig-steps__body">
+              <strong>{d.picker.claude.done.title}</strong>
+              <p set:html={d.picker.claude.done.bodyHtml} />
+            </div>
+          </li>
+        </ol>
+        <p class="ig-more">{d.picker.claude.morePre} <a href={navUrl(lang, '/chatgpt')}>{d.picker.claude.moreLink}</a>{d.picker.claude.morePost}</p>
+      </div>
+    </section>
+
+    <section class="ig-panel" id="panel-cursor" role="tabpanel" tabindex="0" aria-labelledby="tab-cursor">
+      <div class="glass-flat ig-panel__card">
+        <header class="ig-panel__head">
+          <h3>{d.picker.cursor.title}</h3>
+          <span class="ig-time"><i class="fa-regular fa-clock"></i> {d.picker.timeBadge}</span>
+        </header>
+        <ol class="ig-steps">
+          <li>
+            <span class="ig-steps__num" aria-hidden="true">1</span>
+            <div class="ig-steps__body">
+              <strong>{d.picker.cursor.step1.title}</strong>
+              <p>{d.picker.cursor.step1.body}</p>
+              <p class="ig-steps__action"><a class="btn btn--primary" href="https://cursor.com/install-mcp?name=manilo&amp;config=eyJ1cmwiOiJodHRwczovL2FwaS5tYW5pbG8uYXBwL21jcCJ9" target="_blank" rel="noopener" data-cta="Add Manilo to Cursor" data-cta-position="panel-cursor"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.503.131 1.891 5.678a.84.84 0 0 0-.42.726v11.188c0 .3.162.575.42.724l9.609 5.55a1 1 0 0 0 .998 0l9.61-5.55a.84.84 0 0 0 .42-.724V6.404a.84.84 0 0 0-.42-.726L12.497.131a1.01 1.01 0 0 0-.996 0M2.657 6.338h18.55c.263 0 .43.287.297.515L12.23 22.918c-.062.107-.229.064-.229-.06V12.335a.59.59 0 0 0-.295-.51l-9.11-5.257c-.109-.063-.064-.23.061-.23"/></svg> {d.picker.cursor.step1.cta}</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="ig-steps__num" aria-hidden="true">2</span>
+            <div class="ig-steps__body">
+              <strong>{d.picker.cursor.step2.title}</strong>
+              <p set:html={d.picker.cursor.step2.bodyHtml} />
+            </div>
+          </li>
+          <li class="ig-steps__done">
+            <span class="ig-steps__num ig-steps__num--done" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            <div class="ig-steps__body">
+              <strong>{d.picker.cursor.done.title}</strong>
+              <p set:html={d.picker.cursor.done.bodyHtml} />
+            </div>
+          </li>
+        </ol>
+        <details class="ig-manual">
+          <summary><i class="fa-solid fa-chevron-right"></i> {d.picker.cursor.manual.summary}</summary>
+          <div class="ig-manual__body">
+            <p>{d.picker.cursor.manual.introPre} <code>mcp.json</code> {d.picker.cursor.manual.introPost}</p>
+            <div class="code-block"><div class="code-block__header"><span class="code-block__lang">mcp.json</span></div><pre is:raw>{
+  <span class="c-key">"mcpServers"</span>: {
+    <span class="c-key">"manilo"</span>: { <span class="c-key">"url"</span>: <span class="c-str">"https://api.manilo.app/mcp"</span> }
+  }
+}</pre></div>
+          </div>
+        </details>
+        <p class="ig-more">{d.picker.cursor.morePre} <a href="https://dashboard.manilo.app" target="_blank" rel="noopener noreferrer">{d.picker.cursor.moreLink}</a> {d.picker.cursor.morePost}</p>
+      </div>
+    </section>
+
+    <section class="ig-panel" id="panel-other" role="tabpanel" tabindex="0" aria-labelledby="tab-other">
+      <div class="glass-flat ig-panel__card">
+        <header class="ig-panel__head">
+          <h3>{d.picker.other.title}</h3>
+          <span class="ig-time"><i class="fa-regular fa-clock"></i> {d.picker.timeBadge}</span>
+        </header>
+        <ol class="ig-steps">
+          <li>
+            <span class="ig-steps__num" aria-hidden="true">1</span>
+            <div class="ig-steps__body">
+              <strong>{d.picker.other.step1.title}</strong>
+              <p>{d.picker.other.step1.body}</p>
+              <div class="ig-copy">
+                <code>https://api.manilo.app/mcp</code>
+                <button class="ig-copy__btn" type="button" data-copy="https://api.manilo.app/mcp" aria-label={d.picker.copyAria}><i class="fa-regular fa-copy" aria-hidden="true"></i><span>{d.picker.copy}</span></button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="ig-steps__num" aria-hidden="true">2</span>
+            <div class="ig-steps__body">
+              <strong>{d.picker.other.step2.title}</strong>
+              <p>{d.picker.other.step2.pre} <code>client_id</code> {d.picker.other.step2.post}</p>
+            </div>
+          </li>
+          <li class="ig-steps__done">
+            <span class="ig-steps__num ig-steps__num--done" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            <div class="ig-steps__body">
+              <strong>{d.picker.other.done.title}</strong>
+              <p>{d.picker.other.done.body}</p>
+            </div>
+          </li>
+        </ol>
+        <div class="ig-clients" aria-label={d.picker.other.clientsAria}>
+          {d.picker.other.clients.map((c: string) => <span>{c}</span>)}
+        </div>
+        <p class="ig-more">{d.picker.other.morePre} <a href={navUrl(lang, '/api-v1')}>{d.picker.other.moreLink}</a> {d.picker.other.morePost}</p>
+      </div>
+    </section>
+  </section>
+
+  <section class="ig-section" id="prompts" aria-labelledby="prompts-title">
+    <div class="ig-section__head">
+      <span class="t-eyebrow">{d.prompts.eyebrow}</span>
+      <h2 id="prompts-title">{d.prompts.title}</h2>
+      <p class="t-dim">{d.prompts.sub}</p>
+    </div>
+    <div class="ig-prompts">
+      {d.prompts.items.map((p: { q: string; a: string }) => (
+        <div class="ig-prompt">
+          <p class="ig-prompt__q"><i class="fa-solid fa-quote-left" aria-hidden="true"></i>{p.q}</p>
+          <p class="ig-prompt__a">{p.a}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="ig-section" id="capabilities" aria-labelledby="capabilities-title">
+    <div class="ig-section__head">
+      <span class="t-eyebrow">{d.capabilities.eyebrow}</span>
+      <h2 id="capabilities-title">{d.capabilities.title}</h2>
+      <p class="t-dim">{d.capabilities.sub}</p>
+    </div>
+    <div class="ig-caps">
+      <div class="ig-cap">
+        <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+        <h3>{d.capabilities.cards.read.title}</h3>
+        <p>{d.capabilities.cards.read.body}</p>
+      </div>
+      <div class="ig-cap">
+        <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
+        <h3>{d.capabilities.cards.edit.title}</h3>
+        <p>{d.capabilities.cards.edit.body}</p>
+      </div>
+      <div class="ig-cap">
+        <i class="fa-solid fa-right-left" aria-hidden="true"></i>
+        <h3>{d.capabilities.cards.move.title}</h3>
+        <p>{d.capabilities.cards.move.body}</p>
+      </div>
+      <div class="ig-cap">
+        <i class="fa-solid fa-coins" aria-hidden="true"></i>
+        <h3>{d.capabilities.cards.convert.title}</h3>
+        <p>{d.capabilities.cards.convert.body}</p>
+      </div>
+      <div class="ig-cap">
+        <i class="fa-solid fa-receipt" aria-hidden="true"></i>
+        <h3>{d.capabilities.cards.receipts.title}</h3>
+        <p>{d.capabilities.cards.receipts.body}</p>
+      </div>
+      <div class="ig-cap">
+        <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+        <h3>{d.capabilities.cards.reconcile.title}</h3>
+        <p>{d.capabilities.cards.reconcile.body}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ig-section" id="privacy" aria-labelledby="privacy-title">
+    <div class="ig-section__head">
+      <span class="t-eyebrow">{d.privacy.eyebrow}</span>
+      <h2 id="privacy-title">{d.privacy.title}</h2>
+    </div>
+    <div class="ig-priv">
+      <div class="ig-priv__item">
+        <i class="fa-solid fa-eye-slash" aria-hidden="true"></i>
+        <h3>{d.privacy.items.scope.title}</h3>
+        <p>{d.privacy.items.scope.body}</p>
+      </div>
+      <div class="ig-priv__item">
+        <i class="fa-solid fa-key" aria-hidden="true"></i>
+        <h3>{d.privacy.items.password.title}</h3>
+        <p>{d.privacy.items.password.body}</p>
+      </div>
+      <div class="ig-priv__item">
+        <i class="fa-solid fa-plug-circle-xmark" aria-hidden="true"></i>
+        <h3>{d.privacy.items.disconnect.title}</h3>
+        <p>{d.privacy.items.disconnect.body}</p>
+      </div>
+    </div>
+    <p class="ig-priv-note">{d.privacy.notePre} <a href={navUrl(lang, '/privacy')}>{d.privacy.noteLink}</a>{d.privacy.notePost}</p>
+  </section>
+
+</div>
+</div>
+
+<section class="cta-band" id="support">
+  <div class="cta-band__inner">
+    <h2>{d.ctaBand.title}</h2>
+    <p>{d.ctaBand.sub}</p>
+    <div class="cta-band__buttons">
+      <a class="btn btn--primary btn--lg" href="#picker" data-cta="Pick your assistant" data-cta-position="cta-band">{d.ctaBand.pickCta}</a>
+      <a class="btn btn--secondary btn--lg" href="https://apps.apple.com/app/id6761738170" target="_blank" rel="noopener noreferrer" data-cta="Get the iOS app" data-cta-position="cta-band"><i class="fa-brands fa-apple" aria-hidden="true"></i> {d.ctaBand.iosCta}</a>
+    </div>
+    <p class="ig-cta-note">{d.ctaBand.helpIntro} <a href={navUrl(lang, '/support')}>{d.ctaBand.helpLink}</a> · <a href="mailto:support@manilo.app">support@manilo.app</a></p>
+  </div>
+</section>
+
+<script is:inline>
+// Assistant picker — accessible tabs with hash deep-links and copy buttons.
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".ig-tab"));
+  if (!tabs.length) return;
+  var panels = {};
+  tabs.forEach(function (t) { panels[t.dataset.assistant] = document.getElementById("panel-" + t.dataset.assistant); });
+  // Old section ids from the previous version of this page.
+  var LEGACY = { "quick-start-chatgpt": "chatgpt", "quick-start": "claude", "other-clients": "other" };
+
+  function select(key, opts) {
+    opts = opts || {};
+    if (!panels[key]) return;
+    tabs.forEach(function (t) {
+      var on = t.dataset.assistant === key;
+      t.setAttribute("aria-selected", String(on));
+      t.tabIndex = on ? 0 : -1;
+      panels[t.dataset.assistant].classList.toggle("is-active", on);
+    });
+    if (opts.updateHash && history.replaceState) history.replaceState(null, "", "#" + key);
+    if (opts.track) {
+      var evt = { assistant: key, page: location.pathname };
+      if (window.plausible) window.plausible("assistant_select", { props: evt });
+      if (window.gtag) window.gtag("event", "assistant_select", evt);
+    }
+  }
+
+  tabs.forEach(function (t, i) {
+    t.addEventListener("click", function () { select(t.dataset.assistant, { updateHash: true, track: true }); });
+    t.addEventListener("keydown", function (e) {
+      var next = null;
+      if (e.key === "ArrowRight" || e.key === "ArrowDown") next = (i + 1) % tabs.length;
+      else if (e.key === "ArrowLeft" || e.key === "ArrowUp") next = (i - 1 + tabs.length) % tabs.length;
+      else if (e.key === "Home") next = 0;
+      else if (e.key === "End") next = tabs.length - 1;
+      if (next === null) return;
+      e.preventDefault();
+      tabs[next].focus();
+      select(tabs[next].dataset.assistant, { updateHash: true });
+    });
+  });
+
+  function fromHash(scroll) {
+    var h = decodeURIComponent(location.hash.slice(1));
+    var key = panels[h] ? h : LEGACY[h];
+    if (!key) return false;
+    select(key);
+    if (scroll) {
+      var picker = document.getElementById("picker");
+      if (picker) requestAnimationFrame(function () { picker.scrollIntoView({ block: "start" }); });
+    }
+    return true;
+  }
+  if (!fromHash(true)) select("chatgpt");
+  window.addEventListener("hashchange", function () { fromHash(false); });
+
+  // Copy-to-clipboard for the MCP server URL.
+  document.querySelectorAll("[data-copy]").forEach(function (btn) {
+    var icon = btn.querySelector("i");
+    var label = btn.querySelector("span");
+    btn.addEventListener("click", function () {
+      var done = function () {
+        btn.classList.add("is-copied");
+        if (icon) icon.className = "fa-solid fa-check";
+        if (label) label.textContent = "Copied";
+        setTimeout(function () {
+          btn.classList.remove("is-copied");
+          if (icon) icon.className = "fa-regular fa-copy";
+          if (label) label.textContent = "Copy";
+        }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(btn.dataset.copy).then(done, done);
+      } else {
+        done();
+      }
+    });
+  });
+})();
+</script>
+</Base>

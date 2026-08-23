@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "title": "Manilo'yu ChatGPT, Claude ve Cursor'a Bağla — MCP Harcama Takibi",
+    "description": "Manilo, yerleşik MCP sunuculu harcama takip uygulaması. ChatGPT ve Cursor tek tıkla, Claude ve diğer MCP istemcileri kopyala-yapıştır URL ile bağlanır. Kurulum ~1 dk.",
+    "ogDescription": "Yapay zeka asistanını seç ve Manilo'yu yaklaşık bir dakikada bağla — ChatGPT ve Cursor için tek tık, Claude ve diğer tüm istemciler için kopyala-yapıştır MCP URL'si.",
+    "keywords": "mcp harcama takibi, manilo chatgpt bağlama, claude harcama takibi, cursor mcp sunucusu, mcp sunucu kurulumu, model context protocol finans, yapay zeka harcama kaydı, claude ile harcama kaydetme",
+    "twitterTitle": "Manilo'yu ChatGPT, Claude ve Cursor'a Bağla — MCP Harcama Takibi",
+    "twitterDescription": "Yerleşik MCP sunuculu harcama takip uygulaması. Asistanını seç, yaklaşık bir dakikada bağlan, sonra paranı sohbette sor."
+  },
+  "jsonLd": {
+    "techArticle": {
+      "headline": "Manilo'yu ChatGPT, Claude ve Cursor'a Bağla — MCP Harcama Takibi",
+      "description": "Manilo harcama takip uygulamasını ChatGPT'ye, Claude'a, Cursor'a veya Model Context Protocol konuşan herhangi bir yapay zeka asistanına bağlama rehberi."
+    },
+    "breadcrumb": {
+      "home": "Ana sayfa",
+      "integrations": "Entegrasyonlar"
+    },
+    "howtoChatgpt": {
+      "name": "Manilo'yu ChatGPT'ye bağlama",
+      "description": "Manilo harcama takip uygulamasını iki adımda ChatGPT'ye bağla.",
+      "steps": [
+        { "name": "Manilo'yu ChatGPT'ye bağla", "text": "ChatGPT'de Manilo uygulamasını aç ve Connect'e tıkla." },
+        { "name": "Yönergeleri izle", "text": "Apple, Google veya e-posta ile giriş yap ve erişim ver. Sonra herhangi bir sohbette Manilo'dan bahset." }
+      ]
+    },
+    "howtoClaude": {
+      "name": "Manilo'yu Claude'a bağlama",
+      "description": "Manilo harcama takip uygulamasını Claude'a özel MCP bağlayıcısı olarak ekle.",
+      "steps": [
+        { "name": "Bağlayıcı ayarlarını aç", "text": "claude.ai üzerinde veya Claude Desktop'ta Settings → Connectors → Add custom connector yolunu izle." },
+        { "name": "Manilo sunucu URL'sini yapıştır", "text": "Name: Manilo. Server URL: https://api.manilo.app/mcp." },
+        { "name": "Ekle ve giriş yap", "text": "Add'e tıkla, Apple, Google veya e-posta ile giriş yap, sonra herhangi bir sohbette bağlayıcılar menüsünden Manilo'yu etkinleştir." }
+      ]
+    },
+    "howtoCursor": {
+      "name": "Manilo'yu Cursor'a bağlama",
+      "description": "Manilo MCP sunucusunu Cursor'a tek tıkla kur.",
+      "steps": [
+        { "name": "Manilo'yu Cursor'a ekle", "text": "Tek tık kurulum bağlantısını kullan ya da https://api.manilo.app/mcp adresini mcp.json dosyana ekle." },
+        { "name": "Yönergeleri izle", "text": "Cursor açıldığında Install'a tıkla, sonra girişi tarayıcında tamamla." }
+      ]
+    }
+  },
+  "hero": {
+    "eyebrow": "Entegrasyonlar",
+    "title": "Manilo'yu ChatGPT, Claude veya Cursor'a bağla",
+    "lead": "Manilo, yerleşik MCP sunucusuna sahip tek harcama takip uygulaması. Model Context Protocol konuşan herhangi bir yapay zeka asistanından kendi cümlelerinle harcama kaydet, harcamalarını sorgula ve hesaplar arasında para taşı.",
+    "badges": {
+      "time": "Yaklaşık bir dakikada kur",
+      "oauth": "OAuth ile giriş — şifren asla paylaşılmaz",
+      "anyClient": "Her MCP istemcisiyle çalışır"
+    }
+  },
+  "picker": {
+    "eyebrow": "Kurulum",
+    "title": "Hangi yapay zeka asistanını kullanıyorsun?",
+    "timeBadge": "Yaklaşık bir dakika",
+    "copy": "Kopyala",
+    "copyAria": "Sunucu URL'sini kopyala",
+    "tabs": {
+      "chatgpt": { "name": "ChatGPT", "hint": "2 adım · tek tık" },
+      "claude": { "name": "Claude", "hint": "3 adım · URL kopyala" },
+      "cursor": { "name": "Cursor", "hint": "2 adım · tek tık" },
+      "other": { "name": "Diğer", "hint": "Windsurf, VS Code ve dahası" }
+    },
+    "chatgpt": {
+      "title": "Manilo'yu ChatGPT'ye bağla",
+      "step1": {
+        "title": "Manilo'yu ChatGPT'ye bağla",
+        "body": "Düğme, ChatGPT içinde Manilo uygulamasını açar.",
+        "cta": "Manilo'yu ChatGPT'ye bağla"
+      },
+      "step2": {
+        "title": "Yönergeleri izle",
+        "bodyHtml": "<strong>Connect</strong> düğmesine tıkla; Apple, Google veya e-posta ile giriş yap ve erişim ver."
+      },
+      "done": {
+        "title": "Hepsi bu — sohbet et yeter",
+        "bodyHtml": "Herhangi bir sohbette Manilo'dan bahset ya da paranı sor — <em>“Temmuzda markete ne kadar harcadım?”</em> ChatGPT uygulamayı kendiliğinden devreye alır."
+      },
+      "manual": {
+        "summary": "Uygulama planında ya da bölgende yok mu, yoksa elle kurmayı mı tercih ediyorsun?",
+        "introHtml": "<strong>Settings → Apps → Advanced settings → Developer mode</strong> seçeneğini aç (ChatGPT Plus, Pro veya Business gerektirir), <strong>Create</strong> düğmesine tıkla ve şunları doldur:",
+        "nameLabel": "Name:",
+        "urlLabel": "MCP Server URL:",
+        "authLabel": "Authentication:"
+      },
+      "morePre": "Ekstre içe aktarmanın adım adım anlatımı",
+      "moreLink": "ChatGPT'de Manilo",
+      "morePost": "sayfasında."
+    },
+    "claude": {
+      "title": "Manilo'yu Claude'a bağla",
+      "step1": {
+        "title": "Bağlayıcı ayarlarını aç",
+        "pre": "Önce",
+        "mid": "veya Claude Desktop'ta",
+        "settingsPath": "Settings → Connectors",
+        "addConnector": "Add custom connector",
+        "end": " adımına git."
+      },
+      "step2": {
+        "title": "Manilo sunucu URL'sini yapıştır",
+        "nameLabel": "Name:",
+        "serverLabel": "Server URL:",
+        "legacyPre": "Bağlantıyı eski",
+        "legacyPost": "adresiyle mi kurmuştun? Çalışmaya devam ediyor — yeniden bağlanmana gerek yok."
+      },
+      "step3": {
+        "title": "Ekle ve giriş yap",
+        "bodyHtml": "<strong>Add</strong>'e tıkla; Apple, Google veya e-posta ile giriş yap, sonra herhangi bir sohbette bağlayıcılar menüsünden <strong>Manilo</strong>'yu etkinleştir."
+      },
+      "done": {
+        "title": "Hepsi bu — sor yeter",
+        "bodyHtml": "<em>“Nisan harcamalarım marta kıyasla nasıl?”</em> Claude cevabı senin verilerinden verir."
+      },
+      "morePre": "Claude'a bir banka ekstresi bırakıp içe aktartman da mümkün — ayrıntılar",
+      "moreLink": "adım adım anlatımda",
+      "morePost": "; aynı akış Claude'da da çalışır."
+    },
+    "cursor": {
+      "title": "Manilo'yu Cursor'a bağla",
+      "step1": {
+        "title": "Manilo'yu Cursor'a ekle",
+        "body": "Tek tık — düğmeye bastığında Cursor, Manilo MCP sunucusu önceden doldurulmuş hâlde açılır.",
+        "cta": "Manilo'yu Cursor'a ekle"
+      },
+      "step2": {
+        "title": "Yönergeleri izle",
+        "bodyHtml": "Cursor açıldığında <strong>Install</strong>'a tıkla, ardından girişi tarayıcında tamamla."
+      },
+      "done": {
+        "title": "Hepsi bu — ajana sor",
+        "bodyHtml": "<em>“Az önce ödediğim €14'lük ekip yemeğini kaydet.”</em> Hem sohbette hem composer'da çalışır."
+      },
+      "manual": {
+        "summary": "Elle eklemeyi mi tercih ediyorsun?",
+        "introPre": "Bunu",
+        "introPost": "dosyana ekle (Cursor Settings → MCP), istendiğinde OAuth girişini tamamla:"
+      },
+      "morePre": "Cursor'dan kaydedilen harcamalar anında",
+      "moreLink": "web paneline",
+      "morePost": "ve iOS uygulamasına senkronize olur."
+    },
+    "other": {
+      "title": "Herhangi bir MCP istemcisini bağla",
+      "step1": {
+        "title": "Uzak MCP sunucusu ekle",
+        "body": "Windsurf, VS Code, Continue, Zed veya kendi ajanında uzak bir sunucu ekle ve şu adresi göster:"
+      },
+      "step2": {
+        "title": "İstendiğinde giriş yap",
+        "pre": "İstemcin OAuth 2.1'i PKCE ile tamamlar. Dynamic Client Registration (RFC 7591) desteklenir; elle",
+        "post": "girmen ya da kimlik bilgisi alışverişi yapman gerekmez."
+      },
+      "done": {
+        "title": "Hepsi bu — her yerde aynı araçlar",
+        "body": "Her MCP istemcisi; işlemler, hesaplar, bütçeler ve daha fazlasını kapsayan aynı 30+ aracı alır."
+      },
+      "clientsAria": "Uyumluluğu bilinen MCP istemcileri",
+      "clients": ["Windsurf", "VS Code", "Continue", "Zed", "Özel ajanlar"],
+      "morePre": "Kendi entegrasyonunu kodla mı yazıyorsun? Bunun yerine",
+      "moreLink": "REST API v1",
+      "morePost": "kullan."
+    }
+  },
+  "prompts": {
+    "eyebrow": "Günlük kullanım",
+    "title": "Neler sorabilirsin",
+    "sub": "Her cevap tahminden değil, senin verilerinden hesaplanır.",
+    "items": [
+      { "q": "Geçen ay kahveye ne kadar harcadım?", "a": "Her tarih aralığında kategori bazında toplamlar." },
+      { "q": "Dün Pret'te yediğim €12'lik öğle yemeğini Wise hesabıma ekle.", "a": "Satıcıyı, tutarı, para birimini ve tarihi çözümler." },
+      { "q": "Wise Personal'dan Cash'e 200 EUR aktar.", "a": "Hesaplar arası transferler, çapraz kur çevrimi dahil." },
+      { "q": "Nisan harcamalarım marta kıyasla nasıl?", "a": "Ana para biriminde çok dönemli karşılaştırma." },
+      { "q": "Mayısta €100 üzeri tüm işlemleri bul.", "a": "Filtrelenmiş işlem araması." },
+      { "q": "Bu çeyrekteki ilk 5 kategorimi göster.", "a": "İlk-N toplaması." },
+      { "q": "Santander bakiyem şu an ne kadar?", "a": "Canlı bakiye — mobil uygulamayla aynı formül." },
+      { "q": "Santander'i 616 EUR'ya eşitle — banka uygulamam öyle gösteriyor.", "a": "Dış bir rakamla eşitlemek için tek seferlik düzeltme." }
+    ]
+  },
+  "capabilities": {
+    "eyebrow": "Yetenekler",
+    "title": "Bağlandıktan sonra Manilo neler yapabilir",
+    "sub": "MCP sunucusu, asistanına 30'dan fazla araç sunar.",
+    "cards": {
+      "read": { "title": "Her şeyi oku", "body": "Hesaplar, işlemler, kategoriler, bütçeler, gruplar ve etiketler." },
+      "edit": { "title": "Ekle ve düzenle", "body": "İşlemler, hesaplar, kategoriler, bütçeler ve tekrarlayan kurallar." },
+      "move": { "title": "Para taşı", "body": "Hesaplar arası transferler; kur çevrimiyle çapraz para birimi dahil." },
+      "convert": { "title": "Para birimi çevir", "body": "Canlı ECB kurları; panel toplamları ana para biriminde." },
+      "receipts": { "title": "Fişleri yönet", "body": "Herkese açık bir URL'den fiş ekle; imzalı indirme bağlantıları al." },
+      "reconcile": { "title": "Bakiye ve mutabakat", "body": "Canlı hesap bakiyeleri ve bankanla tek seferlik mutabakat." }
+    }
+  },
+  "privacy": {
+    "eyebrow": "Güven",
+    "title": "Gizlilik ve kontrol",
+    "items": {
+      "scope": { "title": "Yalnızca sorduğunu görür", "body": "Asistan, sorunun gerektirdiği veriyi alır. Bağlantı sırasında defterinin tamamını Anthropic'e veya OpenAI'a göndermeyiz." },
+      "password": { "title": "Şifren sende kalır", "body": "Manilo'nun kendi onay sayfasında Apple, Google veya e-posta ile giriş yaparsın. Asistan şifreni asla görmez." },
+      "disconnect": { "title": "İstediğin an bağlantıyı kes", "body": "İstemcinin ayarlarından bağlayıcıyı kaldır — Claude, ChatGPT ya da başka biri. Erişim iptali anında geçerli olur." }
+    },
+    "notePre": "Tüm ayrıntılar",
+    "noteLink": "Gizlilik Politikamızda",
+    "notePost": "."
+  },
+  "ctaBand": {
+    "title": "Paranla konuşmaya hazır mısın?",
+    "sub": "Bir kez bağla, sonra sadece sor. Kurulum yaklaşık bir dakika.",
+    "pickCta": "Asistanını seç",
+    "iosCta": "iOS uygulamasını indir",
+    "helpIntro": "Takıldın mı ya da istemcin listede yok mu?",
+    "helpLink": "Yardım merkezi"
+  }
+}

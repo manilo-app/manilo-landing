@@ -1,0 +1,608 @@
+---
+import Base from '../../layouts/Base.astro';
+import { navUrl, type Locale } from '../../i18n/config';
+import { getDict } from '../../i18n';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const d = getDict<any>(lang, 'home');
+
+const appLd = {
+  '@context': 'https://schema.org',
+  '@type': 'MobileApplication',
+  name: 'Manilo',
+  alternateName: d.jsonLd.appAlternateName,
+  operatingSystem: 'iOS 15.0',
+  applicationCategory: 'FinanceApplication',
+  applicationSubCategory: 'BudgetingApplication',
+  description: d.jsonLd.appDescription,
+  downloadUrl: 'https://apps.apple.com/app/id6761738170',
+  installUrl: 'https://apps.apple.com/app/id6761738170',
+  url: 'https://manilo.app/',
+  softwareVersion: '1.0.1',
+  datePublished: '2026-05-19',
+  inLanguage: ['en', 'de', 'fr', 'it', 'pl', 'uk', 'es', 'hi', 'ja', 'ko', 'pt', 'ru', 'tr', 'zh'],
+  screenshot: [
+    'https://manilo.app/assets/screens/manilo-home.webp',
+    'https://manilo.app/assets/screens/manilo-add.webp',
+    'https://manilo.app/assets/screens/manilo-charts.webp',
+    'https://manilo.app/assets/screens/web-dash.webp',
+  ],
+  featureList: d.jsonLd.featureList,
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+    eligibleRegion: [
+      { '@type': 'Country', name: 'US' },
+      { '@type': 'Country', name: 'DE' },
+      { '@type': 'Country', name: 'GB' },
+      { '@type': 'Country', name: 'PL' },
+      { '@type': 'Country', name: 'UA' },
+      { '@type': 'Country', name: 'FR' },
+      { '@type': 'Country', name: 'IT' },
+    ],
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Manilo',
+    url: 'https://manilo.app/',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://manilo.app/assets/manilo-icon.svg',
+    },
+  },
+  author: {
+    '@type': 'Person',
+    name: 'Borys Harholinskyi',
+  },
+};
+
+const orgLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Manilo',
+  url: 'https://manilo.app/',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://manilo.app/assets/manilo-icon.svg',
+    width: 512,
+    height: 512,
+  },
+  foundingDate: '2026-05-19',
+  founder: {
+    '@type': 'Person',
+    name: 'Borys Harholinskyi',
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer support',
+    email: 'support@manilo.app',
+    availableLanguage: ['English'],
+  },
+  sameAs: ['https://apps.apple.com/app/id6761738170'],
+};
+
+const websiteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Manilo',
+  url: 'https://manilo.app/',
+  description: d.jsonLd.websiteDescription,
+  publisher: {
+    '@type': 'Organization',
+    name: 'Manilo',
+    url: 'https://manilo.app/',
+  },
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  url: 'https://manilo.app/',
+  mainEntity: d.faq.items.map((f: any) => ({
+    '@type': 'Question',
+    name: f.schemaQ ?? f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.schemaA ?? f.a },
+  })),
+};
+---
+<Base
+  title={d.meta.title}
+  description={d.meta.description}
+  path="/"
+  locale={lang}
+  ogDescription={d.meta.ogDescription}
+  screenLabel="01 Home"
+  css={['/assets/home.css']}
+>
+<Fragment slot="head">
+<meta name="keywords" content={d.meta.keywords}>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content={d.meta.ogImageAlt}>
+<meta name="twitter:title" content={d.meta.twitterTitle}>
+<meta name="twitter:description" content={d.meta.twitterDescription}>
+<script type="application/ld+json" is:inline set:html={JSON.stringify(appLd)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(orgLd)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(websiteLd)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(faqLd)} />
+</Fragment>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <span class="pill" aria-label={d.hero.pillAria}>
+        <i class="fa-brands fa-apple" aria-hidden="true"></i>
+        {d.hero.pill}
+      </span>
+      <h1 class="gradient-text">{d.hero.title}</h1>
+      <p class="hero__sub">{d.hero.sub}</p>
+      <div class="hero__cta-row">
+        <div class="hero__cta">
+          <a class="btn btn--primary btn--lg" href="https://apps.apple.com/app/id6761738170" target="_blank" rel="noopener noreferrer" data-cta="Download on App Store" data-cta-position="hero">
+            <i class="fa-brands fa-apple" aria-hidden="true"></i>
+            {d.hero.downloadCta}
+          </a>
+          <span class="hero__cta-meta">{d.hero.downloadMeta}</span>
+        </div>
+        <div class="hero__cta">
+          <a class="btn btn--secondary btn--lg" href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer" data-cta="See pricing" data-cta-position="hero">{d.hero.pricingCta}</a>
+          <span class="hero__cta-meta">{d.hero.pricingMeta}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__visual" aria-hidden="false">
+      <div class="hero__phone">
+        <div class="hero__phone-frame">
+          <div class="hero__phone-screen">
+            <img src="/assets/screens/manilo-add.webp" alt={d.hero.phoneAlt} loading="eager" width="394" height="852">
+          </div>
+          <div class="hero__phone-notch" aria-hidden="true"></div>
+        </div>
+        <!-- floating capture chips -->
+        <div class="capture-chip capture-chip--mic">
+          <i class="fa-solid fa-microphone" aria-hidden="true"></i>
+          <div>
+            <div class="capture-chip__label">{d.hero.chips.voice.label}</div>
+            <div class="capture-chip__line">{d.hero.chips.voice.line}</div>
+          </div>
+        </div>
+        <div class="capture-chip capture-chip--receipt">
+          <i class="fa-solid fa-camera" aria-hidden="true"></i>
+          <div>
+            <div class="capture-chip__label">{d.hero.chips.receipt.label}</div>
+            <div class="capture-chip__line">{d.hero.chips.receipt.line}</div>
+          </div>
+        </div>
+        <div class="capture-chip capture-chip--telegram">
+          <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+          <div>
+            <div class="capture-chip__label">{d.hero.chips.telegram.label}</div>
+            <div class="capture-chip__line">{d.hero.chips.telegram.line}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Trust strip ===== -->
+<section class="trust container-narrow">
+  <a class="trust__item trust__item--link" href="#faq-languages">
+    <i class="fa-solid fa-globe" aria-hidden="true"></i>
+    <span>{d.trust.languages}</span>
+  </a>
+  <div class="trust__divider" aria-hidden="true"></div>
+  <div class="trust__item">
+    <i class="fa-solid fa-lock" aria-hidden="true"></i>
+    <span>{d.trust.offline}</span>
+  </div>
+</section>
+
+<!-- ===== How it works ===== -->
+<section class="section how">
+  <div class="container">
+    <div class="section__head">
+      <span class="t-eyebrow">{d.how.eyebrow}</span>
+      <h2>{d.how.title}</h2>
+      <p>{d.how.sub}</p>
+    </div>
+
+    <div class="how__grid">
+      <article class="glass how__card">
+        <div class="how__step">{d.how.steps[0].num}</div>
+        <i class="fa-solid fa-microphone how__icon" aria-hidden="true"></i>
+        <h3>{d.how.steps[0].title}</h3>
+        <p>{d.how.steps[0].body}</p>
+      </article>
+      <article class="glass how__card">
+        <div class="how__step">{d.how.steps[1].num}</div>
+        <i class="fa-solid fa-wand-magic-sparkles how__icon" aria-hidden="true"></i>
+        <h3>{d.how.steps[1].title}</h3>
+        <p>{d.how.steps[1].body}</p>
+      </article>
+      <article class="glass how__card">
+        <div class="how__step">{d.how.steps[2].num}</div>
+        <i class="fa-solid fa-arrows-rotate how__icon" aria-hidden="true"></i>
+        <h3>{d.how.steps[2].title}</h3>
+        <p>{d.how.steps[2].body}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Capture surfaces ===== -->
+<section class="section surfaces">
+  <div class="container">
+    <div class="section__head">
+      <span class="t-eyebrow">{d.surfaces.eyebrow}</span>
+      <h2>{d.surfaces.title} <span class="gradient-text">{d.surfaces.titleAccent}</span></h2>
+      <p>{d.surfaces.sub}</p>
+    </div>
+
+    <div class="surfaces__grid">
+      <article class="glass-flat surface">
+        <div class="surface__icon"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></div>
+        <h3>{d.surfaces.cards.iphone.title}</h3>
+        <p>{d.surfaces.cards.iphone.body}</p>
+      </article>
+      <article class="glass-flat surface">
+        <div class="surface__icon surface__icon--watch"><i class="fa-brands fa-apple" aria-hidden="true"></i></div>
+        <h3>{d.surfaces.cards.watch.title}</h3>
+        <p>{d.surfaces.cards.watch.body}</p>
+      </article>
+      <article class="glass-flat surface">
+        <div class="surface__icon"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i></div>
+        <h3>{d.surfaces.cards.siri.title}</h3>
+        <p>{d.surfaces.cards.siri.body}</p>
+      </article>
+      <article class="glass-flat surface">
+        <div class="surface__icon"><i class="fa-solid fa-wallet" aria-hidden="true"></i></div>
+        <h3>{d.surfaces.cards.wallet.title}</h3>
+        <p>{d.surfaces.cards.wallet.body}</p>
+      </article>
+      <article class="glass-flat surface">
+        <div class="surface__icon"><i class="fa-brands fa-telegram" aria-hidden="true"></i></div>
+        <h3>{d.surfaces.cards.telegram.title}</h3>
+        <p>{d.surfaces.cards.telegram.body}</p>
+      </article>
+      <article class="glass-flat surface">
+        <div class="surface__icon"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
+        <h3>{d.surfaces.cards.aiAgent.title}</h3>
+        <p>{d.surfaces.cards.aiAgent.body}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Smart by default — alternating rows ===== -->
+<section class="section smart">
+  <div class="container">
+    <div class="section__head">
+      <span class="t-eyebrow">{d.smart.eyebrow}</span>
+      <h2>{d.smart.title}</h2>
+    </div>
+
+    <div class="row">
+      <div class="row__copy">
+        <h3>{d.smart.ai.title}</h3>
+        <p>{d.smart.ai.body}</p>
+        <ul class="checklist">
+          {d.smart.ai.checklist.map((item: string) => (
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> {item}</li>
+          ))}
+        </ul>
+      </div>
+      <div class="row__visual">
+        <div class="phone-frame phone-frame--small">
+          <img src="/assets/screens/manilo-home.webp" alt={d.smart.ai.alt} loading="lazy" width="394" height="852">
+        </div>
+      </div>
+    </div>
+
+    <div class="row row--reverse">
+      <div class="row__copy">
+        <h3>{d.smart.budgets.title}</h3>
+        <p>{d.smart.budgets.body}</p>
+        <ul class="checklist">
+          {d.smart.budgets.checklist.map((item: string) => (
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> {item}</li>
+          ))}
+        </ul>
+      </div>
+      <div class="row__visual">
+        <div class="budget-mock glass">
+          <div class="budget-mock__row">
+            <div class="budget-mock__top">
+              <div class="budget-mock__cat">
+                <span class="cat-circle" style="--c: #FF6B6B;"><i class="fa-solid fa-utensils"></i></span>
+                <div>
+                  <div class="budget-mock__name">{d.smart.budgetMock.food.name}</div>
+                  <div class="budget-mock__sub">{d.smart.budgetMock.food.sub}</div>
+                </div>
+              </div>
+              <span class="budget-mock__pct budget-mock__pct--over">102%</span>
+            </div>
+            <div class="bar"><div class="bar__fill bar__fill--over" style="width:100%"></div></div>
+          </div>
+
+          <div class="budget-mock__row">
+            <div class="budget-mock__top">
+              <div class="budget-mock__cat">
+                <span class="cat-circle" style="--c: #F4A621;"><i class="fa-solid fa-cart-shopping"></i></span>
+                <div>
+                  <div class="budget-mock__name">{d.smart.budgetMock.groceries.name}</div>
+                  <div class="budget-mock__sub">{d.smart.budgetMock.groceries.sub}</div>
+                </div>
+              </div>
+              <span class="budget-mock__pct budget-mock__pct--warn">77%</span>
+            </div>
+            <div class="bar"><div class="bar__fill bar__fill--warn" style="width:77%"></div></div>
+          </div>
+
+          <div class="budget-mock__row">
+            <div class="budget-mock__top">
+              <div class="budget-mock__cat">
+                <span class="cat-circle" style="--c: #2BC470;"><i class="fa-solid fa-car"></i></span>
+                <div>
+                  <div class="budget-mock__name">{d.smart.budgetMock.transport.name}</div>
+                  <div class="budget-mock__sub">{d.smart.budgetMock.transport.sub}</div>
+                </div>
+              </div>
+              <span class="budget-mock__pct budget-mock__pct--ok">57%</span>
+            </div>
+            <div class="bar"><div class="bar__fill bar__fill--ok" style="width:57%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="row__copy">
+        <h3>{d.smart.fx.title}</h3>
+        <p>{d.smart.fx.body}</p>
+        <ul class="checklist">
+          {d.smart.fx.checklist.map((item: string) => (
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> {item}</li>
+          ))}
+        </ul>
+      </div>
+      <div class="row__visual">
+        <div class="fx-mock glass">
+          <div class="fx-mock__row">
+            <span class="fx-flag">€</span>
+            <div class="fx-mock__name">{d.smart.fxMock.trip}</div>
+            <div class="fx-mock__amount">€2,418.00</div>
+          </div>
+          <div class="fx-mock__arrow"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></div>
+          <div class="fx-mock__row fx-mock__row--primary">
+            <span class="fx-flag fx-flag--primary">$</span>
+            <div class="fx-mock__name">{d.smart.fxMock.primary}</div>
+            <div class="fx-mock__amount">$2,612.94</div>
+          </div>
+          <div class="fx-mock__rate">{d.smart.fxMock.rate}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row--reverse">
+      <div class="row__copy">
+        <h3>{d.smart.receipts.title}</h3>
+        <p>{d.smart.receipts.body}</p>
+        <ul class="checklist">
+          {d.smart.receipts.checklist.map((item: string) => (
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i> {item}</li>
+          ))}
+        </ul>
+      </div>
+      <div class="row__visual">
+        <div class="receipt-mock glass">
+          <div class="receipt-mock__paper">
+            <div class="receipt-mock__store">{d.smart.receiptMock.store}</div>
+            <div class="receipt-mock__line"><span>{d.smart.receiptMock.item1}</span><span>$4.50</span></div>
+            <div class="receipt-mock__line"><span>{d.smart.receiptMock.item2}</span><span>$5.25</span></div>
+            <div class="receipt-mock__line receipt-mock__line--total"><span>{d.smart.receiptMock.totalLabel}</span><span>$9.75</span></div>
+            <div class="receipt-mock__date">{d.smart.receiptMock.date}</div>
+          </div>
+          <div class="receipt-mock__tag">
+            <span class="cat-circle" style="--c: #F4A621;"><i class="fa-solid fa-mug-saucer"></i></span>
+            <div>
+              <div class="receipt-mock__cat">{d.smart.receiptMock.category}</div>
+              <div class="receipt-mock__amount">−$9.75</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MCP ===== -->
+<section class="section mcp">
+  <div class="container">
+    <div class="section__head">
+      <span class="t-eyebrow">{d.mcp.eyebrow}</span>
+      <h2>{d.mcp.titlePre} <span class="gradient-text">{d.mcp.titleAccent}</span><br>{d.mcp.titlePost}</h2>
+      <p>{d.mcp.sub}</p>
+    </div>
+
+    <div class="mcp__inner glass">
+      <div class="mcp__viz" aria-hidden="true">
+        <div class="mcp__hub">
+          <img src="/assets/manilo-icon.svg" alt="">
+          <span>{d.mcp.viz.hub}</span>
+        </div>
+        <div class="mcp__client mcp__client--claude">
+          <i class="fa-solid fa-comment-dots"></i>
+          <span>{d.mcp.viz.claude}</span>
+        </div>
+        <div class="mcp__client mcp__client--gpt">
+          <i class="fa-solid fa-circle-nodes"></i>
+          <span>{d.mcp.viz.chatgpt}</span>
+        </div>
+        <div class="mcp__client mcp__client--cursor">
+          <i class="fa-solid fa-i-cursor"></i>
+          <span>{d.mcp.viz.cursor}</span>
+        </div>
+        <div class="mcp__client mcp__client--other">
+          <i class="fa-solid fa-puzzle-piece"></i>
+          <span>{d.mcp.viz.more}</span>
+        </div>
+        <svg class="mcp__lines" viewBox="0 0 600 360" preserveAspectRatio="none">
+          <line x1="300" y1="180" x2="80" y2="60"></line>
+          <line x1="300" y1="180" x2="520" y2="60"></line>
+          <line x1="300" y1="180" x2="80" y2="300"></line>
+          <line x1="300" y1="180" x2="520" y2="300"></line>
+        </svg>
+      </div>
+
+      <div class="mcp__copy">
+        <ul class="mcp__prompts">
+          {d.mcp.prompts.map((p: string) => (
+            <li><i class="fa-solid fa-quote-left"></i> {p}</li>
+          ))}
+        </ul>
+        <p class="mcp__note">{d.mcp.note}</p>
+        <a class="btn btn--secondary" href={navUrl(lang, '/integrations')} data-cta="Set up your assistant" data-cta-position="mcp">{d.mcp.setupCta}</a>
+        <a class="btn btn--ghost" href={navUrl(lang, '/chatgpt')} data-cta="Open ChatGPT page" data-cta-position="mcp">{d.mcp.chatgptCta}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Built for sharing ===== -->
+<section class="section sharing">
+  <div class="container">
+    <div class="sharing__inner glass">
+      <div class="sharing__copy">
+        <span class="t-eyebrow">{d.sharing.eyebrow}</span>
+        <h2>{d.sharing.titlePre} <br><span class="gradient-text">{d.sharing.titleAccent}</span></h2>
+        <p>{d.sharing.sub}</p>
+        <a class="btn btn--secondary" href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer" data-cta="See sharing in pricing" data-cta-position="sharing">{d.sharing.cta}</a>
+      </div>
+      <div class="sharing__diagram" aria-hidden="true">
+        <div class="avatar-cluster">
+          <div class="avatar avatar--a">
+            <i class="fa-solid fa-user"></i>
+            <span class="avatar__chip avatar__chip--coffee">−$9.75</span>
+          </div>
+          <div class="avatar avatar--b">
+            <i class="fa-solid fa-user"></i>
+            <span class="avatar__chip avatar__chip--rent">−$1,450</span>
+          </div>
+          <div class="avatar avatar--c">
+            <i class="fa-solid fa-user"></i>
+            <span class="avatar__chip avatar__chip--gas">−€60</span>
+          </div>
+          <div class="group-node">
+            <div class="group-node__title">{d.sharing.groupNode.title}</div>
+            <div class="group-node__sub">{d.sharing.groupNode.sub}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Made for the way you live ===== -->
+<section class="section devices">
+  <div class="container">
+    <div class="section__head">
+      <span class="t-eyebrow">{d.devices.eyebrow}</span>
+      <h2>{d.devices.title}</h2>
+      <p>{d.devices.sub}</p>
+    </div>
+
+    <div class="devices__grid">
+      <div class="devices__card glass">
+        <div class="watch-frame" aria-hidden="true">
+          <div class="watch-frame__screen">
+            <div class="watch-time">9:41</div>
+            <div class="watch-mic">
+              <i class="fa-solid fa-microphone"></i>
+            </div>
+            <div class="watch-wave">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="watch-prompt">{d.devices.watch.listening}</div>
+          </div>
+          <div class="watch-crown" aria-hidden="true"></div>
+        </div>
+        <div class="devices__caption">
+          <h3>{d.devices.watch.title}</h3>
+          <p>{d.devices.watch.body}</p>
+        </div>
+      </div>
+
+      <div class="devices__card glass">
+        <div class="laptop-frame" aria-hidden="true">
+          <div class="laptop-frame__screen">
+            <img src="/assets/screens/web-dash.webp" alt={d.devices.dashboard.alt} loading="lazy">
+          </div>
+          <div class="laptop-frame__base"></div>
+        </div>
+        <div class="devices__caption">
+          <h3>{d.devices.dashboard.title}</h3>
+          <p>{d.devices.dashboard.body}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Numbers strip ===== -->
+<section class="section--tight numbers">
+  <div class="container">
+    <div class="numbers__grid">
+      {d.numbers.map((n: { value: string; label: string }) => (
+        <div class="numbers__item">
+          <div class="numbers__big">{n.value}</div>
+          <div class="numbers__label">{n.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section faq">
+  <div class="container container-narrow">
+    <div class="section__head">
+      <span class="t-eyebrow">{d.faq.eyebrow}</span>
+      <h2>{d.faq.title}</h2>
+    </div>
+
+    <div class="faq__list">
+      {d.faq.items.map((f: any) => (
+        <details class="faq__item" id={f.anchor}>
+          <summary><span>{f.q}</span><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></summary>
+          <div class="faq__body"><p>{f.a}</p></div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ===== Final CTA band ===== -->
+<section class="cta-band">
+  <div class="cta-band__inner">
+    <h2>{d.ctaBand.title}</h2>
+    <p>{d.ctaBand.sub}</p>
+    <div class="cta-band__buttons">
+      <a class="btn btn--primary btn--lg" href="https://apps.apple.com/app/id6761738170" target="_blank" rel="noopener noreferrer" data-cta="Download on App Store" data-cta-position="footer-cta">
+        <i class="fa-brands fa-apple" aria-hidden="true"></i>
+        {d.ctaBand.download}
+      </a>
+      <a class="btn btn--secondary btn--lg" href="https://dashboard.manilo.app/upgrade" target="_blank" rel="noopener noreferrer" data-cta="See pricing" data-cta-position="footer-cta">{d.ctaBand.pricing}</a>
+    </div>
+  </div>
+</section>
+
+</Base>

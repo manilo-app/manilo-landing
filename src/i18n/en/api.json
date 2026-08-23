@@ -1,0 +1,440 @@
+{
+  "meta": {
+    "title": "API v1 Reference — Manilo for Developers",
+    "description": "Manilo REST API v1 reference. Authenticate with a Personal Access Token and manage accounts, categories, budgets, groups, and transactions over HTTPS. Built for developers and AI agents via MCP.",
+    "ogDescription": "REST API for Manilo. PAT auth, manage accounts/categories/budgets/groups/transactions. Built for devs and AI agents via MCP.",
+    "twitterTitle": "API v1 Reference — Manilo for Developers",
+    "twitterDescription": "REST API for Manilo. PAT auth. Built for devs and AI agents via MCP."
+  },
+  "jsonLd": {
+    "breadcrumbHome": "Home",
+    "breadcrumbApi": "API v1 Reference",
+    "headline": "Manilo REST API v1 — Reference",
+    "description": "Complete REST API reference for Manilo: accounts, categories, budgets, groups, transactions, transfers, receipts. Bearer-token authentication (Personal Access Token, lgpat_ prefix). Bulk create/update/delete up to 100 transactions per request. Cursor pagination. Cloud subscription required."
+  },
+  "hero": {
+    "eyebrow": "Developers",
+    "title": "API v1 reference",
+    "stack": "REST · JSON · OAuth 2.0 Bearer",
+    "stability": "Stable — no breaking changes within v1"
+  },
+  "toc": {
+    "ariaLabel": "Table of contents",
+    "heading": "Contents",
+    "toggle": "Contents",
+    "groups": {
+      "gettingStarted": "Getting started",
+      "conventions": "Conventions",
+      "resources": "Resources",
+      "more": "More"
+    },
+    "items": {
+      "overview": "Overview",
+      "quickstart": "Quickstart",
+      "authentication": "Authentication",
+      "scopes": "Scopes",
+      "subscription": "Subscription gate",
+      "errors": "Errors",
+      "pagination": "Pagination & filters",
+      "types": "Types & formats",
+      "accounts": "Accounts",
+      "categories": "Categories",
+      "budgets": "Budgets",
+      "groups": "Groups",
+      "transactions": "Transactions",
+      "icons": "Icons",
+      "changelog": "Versioning",
+      "support": "Support"
+    }
+  },
+  "common": {
+    "field": "Field",
+    "type": "Type",
+    "description": "Description",
+    "required": "required",
+    "optional": "optional",
+    "requestBody": "Request body",
+    "queryParams": "Query parameters",
+    "requestLabel": "Request"
+  },
+  "overview": {
+    "title": "Overview",
+    "intro": "The Manilo API is a JSON REST API for programmatically managing the same ledger you use in the iOS app — accounts, categories, budgets, shared groups, and transactions. Use it to build importers, exporters, sync bridges, dashboards, or to power your own automations.",
+    "bullets": {
+      "baseUrl": { "label": "Base URL:", "t1": " — the previous base URL ", "t2": " keeps working." },
+      "versionPrefix": { "label": "Version prefix:", "t1": " all endpoints in this document are mounted under ", "t2": "." },
+      "transport": { "label": "Transport:", "t1": " HTTPS only. HTTP requests are not accepted." },
+      "encoding": { "label": "Encoding:", "t1": " JSON request and response bodies. UTF-8. ", "t2": " property names." },
+      "auth": { "label": "Authentication:", "t1": " on every request." },
+      "subscription": { "label": "Cloud subscription:", "t1": " required on every v1 endpoint. See ", "link": "Subscription gate", "t2": "." }
+    },
+    "callout": {
+      "strong": "Looking for an AI assistant?",
+      "t1": " If you want Claude, ChatGPT, or Cursor to talk to Manilo on your behalf, use the Model Context Protocol endpoint at ",
+      "t2": " — see ",
+      "link": "Integrations",
+      "t3": ". The REST API documented here is for code you write yourself."
+    }
+  },
+  "quickstart": {
+    "title": "Quickstart",
+    "intro": "Three steps to your first authenticated request.",
+    "mintTitle": "1. Mint a Personal Access Token",
+    "steps": {
+      "signIn": { "t1": "Sign in to your ", "link": "Manilo dashboard", "t2": " and open ", "strong": "Settings → API Access", "t3": "." },
+      "newToken": { "t1": "Click ", "strong": "+ New token", "t2": "." },
+      "nameIt": { "t1": "Give the token a descriptive name (e.g. ", "em": "\"Zapier — weekly export\"", "t2": "), pick the scopes you need (see ", "link": "Scopes", "t3": "), and optionally set an expiry." },
+      "copyIt": { "t1": "Copy the token. It's shown ", "em": "once", "t2": ". Tokens start with the prefix ", "t3": " followed by 64 hex characters." }
+    },
+    "tokensPage": "The same page lists your active tokens with their last-used timestamp and permission count, surfaces an \"Expiring in 30 days\" warning, and lets you revoke any token instantly via the trash icon. Each account can hold up to 25 active tokens at a time.",
+    "requestTitle": "2. Make a request",
+    "curlCaption": "List accounts",
+    "responseTitle": "3. Inspect the response",
+    "callout": {
+      "strong1": "Treat your token like a password.",
+      "t1": " Anyone with the token can read or modify your ledger within the scopes you granted. Revoke compromised tokens immediately from ",
+      "strong2": "Settings → API Access",
+      "t2": "."
+    }
+  },
+  "authentication": {
+    "title": "Authentication",
+    "intro": { "t1": "Every request to ", "t2": " must carry an ", "t3": " header. Two token types are accepted:" },
+    "pat": {
+      "strong1": "Personal Access Token (PAT)",
+      "t1": " — long-lived bearer token you create from the dashboard's ",
+      "strong2": "Settings → API Access",
+      "t2": " page. Format: ",
+      "t3": " + 64 hex characters. Scoped, revocable, optionally expiring. ",
+      "strong3": "Recommended for all third-party integrations."
+    },
+    "jwt": {
+      "strong": "Session JWT",
+      "t1": " — short-lived token issued to the first-party apps (iOS, dashboard). Has no scope restrictions. You can use it for one-off testing if you can extract one from a signed-in session, but PATs are the supported path."
+    },
+    "headerTitle": "Header format",
+    "limitsTitle": "Token limits",
+    "limits": {
+      "count": { "t1": "Up to ", "strong": "25 active PATs", "t2": " per Manilo account." },
+      "expiry": { "t1": "An optional expiration can be set at creation time. Expired tokens return ", "t2": "." },
+      "revoked": "Revoked tokens stop working immediately — Manilo stores only a SHA-256 hash of the token, never the value, so a leaked token cannot be recovered, only revoked and replaced."
+    },
+    "failuresTitle": "Common auth failures",
+    "failures": {
+      "s401": "Missing, malformed, expired, or revoked token.",
+      "s403": "Token is valid but the requested endpoint requires a scope your PAT does not have, or your Cloud subscription is not active."
+    }
+  },
+  "scopes": {
+    "title": "Scopes",
+    "intro": {
+      "t1": "PATs follow a ",
+      "strong": "deny-by-default",
+      "t2": " model. A token can only call endpoints whose required scope it holds; everything else returns ",
+      "t3": ". Grant the narrowest set of scopes your integration actually needs."
+    },
+    "available": "Available scopes:",
+    "chips": { "t1": "Each endpoint listed below shows its required scope as a small purple chip. ", "t2": " scopes do not imply ", "t3": " — request both if you need both." }
+  },
+  "subscription": {
+    "title": "Subscription gate",
+    "intro": {
+      "t1": "All v1 endpoints — including read-only ones — require the calling user to have an ",
+      "strong": "active Manilo Cloud subscription",
+      "t2": ". If the subscription has lapsed, expired, or never been started, the API responds with:"
+    },
+    "outro": {
+      "t1": "The ",
+      "t2": " header lets clients distinguish a subscription block from a generic permission denial. Restore access by reactivating Cloud in the iOS app or at ",
+      "t3": "."
+    }
+  },
+  "errors": {
+    "title": "Errors",
+    "intro": "Errors use standard HTTP status codes. The response body is a single-field JSON object:",
+    "handle": "Status codes you should handle:",
+    "statuses": {
+      "s200": "OK — resource returned, or list returned.",
+      "s201": { "t1": "Created — new resource created. ", "t2": " header points to the canonical URL." },
+      "s204": "No Content — successful delete; no body.",
+      "s400": "Validation failed — required field missing, value out of range, malformed JSON.",
+      "s401": { "t1": "Authentication failed — see ", "link": "Authentication", "t2": "." },
+      "s403": "Permission denied — insufficient scope or inactive subscription.",
+      "s404": "Resource not found, or hidden behind authorization.",
+      "s409": "Conflict — e.g. unique constraint violation.",
+      "s5xx": "Server-side failure. Safe to retry idempotent reads with exponential backoff."
+    }
+  },
+  "pagination": {
+    "title": "Pagination & filters",
+    "intro": "List endpoints return all matching items by default. Transactions, the only resource that can grow large, supports cursor-based pagination.",
+    "cursorTitle": "Transactions cursor",
+    "caption": "Paginated list",
+    "response": {
+      "t1": "The response includes a ",
+      "t2": ". Pass it back as the ",
+      "t3": " query param to fetch the next page; when ",
+      "t4": " is ",
+      "t5": " you've reached the end."
+    },
+    "params": {
+      "limit": { "t1": " — page size, clamped to ", "t2": ". Default ", "t3": "." },
+      "cursor": " — opaque token. Treat it as a black box.",
+      "filters": { "t1": " — optional filters; see the ", "link": "List transactions", "t2": " endpoint." }
+    }
+  },
+  "types": {
+    "title": "Types & formats",
+    "ids": { "strong": "IDs", "t1": " — opaque strings. Do not parse them; treat them as case-sensitive UTF-8 identifiers." },
+    "timestamps": { "strong": "Timestamps", "t1": " — ISO-8601 in UTC with a trailing ", "t2": ", e.g. ", "t3": "." },
+    "dates": { "strong": "Dates", "t1": " (e.g. transaction ", "t2": ") — the same ISO-8601 shape, but only the date portion is significant." },
+    "money": {
+      "strong1": "Money",
+      "t1": " — JSON numbers in ",
+      "strong2": "major units",
+      "t2": " with up to 4 decimal places (e.g. ",
+      "t3": "). Never minor units. Always paired with ",
+      "t4": "."
+    },
+    "currencyCodes": { "strong": "Currency codes", "t1": " — ISO-4217, exactly three uppercase letters (e.g. ", "t2": ")." },
+    "deletes": {
+      "strong1": "Deletes",
+      "t1": " — all delete operations are ",
+      "strong2": "soft deletes",
+      "t2": ". Deleted items stop appearing in list/get responses; sharing partners and historical receipts are preserved."
+    },
+    "sideEffects": {
+      "strong": "Side effects",
+      "t1": " — deleting an account, category, or group leaves dependent transactions intact; their references are detached. The ",
+      "link": "Delete account",
+      "t2": " endpoint accepts an explicit strategy."
+    }
+  },
+  "accounts": {
+    "title": "Accounts",
+    "intro": "Accounts are the buckets that hold balances — a bank account, a credit card, a cash wallet, a brokerage. Every transaction is linked to one (or two, for transfers).",
+    "list": { "desc": "Return every account the authenticated user owns or has access to." },
+    "get": { "desc": { "t1": "Fetch one account by id. ", "t2": " if not found." } },
+    "create": {
+      "desc": { "t1": "Create a new account. Returns ", "t2": " with the created object and a ", "t3": " header." },
+      "fields": {
+        "name": "Display name. Max 100 chars.",
+        "currencyCode": "ISO-4217. Exactly 3 letters.",
+        "initialBalance": { "t1": "Opening balance in ", "t2": "." },
+        "order": "Sort position. Lower comes first.",
+        "icon": { "t1": "Icon identifier from ", "t2": ". Max 50." },
+        "color": { "t1": "Hex color, e.g. ", "t2": ". Max 20." },
+        "iconColor": "Override the icon tint."
+      }
+    },
+    "update": { "desc": { "t1": "Replace an existing account. Body is identical to ", "link": "Create", "t2": "; all fields must be provided." } },
+    "delete": {
+      "desc": { "t1": "Soft-delete an account. Decide what happens to its transactions via the ", "t2": " query parameter." },
+      "fields": {
+        "action": { "t1": " (default): clear the account ref on each transaction. ", "t2": ": reassign transactions to ", "t3": ". ", "t4": ": soft-delete every linked transaction you own." },
+        "moveTargetAccountId": { "t1": "Required when ", "t2": ". Destination account id." }
+      }
+    }
+  },
+  "categories": {
+    "title": "Categories",
+    "intro": "Categories label what a transaction is for (groceries, rent, freelance income). System categories are read-only and shared by all users; user categories are yours to manage. Category groups bundle related categories together.",
+    "system": { "desc": { "t1": "Return Manilo's curated set of \"well-known\" categories — the starter set the iOS app ships with. These are versioned globally and safe to cache by ", "t2": "." } },
+    "userTitle": "User categories",
+    "list": { "desc": "List all user-defined categories." },
+    "get": { "desc": "Fetch one user category by id." },
+    "create": {
+      "desc": "Create a user category.",
+      "fields": {
+        "name": "Display name. Max 100.",
+        "type": { "t1": " or ", "t2": "." },
+        "order": "Sort position within its group.",
+        "isPinned": "Pin to the top of the picker.",
+        "categoryGroupId": { "t1": "Parent group id, or ", "t2": " for ungrouped." },
+        "icon": "Icon identifier.",
+        "color": "Hex color."
+      }
+    },
+    "update": { "desc": { "t1": "Replace a user category. Body is identical to ", "link": "Create", "t2": "." } },
+    "delete": { "desc": { "t1": "Soft-delete a user category. Transactions are not deleted; their ", "t2": " is cleared." } },
+    "groupsTitle": "Category groups",
+    "cgList": { "desc": "List your category groups." },
+    "cgGet": { "desc": "Fetch one category group." },
+    "cgCreate": {
+      "desc": "Create a category group.",
+      "fields": {
+        "name": "Display name. Max 100.",
+        "order": "Sort position.",
+        "icon": "Icon identifier.",
+        "color": "Hex color."
+      }
+    },
+    "cgUpdate": { "desc": "Replace a category group." },
+    "cgDelete": { "desc": { "t1": "Soft-delete a group. Child categories survive — their ", "t2": " is cleared." } }
+  },
+  "budgets": {
+    "title": "Budgets",
+    "intro": { "t1": "A budget caps spending against a category (or, when ", "t2": " is null, against the whole ledger) over a recurring window. Share a budget with a group by setting ", "t3": "." },
+    "list": { "desc": "List all budgets." },
+    "get": { "desc": "Fetch one budget." },
+    "create": {
+      "desc": "Create a budget.",
+      "fields": {
+        "amount": "Limit per period. Must be greater than 0.",
+        "currencyCode": "ISO-4217.",
+        "period": { "t1": " Weekly · ", "t2": " Monthly · ", "t3": " Quarterly · ", "t4": " Yearly." },
+        "startDate": "First period start.",
+        "isActive": "Whether this budget is currently enforced.",
+        "endDate": "Stop tracking after this date.",
+        "name": "Label. Max 200.",
+        "categoryId": "Category to track. Omit to budget all spending.",
+        "groupId": "Group to share with. Omit for personal."
+      }
+    },
+    "update": { "desc": "Replace a budget." },
+    "delete": { "desc": "Soft-delete a budget." }
+  },
+  "groups": {
+    "title": "Groups",
+    "intro": "Groups are shared ledgers — a household, a trip, a shared apartment. Every member sees the same transactions; ownership stays personal. Membership and invites are managed in the iOS app; the API surface here is the resource itself.",
+    "list": { "desc": "List groups you own or are a member of." },
+    "get": { "desc": "Fetch one group." },
+    "create": {
+      "desc": "Create a group. You become its owner; invite members from the iOS app.",
+      "fields": {
+        "name": "Display name. Max 100.",
+        "description": "Free text. Max 500.",
+        "icon": "Icon identifier.",
+        "color": "Hex color."
+      }
+    },
+    "update": { "desc": "Replace a group's metadata." },
+    "delete": { "desc": "Soft-delete a group. Members lose visibility; underlying transactions revert to personal." }
+  },
+  "transactions": {
+    "title": "Transactions",
+    "intro": {
+      "t1": "Transactions are the verbs of the ledger. They come in four shapes: ",
+      "t2": " (account-to-account), and ",
+      "t3": " (one-off rebalancing). The base endpoint creates income/expense; transfers have their own endpoint; bulk variants exist for high-volume importers."
+    },
+    "list": {
+      "desc": "List transactions with cursor pagination and filters.",
+      "fields": {
+        "limit": { "t1": "Page size. ", "t2": ". Default ", "t3": "." },
+        "cursor": "Opaque continuation token from the previous response.",
+        "type": { "t1": ", or ", "t2": "." },
+        "dateFrom": "Inclusive lower bound.",
+        "dateTo": "Inclusive upper bound.",
+        "categoryId": "Filter to one category.",
+        "accountId": "Filter to one account.",
+        "groupId": "Filter to a shared group."
+      }
+    },
+    "get": { "desc": "Fetch one transaction." },
+    "create": {
+      "desc": { "t1": "Create a single income or expense transaction. For transfers, use ", "t2": "." },
+      "fields": {
+        "type": { "t1": " or ", "t2": "." },
+        "amount": { "t1": "Positive amount in ", "t2": "." },
+        "currencyCode": "ISO-4217.",
+        "date": "When the transaction occurred (UTC).",
+        "accountId": "Source/destination account.",
+        "categoryId": "Category label.",
+        "payee": "Merchant or counterparty. Max 200.",
+        "note": "Free-form note. Max 2000.",
+        "groupId": "Share with a group.",
+        "exchangeRate": { "t1": "FX rate when ", "t2": " ≠ user primary currency." },
+        "convertedAmount": "Amount in user's primary currency."
+      },
+      "exampleCaption": "€8.50 coffee yesterday on Wise"
+    },
+    "update": { "desc": { "t1": "Replace a transaction. Body is identical to ", "link": "Create", "t2": "." } },
+    "delete": { "desc": "Soft-delete one transaction." },
+    "transfer": {
+      "desc": { "t1": "Create a transfer between two accounts. No category. For cross-currency transfers, provide ", "t2": " and ", "t3": " in the destination currency." },
+      "fields": {
+        "fromAccountId": "Source account.",
+        "toAccountId": "Destination account. Must differ from source.",
+        "amount": { "t1": "Amount sent, in ", "t2": "." },
+        "currencyCode": "Source currency, ISO-4217.",
+        "date": "Transfer date.",
+        "exchangeRate": "Required when source and destination currencies differ.",
+        "convertedAmount": "Amount credited to the destination, in its currency.",
+        "note": "Max 2000."
+      }
+    },
+    "bulkTitle": "Bulk operations",
+    "bulkIntro": {
+      "t1": "Designed for importers. Each batch is capped at ",
+      "strong1": "100 items",
+      "t2": " and runs ",
+      "strong2": "best-effort",
+      "t3": ": a single bad row does not roll back the others. Successful items and per-row errors are reported separately so you can retry the failures."
+    },
+    "bulkCreate": { "desc": "Create up to 100 transactions in one call." },
+    "bulkUpdate": { "desc": { "t1": "Update up to 100 transactions in one call. Each item must include its ", "t2": " alongside the full transaction body." } },
+    "bulkDelete": {
+      "desc": { "t1": "Soft-delete up to 100 transactions in one call. Uses ", "t2": " rather than ", "t3": " so the request body is accepted by all HTTP clients." },
+      "fields": {
+        "ids": "1 to 100 transaction ids."
+      }
+    },
+    "objectTitle": "The transaction object",
+    "object": {
+      "id": "Opaque identifier.",
+      "amount": { "t1": "In ", "t2": "." },
+      "currencyCode": "ISO-4217.",
+      "exchangeRate": "Set on cross-currency entries.",
+      "convertedAmount": "Same value in the user's primary currency.",
+      "date": "ISO-8601 UTC.",
+      "accountId": "For transfers this is the source account.",
+      "toAccountId": "Destination account on transfers only.",
+      "categoryId": "Null on transfers.",
+      "groupId": "Set if shared with a group.",
+      "payee": "Merchant or counterparty.",
+      "note": "Free text.",
+      "receiptImagePath": "Path to attached receipt. Fetch via the receipts endpoint (separate from v1).",
+      "recurringTransactionId": "Set if this row was generated from a recurring rule.",
+      "source": { "t1": "Origin tag — ", "t2": ", etc." },
+      "createdAt": "ISO-8601 UTC.",
+      "updatedAt": "ISO-8601 UTC."
+    }
+  },
+  "icons": {
+    "title": "Icons",
+    "intro": "Manilo ships with a curated icon set and color palette used everywhere — accounts, categories, groups. Fetch the catalog once, cache it, and reuse the identifiers when creating resources.",
+    "list": { "desc": { "t1": "Return the full icon library, grouped into categories, alongside the supported color palette. Versioned — safe to cache by the ", "t2": " field." } }
+  },
+  "versioning": {
+    "title": "Versioning",
+    "noBreaking": {
+      "strong": "No breaking changes within v1.",
+      "t1": " We will only add new endpoints, new optional fields, and new enum values. A field's type, nullability, or required-ness will not change."
+    },
+    "enums": {
+      "strong": "New enum values are not breaking.",
+      "t1": " Treat unknown ",
+      "t2": ", or ",
+      "t3": " values as ",
+      "em": "\"don't render\"",
+      "t4": " rather than crashing — we will add them when the product grows."
+    },
+    "v2": {
+      "strong": "Date-shaped breaking changes",
+      "t1": " (if ever needed) will ship under ",
+      "t2": " with at least 6 months of parallel availability and a deprecation header on v1 responses."
+    }
+  },
+  "support": {
+    "title": "Support",
+    "p1": {
+      "t1": "Found a bug, want an endpoint, or hit something undocumented? Open the ",
+      "link": "help center",
+      "t2": " or email ",
+      "t3": " — please include the request id (echoed in the ",
+      "t4": " response header) when reporting an issue."
+    },
+    "p2": { "t1": "For security-sensitive disclosures (a token leak, a permission bypass, an unauthorized read) write to ", "t2": "." }
+  }
+}

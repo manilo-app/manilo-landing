@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "Términos de Servicio — Manilo",
+    "description": "Términos de Servicio de Manilo, la app de control de gastos."
+  },
+  "jsonLd": {
+    "breadcrumbName": "Términos de Servicio"
+  },
+  "hero": {
+    "eyebrow": "Legal",
+    "title": "Términos de Servicio",
+    "updated": "Última actualización: 10 de mayo de 2026"
+  },
+  "toc": {
+    "ariaLabel": "Índice de contenidos",
+    "heading": "Contenido",
+    "toggle": "Contenido",
+    "items": {
+      "agreement": "Acuerdo",
+      "account": "Su cuenta",
+      "subscription": "Suscripción y pago",
+      "trial": "Prueba gratuita",
+      "use": "Uso aceptable",
+      "data": "Sus datos",
+      "beta": "Funciones beta",
+      "warranty": "Sin garantía",
+      "liability": "Responsabilidad",
+      "termination": "Terminación",
+      "law": "Ley aplicable",
+      "contact": "Contacto"
+    }
+  },
+  "sections": {
+    "agreement": {
+      "heading": "Acuerdo",
+      "p": [
+        "Estos Términos de Servicio (“Términos”) rigen el uso que usted haga de Manilo (antes Ledgy): la app para iOS, el panel web en dashboard.manilo.app, el bot de Manilo en Telegram y los servicios relacionados (el “Servicio”). Al crear una cuenta o descargar la app, usted acepta estos Términos. Si no está de acuerdo, no use el Servicio.",
+        "El Servicio es operado por el equipo detrás de Manilo, en adelante “nosotros”."
+      ]
+    },
+    "account": {
+      "heading": "Su cuenta",
+      "p": [
+        "Usted es responsable de todo lo que ocurra en su cuenta, incluido mantener seguras sus credenciales de inicio de sesión. Una misma cuenta solo puede ser usada por una persona; compartir su acceso desvirtúa el propósito de compartir en grupo (función incorporada y gratuita con Cloud).",
+        "Debe tener al menos 13 años (o 16 en el Espacio Económico Europeo) para usar el Servicio."
+      ]
+    },
+    "subscription": {
+      "heading": "Suscripción y pago",
+      "p": [
+        "Cloud se ofrece como una suscripción recurrente, facturada de forma mensual o anual. El precio que se muestra al momento del pago es el precio final que usted paga. Las suscripciones son procesadas por Apple a través de su cuenta del App Store."
+      ],
+      "autoRenew": "Su suscripción se renueva automáticamente al final de cada periodo, salvo que la cancele con al menos 24 horas de anticipación a la renovación.",
+      "cancel": "Puede cancelar en cualquier momento en <em>Configuración → [Su nombre] → Suscripciones</em> en el iPhone.",
+      "refundsPre": "Los reembolsos son gestionados por Apple a través de ",
+      "refundsPost": ".",
+      "rateChange": "Si cambia a un plan superior o inferior, o modifica el periodo de facturación, la nueva tarifa entra en vigor en la siguiente renovación."
+    },
+    "trial": {
+      "heading": "Prueba gratuita",
+      "p": [
+        "Los nuevos suscriptores pueden recibir una prueba gratuita de 7 días. No se le cobrará hasta que termine la prueba. Si cancela antes de que termine, no debe nada. La prueba se ofrece una sola vez por Apple ID."
+      ]
+    },
+    "use": {
+      "heading": "Uso aceptable",
+      "p": [
+        "El uso del Servicio debe ser lícito y razonable. Usted se compromete a no:"
+      ],
+      "items": [
+        "Aplicar ingeniería inversa, descompilar ni intentar extraer el código fuente, salvo en la medida permitida por la ley.",
+        "Usar el Servicio para vulnerar la privacidad o los derechos de terceros.",
+        "Ejecutar abuso automatizado, extracción masiva de datos o ataques de denegación de servicio contra nuestra infraestructura.",
+        "Revender ni sublicenciar el acceso a Cloud sin autorización por escrito."
+      ]
+    },
+    "data": {
+      "heading": "Sus datos",
+      "p1Pre": "Sus transacciones le pertenecen. No reclamamos ninguna propiedad sobre los datos que usted cree usando el Servicio. Los tratamos únicamente para ofrecer las funciones que usted haya activado, según se describe en nuestra ",
+      "p1Link": "Política de Privacidad",
+      "p1Post": ".",
+      "p2": "Puede exportar su registro completo en CSV en cualquier momento desde Configuración → Exportar. Si elimina su cuenta, eliminamos los datos asociados en un plazo de 7 días; los respaldos se depuran en un plazo de 30 días."
+    },
+    "beta": {
+      "heading": "Funciones beta",
+      "callout": "Algunas capacidades de Manilo se publican con la etiqueta “Beta” dentro de la app. Pueden producir resultados incorrectos, cambiar o retirarse sin previo aviso. No dependa de ellas como única fuente de verdad: mantenga siempre una exportación periódica de su registro.",
+      "p": [
+        "Las funciones marcadas como “Beta” dentro de la app son experimentales, pueden producir resultados incorrectos y pueden retirarse sin previo aviso."
+      ]
+    },
+    "warranty": {
+      "heading": "Sin garantía",
+      "p": [
+        "El Servicio se proporciona “tal cual”, sin garantías de ningún tipo, expresas o implícitas, incluidas las de comerciabilidad, idoneidad para un fin determinado y no infracción, en la máxima medida permitida por la ley. La interpretación con IA, la conversión de moneda y la sugerencia de categorías pueden cometer errores: revíselas antes de confiar en ellas.",
+        "Manilo no constituye asesoría financiera, fiscal ni contable."
+      ]
+    },
+    "liability": {
+      "heading": "Limitación de responsabilidad",
+      "p": [
+        "En la máxima medida permitida por la ley, nuestra responsabilidad total por cualquier reclamación relacionada con el Servicio se limita al monto que usted nos haya pagado en los 12 meses anteriores a la reclamación. No somos responsables de daños indirectos, consecuenciales o incidentales, incluidas la pérdida de ganancias, la pérdida de datos o la interrupción del negocio.",
+        "Nada en estos Términos limita la responsabilidad por fraude, negligencia grave ni ninguna responsabilidad que no pueda excluirse conforme a la ley aplicable."
+      ]
+    },
+    "termination": {
+      "heading": "Terminación",
+      "p": [
+        "Puede dejar de usar el Servicio y eliminar su cuenta en cualquier momento. Podemos suspender o cancelar las cuentas que incumplan estos Términos, con aviso previo cuando sea razonablemente posible. Tras la terminación, las secciones que por su naturaleza subsisten (datos, responsabilidad, ley aplicable) continúan aplicándose."
+      ]
+    },
+    "law": {
+      "heading": "Ley aplicable",
+      "p": [
+        "Las controversias están sujetas a las normas imperativas de protección al consumidor de su país de residencia; en lo demás, la ley aplicable y la jurisdicción competente se establecerán en una futura actualización de estos Términos."
+      ]
+    },
+    "contact": {
+      "heading": "Contacto"
+    }
+  }
+}

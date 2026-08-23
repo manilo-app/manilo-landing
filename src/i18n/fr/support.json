@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Assistance — Manilo",
+    "description": "Trouvez de l’aide sur Manilo. FAQ, dépannage, astuces pour enregistrer vos dépenses à la voix, aide sur l’intégration MCP et contact direct.",
+    "ogDescription": "De l’aide sur Manilo : enregistrement à la voix, intégration MCP, multidevise et contact."
+  },
+  "breadcrumb": {
+    "home": "Accueil",
+    "support": "Assistance"
+  },
+  "faqLd": {
+    "name": "Centre d’aide Manilo",
+    "items": [
+      {
+        "q": "Manilo est-il gratuit ?",
+        "a": "Oui. Toutes les fonctions de suivi en solo sont gratuites pour toujours — transactions, comptes, catégories et budgets illimités, multidevise, import et export CSV, et reçus. Manilo Cloud ($2.99/mois ou $22.99/an) ajoute la saisie par IA à la voix et par photo, la synchronisation multi-appareils, les raccourcis Siri, l’enregistrement depuis l’Apple Watch, le bot Telegram, l’automatisation Apple Wallet, le tableau de bord web, le partage en famille et en groupe, et l’intégration MCP avec Claude et ChatGPT."
+      },
+      {
+        "q": "Manilo gère-t-il plusieurs devises ?",
+        "a": "Oui. Manilo prend en charge les comptes multidevises d’emblée. Chaque compte a sa propre devise. Les taux de change sont actualisés chaque jour depuis des sources fiables (alignées sur les données de la BCE). Maintenez le doigt sur n’importe quel montant pour voir son équivalent dans votre devise principale. Le mode voyage facilite le changement quand vous êtes à l’étranger."
+      },
+      {
+        "q": "Puis-je enregistrer mes dépenses à la voix ?",
+        "a": "Oui — l’enregistrement à la voix est une fonction centrale de Manilo Cloud. Appuyez sur le micro sur iPhone ou maintenez la Digital Crown sur l’Apple Watch, puis parlez naturellement : « douze cinquante pour le déjeuner chez Pret ». Manilo en extrait automatiquement le montant, le commerçant et la catégorie. La transcription vocale s’effectue sur l’appareil, via la reconnaissance vocale intégrée d’Apple ; seul le texte obtenu est envoyé à l’IA pour analyse. Vous pouvez aussi déclencher l’enregistrement vocal via Siri : « Dis Siri, enregistre une dépense dans Manilo. »"
+      },
+      {
+        "q": "Manilo fonctionne-t-il hors ligne ?",
+        "a": "Oui. Manilo fonctionne d’abord hors ligne. Chaque écran lit une base de données SQLite locale, sur votre iPhone. Les nouvelles transactions apparaissent instantanément, même sans connexion internet. La synchronisation Cloud se fait en arrière-plan dès que la connexion revient."
+      },
+      {
+        "q": "Manilo est-il disponible sur Android ?",
+        "a": "Non. Manilo est réservé à iOS pour le lancement. Une version Android est sur la feuille de route. Écrivez à support@manilo.app si vous voulez être prévenu de la sortie sur Android."
+      },
+      {
+        "q": "Manilo affiche-t-il de la publicité ?",
+        "a": "Non. Manilo n’a aucune publicité, aucun courtier en données et aucun SDK de pistage publicitaire. L’offre gratuite est financée par l’abonnement Cloud, en option, et non par des revenus publicitaires. Manilo ne collecte pas votre identifiant publicitaire (IDFA)."
+      },
+      {
+        "q": "Manilo respecte-t-il ma vie privée ? Vend-il mes données ?",
+        "a": "Manilo fonctionne d’abord en local. Vos transactions vivent sur votre iPhone, dans une base de données SQLite locale. Si vous activez Cloud, une copie chiffrée est synchronisée vers les serveurs Manilo hébergés en Allemagne (Hetzner). Manilo ne vend jamais vos données, ne les utilise jamais à des fins publicitaires et ne s’en sert jamais pour entraîner des modèles d’IA. L’audio de votre voix est transcrit sur l’appareil et n’est jamais conservé. Tous les détails dans la Politique de confidentialité : https://manilo.app/privacy."
+      },
+      {
+        "q": "Manilo partage-t-il les additions comme Splitwise ?",
+        "a": "Non. Manilo ne calcule pas les remboursements entre personnes et ne répartit pas les montants. Ce qu’il offre, c’est une visibilité partagée des dépenses : quand vous rejoignez un compte ou un groupe partagé, tous les membres voient les transactions des autres au fil de l’eau. C’est utile pour les budgets du foyer et les voyages, où chacun enregistre ses propres dépenses. Si vous avez besoin du calcul des soldes (qui doit quoi à qui), Splitwise reste l’outil adapté."
+      },
+      {
+        "q": "Qu’est-ce que le serveur MCP de Manilo ?",
+        "a": "MCP signifie Model Context Protocol — un standard ouvert qui permet aux assistants IA comme Claude, ChatGPT et Cursor de se connecter à des sources de données externes. Manilo exploite un serveur MCP à l’adresse https://api.manilo.app/mcp. Une fois connecté, vous pouvez poser à votre assistant IA des questions comme « combien j’ai dépensé en café le mois dernier ? » ou « est-ce que je respecte mon budget courses ? » — et il répond à partir de vos vraies données Manilo. L’assistant ne voit que les données qu’il demande explicitement pour vous. Vous pouvez vous déconnecter à tout moment depuis les réglages de l’assistant. L’intégration MCP nécessite un abonnement Manilo Cloud actif."
+      },
+      {
+        "q": "Manilo fonctionne-t-il sur l’Apple Watch ?",
+        "a": "Oui. Manilo a une app Apple Watch native. Maintenez la Digital Crown, énoncez votre dépense — « café quatre cinquante » — et la transaction arrive sur votre iPhone avant que vous ayez baissé le poignet. Les complications de la montre mènent directement à l’écran d’enregistrement. L’enregistrement depuis l’Apple Watch nécessite un abonnement Manilo Cloud."
+      },
+      {
+        "q": "Comment fonctionne la conversion multidevise ?",
+        "a": "Chaque compte dans Manilo a sa propre devise. Vous définissez une devise principale (par ex. USD) et Manilo convertit tous les soldes et totaux en devise étrangère vers cette devise principale, avec des taux de change actualisés chaque jour. Les taux proviennent de fournisseurs de données financières fiables, alignés sur les taux de référence de la BCE. Maintenez le doigt sur n’importe quel montant pour voir la conversion en direct. En mode voyage, votre compte de voyage actif est mis en avant en haut."
+      },
+      {
+        "q": "Puis-je importer depuis un CSV ?",
+        "a": "Oui. L’assistant d’import CSV de Manilo détecte automatiquement les en-têtes de colonnes dans 29 locales, reconnaît les symboles de devises et associe les alias de catégories tout seul. S’il se trompe sur une colonne, vous pouvez la réassocier par glisser-déposer avant de confirmer. Il fonctionne avec les exports de Mint, YNAB, Apple Numbers et de la plupart des autres apps de finances personnelles. Rendez-vous dans Réglages → Import → CSV dans l’app Manilo."
+      },
+      {
+        "q": "Combien coûte Manilo Cloud ?",
+        "a": "Manilo Cloud coûte $2.99 par mois ou $22.99 par an (soit environ $1.92 par mois, 36 % d’économie par rapport au mensuel). Un essai gratuit de 7 jours est inclus — vous n’êtes débité qu’à la fin de l’essai. Annulez à tout moment depuis Réglages → [Votre nom] → Abonnements sur iPhone. Les abonnements sont gérés par Apple."
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "Centre d’aide",
+    "title": "Comment pouvons-nous vous aider ?",
+    "replyTime": "Nous répondons sous 1 jour ouvré"
+  },
+  "grid": {
+    "learnMore": "En savoir plus →"
+  },
+  "toc": {
+    "ariaLabel": "Sommaire",
+    "heading": "Articles"
+  },
+  "sections": {
+    "gettingStarted": {
+      "title": "Premiers pas",
+      "cardSub": "Installation, connexion et import de vos données existantes.",
+      "install": {
+        "title": "Installer Manilo",
+        "pre": "Ouvrez la ",
+        "linkText": "page App Store de Manilo",
+        "post": " sur votre iPhone et appuyez sur Obtenir. iOS 15 ou version ultérieure requis."
+      },
+      "signIn": {
+        "title": "Se connecter",
+        "body": "Connectez-vous avec Apple au premier lancement. Votre adresse iCloud sert d’identifiant de compte ; nous ne voyons jamais le mot de passe de votre identifiant Apple."
+      },
+      "import": {
+        "title": "Importer vos données existantes",
+        "body": "Depuis Réglages → Import → CSV, envoyez un export venant de Mint, YNAB, Apple Numbers ou de n’importe quelle autre source. L’assistant détecte automatiquement les en-têtes de colonnes dans 29 locales — s’il se trompe sur une colonne, réassociez-la par glisser-déposer."
+      }
+    },
+    "capture": {
+      "title": "Canaux de capture",
+      "cardSub": "Voix, photo, Siri, Watch, Telegram, Wallet.",
+      "voice": {
+        "title": "Voix",
+        "body": "Appuyez sur le micro sur iPhone ou maintenez la Digital Crown sur l’Apple Watch. Parlez naturellement — « douze cinquante pour le déjeuner chez Pret » — et Manilo en extrait le montant, le commerçant et la catégorie. La transcription vocale se fait sur l’appareil ; seul le texte obtenu est envoyé pour analyse par l’IA."
+      },
+      "photo": {
+        "title": "Photo",
+        "body": "Appuyez sur le bouton appareil photo ou utilisez la feuille de partage iOS depuis Photos. L’image du reçu est envoyée à notre moteur d’analyse ; le résultat reste modifiable avant l’enregistrement."
+      },
+      "siri": {
+        "title": "Siri",
+        "body": "« Dis Siri, enregistre une dépense dans Manilo » — Siri ouvre notre raccourci et vous guide en une seule question. Ajoutez les raccourcis Siri dans Réglages → Raccourcis pour un accès en une fois."
+      },
+      "telegram": {
+        "title": "Telegram",
+        "pre": "Cherchez le bot Telegram de Manilo (",
+        "post": ") dans Telegram, appuyez sur Start, puis associez-le avec le code à 6 chiffres affiché dans Réglages → Telegram. Envoyez du texte, des photos ou des messages vocaux. Le bot répond avec des boutons intégrés pour tout corriger en deux gestes."
+      },
+      "wallet": {
+        "title": "Apple Wallet",
+        "body": "Réglages → Apple Wallet → activez l’enregistrement automatique d’Apple Pay. Chaque carte peut avoir sa propre règle IA (par ex. « c’est ma carte Voyage 2026 → ajouter le tag correspondant »). Nous ne recevons jamais votre numéro de carte — seulement le commerçant, le montant et l’heure de la notification d’achat."
+      }
+    },
+    "sharing": {
+      "title": "Partage et groupes",
+      "cardSub": "Invitations, budgets de groupe, quitter sans perdre son historique.",
+      "body": "Ouvrez n’importe quel compte, groupe ou budget → appuyez sur Partager → générez un code d’invitation ou un QR code. L’autre personne l’ouvre une fois et la ressource apparaît dans son app, avec vos transactions visibles à l’intérieur.",
+      "important": "Important :",
+      "importantBody": "Le partage décide de la visibilité — jamais de la propriété. Vos transactions sont toujours les vôtres. Si vous quittez un groupe, tout votre historique part avec vous."
+    },
+    "billing": {
+      "title": "Facturation et abonnement",
+      "cardSub": "Essai, annulation, remboursements, restauration des achats.",
+      "trial": {
+        "title": "Démarrer un essai",
+        "body": "Allez dans Réglages → Cloud → Démarrer l’essai. Vous obtenez 7 jours d’accès complet à Cloud. Nous ne débitons rien avant la fin de l’essai."
+      },
+      "cancel": {
+        "title": "Annuler",
+        "body": "C’est iOS qui gère la facturation pour nous. Pour annuler : ouvrez l’app Réglages → appuyez sur votre nom → Abonnements → Manilo → Annuler l’abonnement. Vous conservez l’accès jusqu’à la fin de la période en cours."
+      },
+      "refund": {
+        "title": "Se faire rembourser",
+        "pre": "Les remboursements passent par Apple. Rendez-vous sur ",
+        "post": ", trouvez le paiement Manilo et demandez un remboursement."
+      },
+      "restore": {
+        "title": "Restaurer un achat sur un nouvel appareil",
+        "body": "Réglages → Cloud → Restaurer les achats. Tant que vous vous connectez avec le même identifiant Apple, votre abonnement sera détecté."
+      }
+    },
+    "data": {
+      "title": "Données et confidentialité",
+      "cardSub": "Où vivent vos données, comment les exporter et comment les supprimer.",
+      "intro": "Manilo fonctionne d’abord en local. Chaque écran lit une base de données SQLite sur votre appareil. Cloud synchronise une copie chiffrée de cette base vers notre backend, pour que vos autres appareils et les membres de vos groupes puissent la voir.",
+      "export": {
+        "title": "Exporter vos données",
+        "body": "Réglages → Export → CSV ou JSON. L’export contient chaque transaction, compte, catégorie, tag et budget que vous avez créés."
+      },
+      "delete": {
+        "title": "Supprimer votre compte",
+        "body": "Réglages → Compte → Supprimer le compte. Nous supprimons les données du serveur sous 7 jours et les sauvegardes sous 30 jours. Les données locales sont effacées immédiatement à la déconnexion."
+      },
+      "privacy": {
+        "pre": "Pour en savoir plus, consultez notre ",
+        "linkText": "Politique de confidentialité",
+        "post": "."
+      }
+    },
+    "troubleshooting": {
+      "title": "Dépannage",
+      "cardSub": "Problèmes de synchronisation, voix qui ne fonctionne pas, transactions manquantes.",
+      "sync": {
+        "title": "La synchronisation ne rattrape pas son retard",
+        "body": "Tirez vers le bas pour rafraîchir l’écran d’accueil. Si une transaction créée sur un autre appareil n’est pas apparue au bout de 30 secondes, forcez la fermeture de Manilo puis relancez-le. Si l’état reste obsolète, allez dans Réglages → Cloud → Forcer la resynchronisation."
+      },
+      "voice": {
+        "title": "La saisie vocale affiche « analyse impossible »",
+        "body": "La transcription sur l’appareil a peut-être mal entendu. Appuyez sur le message dans la boîte de réception de l’app pour voir la transcription brute et la corriger avant une nouvelle analyse."
+      },
+      "wallet": {
+        "title": "Les transactions Apple Wallet ne s’enregistrent pas automatiquement",
+        "body": "iOS révoque parfois les autorisations de notification après une mise à jour. Allez dans Réglages → Apple Wallet → Réautoriser. Il faut peut-être aussi activer les notifications de Wallet lui-même dans Réglages iOS → Notifications → Wallet."
+      },
+      "telegram": {
+        "title": "Le bot Telegram ne répond plus",
+        "pre": "Envoyez ",
+        "mid": " au bot Telegram de Manilo (",
+        "post": ") et suivez la demande de code à 6 chiffres. Telegram renouvelle parfois les jetons de webhook."
+      },
+      "callout": {
+        "pre": "Toujours bloqué ? Écrivez à ",
+        "post": " avec une capture d’écran et l’heure approximative de l’incident. Nous répondons généralement sous un jour ouvré."
+      }
+    }
+  },
+  "contact": {
+    "title": "Besoin de parler à quelqu’un ?",
+    "body": "Écrivez-nous avec le plus de détails possible — les captures d’écran aident beaucoup. Nous répondons sous un jour ouvré, tous les jours de la semaine.",
+    "cta": "Écrire à support@manilo.app"
+  }
+}
