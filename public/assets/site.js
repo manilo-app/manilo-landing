@@ -44,4 +44,15 @@
   } else {
     openFromHash();
   }
+
+  // Language dropdown — close on outside click / Escape.
+  document.addEventListener("click", (e) => {
+    document.querySelectorAll(".lang-dropdown[open]").forEach((d) => {
+      if (!d.contains(e.target)) d.removeAttribute("open");
+    });
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    document.querySelectorAll(".lang-dropdown[open]").forEach((d) => d.removeAttribute("open"));
+  });
 })();

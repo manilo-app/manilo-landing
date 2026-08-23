@@ -56,11 +56,18 @@ const pageLocales = PAGE_LOCALES[path] ?? [DEFAULT_LOCALE];
       </div>
     </div>
     {pageLocales.length > 1 && (
-      <nav class="site-footer__langs" aria-label={t.footer.language}>
-        {pageLocales.map((l) => (
-          <a href={localeUrl(l, path)} hreflang={l} lang={l} aria-current={l === locale ? 'true' : undefined}>{LOCALE_NAMES[l]}</a>
-        ))}
-      </nav>
+      <details class="lang-dropdown">
+        <summary aria-label={t.footer.language}>
+          <i class="fa-solid fa-globe" aria-hidden="true"></i>
+          {LOCALE_NAMES[locale]}
+          <i class="fa-solid fa-chevron-up lang-dropdown__chev" aria-hidden="true"></i>
+        </summary>
+        <ul class="lang-dropdown__menu">
+          {pageLocales.map((l) => (
+            <li><a href={localeUrl(l, path)} hreflang={l} lang={l} aria-current={l === locale ? 'true' : undefined}>{LOCALE_NAMES[l]}</a></li>
+          ))}
+        </ul>
+      </details>
     )}
     <div class="site-footer__legal">
       <span>{t.footer.copyright}</span>
