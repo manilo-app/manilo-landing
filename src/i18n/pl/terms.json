@@ -79,7 +79,7 @@
       "p1Pre": "Twoje transakcje należą do Ciebie. Nie rościmy sobie żadnych praw własności do danych, które tworzysz, korzystając z Usługi. Przetwarzamy je wyłącznie po to, by dostarczyć włączone przez Ciebie funkcje, na zasadach opisanych w naszej ",
       "p1Link": "Polityce prywatności",
       "p1Post": ".",
-      "p2": "W dowolnej chwili możesz wyeksportować pełną historię transakcji do pliku CSV w sekcji Ustawienia → Eksport. Jeśli usuniesz konto, powiązane z nim dane usuwamy w ciągu 7 dni, a kopie zapasowe wygasają w ciągu 30 dni."
+      "p2": "W dowolnej chwili możesz wyeksportować pełną historię transakcji do pliku CSV w sekcji Ustawienia → Eksport. Jeśli usuniesz konto, powiązane z nim dane usuwamy natychmiast, a kopie zapasowe wygasają w ciągu 30 dni."
     },
     "beta": {
       "heading": "Funkcje w wersji beta",

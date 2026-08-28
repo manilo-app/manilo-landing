@@ -37,7 +37,7 @@
       },
       {
         "q": "Ist Manilo privat? Werden meine Daten verkauft?",
-        "a": "Bei Manilo liegen deine Daten zuerst lokal. Deine Transaktionen leben auf deinem iPhone in einer lokalen SQLite-Datenbank. Wenn du Cloud aktivierst, wird eine verschlüsselte Kopie mit Manilo-Servern in Deutschland (Hetzner) synchronisiert. Manilo verkauft deine Daten nie, nutzt sie nie für Werbung und nie zum Trainieren von AI-Modellen. Sprachaufnahmen werden direkt auf dem Gerät transkribiert und nie gespeichert. Alle Details stehen in der Datenschutzerklärung unter https://manilo.app/privacy."
+        "a": "Bei Manilo liegen deine Daten zuerst lokal. Deine Transaktionen leben auf deinem iPhone in einer lokalen SQLite-Datenbank. Wenn du Cloud aktivierst, wird eine Kopie mit Manilo-Servern auf Google Cloud (USA) synchronisiert, ruhend verschlüsselt und pro Nutzer isoliert. Manilo verkauft deine Daten nie, nutzt sie nie für Werbung und nie zum Trainieren von AI-Modellen. Diktate in der App werden auf dem Gerät transkribiert, und Sprachaufnahmen werden nie gespeichert. Alle Details stehen in der Datenschutzerklärung unter https://manilo.app/privacy."
       },
       {
         "q": "Teilt Manilo Rechnungen auf wie Splitwise?",
@@ -159,7 +159,7 @@
       },
       "delete": {
         "title": "Dein Konto löschen",
-        "body": "Einstellungen → Konto → Konto löschen. Wir löschen die Serverdaten innerhalb von 7 Tagen und die Backups innerhalb von 30. Die lokalen Daten werden beim Abmelden sofort gelöscht."
+        "body": "Einstellungen → Konto → Konto löschen. Die Serverdaten werden sofort gelöscht, die Backups laufen innerhalb von 30 Tagen aus. Die lokalen Daten werden beim Abmelden sofort gelöscht."
       },
       "privacy": {
         "pre": "Mehr dazu steht in unserer ",

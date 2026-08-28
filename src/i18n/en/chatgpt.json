@@ -94,7 +94,7 @@
       {
         "id": "security",
         "q": "Is it secure? What can ChatGPT or Claude actually access?",
-        "a": "Sign-in uses OAuth 2.1 with PKCE and happens on Manilo's own consent page, with Apple, Google, or email. The assistant never sees your password. Once connected, it can read your data and, when you ask, create, edit, or delete entries; ChatGPT shows a confirmation prompt before any write. Data is stored in Germany (Hetzner) plus Google Cloud Firestore. Transaction amounts are never sent to analytics. To disconnect, remove the connector in your ChatGPT or Claude settings. Security contact:"
+        "a": "Sign-in uses OAuth 2.1 with PKCE and happens on Manilo's own consent page, with Apple, Google, or email. The assistant never sees your password. Once connected, it can read your data and, when you ask, create, edit, or delete entries; ChatGPT shows a confirmation prompt before any write. Data is stored in Google Cloud Firestore, encrypted at rest and isolated per user. Transaction amounts are never sent to analytics. To disconnect, remove the connector in your ChatGPT or Claude settings. Security contact:"
       },
       {
         "id": "trial",

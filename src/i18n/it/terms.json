@@ -79,7 +79,7 @@
       "p1Pre": "Le tue transazioni appartengono a te. Non rivendichiamo alcuna proprietà sui dati che crei usando il Servizio. Li trattiamo solo per fornire le funzioni che hai attivato, come descritto nella nostra ",
       "p1Link": "Informativa sulla privacy",
       "p1Post": ".",
-      "p2": "Puoi esportare il tuo registro completo in CSV in qualsiasi momento da Impostazioni → Esporta. Se elimini il tuo account, eliminiamo i dati associati entro 7 giorni; i backup vengono smaltiti entro 30 giorni."
+      "p2": "Puoi esportare il tuo registro completo in CSV in qualsiasi momento da Impostazioni → Esporta. Se elimini il tuo account, eliminiamo subito i dati associati; i backup scadono entro 30 giorni."
     },
     "beta": {
       "heading": "Funzioni beta",

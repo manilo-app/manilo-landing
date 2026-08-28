@@ -79,7 +79,7 @@
       "p1Pre": "Your transactions belong to you. We claim no ownership over data you create using the Service. We process it only to deliver the features you've enabled, as described in our ",
       "p1Link": "Privacy Policy",
       "p1Post": ".",
-      "p2": "You can export your full ledger as CSV at any time from Settings → Export. If you delete your account, we delete the associated data within 7 days; backups roll off within 30 days."
+      "p2": "You can export your full ledger as CSV at any time from Settings → Export. If you delete your account, we delete the associated data immediately; backups expire within 30 days."
     },
     "beta": {
       "heading": "Beta features",

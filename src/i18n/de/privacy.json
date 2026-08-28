@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Datenschutzerklärung — Manilo",
-    "description": "Datenschutzerklärung für Manilo. Daten zuerst lokal, pro Nutzer isoliert, an der DSGVO ausgerichtet. Keine Werbung. Keine Datenhändler. Keine Tracking-SDKs.",
-    "ogDescription": "Daten zuerst lokal, an der DSGVO ausgerichtet. Keine Werbung, keine Datenhändler, keine Tracking-SDKs."
+    "description": "Datenschutzerklärung für Manilo. Daten zuerst lokal, pro Nutzer isoliert, an der DSGVO ausgerichtet. Keine Werbung, keine Datenhändler, kein Verkauf deiner Daten.",
+    "ogDescription": "Daten zuerst lokal, an der DSGVO ausgerichtet. Keine Werbung, keine Datenhändler, kein Verkauf deiner Daten."
   },
   "jsonLd": {
     "breadcrumbName": "Datenschutzerklärung"
@@ -10,7 +10,7 @@
   "hero": {
     "eyebrow": "Rechtliches",
     "title": "Datenschutzerklärung",
-    "lastUpdated": "Zuletzt aktualisiert am 10. Mai 2026"
+    "lastUpdated": "Zuletzt aktualisiert am 28. August 2026"
   },
   "toc": {
     "ariaLabel": "Inhaltsverzeichnis",
@@ -19,35 +19,37 @@
   "summary": {
     "heading": "Kurzfassung",
     "calloutLead": "Die kurze Version:",
-    "calloutBody": "Bei Manilo (früher Ledgy) liegen deine Daten zuerst lokal. Deine Transaktionen leben auf deinem Gerät. Wenn du Cloud aktivierst, wird eine verschlüsselte Kopie mit unseren Servern synchronisiert, damit andere Geräte und geteilte Gruppen sie sehen können. Wir verkaufen deine Daten nie, sehen uns deine Transaktionen nie an und nutzen sie nie zum Trainieren von AI.",
-    "introBeforeLink": "Diese Datenschutzerklärung erklärt, welche Daten Manilo („wir“, „uns“) erhebt, wenn du die Manilo-iOS-App, das Manilo-Web-Dashboard unter",
-    "introAfterLink": ", den Manilo-Telegram-Bot und alle zugehörigen Dienste (zusammen der „Dienst“) nutzt. Sie ist in verständlicher Sprache geschrieben und an der DSGVO (EU 2016/679) sowie den Anforderungen des Apple App Store ausgerichtet."
+    "calloutBody": "Bei Manilo (früher Ledgy) liegen deine Daten zuerst lokal — deine Transaktionen leben auf deinem Gerät. Wenn du Cloud aktivierst, wird eine Kopie mit unseren Servern auf Google Cloud (USA) synchronisiert, damit deine anderen Geräte, Personen, mit denen du teilst, und AI-Assistenten, die du selbst verbindest, damit arbeiten können. Wir verkaufen deine Daten nie, zeigen nie Werbung und nutzen deine Daten nie, um AI-Modelle zu trainieren.",
+    "introBeforeLink": "Diese Datenschutzerklärung erklärt, welche Daten Manilo („wir“, „uns“) erhebt, wenn du die Manilo-iOS-App (einschließlich der Apple-Watch-App), das Manilo-Web-Dashboard unter",
+    "introAfterLink": ", den Manilo-Telegram-Bot, unsere Integrationen mit AI-Assistenten (ChatGPT, Claude und andere MCP-kompatible Clients) sowie alle zugehörigen Dienste (zusammen der „Dienst“) nutzt. Einige Endpunkte des Dienstes laufen weiterhin unter unserer alten Domain ledgy.app. Sie ist in verständlicher Sprache geschrieben und an der DSGVO (EU 2016/679) sowie den Anforderungen des Apple App Store ausgerichtet."
   },
   "whatWeCollect": {
     "heading": "Was wir erheben",
     "account": {
       "heading": "Kontodaten (wenn du dich für Cloud registrierst)",
       "items": [
-        "E-Mail-Adresse — dient zur Identifikation deines Kontos und zum Versand von Transaktions-E-Mails.",
-        "Authentifizierungs-Token — ausgestellt über „Mit Apple anmelden“ oder unser eigenes Anmeldeverfahren.",
-        "Abo-Status — ob du eine aktive Cloud-Berechtigung hast, geliefert von RevenueCat."
+        "E-Mail-Adresse — dient zur Identifikation deines Kontos und zum Empfang von E-Mails zum Dienst. Wenn du dich mit Apple oder Google anmeldest, erhalten wir die E-Mail-Adresse und die Basis-Profildaten, die dabei übermittelt werden; wenn du dich mit E-Mail und Passwort registrierst, speichern wir deine E-Mail-Adresse und einen Hash deines Passworts (nie das Passwort selbst).",
+        "Authentifizierungsdaten — Anmelde-Token, ausgestellt von Apple, Google oder unserem eigenen Anmeldeverfahren. Persönliche Zugriffstoken, die du für den API-/MCP-Zugriff erstellst, speichern wir ausschließlich als SHA-256-Hashes.",
+        "Abo-Status — ob du eine aktive Berechtigung oder eine Testphase hast, geliefert von RevenueCat und Apple. Zahlungen wickeln Apple (in der App) oder der Checkout von RevenueCat (im Web) ab; Kartendaten erreichen unsere Server nie."
       ]
     },
     "application": {
       "heading": "Anwendungsdaten (wenn du Cloud nutzt)",
       "items": [
-        "Transaktionen, Konten, Kategorien, Tags, Budgets, wiederkehrende Regeln, Gruppenmitgliedschaften und Kategorie-Regeln.",
-        "Belegfotos, die du anhängst.",
-        "Sprachaufnahmen — <strong>werden nicht gespeichert.</strong> Sprache wird auf deinem Gerät über das On-Device-Sprachframework von Apple transkribiert. Nur der fertige Text geht zur Auswertung an unsere AI.",
-        "Für Telegram-Nutzer: deine Telegram-Nutzer-ID, die als Verknüpfungsschlüssel zu deinem Manilo-Konto dient.",
-        "Für Apple-Wallet-Nutzer: die Zahlungsmitteilungen, die du weiterleitest — Händler, Betrag, Währung und Zeitstempel. Kartennummern erhalten wir nie."
+        "Dein Haushaltsbuch — Transaktionen (Betrag, Währung, Datum, Kategorie, Konto, freie Notizen, Händler/Empfänger), Konten und Kontostände, Kategorien, Tags, Budgets, wiederkehrende Regeln, Ausgabengruppen (einschließlich der Anzeigenamen der Personen, mit denen du teilst) und Profileinstellungen (Hauptwährung, Sprache, Datums- und Zahlenformat, Zeitzone, Wochenbeginn).",
+        "Belegdateien, die du anhängst — Fotos oder PDFs.",
+        "Spracheingaben. Diktate in der iPhone-App werden <strong>auf deinem Gerät</strong> über das Sprachframework von Apple transkribiert — nur der fertige Text erreicht uns. Spracheingaben auf der Apple Watch und Sprachnachrichten an den Telegram-Bot werden auf unseren Servern von unserem AI-Anbieter (Groq) transkribiert; die Audiodaten werden nur vorübergehend verarbeitet und von uns nicht gespeichert.",
+        "Für Telegram-Nutzer: deine Telegram-Nutzer-ID (der Verknüpfungsschlüssel zu deinem Manilo-Konto) sowie die Nachrichten, Fotos und Sprachnachrichten, die du dem Bot schickst.",
+        "Für Apple-Wallet-Nutzer: die Zahlungsmitteilungen, die du weiterleitest — Händler, Betrag, Währung und Zeitstempel. Kartennummern erhalten wir nie.",
+        "Inhalte, die du einem verbundenen AI-Assistenten zum Import übergibst (zum Beispiel einen Kontoauszug oder einen Beleg) — sie werden zuerst von der Plattform dieses Assistenten verarbeitet und danach wie jeder andere Eintrag in deinem Haushaltsbuch gespeichert."
       ]
     },
     "diagnostics": {
-      "heading": "Diagnosedaten",
+      "heading": "Diagnose- und Nutzungsdaten",
       "items": [
         "Absturzberichte — anonymisiert, über die Standard-Absturzberichte von Apple übermittelt (die du in den iOS-Einstellungen deaktivieren kannst).",
-        "Aggregierte Nutzungsereignisse — Seitenaufrufe und Klicks, keine persönlichen Inhalte. Wir nutzen einen datenschutzfreundlichen Analytics-Anbieter, der keine Tracking-Cookies setzt und keine seitenübergreifenden Profile bildet."
+        "Nutzungsanalyse — in der App, auf der Website und in unserer API setzen wir Google Analytics ein, um die Nutzung von Funktionen zu messen: aufgerufene Bildschirme, genutzte Funktionen, Tool-Aufrufe verbundener Assistenten und Zeitmessungen. Bei angemeldeten Nutzern sind diese Ereignisse mit deiner Konto-Kennung verknüpft. Transaktionsbeträge, Händlernamen, Notizen oder Beleginhalte übermitteln wir nicht an Analytics. Auf unseren Websites setzt Google Analytics Cookies.",
+        "Sicherheitsdaten — IP-Adressen werden vorübergehend zur Ratenbegrenzung und zum Missbrauchsschutz verarbeitet. Serverprotokolle (die deine Konto-Kennung und deine Aktionen nennen, nie deine E-Mail-Adresse) bewahren wir bis zu 30 Tage auf."
       ]
     }
   },
@@ -55,9 +57,9 @@
     "heading": "Was wir nie erheben",
     "items": [
       "Deine Bank-Zugangsdaten, Kartennummern oder Banking-Sitzungen. Manilo verbindet sich nicht mit Bankkonten.",
-      "Deine Kontakte, Fotomediathek, Kalender oder deinen Standort.",
-      "Werbe-IDs (Identifier for Advertisers, IDFA). Manilo zeigt keine Werbung.",
-      "Sprachaufnahmen. Die Umwandlung von Sprache in Text läuft auf deinem Gerät.",
+      "Deine Kontakte, deinen Kalender, deine Fotomediathek oder deinen Standort. Wir erhalten nur die Fotos, die du ausdrücklich anhängst.",
+      "Werbe-IDs (Identifier For Advertisers, IDFA). Manilo zeigt keine Werbung.",
+      "Gespeicherte Sprachaufnahmen. Audiodaten werden transkribiert und verworfen; Diktate auf dem iPhone verlassen dein Gerät nie.",
       "Alles, was wir für die oben genannten Funktionen nicht zwingend brauchen."
     ]
   },
@@ -65,46 +67,63 @@
     "heading": "Wie wir sie nutzen",
     "intro": "Wir nutzen die oben genannten Daten ausschließlich für folgende Zwecke:",
     "purposes": [
-      "Dein Haushaltsbuch zwischen deinen eigenen Geräten synchronisieren.",
-      "Sichtbarkeit mit Personen teilen, die du ausdrücklich zu einer geteilten Ressource eingeladen hast.",
-      "Den Text aus Sprache, Foto oder SMS in eine Transaktion umwandeln (AI-Verarbeitung).",
-      "Dir Transaktions-E-Mails senden — Anmeldelinks, Rechnungen, Sicherheitshinweise, Kontoänderungen.",
-      "Abstürze analysieren und das Produkt verbessern."
+      "Dein Haushaltsbuch zwischen deinen Geräten und mit Personen synchronisieren, die du ausdrücklich in geteilte Gruppen oder Konten eingeladen hast.",
+      "Deine Texte, Fotos, Sprachtranskripte und weitergeleiteten Mitteilungen in Transaktionen umwandeln (AI-Verarbeitung).",
+      "Fragen beantworten und Aktionen ausführen, um die du einen verbundenen AI-Assistenten bittest.",
+      "Dein Abo und deine Testphase verwalten.",
+      "Transaktions- und Einstiegs-E-Mails senden — Anmeldecodes, Sicherheitshinweise, Kontoänderungen, Tipps für den Einstieg. Jede nicht zwingend erforderliche E-Mail enthält einen Abmeldelink.",
+      "Push-Mitteilungen zustellen, die du aktivierst. Ihr Text kann Beträge und Händlernamen enthalten, erscheint auf deinem Sperrbildschirm und läuft über die Push-Dienste von Apple und Google.",
+      "Abstürze analysieren, die Nutzung messen und Missbrauch verhindern."
     ],
-    "doNot": "<strong>Wir verkaufen deine Daten nicht</strong>, geben sie nicht für Werbung weiter und nutzen sie nicht, um AI-Modelle Dritter zu trainieren.",
+    "doNot": "<strong>Wir verkaufen deine Daten nicht</strong>, geben sie nicht für Werbung weiter und nutzen sie nicht, um eigene oder fremde AI-Modelle zu trainieren.",
     "mcp": {
       "heading": "AI-Assistenten & Model Context Protocol (MCP)",
       "beforeLink": "Wenn du Manilo über unsere",
       "linkText": "Integrationsseite",
-      "afterLink": "mit einem AI-Assistenten verbindest (Claude, ChatGPT, Cursor oder einem beliebigen MCP-kompatiblen Client), erhält dieser Assistent die Daten, die zur Beantwortung deiner Fragen nötig sind — typischerweise Auszüge aus Transaktionen, Kategorie-Namen, Kontostände oder aggregierte Summen. Du entscheidest, was abgefragt wird: Der Assistent sieht nur die Daten, die er in deinem Auftrag ausdrücklich anfragt. Du kannst die Verbindung jederzeit in den Einstellungen des Assistenten trennen; der Widerruf wirkt sofort. Wir schieben dem Assistenten beim Verbinden nicht dein komplettes Haushaltsbuch zu."
+      "afterLink": "mit einem AI-Assistenten verbindest — ChatGPT (OpenAI), Claude (Anthropic) oder einem anderen MCP-kompatiblen Client —, kann dieser auf deine Anweisung hin über die Tools von Manilo deine Daten lesen und ändern. Wir schieben dem Assistenten beim Verbinden nie dein Haushaltsbuch zu — Daten fließen nur, wenn der Assistent in deinem Auftrag ein Tool aufruft.",
+      "read": "<strong>Was der Assistent lesen kann:</strong> deine Transaktionen (einschließlich Notizen und Händlernamen), Konten und Kontostände (einschließlich der Aufschlüsselung nach Einnahmen, Ausgaben und Umbuchungen), Budgets, Kategorien, Tags, wiederkehrende Regeln, Ausgabengruppen samt der Anzeigenamen ihrer Mitglieder, deine Profileinstellungen, aggregierte Summen sowie Belegdateien über kurzlebige signierte Download-Links, deren URL deine Konto-Kennung enthält. Tool-Antworten enthalten außerdem Datensatz-Kennungen (damit der Assistent Einträge in Folgeaktionen referenzieren kann) und Zustandsangaben zum Dienst wie deinen Test- oder Abo-Status sowie gelegentliche Nutzungshinweise.",
+      "write": "<strong>Was der Assistent schreiben kann:</strong> Transaktionen, Umbuchungen, Saldokorrekturen, Konten, Kategorien, Tags, Budgets, wiederkehrende Regeln und Gruppen anlegen, ändern und löschen; deine Profileinstellungen ändern; und Belegdateien an Transaktionen anhängen.",
+      "flow": "Daten, die die Tools zurückgeben, werden an die Plattform des Assistenten übermittelt und dort nach deren eigenen Datenschutzbestimmungen verarbeitet (bei ChatGPT die von OpenAI, bei Claude die von Anthropic). Inhalte, die du einem Assistenten hochlädst, verarbeitet dessen Plattform, bevor Manilo das erhält, was du importieren wolltest. Du kannst die Verbindung jederzeit in den Einstellungen des Assistenten trennen und persönliche Zugriffstoken im Dashboard widerrufen; der serverseitige Zugriff endet sofort."
     }
   },
   "thirdParties": {
     "heading": "Unterauftragsverarbeiter",
-    "intro": "Für die Bereitstellung des Dienstes greifen wir auf die folgenden Anbieter zurück. Jeder ist durch einen Auftragsverarbeitungsvertrag gebunden und verarbeitet Daten nur nach unseren Weisungen.",
+    "intro": "Für die Bereitstellung des Dienstes greifen wir auf die folgenden Anbieter zurück. Jeder verarbeitet Daten nur nach unseren Weisungen und auf Grundlage eines Auftragsverarbeitungsvertrags.",
     "providers": [
-      { "name": "Hetzner", "desc": "Hosting unseres Backends und unserer Datenbank in Deutschland (EU)." },
-      { "name": "OpenAI / Anthropic", "desc": "AI-Auswertung von Transaktionstext. Deine transkribierte Nachricht wird zur Auswertung übermittelt; die Ergebnisse werden gemäß den jeweiligen API-Bedingungen nicht zum Trainieren ihrer Modelle genutzt. Anthropic ist außerdem der AI-Assistent, wenn du Manilo über das Model Context Protocol mit Claude verbindest; die abgefragten Daten gehen für die Dauer des Gesprächs an Anthropic und werden nach deren API-Bedingungen nicht für das Modelltraining genutzt." },
-      { "name": "RevenueCat", "desc": "Abo-Status auf iOS." },
-      { "name": "Apple", "desc": "Zahlungsabwicklung für In-App-Abos und Absturzberichte." },
-      { "name": "Resend", "desc": "Versand von Transaktions-E-Mails." },
-      { "name": "Telegram", "desc": "Bot-Weiterleitung für Nutzer, die die Erfassung über Telegram aktivieren." }
+      { "name": "Google Cloud Platform", "desc": "Hosting und Speicherung: Unser Backend läuft auf Google Cloud Run, mit Google Firestore (Datenbank) und Google Cloud Storage (Belegdateien) in den USA; Push-Zustellung über Firebase Cloud Messaging." },
+      { "name": "Groq", "desc": "primäre AI-Auswertung von Transaktionstext und Belegbildern sowie Transkription der Spracheingaben von Apple Watch und Telegram. Anfragen enthalten deine Konto-Kennung zur Missbrauchsprävention; die Inhalte werden gemäß den API-Bedingungen von Groq nicht zum Trainieren ihrer Modelle genutzt." },
+      { "name": "OpenAI", "desc": "AI-Auswertung von Transaktionstext und Belegbildern als Rückfallebene, unter denselben API-Bedingungen zu Konto-Kennung und Nicht-Training. OpenAI ist außerdem die Assistenten-Plattform, die deine abgefragten Daten erhält, wenn du Manilo mit ChatGPT verbindest." },
+      { "name": "Anthropic", "desc": "die Assistenten-Plattform, die deine abgefragten Daten erhält, wenn du Manilo mit Claude verbindest; API-Daten werden gemäß den Bedingungen von Anthropic nicht für das Modelltraining genutzt." },
+      { "name": "Apple", "desc": "Sign in with Apple, Zahlungsabwicklung für In-App-Abos, Push-Mitteilungen und Absturzberichte." },
+      { "name": "Google", "desc": "Sign in with Google sowie Google Analytics zur Nutzungsmessung (setzt Cookies auf unseren Websites)." },
+      { "name": "RevenueCat", "desc": "Abo-Status und Web-Checkout; erhält deine Konto-Kennung, nie dein Haushaltsbuch." },
+      { "name": "Microsoft 365", "desc": "Versand von Transaktions- und Einstiegs-E-Mails." },
+      { "name": "Upstash", "desc": "verschlüsselter, kurzlebiger serverseitiger Cache; Einträge laufen innerhalb von 24 Stunden ab." },
+      { "name": "Telegram", "desc": "Nachrichtenweiterleitung für Nutzer, die den Telegram-Bot aktivieren. Dein Chat mit dem Bot (einschließlich der Transaktionsbestätigungen, die er sendet) bleibt in deinem Telegram-Chatverlauf und unterliegt der eigenen Datenschutzerklärung von Telegram." }
     ],
-    "dpaBeforeEmail": "Wenn du eine Liste der Unterstandorte unserer Unterauftragsverarbeiter oder Kopien der Auftragsverarbeitungsverträge möchtest, schreib an",
+    "dpaBeforeEmail": "Soweit Daten aus der EU oder dem Vereinigten Königreich übermittelt werden, stützen wir uns auf die anerkannten Garantien unserer Anbieter (EU-U.S. Data Privacy Framework oder Standardvertragsklauseln). Für Kopien der Auftragsverarbeitungsverträge oder eine Liste der Unterstandorte unserer Unterauftragsverarbeiter schreib an",
     "dpaAfterEmail": "."
   },
   "retention": {
     "heading": "Speicherdauer & Löschung",
     "items": [
-      "Transaktionen und Belege, die du anlegst, bleiben gespeichert, bis du sie oder dein Konto löschst.",
-      "Wenn du Cloud kündigst, bleibt deine lokale Kopie auf deinem Gerät. Die Cloud-Kopie wird 30 Tage aufbewahrt und dann gelöscht.",
-      "Kontolöschung: Öffne Einstellungen → Konto → Konto löschen. Alles auf dem Server wird innerhalb von 7 Tagen gelöscht. Backups laufen innerhalb von 30 Tagen aus."
+      "Dein Haushaltsbuch und deine Belege bleiben so lange gespeichert, wie dein Konto besteht — bis du einzelne Einträge oder dein gesamtes Konto löschst.",
+      "Wenn dein Cloud-Abo endet, bleiben deine synchronisierten Daten gespeichert, damit sie da sind, falls du zurückkommst; deine lokale Kopie bleibt auf deinem Gerät. Die Kopie auf dem Server kannst du jederzeit entfernen, indem du dein Konto löschst.",
+      "Kontolöschung: Einstellungen → Konto → Konto löschen. Deine Daten werden sofort aus unserer Produktivdatenbank gelöscht — eine echte Löschung, keine Deaktivierung. Belegdateien sind im selben Moment dauerhaft nicht mehr zugänglich. Verschlüsselte Datenbank-Backups laufen innerhalb von 30 Tagen ab, serverseitige Caches innerhalb von 24 Stunden, Serverprotokolle innerhalb von 30 Tagen.",
+      "AI-Anbieter (Groq, OpenAI, Anthropic) verarbeiten Auswertungs- und Assistenten-Anfragen nur vorübergehend nach ihren API-Bedingungen zur Datenspeicherung und trainieren nicht damit. Google Analytics bewahrt Nutzungsereignisse bis zu 14 Monate auf."
     ]
   },
   "rights": {
     "heading": "Deine Rechte",
-    "bodyBeforeEmail": "Wenn du in der EU, im Vereinigten Königreich oder in Kalifornien bist, hast du das Recht, auf deine personenbezogenen Daten zuzugreifen, sie zu berichtigen, zu übertragen, zu löschen oder der Verarbeitung zu widersprechen. All das kannst du in der App unter Einstellungen → Konto ausüben oder per E-Mail an",
+    "bodyBeforeEmail": "Wenn du in der EU, im Vereinigten Königreich oder in Kalifornien bist, hast du das Recht, auf deine personenbezogenen Daten zuzugreifen, sie zu berichtigen, zu übertragen, zu löschen oder der Verarbeitung zu widersprechen. Die meisten dieser Rechte kannst du direkt im Produkt ausüben oder per E-Mail an",
     "bodyAfterEmail": ". Wir antworten innerhalb von 30 Tagen.",
+    "controls": [
+      "Alles löschen: Einstellungen → Konto → Konto löschen.",
+      "Dein Haushaltsbuch als CSV aus der App exportieren.",
+      "Einen AI-Assistenten in dessen eigenen Einstellungen trennen; persönliche Zugriffstoken im Dashboard widerrufen — beides beendet den serverseitigen Zugriff sofort.",
+      "Nicht zwingend erforderliche E-Mails über den Abmeldelink in jeder Nachricht abbestellen.",
+      "Absturzberichte in den iOS-Einstellungen deaktivieren."
+    ],
     "complaint": "Du hast außerdem das Recht, eine Beschwerde bei der für dich zuständigen Datenschutz-Aufsichtsbehörde einzulegen."
   },
   "children": {

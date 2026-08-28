@@ -79,7 +79,7 @@
       "p1Pre": "Vos transactions vous appartiennent. Nous ne revendiquons aucun droit de propriété sur les données que vous créez au moyen du Service. Nous ne les traitons que pour fournir les fonctionnalités que vous avez activées, comme décrit dans notre ",
       "p1Link": "Politique de confidentialité",
       "p1Post": ".",
-      "p2": "Vous pouvez exporter l’intégralité de votre registre au format CSV à tout moment depuis Réglages → Exporter. Si vous supprimez votre compte, nous supprimons les données associées sous 7 jours ; les sauvegardes disparaissent sous 30 jours."
+      "p2": "Vous pouvez exporter l’intégralité de votre registre au format CSV à tout moment depuis Réglages → Exporter. Si vous supprimez votre compte, nous supprimons immédiatement les données associées ; les sauvegardes expirent sous 30 jours."
     },
     "beta": {
       "heading": "Fonctionnalités bêta",

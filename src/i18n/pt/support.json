@@ -37,7 +37,7 @@
       },
       {
         "q": "O Manilo é privado? Ele vende meus dados?",
-        "a": "O Manilo é local-first. Suas transações ficam no seu iPhone, em um banco de dados SQLite local. Se você ativar o Cloud, uma cópia criptografada é sincronizada com servidores do Manilo hospedados na Alemanha (Hetzner). O Manilo nunca vende seus dados, nunca os usa para publicidade e nunca os usa para treinar modelos de IA. O áudio da sua voz é transcrito no próprio aparelho e nunca é armazenado. Todos os detalhes estão na Política de Privacidade, em https://manilo.app/privacy."
+        "a": "O Manilo é local-first. Suas transações ficam no seu iPhone, em um banco de dados SQLite local. Se você ativar o Cloud, uma cópia é sincronizada com servidores do Manilo no Google Cloud (Estados Unidos), criptografada em repouso e isolada por usuário. O Manilo nunca vende seus dados, nunca os usa para publicidade e nunca os usa para treinar modelos de IA. O ditado dentro do app é transcrito no próprio aparelho, e o áudio da voz nunca é armazenado. Todos os detalhes estão na Política de Privacidade, em https://manilo.app/privacy."
       },
       {
         "q": "O Manilo divide contas como o Splitwise?",
@@ -159,7 +159,7 @@
       },
       "delete": {
         "title": "Exclua sua conta",
-        "body": "Configurações → Conta → Excluir conta. Apagamos os dados do servidor em até 7 dias e os backups em até 30. Os dados locais são apagados na hora em que você sai da conta."
+        "body": "Configurações → Conta → Excluir conta. Os dados do servidor são excluídos imediatamente e os backups expiram em até 30 dias. Os dados locais são apagados na hora em que você sai da conta."
       },
       "privacy": {
         "pre": "Para saber mais, leia nossa ",

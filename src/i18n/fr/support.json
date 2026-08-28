@@ -37,7 +37,7 @@
       },
       {
         "q": "Manilo respecte-t-il ma vie privée ? Vend-il mes données ?",
-        "a": "Manilo fonctionne d’abord en local. Vos transactions vivent sur votre iPhone, dans une base de données SQLite locale. Si vous activez Cloud, une copie chiffrée est synchronisée vers les serveurs Manilo hébergés en Allemagne (Hetzner). Manilo ne vend jamais vos données, ne les utilise jamais à des fins publicitaires et ne s’en sert jamais pour entraîner des modèles d’IA. L’audio de votre voix est transcrit sur l’appareil et n’est jamais conservé. Tous les détails dans la Politique de confidentialité : https://manilo.app/privacy."
+        "a": "Manilo fonctionne d’abord en local. Vos transactions vivent sur votre iPhone, dans une base de données SQLite locale. Si vous activez Cloud, une copie est synchronisée vers les serveurs Manilo sur Google Cloud (États-Unis), chiffrée au repos et isolée par utilisateur. Manilo ne vend jamais vos données, ne les utilise jamais à des fins publicitaires et ne s’en sert jamais pour entraîner des modèles d’IA. La dictée dans l’application est transcrite sur l’appareil, et l’audio de votre voix n’est jamais conservé. Tous les détails dans la Politique de confidentialité : https://manilo.app/privacy."
       },
       {
         "q": "Manilo partage-t-il les additions comme Splitwise ?",
@@ -159,7 +159,7 @@
       },
       "delete": {
         "title": "Supprimer votre compte",
-        "body": "Réglages → Compte → Supprimer le compte. Nous supprimons les données du serveur sous 7 jours et les sauvegardes sous 30 jours. Les données locales sont effacées immédiatement à la déconnexion."
+        "body": "Réglages → Compte → Supprimer le compte. Les données du serveur sont supprimées immédiatement et les sauvegardes expirent sous 30 jours. Les données locales sont effacées immédiatement à la déconnexion."
       },
       "privacy": {
         "pre": "Pour en savoir plus, consultez notre ",

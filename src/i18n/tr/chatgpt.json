@@ -94,7 +94,7 @@
       {
         "id": "security",
         "q": "Güvenli mi? ChatGPT veya Claude gerçekte neye erişebiliyor?",
-        "a": "Giriş, OAuth 2.1 ve PKCE ile Manilo'nun kendi onay sayfasında yapılır — Apple, Google veya e-posta ile. Asistan şifreni asla görmez. Bağlandıktan sonra verilerini okuyabilir ve sen istediğinde kayıt oluşturabilir, düzenleyebilir veya silebilir; ChatGPT her yazma işleminden önce onay istemi gösterir. Veriler Almanya'da (Hetzner) ve Google Cloud Firestore'da saklanır. İşlem tutarları analitik servislerine asla gönderilmez. Bağlantıyı kesmek için ChatGPT veya Claude ayarlarından bağlayıcıyı kaldır. Güvenlik iletişimi:"
+        "a": "Giriş, OAuth 2.1 ve PKCE ile Manilo'nun kendi onay sayfasında yapılır — Apple, Google veya e-posta ile. Asistan şifreni asla görmez. Bağlandıktan sonra verilerini okuyabilir ve sen istediğinde kayıt oluşturabilir, düzenleyebilir veya silebilir; ChatGPT her yazma işleminden önce onay istemi gösterir. Veriler Google Cloud Firestore'da, beklemedeyken şifrelenmiş ve her kullanıcı için yalıtılmış olarak saklanır. İşlem tutarları analitik servislerine asla gönderilmez. Bağlantıyı kesmek için ChatGPT veya Claude ayarlarından bağlayıcıyı kaldır. Güvenlik iletişimi:"
       },
       {
         "id": "trial",

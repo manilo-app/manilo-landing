@@ -94,7 +94,7 @@
       {
         "id": "security",
         "q": "È sicuro? A cosa possono accedere davvero ChatGPT o Claude?",
-        "a": "L’accesso usa OAuth 2.1 con PKCE e avviene sulla pagina di consenso di Manilo, con Apple, Google o email. L’assistente non vede mai la tua password. Una volta collegato può leggere i tuoi dati e, quando glielo chiedi, creare, modificare o eliminare voci; ChatGPT mostra una richiesta di conferma prima di ogni scrittura. I dati sono archiviati in Germania (Hetzner) e su Google Cloud Firestore. Gli importi delle transazioni non vengono mai inviati agli strumenti di analisi. Per disconnetterti, rimuovi il connettore dalle impostazioni di ChatGPT o Claude. Contatto per la sicurezza:"
+        "a": "L’accesso usa OAuth 2.1 con PKCE e avviene sulla pagina di consenso di Manilo, con Apple, Google o email. L’assistente non vede mai la tua password. Una volta collegato può leggere i tuoi dati e, quando glielo chiedi, creare, modificare o eliminare voci; ChatGPT mostra una richiesta di conferma prima di ogni scrittura. I dati sono archiviati su Google Cloud Firestore, crittografati a riposo e isolati per ogni utente. Gli importi delle transazioni non vengono mai inviati agli strumenti di analisi. Per disconnetterti, rimuovi il connettore dalle impostazioni di ChatGPT o Claude. Contatto per la sicurezza:"
       },
       {
         "id": "trial",

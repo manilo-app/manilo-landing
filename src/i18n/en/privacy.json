@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Privacy Policy — Manilo",
-    "description": "Privacy Policy for Manilo. Local-first, isolated per user, GDPR-aligned. No ads. No data brokers. No tracking SDKs.",
-    "ogDescription": "Local-first, GDPR-aligned. No ads, no data brokers, no tracking SDKs."
+    "description": "Privacy Policy for Manilo. Local-first, isolated per user, GDPR-aligned. No ads, no data brokers, no selling data.",
+    "ogDescription": "Local-first, GDPR-aligned. No ads, no data brokers, no selling data."
   },
   "jsonLd": {
     "breadcrumbName": "Privacy Policy"
@@ -10,7 +10,7 @@
   "hero": {
     "eyebrow": "Legal",
     "title": "Privacy Policy",
-    "lastUpdated": "Last updated May 10, 2026"
+    "lastUpdated": "Last updated August 28, 2026"
   },
   "toc": {
     "ariaLabel": "Table of contents",
@@ -19,35 +19,37 @@
   "summary": {
     "heading": "Summary",
     "calloutLead": "The short version:",
-    "calloutBody": "Manilo (formerly Ledgy) is local-first. Your transactions live on your device. If you turn on Cloud, an encrypted copy syncs to our servers so other devices and shared groups can see it. We never sell your data, never look at your transactions, and never use them to train AI.",
-    "introBeforeLink": "This Privacy Policy explains what data Manilo (\"we\", \"us\") collects when you use the Manilo iOS app, the Manilo web dashboard at",
-    "introAfterLink": ", the Manilo Telegram bot, and any related services (collectively, the \"Service\"). It is written in plain English and aligned with the GDPR (EU 2016/679) and Apple App Store requirements."
+    "calloutBody": "Manilo (formerly Ledgy) is local-first — your transactions live on your device. If you turn on Cloud, a copy syncs to our servers on Google Cloud (United States) so your other devices, people you share with, and AI assistants you choose to connect can work with it. We never sell your data, never show ads, and never use your data to train AI models.",
+    "introBeforeLink": "This Privacy Policy explains what data Manilo (\"we\", \"us\") collects when you use the Manilo iOS app (including the Apple Watch app), the Manilo web dashboard at",
+    "introAfterLink": ", the Manilo Telegram bot, our AI-assistant integrations (ChatGPT, Claude, and other MCP-compatible clients), and any related services (collectively, the \"Service\"). Some service endpoints operate under our legacy ledgy.app domain. This policy is written in plain English and aligned with the GDPR (EU 2016/679) and Apple App Store requirements."
   },
   "whatWeCollect": {
     "heading": "What we collect",
     "account": {
       "heading": "Account data (when you sign up for Cloud)",
       "items": [
-        "Email address — used to identify your account and send you transactional email.",
-        "Authentication tokens — issued by Apple Sign-In or our own auth flow.",
-        "Subscription status — whether you have an active Cloud entitlement, supplied by RevenueCat."
+        "Email address — identifies your account and receives service email. If you sign in with Apple or Google, we receive the email and basic profile they share; if you sign up with email and password, we store your email and a hash of your password (never the password itself).",
+        "Authentication data — sign-in tokens issued by Apple, Google, or our own auth flow. Personal access tokens you create for API/MCP access are stored as SHA-256 hashes only.",
+        "Subscription status — whether you have an active entitlement or trial, supplied by RevenueCat and Apple. Payments are processed by Apple (in-app) or RevenueCat's checkout (web); card details never reach our servers."
       ]
     },
     "application": {
       "heading": "Application data (when you use Cloud)",
       "items": [
-        "Transactions, accounts, categories, tags, budgets, recurring rules, group memberships, and category rules.",
-        "Receipt photos you attach.",
-        "Voice recordings — <strong>not stored.</strong> Speech is transcribed on your device by Apple's on-device speech framework. Only the resulting text is sent to our AI for parsing.",
-        "For Telegram users: your Telegram user ID, used as the join key for your Manilo account.",
-        "For Apple Wallet users: transaction notifications you choose to forward — merchant, amount, currency, and timestamp. We never receive card numbers."
+        "Your ledger — transactions (amount, currency, date, category, account, free-text notes, merchant/payee), accounts and balances, categories, tags, budgets, recurring rules, spending groups (including the display names of people you share with), and profile settings (primary currency, language, date and number format, timezone, week start).",
+        "Receipt files you attach — photos or PDFs.",
+        "Voice input. Dictation in the iPhone app is transcribed <strong>on your device</strong> by Apple's speech framework — only the resulting text reaches us. Voice entries made on Apple Watch and voice notes sent to the Telegram bot are transcribed on our servers by our AI provider (Groq); the audio is processed transiently and is not stored by us.",
+        "For Telegram users: your Telegram user ID (the join key to your Manilo account) and the messages, photos, and voice notes you send the bot.",
+        "For Apple Wallet users: transaction notifications you choose to forward — merchant, amount, currency, and timestamp. We never receive card numbers.",
+        "Content you hand to a connected AI assistant to import (for example a bank statement or a receipt) — it is processed by that assistant's platform first, then stored in your ledger like any other entry."
       ]
     },
     "diagnostics": {
-      "heading": "Diagnostic data",
+      "heading": "Diagnostic and usage data",
       "items": [
         "Crash reports — anonymized, sent through Apple's standard crash reporting (which you can opt out of in iOS Settings).",
-        "Aggregate usage events — page views and click events, no personal content. We use a privacy-respecting analytics provider that does not set tracking cookies and does not build cross-site profiles."
+        "Usage analytics — we use Google Analytics across the app, the website, and our API to measure feature usage: screens viewed, features used, tool calls made by connected assistants, and timings. For signed-in users these events are linked to your account identifier. We do not send transaction amounts, merchant names, notes, or receipt contents to analytics. On our websites, Google Analytics sets cookies.",
+        "Security data — IP addresses are processed transiently for rate limiting and abuse protection. Server logs (which reference your account identifier and actions, never your email) are retained for up to 30 days."
       ]
     }
   },
@@ -55,56 +57,73 @@
     "heading": "What we never collect",
     "items": [
       "Your bank credentials, card numbers, or banking sessions. Manilo does not connect to bank accounts.",
-      "Your contacts, photos library, calendar, or location.",
+      "Your contacts, calendar, photo library, or location. We only receive the photos you explicitly attach.",
       "Identifiers For Advertisers (IDFA). Manilo does not show ads.",
-      "Voice audio. Speech-to-text runs on your device.",
+      "Stored voice recordings. Audio is transcribed and discarded; iPhone dictation never leaves your device.",
       "Anything we don't strictly need to deliver the features above."
     ]
   },
   "howWeUse": {
     "heading": "How we use it",
-    "intro": "We use the data above only for the following purposes:",
+    "intro": "We use the data above only to:",
     "purposes": [
-      "Sync your ledger across your own devices.",
-      "Share visibility with people you have explicitly invited to a shared resource.",
-      "Parse the text from your voice/photo/SMS into a transaction (AI processing).",
-      "Send you transactional email — sign-in links, invoices, security notices, account changes.",
-      "Diagnose crashes and improve the product."
+      "Sync your ledger across your devices and with people you have explicitly invited to shared groups or accounts.",
+      "Parse your text, photos, voice transcripts, and forwarded notifications into transactions (AI processing).",
+      "Answer questions and perform actions you ask a connected AI assistant to do.",
+      "Manage your subscription and trial.",
+      "Send transactional and onboarding email — sign-in codes, security notices, account changes, getting-started tips. Every non-essential email has an unsubscribe link.",
+      "Deliver push notifications you enable. Their text can include amounts and merchant names, appears on your lock screen, and transits Apple's and Google's push services.",
+      "Diagnose crashes, measure usage, and prevent abuse."
     ],
-    "doNot": "<strong>We do not</strong> sell your data, share it for advertising, or use it to train third-party AI models.",
+    "doNot": "<strong>We do not</strong> sell your data, share it for advertising, or use it to train our own or third-party AI models.",
     "mcp": {
       "heading": "AI Assistants & Model Context Protocol (MCP)",
-      "beforeLink": "If you connect Manilo to an AI assistant (Claude, ChatGPT, Cursor, or any MCP-compatible client) via our",
+      "beforeLink": "If you connect Manilo to an AI assistant — ChatGPT (OpenAI), Claude (Anthropic), or another MCP-compatible client — via our",
       "linkText": "integrations",
-      "afterLink": "page, that assistant receives the data necessary to answer your queries — typically transaction excerpts, category names, account balances, or aggregated totals. You control what is queried: the assistant only sees data it explicitly requests on your behalf. You can disconnect at any time from the assistant's settings; revoking access takes effect immediately. We do not push your full ledger to the assistant on connection."
+      "afterLink": "page, the assistant can, on your instruction, read and change your data through Manilo's tools. We never push your ledger to an assistant on connection — data moves only when the assistant calls a tool on your behalf.",
+      "read": "<strong>What the assistant can read:</strong> your transactions (including notes and merchant names), accounts and balances (including income/expense/transfer breakdowns), budgets, categories, tags, recurring rules, spending groups including member display names, your profile settings, aggregated totals, and receipt files via short-lived signed download links whose URL contains your account identifier. Tool responses also include record identifiers (so the assistant can reference entries in follow-up actions) and service state such as your trial or subscription status and occasional usage tips.",
+      "write": "<strong>What the assistant can write:</strong> create, update, and delete transactions, transfers, balance adjustments, accounts, categories, tags, budgets, recurring rules, and groups; update your profile settings; and attach receipt files to transactions.",
+      "flow": "Data the tools return is transmitted to the assistant's platform and handled there under that platform's own privacy terms (OpenAI's for ChatGPT, Anthropic's for Claude). Content you upload to an assistant is processed by that platform before Manilo receives what you asked to import. You can disconnect the assistant at any time from its settings, and revoke personal access tokens in the dashboard; server-side access ends immediately."
     }
   },
   "thirdParties": {
     "heading": "Subprocessors",
-    "intro": "To deliver the Service we rely on the following providers. Each is bound by a Data Processing Agreement and processes data only on our instructions.",
+    "intro": "To deliver the Service we rely on the following providers. Each processes data only on our instructions under a data-processing agreement.",
     "providers": [
-      { "name": "Hetzner", "desc": "hosting our backend and database in Germany (EU)." },
-      { "name": "OpenAI / Anthropic", "desc": "AI parsing of transaction text. Your transcribed message is sent for parsing; outputs are not used to train their models per their API terms. Anthropic also acts as the AI assistant when you connect Manilo to Claude via the Model Context Protocol; queried data is sent to Anthropic for the duration of the conversation and not used for model training under their API terms." },
-      { "name": "RevenueCat", "desc": "subscription state on iOS." },
-      { "name": "Apple", "desc": "payment processing for in-app subscriptions and crash reporting." },
-      { "name": "Resend", "desc": "transactional email delivery." },
-      { "name": "Telegram", "desc": "bot relay for users who opt into the Telegram intake." }
+      { "name": "Google Cloud Platform", "desc": "hosting and storage: our backend runs on Google Cloud Run, with Google Firestore (database) and Google Cloud Storage (receipt files) in the United States; push delivery via Firebase Cloud Messaging." },
+      { "name": "Groq", "desc": "primary AI parsing of transaction text and receipt images, and transcription of Apple Watch and Telegram voice input. Requests carry your account identifier for abuse prevention; content is not used to train their models per their API terms." },
+      { "name": "OpenAI", "desc": "fallback AI parsing of transaction text and receipt images, under the same account-identifier and no-training API terms. OpenAI is also the assistant platform that receives your queried data when you connect Manilo to ChatGPT." },
+      { "name": "Anthropic", "desc": "the assistant platform that receives your queried data when you connect Manilo to Claude; API data is not used for model training per their terms." },
+      { "name": "Apple", "desc": "Sign in with Apple, in-app subscription payments, push notifications, and crash reporting." },
+      { "name": "Google", "desc": "Sign in with Google, and Google Analytics for usage measurement (sets cookies on our websites)." },
+      { "name": "RevenueCat", "desc": "subscription state and web checkout; receives your account identifier, never your ledger." },
+      { "name": "Microsoft 365", "desc": "transactional and onboarding email delivery." },
+      { "name": "Upstash", "desc": "encrypted, short-lived server-side cache; entries expire within 24 hours." },
+      { "name": "Telegram", "desc": "message relay for users who opt into the Telegram bot. Your conversation with the bot (including transaction confirmations it sends) stays in your Telegram chat history under Telegram's own privacy policy." }
     ],
-    "dpaBeforeEmail": "If you'd like a list of subprocessor sub-locations or DPA copies, write to",
+    "dpaBeforeEmail": "Where data is transferred out of the EU or UK, we rely on our providers' recognized safeguards (EU-U.S. Data Privacy Framework or Standard Contractual Clauses). For DPA copies or subprocessor sub-locations, write to",
     "dpaAfterEmail": "."
   },
   "retention": {
     "heading": "Retention & deletion",
     "items": [
-      "Transactions and receipts you create are kept until you delete them or delete your account.",
-      "If you cancel Cloud, your local copy stays on your device. The Cloud copy is retained for 30 days, then deleted.",
-      "Account deletion: open Settings → Account → Delete account. Everything on the server is wiped within 7 days. Backups roll off within 30 days."
+      "Your ledger and receipts are kept for as long as your account exists — until you delete individual entries or your whole account.",
+      "If your Cloud subscription ends, your synced data remains stored so it is there if you return; your local copy stays on your device. You can remove the server copy at any time by deleting your account.",
+      "Account deletion: Settings → Account → Delete account. Your data is deleted from our production database immediately — a hard delete, not a deactivation. Receipt files become permanently inaccessible at the same moment. Encrypted database backups expire within 30 days; server-side caches within 24 hours; server logs within 30 days.",
+      "AI providers (Groq, OpenAI, Anthropic) process parsing and assistant requests transiently under their API data-retention terms and do not train on them. Google Analytics retains usage events for up to 14 months."
     ]
   },
   "rights": {
     "heading": "Your rights",
-    "bodyBeforeEmail": "If you're in the EU, UK, or California you have rights to access, correct, port, delete, or object to the processing of your personal data. You can exercise all of these from inside the app under Settings → Account, or by emailing",
+    "bodyBeforeEmail": "If you're in the EU, UK, or California you have rights to access, correct, port, delete, or object to the processing of your personal data. Most of them you can exercise directly in the product, or by emailing",
     "bodyAfterEmail": ". We respond within 30 days.",
+    "controls": [
+      "Delete everything: Settings → Account → Delete account.",
+      "Export your ledger as CSV from the app.",
+      "Disconnect an AI assistant from the assistant's own settings; revoke personal access tokens in the dashboard — both cut off server-side access immediately.",
+      "Unsubscribe from non-essential email via the link in every message.",
+      "Opt out of crash reports in iOS Settings."
+    ],
     "complaint": "You also have the right to lodge a complaint with your local data protection supervisory authority."
   },
   "children": {

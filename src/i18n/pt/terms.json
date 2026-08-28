@@ -79,7 +79,7 @@
       "p1Pre": "As suas transações pertencem a você. Não reivindicamos propriedade sobre os dados que você cria usando o Serviço. Nós os tratamos apenas para entregar os recursos que você ativou, conforme descrito na nossa ",
       "p1Link": "Política de Privacidade",
       "p1Post": ".",
-      "p2": "Você pode exportar todo o seu registro financeiro em CSV a qualquer momento em Configurações → Exportar. Se você excluir a sua conta, excluímos os dados associados em até 7 dias; os backups expiram em até 30 dias."
+      "p2": "Você pode exportar todo o seu registro financeiro em CSV a qualquer momento em Configurações → Exportar. Se você excluir a sua conta, excluímos os dados associados imediatamente; os backups expiram em até 30 dias."
     },
     "beta": {
       "heading": "Recursos beta",

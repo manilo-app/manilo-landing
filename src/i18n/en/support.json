@@ -37,7 +37,7 @@
       },
       {
         "q": "Is Manilo private? Does it sell my data?",
-        "a": "Manilo is local-first. Your transactions live on your iPhone in a local SQLite database. If you enable Cloud, an encrypted copy is synced to Manilo servers hosted in Germany (Hetzner). Manilo never sells your data, never uses it for advertising, and never uses it to train AI models. Voice audio is transcribed on-device and never stored. For full details, see the Privacy Policy at https://manilo.app/privacy."
+        "a": "Manilo is local-first. Your transactions live on your iPhone in a local SQLite database. If you enable Cloud, a copy is synced to Manilo servers on Google Cloud (United States), encrypted at rest and isolated per user. Manilo never sells your data, never uses it for advertising, and never uses it to train AI models. In-app dictation is transcribed on-device, and voice audio is never stored. For full details, see the Privacy Policy at https://manilo.app/privacy."
       },
       {
         "q": "Does Manilo split bills like Splitwise?",
@@ -159,7 +159,7 @@
       },
       "delete": {
         "title": "Delete your account",
-        "body": "Settings → Account → Delete Account. We delete server data within 7 days and backups within 30. Local data is wiped immediately when you log out."
+        "body": "Settings → Account → Delete Account. Server data is deleted immediately and backups expire within 30 days. Local data is wiped immediately when you log out."
       },
       "privacy": {
         "pre": "For more, read our ",

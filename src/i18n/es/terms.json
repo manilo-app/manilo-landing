@@ -79,7 +79,7 @@
       "p1Pre": "Sus transacciones le pertenecen. No reclamamos ninguna propiedad sobre los datos que usted cree usando el Servicio. Los tratamos únicamente para ofrecer las funciones que usted haya activado, según se describe en nuestra ",
       "p1Link": "Política de Privacidad",
       "p1Post": ".",
-      "p2": "Puede exportar su registro completo en CSV en cualquier momento desde Configuración → Exportar. Si elimina su cuenta, eliminamos los datos asociados en un plazo de 7 días; los respaldos se depuran en un plazo de 30 días."
+      "p2": "Puede exportar su registro completo en CSV en cualquier momento desde Configuración → Exportar. Si elimina su cuenta, eliminamos los datos asociados de inmediato; los respaldos expiran en un plazo de 30 días."
     },
     "beta": {
       "heading": "Funciones beta",

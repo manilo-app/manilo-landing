@@ -124,6 +124,9 @@ const breadcrumbLd = {
 
       <h3>{d.howWeUse.mcp.heading}</h3>
       <p>{d.howWeUse.mcp.beforeLink} <a href={navUrl(lang, '/integrations')}>{d.howWeUse.mcp.linkText}</a> {d.howWeUse.mcp.afterLink}</p>
+      {d.howWeUse.mcp.read && <p set:html={d.howWeUse.mcp.read} />}
+      {d.howWeUse.mcp.write && <p set:html={d.howWeUse.mcp.write} />}
+      {d.howWeUse.mcp.flow && <p>{d.howWeUse.mcp.flow}</p>}
     </section>
 
     <section id="third-parties">
@@ -149,6 +152,13 @@ const breadcrumbLd = {
     <section id="rights">
       <h2 data-num="07">{d.rights.heading}</h2>
       <p>{d.rights.bodyBeforeEmail} <a href="mailto:privacy@manilo.app">privacy@manilo.app</a>{d.rights.bodyAfterEmail}</p>
+      {d.rights.controls && (
+        <ul>
+          {d.rights.controls.map((item: string) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      )}
       <p>{d.rights.complaint}</p>
     </section>
 

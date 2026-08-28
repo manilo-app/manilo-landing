@@ -37,7 +37,7 @@
       },
       {
         "q": "Manilo gizliliğe saygılı mı? Verilerimi satıyor mu?",
-        "a": "Manilo yerel önceliklidir. İşlemlerin, iPhone'undaki yerel bir SQLite veritabanında durur. Cloud'u açarsan şifrelenmiş bir kopya, Almanya'da (Hetzner) barındırılan Manilo sunucularına senkronize edilir. Manilo verilerini asla satmaz, reklam için kullanmaz ve yapay zeka modellerini eğitmekte kullanmaz. Ses kaydı cihazda yazıya dökülür ve asla saklanmaz. Ayrıntıların tamamı için https://manilo.app/privacy adresindeki Gizlilik Politikası'na bak."
+        "a": "Manilo yerel önceliklidir. İşlemlerin, iPhone'undaki yerel bir SQLite veritabanında durur. Cloud'u açarsan bir kopya, Google Cloud (Amerika Birleşik Devletleri) üzerindeki Manilo sunucularına senkronize edilir; veriler beklemedeyken şifrelenir ve her kullanıcı için yalıtılır. Manilo verilerini asla satmaz, reklam için kullanmaz ve yapay zeka modellerini eğitmekte kullanmaz. Uygulama içi dikte cihazda yazıya dökülür ve ses kaydı asla saklanmaz. Ayrıntıların tamamı için https://manilo.app/privacy adresindeki Gizlilik Politikası'na bak."
       },
       {
         "q": "Manilo, Splitwise gibi hesabı bölüşüyor mu?",
@@ -159,7 +159,7 @@
       },
       "delete": {
         "title": "Hesabını sil",
-        "body": "Ayarlar → Hesap → Hesabı Sil. Sunucu verilerini 7 gün, yedekleri 30 gün içinde sileriz. Yerel veriler, çıkış yaptığın anda temizlenir."
+        "body": "Ayarlar → Hesap → Hesabı Sil. Sunucu verileri anında silinir, yedekler 30 gün içinde tamamen silinir. Yerel veriler, çıkış yaptığın anda temizlenir."
       },
       "privacy": {
         "pre": "Daha fazlası için ",

@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Política de Privacidade — Manilo",
-    "description": "Política de Privacidade do Manilo. Local-first, isolado por usuário, alinhado ao GDPR. Sem anúncios, sem corretores de dados, sem SDKs de rastreamento.",
-    "ogDescription": "Local-first e alinhado ao GDPR. Sem anúncios, sem corretores de dados, sem SDKs de rastreamento."
+    "description": "Política de Privacidade do Manilo. Local-first, isolado por usuário, alinhado ao GDPR. Sem anúncios, sem corretores de dados, sem venda de dados.",
+    "ogDescription": "Local-first e alinhado ao GDPR. Sem anúncios, sem corretores de dados, sem venda de dados."
   },
   "jsonLd": {
     "breadcrumbName": "Política de Privacidade"
@@ -10,7 +10,7 @@
   "hero": {
     "eyebrow": "Legal",
     "title": "Política de Privacidade",
-    "lastUpdated": "Última atualização em 10 de maio de 2026"
+    "lastUpdated": "Última atualização em 28 de agosto de 2026"
   },
   "toc": {
     "ariaLabel": "Sumário",
@@ -19,35 +19,37 @@
   "summary": {
     "heading": "Resumo",
     "calloutLead": "A versão curta:",
-    "calloutBody": "O Manilo (antes Ledgy) é local-first. Suas transações ficam no seu aparelho. Se você ativar o Cloud, uma cópia criptografada é sincronizada com os nossos servidores para que outros aparelhos e grupos compartilhados possam vê-la. Nunca vendemos os seus dados, nunca olhamos as suas transações e nunca as usamos para treinar IA.",
-    "introBeforeLink": "Esta Política de Privacidade explica quais dados o Manilo (“nós”) coleta quando você usa o app do Manilo para iOS, o painel web do Manilo em",
-    "introAfterLink": ", o bot do Manilo no Telegram e quaisquer serviços relacionados (em conjunto, o “Serviço”). Ela foi escrita em linguagem simples e está alinhada ao GDPR (UE 2016/679) e às exigências da App Store da Apple."
+    "calloutBody": "O Manilo (antes Ledgy) é local-first: as suas transações ficam no seu aparelho. Se você ativar o Cloud, uma cópia é sincronizada com os nossos servidores no Google Cloud (Estados Unidos), para que os seus outros aparelhos, as pessoas com quem você compartilha e os assistentes de IA que você escolher conectar possam trabalhar com ela. Nunca vendemos os seus dados, nunca exibimos anúncios e nunca usamos os seus dados para treinar modelos de IA.",
+    "introBeforeLink": "Esta Política de Privacidade explica quais dados o Manilo (“nós”) coleta quando você usa o app do Manilo para iOS (incluindo o app para Apple Watch), o painel web do Manilo em",
+    "introAfterLink": ", o bot do Manilo no Telegram, as nossas integrações com assistentes de IA (ChatGPT, Claude e outros clientes compatíveis com MCP) e quaisquer serviços relacionados (em conjunto, o “Serviço”). Alguns endpoints do serviço ainda operam sob o nosso domínio legado ledgy.app. Esta política foi escrita em linguagem simples e está alinhada ao GDPR (UE 2016/679) e às exigências da App Store da Apple."
   },
   "whatWeCollect": {
     "heading": "O que coletamos",
     "account": {
       "heading": "Dados da conta (quando você cria uma conta no Cloud)",
       "items": [
-        "Endereço de e-mail — usado para identificar a sua conta e enviar e-mails transacionais.",
-        "Tokens de autenticação — emitidos pelo Iniciar Sessão com a Apple ou pelo nosso próprio fluxo de autenticação.",
-        "Status da assinatura — se você tem um direito de acesso ativo ao Cloud, informado pela RevenueCat."
+        "Endereço de e-mail — identifica a sua conta e recebe os e-mails do serviço. Se você entrar com a Apple ou com o Google, recebemos o e-mail e o perfil básico que eles compartilham; se você criar a conta com e-mail e senha, guardamos o seu e-mail e um hash da sua senha (nunca a senha em si).",
+        "Dados de autenticação — tokens de acesso emitidos pela Apple, pelo Google ou pelo nosso próprio fluxo de autenticação. Os tokens de acesso pessoal que você cria para uso da API/MCP são guardados apenas como hashes SHA-256.",
+        "Status da assinatura — se você tem um direito de acesso ativo ou um período de teste, informado pela RevenueCat e pela Apple. Os pagamentos são processados pela Apple (dentro do app) ou pelo checkout da RevenueCat (na web); os dados do cartão nunca chegam aos nossos servidores."
       ]
     },
     "application": {
       "heading": "Dados do aplicativo (quando você usa o Cloud)",
       "items": [
-        "Transações, contas, categorias, tags, orçamentos, regras de recorrência, participações em grupos e regras de categorias.",
-        "Fotos de recibos que você anexa.",
-        "Gravações de voz — <strong>não são armazenadas.</strong> A fala é transcrita no seu aparelho pelo framework de reconhecimento de fala da Apple. Só o texto resultante é enviado à nossa IA para interpretação.",
-        "Para quem usa o Telegram: o seu ID de usuário do Telegram, usado como chave de vinculação à sua conta do Manilo.",
-        "Para quem usa o Apple Wallet: as notificações de transação que você optar por encaminhar — estabelecimento, valor, moeda e data e hora. Nunca recebemos números de cartão."
+        "O seu registro financeiro — transações (valor, moeda, data, categoria, conta, observações em texto livre, estabelecimento/beneficiário), contas e saldos, categorias, tags, orçamentos, regras de recorrência, grupos de gastos (incluindo os nomes de exibição das pessoas com quem você compartilha) e as configurações do seu perfil (moeda principal, idioma, formato de data e de números, fuso horário e início da semana).",
+        "Os arquivos de recibo que você anexa — fotos ou PDFs.",
+        "Entrada por voz. O ditado no app para iPhone é transcrito <strong>no seu aparelho</strong> pelo framework de reconhecimento de fala da Apple — só o texto resultante chega até nós. Os lançamentos por voz feitos no Apple Watch e as mensagens de voz enviadas ao bot do Telegram são transcritos nos nossos servidores pelo nosso provedor de IA (Groq); o áudio é processado de forma transitória e não é armazenado por nós.",
+        "Para quem usa o Telegram: o seu ID de usuário do Telegram (a chave de vinculação à sua conta do Manilo) e as mensagens, fotos e mensagens de voz que você envia ao bot.",
+        "Para quem usa o Apple Wallet: as notificações de transação que você optar por encaminhar — estabelecimento, valor, moeda e data e hora. Nunca recebemos números de cartão.",
+        "O conteúdo que você entrega a um assistente de IA conectado para importar (por exemplo, um extrato bancário ou um recibo) — ele é processado primeiro pela plataforma desse assistente e depois guardado no seu registro financeiro como qualquer outro lançamento."
       ]
     },
     "diagnostics": {
-      "heading": "Dados de diagnóstico",
+      "heading": "Dados de diagnóstico e de uso",
       "items": [
         "Relatórios de falhas — anonimizados, enviados pelo sistema padrão de relatórios de falhas da Apple (que você pode desativar nos Ajustes do iOS).",
-        "Eventos de uso agregados — visualizações de página e cliques, sem conteúdo pessoal. Usamos um provedor de analytics que respeita a privacidade, não usa cookies de rastreamento e não monta perfis entre sites."
+        "Analytics de uso — usamos o Google Analytics no app, no site e na nossa API para medir o uso dos recursos: telas visualizadas, recursos utilizados, chamadas de ferramentas feitas por assistentes conectados e tempos de resposta. Para quem está com a conta conectada, esses eventos ficam vinculados ao identificador da sua conta. Não enviamos ao analytics valores de transações, nomes de estabelecimentos, observações nem o conteúdo dos recibos. Nos nossos sites, o Google Analytics usa cookies.",
+        "Dados de segurança — os endereços IP são processados de forma transitória para limitar a frequência de requisições e prevenir abusos. Os registros (logs) do servidor — que referenciam o identificador da sua conta e as ações realizadas, nunca o seu e-mail — são mantidos por até 30 dias."
       ]
     }
   },
@@ -55,9 +57,9 @@
     "heading": "O que nunca coletamos",
     "items": [
       "As suas credenciais bancárias, números de cartão ou sessões de banco. O Manilo não se conecta a contas bancárias.",
-      "Os seus contatos, a sua biblioteca de fotos, o seu calendário ou a sua localização.",
+      "Os seus contatos, o seu calendário, a sua biblioteca de fotos ou a sua localização. Só recebemos as fotos que você anexa explicitamente.",
       "Identificadores para Anunciantes (IDFA). O Manilo não exibe anúncios.",
-      "Áudio de voz. A conversão de fala em texto roda no seu aparelho.",
+      "Gravações de voz armazenadas. O áudio é transcrito e descartado; o ditado no iPhone nunca sai do seu aparelho.",
       "Qualquer coisa de que não precisemos estritamente para entregar os recursos acima."
     ]
   },
@@ -65,46 +67,63 @@
     "heading": "Como usamos",
     "intro": "Usamos os dados acima apenas para as seguintes finalidades:",
     "purposes": [
-      "Sincronizar o seu registro financeiro entre os seus próprios aparelhos.",
-      "Dar visibilidade às pessoas que você convidou explicitamente para um recurso compartilhado.",
-      "Interpretar o texto da sua voz, foto ou SMS e transformá-lo em uma transação (processamento por IA).",
-      "Enviar e-mails transacionais — links de acesso, faturas, avisos de segurança e alterações na conta.",
-      "Diagnosticar falhas e melhorar o produto."
+      "Sincronizar o seu registro financeiro entre os seus aparelhos e com as pessoas que você convidou explicitamente para grupos ou contas compartilhadas.",
+      "Interpretar os seus textos, fotos, transcrições de voz e notificações encaminhadas, transformando-os em transações (processamento por IA).",
+      "Responder a perguntas e executar as ações que você pedir a um assistente de IA conectado.",
+      "Gerenciar a sua assinatura e o seu período de teste.",
+      "Enviar e-mails transacionais e de boas-vindas — códigos de acesso, avisos de segurança, alterações na conta e dicas para começar. Todo e-mail não essencial tem um link para cancelar o recebimento.",
+      "Entregar as notificações push que você ativar. O texto delas pode incluir valores e nomes de estabelecimentos, aparece na tela de bloqueio e passa pelos serviços de push da Apple e do Google.",
+      "Diagnosticar falhas, medir o uso e prevenir abusos."
     ],
-    "doNot": "<strong>Nós não</strong> vendemos os seus dados, não os compartilhamos para fins publicitários e não os usamos para treinar modelos de IA de terceiros.",
+    "doNot": "<strong>Nós não</strong> vendemos os seus dados, não os compartilhamos para fins publicitários e não os usamos para treinar modelos de IA próprios ou de terceiros.",
     "mcp": {
       "heading": "Assistentes de IA e Model Context Protocol (MCP)",
-      "beforeLink": "Se você conectar o Manilo a um assistente de IA (Claude, ChatGPT, Cursor ou qualquer cliente compatível com MCP) pela nossa",
+      "beforeLink": "Se você conectar o Manilo a um assistente de IA (ChatGPT, da OpenAI, Claude, da Anthropic, ou outro cliente compatível com MCP) pela nossa",
       "linkText": "página de integrações",
-      "afterLink": "— esse assistente recebe os dados necessários para responder às suas perguntas: normalmente trechos de transações, nomes de categorias, saldos de contas ou totais agregados. Você controla o que é consultado: o assistente só vê os dados que solicita explicitamente em seu nome. Você pode desconectar a qualquer momento nas configurações do assistente; a revogação do acesso tem efeito imediato. Não enviamos o seu registro financeiro completo ao assistente no momento da conexão."
+      "afterLink": "— esse assistente pode, quando você pedir, ler e alterar os seus dados por meio das ferramentas do Manilo. Nunca enviamos o seu registro financeiro ao assistente no momento da conexão: os dados só trafegam quando o assistente chama uma ferramenta em seu nome.",
+      "read": "<strong>O que o assistente pode ler:</strong> as suas transações (incluindo observações e nomes de estabelecimentos), contas e saldos (incluindo a divisão entre receitas, despesas e transferências), orçamentos, categorias, tags, regras de recorrência, grupos de gastos com os nomes de exibição dos participantes, as configurações do seu perfil, totais agregados e os arquivos de recibo por meio de links de download assinados e de curta duração, cuja URL contém o identificador da sua conta. As respostas das ferramentas também incluem identificadores de registros (para o assistente poder se referir a eles em ações seguintes) e informações de estado do serviço, como o seu período de teste ou o status da assinatura, além de dicas de uso ocasionais.",
+      "write": "<strong>O que o assistente pode gravar:</strong> criar, atualizar e excluir transações, transferências, ajustes de saldo, contas, categorias, tags, orçamentos, regras de recorrência e grupos; atualizar as configurações do seu perfil; e anexar arquivos de recibo a transações.",
+      "flow": "Os dados devolvidos pelas ferramentas são transmitidos à plataforma do assistente e tratados lá conforme os termos de privacidade dessa plataforma (os da OpenAI para o ChatGPT, os da Anthropic para o Claude). O conteúdo que você envia a um assistente é processado por essa plataforma antes de o Manilo receber aquilo que você pediu para importar. Você pode desconectar o assistente a qualquer momento nas configurações dele e revogar os tokens de acesso pessoal no painel; o acesso no servidor termina imediatamente."
     }
   },
   "thirdParties": {
     "heading": "Subprocessadores",
-    "intro": "Para entregar o Serviço, contamos com os provedores abaixo. Cada um está vinculado a um Acordo de Processamento de Dados e processa os dados apenas conforme as nossas instruções.",
+    "intro": "Para entregar o Serviço, contamos com os provedores abaixo. Cada um processa os dados apenas conforme as nossas instruções e sob um Acordo de Processamento de Dados.",
     "providers": [
-      { "name": "Hetzner", "desc": "hospedagem do nosso backend e do banco de dados na Alemanha (UE)." },
-      { "name": "OpenAI / Anthropic", "desc": "interpretação por IA do texto das transações. A sua mensagem transcrita é enviada para interpretação; conforme os termos de API dessas empresas, as saídas não são usadas para treinar os modelos delas. A Anthropic também atua como assistente de IA quando você conecta o Manilo ao Claude pelo Model Context Protocol; os dados consultados são enviados à Anthropic durante a conversa e, conforme os termos de API da empresa, não são usados para treinar modelos." },
-      { "name": "RevenueCat", "desc": "status da assinatura no iOS." },
-      { "name": "Apple", "desc": "processamento de pagamentos das assinaturas dentro do app e relatórios de falhas." },
-      { "name": "Resend", "desc": "envio de e-mails transacionais." },
-      { "name": "Telegram", "desc": "retransmissão do bot para quem optar pelo registro via Telegram." }
+      { "name": "Google Cloud Platform", "desc": "hospedagem e armazenamento: o nosso backend roda no Google Cloud Run, com Google Firestore (banco de dados) e Google Cloud Storage (arquivos de recibo) nos Estados Unidos; entrega de notificações push pelo Firebase Cloud Messaging." },
+      { "name": "Groq", "desc": "interpretação principal por IA do texto das transações e das imagens de recibos, além da transcrição da entrada por voz no Apple Watch e no Telegram. As solicitações levam o identificador da sua conta para prevenção de abusos; conforme os termos de API da empresa, o conteúdo não é usado para treinar os modelos dela." },
+      { "name": "OpenAI", "desc": "interpretação por IA de reserva do texto das transações e das imagens de recibos, sob os mesmos termos de API de identificador de conta e de não treinamento. A OpenAI também é a plataforma de assistente que recebe os dados consultados quando você conecta o Manilo ao ChatGPT." },
+      { "name": "Anthropic", "desc": "a plataforma de assistente que recebe os dados consultados quando você conecta o Manilo ao Claude; conforme os termos da empresa, os dados enviados pela API não são usados para treinar modelos." },
+      { "name": "Apple", "desc": "Sign in with Apple, pagamentos de assinatura dentro do app, notificações push e relatórios de falhas." },
+      { "name": "Google", "desc": "Sign in with Google e Google Analytics para medição de uso (usa cookies nos nossos sites)." },
+      { "name": "RevenueCat", "desc": "estado da assinatura e checkout na web; recebe o identificador da sua conta, nunca o seu registro financeiro." },
+      { "name": "Microsoft 365", "desc": "envio de e-mails transacionais e de boas-vindas." },
+      { "name": "Upstash", "desc": "cache criptografado e de curta duração no servidor; as entradas expiram em até 24 horas." },
+      { "name": "Telegram", "desc": "retransmissão de mensagens para quem optar pelo bot do Telegram. A sua conversa com o bot (incluindo as confirmações de transação que ele envia) fica no seu histórico de conversas do Telegram, sob a política de privacidade do próprio Telegram." }
     ],
-    "dpaBeforeEmail": "Se quiser a lista das sublocalizações dos subprocessadores ou cópias dos Acordos de Processamento de Dados, escreva para",
+    "dpaBeforeEmail": "Quando os dados são transferidos para fora da UE ou do Reino Unido, usamos as salvaguardas reconhecidas dos nossos provedores (EU-U.S. Data Privacy Framework ou Cláusulas Contratuais Padrão). Se quiser cópias dos Acordos de Processamento de Dados ou a lista das sublocalizações dos subprocessadores, escreva para",
     "dpaAfterEmail": "."
   },
   "retention": {
     "heading": "Retenção e exclusão",
     "items": [
-      "As transações e os recibos que você cria ficam guardados até você excluí-los ou excluir a sua conta.",
-      "Se você cancelar o Cloud, a sua cópia local continua no seu aparelho. A cópia no Cloud é mantida por 30 dias e depois excluída.",
-      "Exclusão da conta: abra Configurações → Conta → Excluir conta. Tudo o que está no servidor é apagado em até 7 dias. Os backups expiram em até 30 dias."
+      "O seu registro financeiro e os seus recibos ficam guardados enquanto a sua conta existir — até você excluir lançamentos individuais ou a conta inteira.",
+      "Se a sua assinatura do Cloud terminar, os seus dados sincronizados continuam armazenados, para estarem lá caso você volte; a sua cópia local permanece no seu aparelho. Você pode remover a cópia do servidor a qualquer momento excluindo a sua conta.",
+      "Exclusão da conta: Configurações → Conta → Excluir conta. Os seus dados são excluídos do nosso banco de dados de produção imediatamente — uma exclusão definitiva, não uma desativação. Os arquivos de recibo ficam permanentemente inacessíveis no mesmo instante. Os backups criptografados do banco de dados expiram em até 30 dias; os caches no servidor, em até 24 horas; os logs do servidor, em até 30 dias.",
+      "Os provedores de IA (Groq, OpenAI, Anthropic) processam as solicitações de interpretação e de assistente de forma transitória, conforme os termos de retenção de dados das APIs deles, e não as usam para treinamento. O Google Analytics mantém os eventos de uso por até 14 meses."
     ]
   },
   "rights": {
     "heading": "Seus direitos",
-    "bodyBeforeEmail": "Se você está na UE, no Reino Unido ou na Califórnia, você tem direito de acessar, corrigir, portar, excluir os seus dados pessoais ou se opor ao tratamento deles. Você pode exercer todos esses direitos dentro do app, em Configurações → Conta, ou por e-mail para",
+    "bodyBeforeEmail": "Se você está na UE, no Reino Unido ou na Califórnia, você tem direito de acessar, corrigir, portar, excluir os seus dados pessoais ou se opor ao tratamento deles. A maior parte desses direitos você exerce diretamente no produto ou por e-mail para",
     "bodyAfterEmail": ". Respondemos em até 30 dias.",
+    "controls": [
+      "Excluir tudo: Configurações → Conta → Excluir conta.",
+      "Exportar o seu registro financeiro em CSV pelo app.",
+      "Desconectar um assistente de IA nas configurações do próprio assistente; revogar os tokens de acesso pessoal no painel — os dois cortam o acesso no servidor imediatamente.",
+      "Cancelar o recebimento de e-mails não essenciais pelo link presente em cada mensagem.",
+      "Desativar os relatórios de falhas nos Ajustes do iOS."
+    ],
     "complaint": "Você também tem o direito de apresentar uma reclamação à autoridade supervisora local de proteção de dados."
   },
   "children": {

@@ -79,7 +79,7 @@
       "p1Pre": "Deine Transaktionen gehören dir. Wir erheben keinen Eigentumsanspruch auf Daten, die du mit dem Dienst erstellst. Wir verarbeiten sie ausschließlich, um die von dir aktivierten Funktionen bereitzustellen — so, wie es in unserer ",
       "p1Link": "Datenschutzerklärung",
       "p1Post": " beschrieben ist.",
-      "p2": "Du kannst dein vollständiges Haushaltsbuch jederzeit unter Einstellungen → Export als CSV exportieren. Wenn du dein Konto löschst, löschen wir die zugehörigen Daten innerhalb von 7 Tagen; Backups laufen innerhalb von 30 Tagen aus."
+      "p2": "Du kannst dein vollständiges Haushaltsbuch jederzeit unter Einstellungen → Export als CSV exportieren. Wenn du dein Konto löschst, löschen wir die zugehörigen Daten sofort; Backups laufen innerhalb von 30 Tagen aus."
     },
     "beta": {
       "heading": "Beta-Funktionen",

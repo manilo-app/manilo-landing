@@ -94,7 +94,7 @@
       {
         "id": "security",
         "q": "安全吗？ChatGPT 或 Claude 到底能访问什么？",
-        "a": "登录使用 OAuth 2.1（含 PKCE），在 Manilo 自己的授权页面完成，支持 Apple、Google 或邮箱。助手永远看不到你的密码。连接后，它可以读取你的数据，并在你要求时创建、编辑或删除条目；ChatGPT 在任何写入前都会显示确认提示。数据存储在德国（Hetzner）及 Google Cloud Firestore。交易金额绝不会发送给分析服务。要断开连接，在 ChatGPT 或 Claude 的设置中移除连接器即可。安全问题请联系："
+        "a": "登录使用 OAuth 2.1（含 PKCE），在 Manilo 自己的授权页面完成，支持 Apple、Google 或邮箱。助手永远看不到你的密码。连接后，它可以读取你的数据，并在你要求时创建、编辑或删除条目；ChatGPT 在任何写入前都会显示确认提示。数据存储在 Google Cloud Firestore 中，静态加密并按用户隔离。交易金额绝不会发送给分析服务。要断开连接，在 ChatGPT 或 Claude 的设置中移除连接器即可。安全问题请联系："
       },
       {
         "id": "trial",

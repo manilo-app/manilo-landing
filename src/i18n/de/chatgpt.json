@@ -94,7 +94,7 @@
       {
         "id": "security",
         "q": "Ist das sicher? Worauf können ChatGPT oder Claude tatsächlich zugreifen?",
-        "a": "Die Anmeldung läuft über OAuth 2.1 mit PKCE und findet auf Manilos eigener Zustimmungsseite statt — mit Apple, Google oder E-Mail. Der Assistent sieht dein Passwort nie. Nach dem Verbinden kann er deine Daten lesen und, wenn du ihn darum bittest, Einträge anlegen, ändern oder löschen; ChatGPT zeigt vor jedem Schreibvorgang eine Bestätigung. Die Daten liegen in Deutschland (Hetzner) sowie in Google Cloud Firestore. Transaktionsbeträge gehen nie an Analytics. Zum Trennen entfernst du den Konnektor in deinen ChatGPT- oder Claude-Einstellungen. Sicherheitskontakt:"
+        "a": "Die Anmeldung läuft über OAuth 2.1 mit PKCE und findet auf Manilos eigener Zustimmungsseite statt — mit Apple, Google oder E-Mail. Der Assistent sieht dein Passwort nie. Nach dem Verbinden kann er deine Daten lesen und, wenn du ihn darum bittest, Einträge anlegen, ändern oder löschen; ChatGPT zeigt vor jedem Schreibvorgang eine Bestätigung. Die Daten liegen in Google Cloud Firestore, ruhend verschlüsselt und pro Nutzer isoliert. Transaktionsbeträge gehen nie an Analytics. Zum Trennen entfernst du den Konnektor in deinen ChatGPT- oder Claude-Einstellungen. Sicherheitskontakt:"
       },
       {
         "id": "trial",
