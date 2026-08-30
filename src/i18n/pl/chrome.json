@@ -1,6 +1,10 @@
 {
   "skipLink": "Przejdź do treści",
-  "nav": { "home": "Strona główna", "pricing": "Cennik", "support": "Pomoc" },
+  "nav": {
+    "home": "Strona główna",
+    "pricing": "Cennik",
+    "support": "Pomoc"
+  },
   "header": {
     "brandAria": "Strona główna Manilo",
     "openDashboard": "Otwórz panel",
@@ -26,5 +30,11 @@
     "copyright": "© 2026 Manilo",
     "status": "Wszystkie systemy działają",
     "language": "Język"
+  },
+  "cookies": {
+    "text": "Używamy plików cookie Google Analytics, aby rozumieć, jak korzystasz z tej strony. Nic nie zostanie zapisane, dopóki nie zdecydujesz.",
+    "accept": "Akceptuję",
+    "decline": "Odrzucam",
+    "privacy": "Polityka prywatności"
   }
 }

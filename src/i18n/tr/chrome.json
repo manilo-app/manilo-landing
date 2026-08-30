@@ -26,5 +26,11 @@
     "copyright": "© 2026 Manilo",
     "status": "Tüm sistemler çalışıyor",
     "language": "Dil"
+  },
+  "cookies": {
+    "text": "Sitenin nasıl kullanıldığını anlamak için Google Analytics çerezleri kullanıyoruz. Siz seçim yapmadan hiçbir çerez yerleştirilmez.",
+    "accept": "Kabul et",
+    "decline": "Reddet",
+    "privacy": "Gizlilik Politikası"
   }
 }

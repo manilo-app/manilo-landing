@@ -22,7 +22,7 @@
       "ローカルSQLiteデータベースによるオフラインファースト設計",
       "CSV・PDFエクスポート",
       "14言語に対応",
-      "広告なし、データ販売なし、トラッキングSDKなし",
+      "広告なし、データブローカーなし、データの販売なし",
       "Telegramボットからの支出記録",
       "Apple WalletによるApple Pay支払いの自動記録",
       "トレンドとレポートを備えたWebダッシュボード"
@@ -33,16 +33,25 @@
     "pillAria": "App Storeで配信中。iOS向け。",
     "pill": "App Storeで配信中 · iOS",
     "title": "どんな支出も、どんな通貨でも。",
-    "sub": "お金と、話そう。Manilo（旧Ledgy）はiOS向けのマルチ通貨支出管理アプリ。iPhoneやApple Watchに話しかけて記録、レシートを撮影、ClaudeやChatGPTに直接頼むこともできます。ダウンロードは無料。広告なし。データはあなたのデバイスの中に。",
+    "sub": "お金と、話そう。Manilo（旧Ledgy）はiOS向けのマルチ通貨支出管理アプリ。iPhoneやApple Watchに話しかけて記録、レシートを撮影、ClaudeやChatGPTに直接頼むこともできます。ダウンロードは無料。広告なし。Cloudを有効にしないかぎり、データはお客様のデバイスの中にとどまります。",
     "downloadCta": "App Storeでダウンロード",
     "downloadMeta": "無料ダウンロード · iOS 15以降",
     "pricingCta": "料金を見る",
     "pricingMeta": "ひとりで使うならずっと無料",
     "phoneAlt": "Maniloの取引追加画面。$555の支出を音声で記録しているところ",
     "chips": {
-      "voice": { "label": "音声", "line": "「Blue Bottleでコーヒー $4.50」" },
-      "receipt": { "label": "レシート", "line": "ランチ · €18.20" },
-      "telegram": { "label": "Telegram", "line": "ガソリン満タン · 60 EUR" }
+      "voice": {
+        "label": "音声",
+        "line": "「Blue Bottleでコーヒー $4.50」"
+      },
+      "receipt": {
+        "label": "レシート",
+        "line": "ランチ · €18.20"
+      },
+      "telegram": {
+        "label": "Telegram",
+        "line": "ガソリン満タン · 60 EUR"
+      }
     }
   },
   "trust": {
@@ -54,9 +63,21 @@
     "title": "ステップは3つ。あとは、なにもしない。",
     "sub": "記録は、その瞬間いちばん速い方法で。あとのことはManiloが引き受けます。",
     "steps": [
-      { "num": "01", "title": "記録する", "body": "Apple Watchに話す、レシートを撮る、TelegramにSMSを転送する。どれでも。" },
-      { "num": "02", "title": "AIが解析", "body": "AIが内容を読み取り、ぴったりのカテゴリ・口座・グループを選びます。" },
-      { "num": "03", "title": "どこでも確認", "body": "iPhone、Apple Watch、Webダッシュボード、そしてAIエージェント（ChatGPT・Claude・Geminiなど）で。" }
+      {
+        "num": "01",
+        "title": "記録する",
+        "body": "Apple Watchに話す、レシートを撮る、TelegramにSMSを転送する。どれでも。"
+      },
+      {
+        "num": "02",
+        "title": "AIが解析",
+        "body": "AIが内容を読み取り、ぴったりのカテゴリ・口座・グループを選びます。"
+      },
+      {
+        "num": "03",
+        "title": "どこでも確認",
+        "body": "iPhone、Apple Watch、Webダッシュボード、そしてAIエージェント（ChatGPT・Claude・Geminiなど）で。"
+      }
     ]
   },
   "surfaces": {
@@ -65,12 +86,30 @@
     "titleAccent": "行き先はひとつ。",
     "sub": "いちばん近くのデバイスが、そのまま記録の入り口に。すべてはひとつの台帳に集まります。",
     "cards": {
-      "iphone": { "title": "iPhone", "body": "音声、写真、テンキー、どこからでもペースト。ワンタップ、ひと言。それだけ。" },
-      "watch": { "title": "Apple Watch", "body": "マイクを長押しして、話すだけ。5秒で完了。コンプリケーションから記録画面へ直行できます。" },
-      "siri": { "title": "Siri", "body": "「Hey Siri、Maniloで支出を記録して」。iOS 16以降のApp Intentsに対応。" },
-      "wallet": { "title": "Apple Wallet", "body": "Apple Payの支払いを自動で記録。カードごとにAIルールを設定できます（例：「旅行2026のタグを付ける」）。" },
-      "telegram": { "title": "Telegramボット", "body": "チャットにテキスト、写真、音声を送るだけ。インラインボタンで、どこでも2タップで直せます。" },
-      "aiAgent": { "title": "AIエージェント", "body": "いつものAIエージェント（ChatGPT・Claude・Geminiなど）に、記録したい内容を伝えるだけ。" }
+      "iphone": {
+        "title": "iPhone",
+        "body": "音声、写真、テンキー、どこからでもペースト。ワンタップ、ひと言。それだけ。"
+      },
+      "watch": {
+        "title": "Apple Watch",
+        "body": "マイクを長押しして、話すだけ。5秒で完了。コンプリケーションから記録画面へ直行できます。"
+      },
+      "siri": {
+        "title": "Siri",
+        "body": "「Hey Siri、Maniloで支出を記録して」。iOS 16以降のApp Intentsに対応。"
+      },
+      "wallet": {
+        "title": "Apple Wallet",
+        "body": "Apple Payの支払いを自動で記録。カードごとにAIルールを設定できます（例：「旅行2026のタグを付ける」）。"
+      },
+      "telegram": {
+        "title": "Telegramボット",
+        "body": "チャットにテキスト、写真、音声を送るだけ。インラインボタンで、どこでも2タップで直せます。"
+      },
+      "aiAgent": {
+        "title": "AIエージェント",
+        "body": "いつものAIエージェント（ChatGPT・Claude・Geminiなど）に、記録したい内容を伝えるだけ。"
+      }
     }
   },
   "smart": {
@@ -96,9 +135,18 @@
       ]
     },
     "budgetMock": {
-      "food": { "name": "食費", "sub": "$600中$612" },
-      "groceries": { "name": "食料品", "sub": "$500中$384" },
-      "transport": { "name": "交通", "sub": "$250中$142" }
+      "food": {
+        "name": "食費",
+        "sub": "$600中$612"
+      },
+      "groceries": {
+        "name": "食料品",
+        "sub": "$500中$384"
+      },
+      "transport": {
+        "name": "交通",
+        "sub": "$250中$142"
+      }
     },
     "fx": {
       "title": "マルチ通貨も、計算いらず。",
@@ -182,10 +230,22 @@
     }
   },
   "numbers": [
-    { "value": "14", "label": "言語に完全対応" },
-    { "value": "29", "label": "CSVインポートで自動判別するロケール" },
-    { "value": "30+", "label": "AIエージェント向けMCPツール" },
-    { "value": "5", "label": "記録の入り口 · 行き先は1つ" }
+    {
+      "value": "14",
+      "label": "言語に完全対応"
+    },
+    {
+      "value": "29",
+      "label": "CSVインポートで自動判別するロケール"
+    },
+    {
+      "value": "30+",
+      "label": "AIエージェント向けMCPツール"
+    },
+    {
+      "value": "5",
+      "label": "記録の入り口 · 行き先は1つ"
+    }
   ],
   "faq": {
     "eyebrow": "FAQ",

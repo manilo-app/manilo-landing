@@ -10,7 +10,7 @@
   "hero": {
     "eyebrow": "Légal",
     "title": "Politique de confidentialité",
-    "lastUpdated": "Dernière mise à jour le 28 août 2026"
+    "lastUpdated": "Dernière mise à jour le 30 août 2026"
   },
   "toc": {
     "ariaLabel": "Table des matières",
@@ -21,7 +21,8 @@
     "calloutLead": "En bref :",
     "calloutBody": "Manilo (anciennement Ledgy) fonctionne d’abord en local — vos transactions vivent sur votre appareil. Si vous activez Cloud, une copie est synchronisée vers nos serveurs sur Google Cloud (États-Unis) afin que vos autres appareils, les personnes avec qui vous partagez et les assistants IA que vous choisissez de connecter puissent y accéder. Nous ne vendons jamais vos données, nous n’affichons aucune publicité et nous n’utilisons jamais vos données pour entraîner des modèles d’IA.",
     "introBeforeLink": "La présente Politique de confidentialité explique quelles données Manilo (« nous ») collecte lorsque vous utilisez l’application iOS Manilo (y compris l’application Apple Watch), le tableau de bord web Manilo à l’adresse",
-    "introAfterLink": ", le bot Telegram Manilo, nos intégrations avec les assistants IA (ChatGPT, Claude et autres clients compatibles MCP) et tout service associé (ensemble, le « Service »). Certains points d’accès du service fonctionnent encore sous notre ancien domaine ledgy.app. Elle est rédigée en langage clair et alignée sur le RGPD (UE 2016/679) ainsi que sur les exigences de l’App Store d’Apple."
+    "introAfterLink": ", le bot Telegram Manilo, nos intégrations avec les assistants IA (ChatGPT, Claude et autres clients compatibles MCP) et tout service associé (ensemble, le « Service »). Certains points d’accès du service fonctionnent encore sous notre ancien domaine ledgy.app. Elle est rédigée en langage clair et alignée sur le RGPD (UE 2016/679) ainsi que sur les exigences de l’App Store d’Apple.",
+    "controller": "Le responsable du traitement est Borys Harholinskyi, entrepreneur individuel (autónomo) immatriculé en Espagne, exerçant sous le nom de Manilo. Contact : privacy@manilo.app."
   },
   "whatWeCollect": {
     "heading": "Ce que nous collectons",
@@ -48,7 +49,8 @@
       "heading": "Données de diagnostic et d’usage",
       "items": [
         "Rapports de plantage — anonymisés, transmis via le mécanisme de rapport de plantage standard d’Apple (que vous pouvez désactiver dans les Réglages iOS).",
-        "Analytique d’usage — nous utilisons Google Analytics dans l’application, sur le site web et sur notre API pour mesurer l’utilisation des fonctionnalités : écrans consultés, fonctionnalités utilisées, appels d’outils effectués par les assistants connectés et durées. Pour les utilisateurs connectés, ces événements sont rattachés à l’identifiant de votre compte. Nous n’envoyons à l’analytique ni montants de transactions, ni noms de commerçants, ni notes, ni contenus de reçus. Sur nos sites web, Google Analytics dépose des cookies.",
+        "Analytique d’usage — nous utilisons Google Analytics (Firebase) dans l’application, sur le site web et sur notre API pour mesurer l’utilisation des fonctionnalités : écrans consultés, fonctionnalités utilisées, appels d’outils effectués par les assistants connectés et durées. Pour les utilisateurs connectés, ces événements sont rattachés à l’identifiant de votre compte, et une copie des événements bruts est exportée vers Google BigQuery dans notre propre projet afin que nous puissions analyser l’usage du produit par compte. Nous n’envoyons à l’analytique ni montants de transactions, ni noms de commerçants, ni notes, ni contenus de reçus. Sur nos sites web, Google Analytics ne dépose des cookies qu’après votre acceptation dans la bannière de cookies ; si vous refusez, le site reste pleinement fonctionnel.",
+        "Attribution des installations — si vous avez installé Manilo depuis une publicité Apple Search Ads, le framework AdServices d’Apple, respectueux de la vie privée, fournit un jeton d’attribution que RevenueCat, notre prestataire d’abonnements, échange contre la campagne, le groupe d’annonces et le mot-clé à l’origine de l’installation. Aucun identifiant d’appareil (IDFA) n’est utilisé et aucune autorisation de pistage n’est demandée ; nous nous en servons uniquement pour mesurer quelles publicités fonctionnent.",
         "Données de sécurité — les adresses IP sont traitées de manière transitoire à des fins de limitation du débit et de protection contre les abus. Les journaux serveur (qui font référence à l’identifiant de votre compte et à vos actions, jamais à votre adresse e-mail) sont conservés au maximum 30 jours."
       ]
     }
@@ -71,11 +73,20 @@
       "Analyser vos textes, vos photos, vos transcriptions vocales et les notifications transférées pour en faire des transactions (traitement par IA).",
       "Répondre aux questions et exécuter les actions que vous demandez à un assistant IA connecté.",
       "Gérer votre abonnement et votre période d’essai.",
-      "Vous envoyer des e-mails transactionnels et de prise en main — codes de connexion, avis de sécurité, modifications de compte, conseils de démarrage. Chaque e-mail non essentiel comporte un lien de désabonnement.",
+      "Vous envoyer des e-mails transactionnels, de prise en main et d’offres — codes de connexion, avis de sécurité, modifications de compte, conseils de démarrage et messages occasionnels au sujet de votre période d’essai ou de votre formule. Chaque e-mail non essentiel comporte un lien de désabonnement.",
       "Vous délivrer les notifications push que vous activez. Leur texte peut contenir des montants et des noms de commerçants, s’affiche sur votre écran verrouillé et transite par les services de notification d’Apple et de Google.",
-      "Diagnostiquer les plantages, mesurer l’usage et prévenir les abus."
+      "Diagnostiquer les plantages, mesurer l’usage et prévenir les abus.",
+      "Mesurer quelles publicités de l’App Store amènent des personnes vers Manilo (voir l’attribution des installations ci-dessus)."
     ],
     "doNot": "<strong>Nous ne vendons pas</strong> vos données, nous ne les partageons pas à des fins publicitaires et nous ne les utilisons pas pour entraîner nos propres modèles d’IA ni ceux de tiers.",
+    "legalBases": {
+      "heading": "Bases légales (art. 6 du RGPD)",
+      "items": [
+        "L’exécution de notre contrat avec vous (art. 6, § 1, b) — la synchronisation de votre registre, l’analyse de vos entrées par IA, le fonctionnement des assistants connectés, la gestion de votre abonnement et l’envoi des e-mails transactionnels.",
+        "Nos intérêts légitimes (art. 6, § 1, f) — l’analytique d’usage, l’attribution des installations, la prévention des abus et la sécurité, ainsi que les e-mails de prise en main et d’offres. Vous pouvez vous y opposer à tout moment : désabonnez-vous des e-mails via le lien présent dans chaque message et contactez-nous pour désactiver l’analytique pour votre compte.",
+        "Votre consentement (art. 6, § 1, a) — les cookies sur nos sites web, ainsi que les fonctionnalités facultatives que vous activez vous-même (Cloud, bot Telegram, transfert depuis Apple Wallet, connexion d’un assistant IA). Vous pouvez le retirer en désactivant la fonctionnalité ou en refusant les cookies."
+      ]
+    },
     "mcp": {
       "heading": "Assistants IA et Model Context Protocol (MCP)",
       "beforeLink": "Si vous connectez Manilo à un assistant IA (ChatGPT d’OpenAI, Claude d’Anthropic ou tout autre client compatible MCP) depuis notre page",
@@ -90,16 +101,46 @@
     "heading": "Sous-traitants",
     "intro": "Pour fournir le Service, nous faisons appel aux prestataires suivants. Chacun ne traite les données que sur nos instructions, dans le cadre d’un accord de traitement des données.",
     "providers": [
-      { "name": "Google Cloud Platform", "desc": "hébergement et stockage : notre backend s’exécute sur Google Cloud Run, avec Google Firestore (base de données) et Google Cloud Storage (fichiers de reçus) aux États-Unis ; acheminement des notifications push via Firebase Cloud Messaging." },
-      { "name": "Groq", "desc": "analyse par IA principale du texte des transactions et des images de reçus, et transcription des saisies vocales Apple Watch et Telegram. Les requêtes portent l’identifiant de votre compte à des fins de prévention des abus ; conformément aux conditions de leur API, les contenus ne servent pas à entraîner leurs modèles." },
-      { "name": "OpenAI", "desc": "analyse par IA de secours du texte des transactions et des images de reçus, soumise aux mêmes conditions d’API (identifiant de compte, absence d’entraînement). OpenAI est également la plateforme d’assistant qui reçoit les données interrogées lorsque vous connectez Manilo à ChatGPT." },
-      { "name": "Anthropic", "desc": "la plateforme d’assistant qui reçoit les données interrogées lorsque vous connectez Manilo à Claude ; conformément à ses conditions, les données transmises via l’API ne servent pas à entraîner ses modèles." },
-      { "name": "Apple", "desc": "Sign in with Apple, paiement des abonnements intégrés, notifications push et rapports de plantage." },
-      { "name": "Google", "desc": "Sign in with Google, et Google Analytics pour la mesure d’usage (dépose des cookies sur nos sites web)." },
-      { "name": "RevenueCat", "desc": "état des abonnements et paiement en ligne ; reçoit l’identifiant de votre compte, jamais votre registre." },
-      { "name": "Microsoft 365", "desc": "acheminement des e-mails transactionnels et de prise en main." },
-      { "name": "Upstash", "desc": "cache côté serveur chiffré et de courte durée ; les entrées expirent sous 24 heures." },
-      { "name": "Telegram", "desc": "relais des messages pour les utilisateurs qui choisissent le bot Telegram. Votre conversation avec le bot (y compris les confirmations de transaction qu’il envoie) reste dans votre historique de discussion Telegram, régi par la politique de confidentialité de Telegram." }
+      {
+        "name": "Google Cloud Platform",
+        "desc": "hébergement et stockage : notre backend s’exécute sur Google Cloud Run, avec Google Firestore (base de données) et Google Cloud Storage (fichiers de reçus) aux États-Unis ; acheminement des notifications push via Firebase Cloud Messaging."
+      },
+      {
+        "name": "Groq",
+        "desc": "analyse par IA principale du texte des transactions et des images de reçus, et transcription des saisies vocales Apple Watch et Telegram. Les requêtes portent l’identifiant de votre compte à des fins de prévention des abus ; conformément aux conditions de leur API, les contenus ne servent pas à entraîner leurs modèles."
+      },
+      {
+        "name": "OpenAI",
+        "desc": "analyse par IA de secours du texte des transactions et des images de reçus, soumise aux mêmes conditions d’API (identifiant de compte, absence d’entraînement). OpenAI est également la plateforme d’assistant qui reçoit les données interrogées lorsque vous connectez Manilo à ChatGPT."
+      },
+      {
+        "name": "Anthropic",
+        "desc": "la plateforme d’assistant qui reçoit les données interrogées lorsque vous connectez Manilo à Claude ; conformément à ses conditions, les données transmises via l’API ne servent pas à entraîner ses modèles."
+      },
+      {
+        "name": "Apple",
+        "desc": "Sign in with Apple, paiement des abonnements intégrés, notifications push et rapports de plantage."
+      },
+      {
+        "name": "Google",
+        "desc": "Sign in with Google, Google Analytics (Firebase) pour la mesure d’usage (dépose des cookies sur nos sites web avec votre consentement) et Google BigQuery pour notre export analytique."
+      },
+      {
+        "name": "RevenueCat",
+        "desc": "état des abonnements, paiement en ligne et attribution des installations ; reçoit l’identifiant de votre compte et les données d’attribution Apple Search Ads, jamais votre registre."
+      },
+      {
+        "name": "Microsoft 365",
+        "desc": "acheminement des e-mails transactionnels et de prise en main."
+      },
+      {
+        "name": "Upstash",
+        "desc": "cache côté serveur chiffré et de courte durée ; les entrées expirent sous 24 heures."
+      },
+      {
+        "name": "Telegram",
+        "desc": "relais des messages pour les utilisateurs qui choisissent le bot Telegram. Votre conversation avec le bot (y compris les confirmations de transaction qu’il envoie) reste dans votre historique de discussion Telegram, régi par la politique de confidentialité de Telegram."
+      }
     ],
     "dpaBeforeEmail": "Lorsque des données sont transférées hors de l’UE ou du Royaume-Uni, nous nous appuyons sur les garanties reconnues de nos prestataires (EU-U.S. Data Privacy Framework ou clauses contractuelles types). Pour obtenir une copie des accords de traitement des données ou la liste des sous-localisations de nos sous-traitants, écrivez à",
     "dpaAfterEmail": "."
@@ -110,7 +151,7 @@
       "Votre registre et vos reçus sont conservés tant que votre compte existe — jusqu’à ce que vous supprimiez des entrées individuelles ou l’intégralité de votre compte.",
       "Si votre abonnement Cloud prend fin, vos données synchronisées restent stockées afin d’être disponibles si vous revenez ; votre copie locale reste sur votre appareil. Vous pouvez supprimer la copie sur le serveur à tout moment en supprimant votre compte.",
       "Suppression du compte : Réglages → Compte → Supprimer le compte. Vos données sont immédiatement supprimées de notre base de données de production — une suppression définitive, et non une désactivation. Les fichiers de reçus deviennent définitivement inaccessibles au même moment. Les sauvegardes chiffrées de la base de données expirent sous 30 jours ; les caches côté serveur sous 24 heures ; les journaux serveur sous 30 jours.",
-      "Les fournisseurs d’IA (Groq, OpenAI, Anthropic) traitent les requêtes d’analyse et d’assistant de manière transitoire, conformément aux conditions de conservation des données de leurs API, et ne s’en servent pas pour entraîner leurs modèles. Google Analytics conserve les événements d’usage jusqu’à 14 mois."
+      "Les fournisseurs d’IA (Groq, OpenAI, Anthropic) traitent les requêtes d’analyse et d’assistant de manière transitoire, conformément aux conditions de conservation des données de leurs API, et ne s’en servent pas pour entraîner leurs modèles. Google Analytics conserve les événements d’usage jusqu’à 14 mois, et notre copie dans BigQuery est supprimée selon le même calendrier de 14 mois."
     ]
   },
   "rights": {

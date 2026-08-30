@@ -33,7 +33,7 @@
       },
       {
         "q": "O Manilo tem anúncios?",
-        "a": "Não. O Manilo não tem anúncios, não trabalha com corretores de dados e não usa SDKs de rastreamento publicitário. O plano grátis é sustentado pela assinatura opcional do Cloud, não por receita de publicidade. O Manilo não coleta o seu Identifier for Advertisers (IDFA)."
+        "a": "Não. O Manilo não tem anúncios, não trabalha com corretores de dados e nunca vende os seus dados. O plano grátis é sustentado pela assinatura opcional do Cloud, não por receita de publicidade. O Manilo não coleta o seu Identifier for Advertisers (IDFA) e nunca pede permissão de rastreamento. Se você instalou o Manilo a partir de um anúncio do Apple Search Ads, o framework AdServices da Apple, que preserva a privacidade, nos informa de qual campanha veio a instalação — nada além disso."
       },
       {
         "q": "O Manilo é privado? Ele vende meus dados?",

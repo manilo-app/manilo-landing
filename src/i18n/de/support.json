@@ -33,7 +33,7 @@
       },
       {
         "q": "Zeigt Manilo Werbung?",
-        "a": "Nein. Manilo hat keine Werbung, keine Datenhändler und keine Tracking-SDKs für Werbung. Der kostenlose Plan wird vom optionalen Cloud-Abo getragen, nicht von Werbeeinnahmen. Manilo erfasst deine Werbe-ID (Identifier for Advertisers, IDFA) nicht."
+        "a": "Nein. Manilo hat keine Werbung, keine Datenhändler und verkauft deine Daten nie. Der kostenlose Plan wird vom optionalen Cloud-Abo getragen, nicht von Werbeeinnahmen. Manilo erfasst deine Werbe-ID (Identifier for Advertisers, IDFA) nicht und fragt nie nach einer Tracking-Erlaubnis. Wenn du Manilo über eine Anzeige in Apple Search Ads installiert hast, sagt uns das datenschutzfreundliche AdServices-Framework von Apple, aus welcher Kampagne die Installation stammt — mehr nicht."
       },
       {
         "q": "Ist Manilo privat? Werden meine Daten verkauft?",

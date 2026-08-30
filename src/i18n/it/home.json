@@ -22,7 +22,7 @@
       "Funziona anche offline con database SQLite locale",
       "Esportazione in CSV e PDF",
       "Disponibile in 14 lingue",
-      "Senza pubblicità, senza vendita di dati, senza SDK di tracciamento",
+      "Senza pubblicità, senza broker di dati, senza vendita dei tuoi dati",
       "Registrazione delle spese con il bot Telegram",
       "Registrazione automatica dei pagamenti Apple Pay via Apple Wallet",
       "Dashboard web con tendenze e report"
@@ -33,16 +33,25 @@
     "pillAria": "Ora su App Store. Disponibile per iOS.",
     "pill": "Ora su App Store · iOS",
     "title": "Registra ogni spesa in qualsiasi valuta.",
-    "sub": "Parla con i tuoi soldi. Manilo (in precedenza Ledgy) è un tracker di spese multivaluta per iOS. Registra a voce da iPhone o Apple Watch, fotografa lo scontrino o chiedi direttamente a Claude e ChatGPT. Il download è gratuito. Senza pubblicità. I tuoi dati restano sul tuo dispositivo.",
+    "sub": "Parla con i tuoi soldi. Manilo (in precedenza Ledgy) è un tracker di spese multivaluta per iOS. Registra a voce da iPhone o Apple Watch, fotografa lo scontrino o chiedi direttamente a Claude e ChatGPT. Il download è gratuito. Senza pubblicità. I tuoi dati restano sul tuo dispositivo, a meno che tu non attivi Cloud.",
     "downloadCta": "Scarica su App Store",
     "downloadMeta": "Download gratuito · iOS 15+",
     "pricingCta": "Vedi i prezzi",
     "pricingMeta": "Uso personale: gratis per sempre",
     "phoneAlt": "La schermata di aggiunta transazione di Manilo con una spesa di $555 registrata a voce",
     "chips": {
-      "voice": { "label": "Voce", "line": "“$4.50 di caffè da Blue Bottle”" },
-      "receipt": { "label": "Scontrino", "line": "Pranzo · €18.20" },
-      "telegram": { "label": "Telegram", "line": "Pieno di benzina · 60 EUR" }
+      "voice": {
+        "label": "Voce",
+        "line": "“$4.50 di caffè da Blue Bottle”"
+      },
+      "receipt": {
+        "label": "Scontrino",
+        "line": "Pranzo · €18.20"
+      },
+      "telegram": {
+        "label": "Telegram",
+        "line": "Pieno di benzina · 60 EUR"
+      }
     }
   },
   "trust": {
@@ -54,9 +63,21 @@
     "title": "Tre passaggi. Poi te ne dimentichi.",
     "sub": "Registra nel modo più veloce del momento. Al resto pensa Manilo.",
     "steps": [
-      { "num": "01", "title": "Registra", "body": "Voce dall’orologio, foto dello scontrino o SMS inoltrato su Telegram." },
-      { "num": "02", "title": "L’IA capisce", "body": "Legge il testo e sceglie la categoria giusta, il conto e il gruppo." },
-      { "num": "03", "title": "Vedi tutto ovunque", "body": "iPhone, Apple Watch, dashboard web e i tuoi agenti IA (ChatGPT, Claude, Gemini e altri)." }
+      {
+        "num": "01",
+        "title": "Registra",
+        "body": "Voce dall’orologio, foto dello scontrino o SMS inoltrato su Telegram."
+      },
+      {
+        "num": "02",
+        "title": "L’IA capisce",
+        "body": "Legge il testo e sceglie la categoria giusta, il conto e il gruppo."
+      },
+      {
+        "num": "03",
+        "title": "Vedi tutto ovunque",
+        "body": "iPhone, Apple Watch, dashboard web e i tuoi agenti IA (ChatGPT, Claude, Gemini e altri)."
+      }
     ]
   },
   "surfaces": {
@@ -65,12 +86,30 @@
     "titleAccent": "Un unico posto.",
     "sub": "Manilo usa il dispositivo che hai più a portata di mano. Tutto finisce nello stesso registro.",
     "cards": {
-      "iphone": { "title": "iPhone", "body": "Voce, foto, tastierino numerico o copia-incolla da dove vuoi. Un tocco, una frase. Fatto." },
-      "watch": { "title": "Apple Watch", "body": "Tieni premuto il microfono. Parla. Fatto in 5 secondi. Le complicazioni del quadrante portano dritto alla registrazione." },
-      "siri": { "title": "Siri", "body": "“Ehi Siri, registra una spesa su Manilo.” App Intents su iOS 16+." },
-      "wallet": { "title": "Apple Wallet", "body": "I pagamenti Apple Pay si registrano da soli. Ogni carta ha la sua regola IA (es. “aggiungi il tag Viaggio 2026”)." },
-      "telegram": { "title": "Bot Telegram", "body": "Testo, foto o vocale direttamente in chat. Pulsanti inline per correggere qualsiasi cosa in due tocchi." },
-      "aiAgent": { "title": "Agente IA", "body": "Basta dire al tuo agente IA (ChatGPT, Claude, Gemini e altri) cosa registrare." }
+      "iphone": {
+        "title": "iPhone",
+        "body": "Voce, foto, tastierino numerico o copia-incolla da dove vuoi. Un tocco, una frase. Fatto."
+      },
+      "watch": {
+        "title": "Apple Watch",
+        "body": "Tieni premuto il microfono. Parla. Fatto in 5 secondi. Le complicazioni del quadrante portano dritto alla registrazione."
+      },
+      "siri": {
+        "title": "Siri",
+        "body": "“Ehi Siri, registra una spesa su Manilo.” App Intents su iOS 16+."
+      },
+      "wallet": {
+        "title": "Apple Wallet",
+        "body": "I pagamenti Apple Pay si registrano da soli. Ogni carta ha la sua regola IA (es. “aggiungi il tag Viaggio 2026”)."
+      },
+      "telegram": {
+        "title": "Bot Telegram",
+        "body": "Testo, foto o vocale direttamente in chat. Pulsanti inline per correggere qualsiasi cosa in due tocchi."
+      },
+      "aiAgent": {
+        "title": "Agente IA",
+        "body": "Basta dire al tuo agente IA (ChatGPT, Claude, Gemini e altri) cosa registrare."
+      }
     }
   },
   "smart": {
@@ -96,9 +135,18 @@
       ]
     },
     "budgetMock": {
-      "food": { "name": "Cibo e bevande", "sub": "$612 su $600" },
-      "groceries": { "name": "Spesa", "sub": "$384 su $500" },
-      "transport": { "name": "Trasporti", "sub": "$142 su $250" }
+      "food": {
+        "name": "Cibo e bevande",
+        "sub": "$612 su $600"
+      },
+      "groceries": {
+        "name": "Spesa",
+        "sub": "$384 su $500"
+      },
+      "transport": {
+        "name": "Trasporti",
+        "sub": "$142 su $250"
+      }
     },
     "fx": {
       "title": "Multivaluta senza fare i conti",
@@ -182,10 +230,22 @@
     }
   },
   "numbers": [
-    { "value": "14", "label": "Lingue completamente tradotte" },
-    { "value": "29", "label": "Lingue rilevate in automatico nell’importazione CSV" },
-    { "value": "30+", "label": "Strumenti MCP per gli agenti IA" },
-    { "value": "5", "label": "Canali di registrazione · 1 posto" }
+    {
+      "value": "14",
+      "label": "Lingue completamente tradotte"
+    },
+    {
+      "value": "29",
+      "label": "Lingue rilevate in automatico nell’importazione CSV"
+    },
+    {
+      "value": "30+",
+      "label": "Strumenti MCP per gli agenti IA"
+    },
+    {
+      "value": "5",
+      "label": "Canali di registrazione · 1 posto"
+    }
   ],
   "faq": {
     "eyebrow": "FAQ",

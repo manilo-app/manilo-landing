@@ -22,7 +22,7 @@
       "Offline-first with local SQLite database",
       "CSV and PDF export",
       "14 languages supported",
-      "No ads, no data brokers, no tracking SDKs",
+      "No ads, no data brokers, no selling your data",
       "Telegram bot expense logging",
       "Apple Wallet auto-log for Apple Pay",
       "Web dashboard with trends and reports"
@@ -33,7 +33,7 @@
     "pillAria": "Now on the App Store. Available for iOS.",
     "pill": "Now on the App Store · iOS",
     "title": "Track any expense in any currency.",
-    "sub": "Talk to your money. Manilo (formerly Ledgy) is a multi-currency expense tracker for iOS. Log by voice on your iPhone or Apple Watch, snap a receipt, or ask Claude and ChatGPT directly. Free to download. No ads. Your data stays on your device.",
+    "sub": "Talk to your money. Manilo (formerly Ledgy) is a multi-currency expense tracker for iOS. Log by voice on your iPhone or Apple Watch, snap a receipt, or ask Claude and ChatGPT directly. Free to download. No ads. Your data stays on your device unless you turn on Cloud.",
     "downloadCta": "Download on the App Store",
     "downloadMeta": "Free download · iOS 15+",
     "pricingCta": "See pricing",

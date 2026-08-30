@@ -1,6 +1,10 @@
 {
   "skipLink": "Skip to content",
-  "nav": { "home": "Home", "pricing": "Pricing", "support": "Support" },
+  "nav": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "support": "Support"
+  },
   "header": {
     "brandAria": "Manilo home",
     "openDashboard": "Open dashboard",
@@ -26,5 +30,11 @@
     "copyright": "© 2026 Manilo",
     "status": "All systems operational",
     "language": "Language"
+  },
+  "cookies": {
+    "text": "We use Google Analytics cookies to understand how the site is used. Nothing is set until you choose.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "privacy": "Privacy Policy"
   }
 }

@@ -22,7 +22,7 @@
       "Yerel SQLite veritabanıyla çevrimdışı öncelikli çalışma",
       "CSV ve PDF dışa aktarma",
       "14 dil desteği",
-      "Reklam yok, veri satışı yok, takip SDK'sı yok",
+      "Reklam yok, veri simsarı yok, veri satışı yok",
       "Telegram botuyla harcama kaydı",
       "Apple Pay için Apple Wallet otomatik kaydı",
       "Trendler ve raporlarla web paneli"
@@ -33,7 +33,7 @@
     "pillAria": "Artık App Store'da. iOS için kullanılabilir.",
     "pill": "Artık App Store'da · iOS",
     "title": "Her harcamayı istediğin para biriminde kaydet.",
-    "sub": "Paranla konuş. Manilo (eski adıyla Ledgy), iOS için çoklu para birimli bir harcama takip uygulaması. iPhone'unda veya Apple Watch'unda sesle kaydet, fişin fotoğrafını çek ya da doğrudan Claude ve ChatGPT'ye söyle. İndirmesi ücretsiz. Reklamsız. Verilerin cihazında kalır.",
+    "sub": "Paranla konuş. Manilo (eski adıyla Ledgy), iOS için çoklu para birimli bir harcama takip uygulaması. iPhone'unda veya Apple Watch'unda sesle kaydet, fişin fotoğrafını çek ya da doğrudan Claude ve ChatGPT'ye söyle. İndirmesi ücretsiz. Reklamsız. Cloud'u açmadıkça verilerin cihazında kalır.",
     "downloadCta": "App Store'dan indir",
     "downloadMeta": "İndirmesi ücretsiz · iOS 15+",
     "pricingCta": "Fiyatları gör",

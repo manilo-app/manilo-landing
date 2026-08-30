@@ -22,7 +22,7 @@
       "离线优先，本地 SQLite 数据库",
       "CSV 和 PDF 导出",
       "支持 14 种语言",
-      "无广告、不出售数据、无跟踪 SDK",
+      "无广告、无数据经纪商、绝不出售你的数据",
       "通过 Telegram 机器人记账",
       "Apple Wallet 自动记录 Apple Pay 消费",
       "网页仪表盘，含趋势与报表"
@@ -33,16 +33,25 @@
     "pillAria": "现已上架 App Store。适用于 iOS。",
     "pill": "现已上架 App Store · iOS",
     "title": "任何支出，任何币种，随手记下。",
-    "sub": "和你的钱对话。Manilo（原 Ledgy）是一款 iOS 多币种记账应用：在 iPhone 或 Apple Watch 上语音记账，拍张小票，或直接让 Claude 和 ChatGPT 帮你记。免费下载。无广告。数据留在你的设备上。",
+    "sub": "和你的钱对话。Manilo（原 Ledgy）是一款 iOS 多币种记账应用：在 iPhone 或 Apple Watch 上语音记账，拍张小票，或直接让 Claude 和 ChatGPT 帮你记。免费下载。无广告。除非你开通 Cloud，否则数据只留在你的设备上。",
     "downloadCta": "在 App Store 下载",
     "downloadMeta": "免费下载 · iOS 15+",
     "pricingCta": "查看价格",
     "pricingMeta": "个人使用永久免费",
     "phoneAlt": "Manilo 添加交易界面，正在用语音记录一笔 $555 支出",
     "chips": {
-      "voice": { "label": "语音", "line": "“在 Blue Bottle 买了杯咖啡，$4.50”" },
-      "receipt": { "label": "小票", "line": "午餐 · €18.20" },
-      "telegram": { "label": "Telegram", "line": "加满一箱油 · 60 EUR" }
+      "voice": {
+        "label": "语音",
+        "line": "“在 Blue Bottle 买了杯咖啡，$4.50”"
+      },
+      "receipt": {
+        "label": "小票",
+        "line": "午餐 · €18.20"
+      },
+      "telegram": {
+        "label": "Telegram",
+        "line": "加满一箱油 · 60 EUR"
+      }
     }
   },
   "trust": {
@@ -54,9 +63,21 @@
     "title": "三步搞定，从此不用再管。",
     "sub": "当下哪种方式最快，就用哪种记。剩下的交给 Manilo。",
     "steps": [
-      { "num": "01", "title": "记录", "body": "在手表上说一句、拍张小票，或把短信转发进 Telegram。" },
-      { "num": "02", "title": "AI 解析", "body": "AI 读懂内容，自动选好分类、账户和群组。" },
-      { "num": "03", "title": "随处可见", "body": "iPhone、Apple Watch、网页仪表盘，还有你的 AI 助手（ChatGPT、Claude、Gemini 等）。" }
+      {
+        "num": "01",
+        "title": "记录",
+        "body": "在手表上说一句、拍张小票，或把短信转发进 Telegram。"
+      },
+      {
+        "num": "02",
+        "title": "AI 解析",
+        "body": "AI 读懂内容，自动选好分类、账户和群组。"
+      },
+      {
+        "num": "03",
+        "title": "随处可见",
+        "body": "iPhone、Apple Watch、网页仪表盘，还有你的 AI 助手（ChatGPT、Claude、Gemini 等）。"
+      }
     ]
   },
   "surfaces": {
@@ -65,12 +86,30 @@
     "titleAccent": "一本账。",
     "sub": "哪台设备离你最近，就用哪台记。所有记录最终汇入同一本账。",
     "cards": {
-      "iphone": { "title": "iPhone", "body": "语音、拍照、数字键盘，或从任意应用粘贴。一点，一说，搞定。" },
-      "watch": { "title": "Apple Watch", "body": "按住麦克风说一句，5 秒搞定。表盘复杂功能一点直达记账。" },
-      "siri": { "title": "Siri", "body": "“嘿 Siri，在 Manilo 里记一笔支出。”基于 App Intents，iOS 16+ 可用。" },
-      "wallet": { "title": "Apple Wallet", "body": "Apple Pay 付款自动入账。每张卡都有专属 AI 规则（如“打上‘2026 旅行’标签”）。" },
-      "telegram": { "title": "Telegram 机器人", "body": "在聊天里发文字、照片或语音。内联按钮两下就能改好任何细节。" },
-      "aiAgent": { "title": "AI 助手", "body": "直接告诉你常用的 AI 助手（ChatGPT、Claude、Gemini 等）要记什么。" }
+      "iphone": {
+        "title": "iPhone",
+        "body": "语音、拍照、数字键盘，或从任意应用粘贴。一点，一说，搞定。"
+      },
+      "watch": {
+        "title": "Apple Watch",
+        "body": "按住麦克风说一句，5 秒搞定。表盘复杂功能一点直达记账。"
+      },
+      "siri": {
+        "title": "Siri",
+        "body": "“嘿 Siri，在 Manilo 里记一笔支出。”基于 App Intents，iOS 16+ 可用。"
+      },
+      "wallet": {
+        "title": "Apple Wallet",
+        "body": "Apple Pay 付款自动入账。每张卡都有专属 AI 规则（如“打上‘2026 旅行’标签”）。"
+      },
+      "telegram": {
+        "title": "Telegram 机器人",
+        "body": "在聊天里发文字、照片或语音。内联按钮两下就能改好任何细节。"
+      },
+      "aiAgent": {
+        "title": "AI 助手",
+        "body": "直接告诉你常用的 AI 助手（ChatGPT、Claude、Gemini 等）要记什么。"
+      }
     }
   },
   "smart": {
@@ -96,9 +135,18 @@
       ]
     },
     "budgetMock": {
-      "food": { "name": "餐饮", "sub": "$612 / $600" },
-      "groceries": { "name": "食品杂货", "sub": "$384 / $500" },
-      "transport": { "name": "交通", "sub": "$142 / $250" }
+      "food": {
+        "name": "餐饮",
+        "sub": "$612 / $600"
+      },
+      "groceries": {
+        "name": "食品杂货",
+        "sub": "$384 / $500"
+      },
+      "transport": {
+        "name": "交通",
+        "sub": "$142 / $250"
+      }
     },
     "fx": {
       "title": "多币种，不用自己算",
@@ -182,10 +230,22 @@
     }
   },
   "numbers": [
-    { "value": "14", "label": "种语言，完整翻译" },
-    { "value": "29", "label": "种 CSV 导入格式，自动识别" },
-    { "value": "30+", "label": "个 MCP 工具，供 AI 助手调用" },
-    { "value": "5", "label": "个记账入口 · 1 本账" }
+    {
+      "value": "14",
+      "label": "种语言，完整翻译"
+    },
+    {
+      "value": "29",
+      "label": "种 CSV 导入格式，自动识别"
+    },
+    {
+      "value": "30+",
+      "label": "个 MCP 工具，供 AI 助手调用"
+    },
+    {
+      "value": "5",
+      "label": "个记账入口 · 1 本账"
+    }
   ],
   "faq": {
     "eyebrow": "常见问题",

@@ -33,7 +33,7 @@
       },
       {
         "q": "Czy Manilo pokazuje reklamy?",
-        "a": "Nie. Manilo nie ma reklam, nie współpracuje z brokerami danych i nie zawiera reklamowych SDK śledzących. Darmowy plan utrzymuje opcjonalna subskrypcja Cloud, a nie przychody z reklam. Manilo nie zbiera Twojego identyfikatora reklamowego (IDFA)."
+        "a": "Nie. Manilo nie ma reklam, nie współpracuje z brokerami danych i nigdy nie sprzedaje Twoich danych. Darmowy plan utrzymuje opcjonalna subskrypcja Cloud, a nie przychody z reklam. Manilo nie zbiera Twojego identyfikatora reklamowego (IDFA) i nigdy nie prosi o zgodę na śledzenie. Jeśli zainstalowałeś(-aś) Manilo z reklamy Apple Search Ads, chroniący prywatność mechanizm AdServices firmy Apple przekazuje nam informację o tym, z której kampanii pochodzi instalacja — i nic więcej."
       },
       {
         "q": "Czy Manilo jest prywatne? Czy sprzedaje moje dane?",

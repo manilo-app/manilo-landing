@@ -10,7 +10,7 @@
   "hero": {
     "eyebrow": "Note legali",
     "title": "Informativa sulla privacy",
-    "lastUpdated": "Ultimo aggiornamento: 28 agosto 2026"
+    "lastUpdated": "Ultimo aggiornamento: 30 agosto 2026"
   },
   "toc": {
     "ariaLabel": "Indice dei contenuti",
@@ -21,7 +21,8 @@
     "calloutLead": "In breve:",
     "calloutBody": "Manilo (in precedenza Ledgy) funziona prima di tutto in locale: le tue transazioni vivono sul tuo dispositivo. Se attivi Cloud, una copia viene sincronizzata sui nostri server su Google Cloud (Stati Uniti), così possono usarla i tuoi altri dispositivi, le persone con cui condividi e gli assistenti IA che scegli di collegare. Non vendiamo mai i tuoi dati, non mostriamo mai pubblicità e non li usiamo mai per addestrare modelli di IA.",
     "introBeforeLink": "La presente Informativa sulla privacy spiega quali dati raccoglie Manilo (“noi”) quando usi l’app iOS di Manilo (compresa l’app per Apple Watch), la dashboard web di Manilo su",
-    "introAfterLink": ", il bot Telegram di Manilo, le nostre integrazioni con gli assistenti IA (ChatGPT, Claude e altri client compatibili con MCP) e qualsiasi servizio collegato (nel loro insieme, il “Servizio”). Alcuni endpoint del servizio operano ancora sul nostro dominio storico ledgy.app. La presente informativa è scritta in linguaggio semplice ed è allineata al GDPR (UE 2016/679) e ai requisiti dell’App Store di Apple."
+    "introAfterLink": ", il bot Telegram di Manilo, le nostre integrazioni con gli assistenti IA (ChatGPT, Claude e altri client compatibili con MCP) e qualsiasi servizio collegato (nel loro insieme, il “Servizio”). Alcuni endpoint del servizio operano ancora sul nostro dominio storico ledgy.app. La presente informativa è scritta in linguaggio semplice ed è allineata al GDPR (UE 2016/679) e ai requisiti dell’App Store di Apple.",
+    "controller": "Il titolare del trattamento è Borys Harholinskyi, lavoratore autonomo registrato in Spagna (autónomo), che opera con il nome Manilo. Contatto: privacy@manilo.app."
   },
   "whatWeCollect": {
     "heading": "Quali dati raccogliamo",
@@ -48,7 +49,8 @@
       "heading": "Dati diagnostici e di utilizzo",
       "items": [
         "Segnalazioni di crash — anonimizzate, inviate tramite il sistema standard di segnalazione crash di Apple (che puoi disattivare nelle Impostazioni di iOS).",
-        "Analisi di utilizzo — usiamo Google Analytics nell’app, sul sito e nella nostra API per misurare l’uso delle funzioni: schermate visualizzate, funzioni usate, chiamate agli strumenti effettuate dagli assistenti collegati e tempi di risposta. Per gli utenti che hanno effettuato l’accesso questi eventi sono collegati all’identificativo del tuo account. Non inviamo agli strumenti di analisi gli importi delle transazioni, i nomi degli esercenti, le note o il contenuto degli scontrini. Sui nostri siti web Google Analytics imposta cookie.",
+        "Analisi di utilizzo — usiamo Google Analytics (Firebase) nell’app, sul sito e nella nostra API per misurare l’uso delle funzioni: schermate visualizzate, funzioni usate, chiamate agli strumenti effettuate dagli assistenti collegati e tempi di risposta. Per gli utenti che hanno effettuato l’accesso questi eventi sono collegati all’identificativo del tuo account e una copia degli eventi grezzi viene esportata in Google BigQuery, in un nostro progetto, così da poter analizzare l’uso del prodotto per singolo account. Non inviamo agli strumenti di analisi gli importi delle transazioni, i nomi degli esercenti, le note o il contenuto degli scontrini. Sui nostri siti web Google Analytics imposta cookie solo dopo che li hai accettati nel banner dei cookie; se li rifiuti, il sito resta pienamente funzionante.",
+        "Attribuzione delle installazioni — se hai installato Manilo da un annuncio Apple Search Ads, il framework AdServices di Apple, che tutela la privacy, fornisce un token di attribuzione che RevenueCat, il nostro fornitore per gli abbonamenti, converte nella campagna, nel gruppo di annunci e nella parola chiave da cui proviene l’installazione. Non è coinvolto alcun identificativo del dispositivo (IDFA) e non viene richiesto alcun permesso di tracciamento; lo usiamo solo per capire quali annunci funzionano.",
         "Dati di sicurezza — gli indirizzi IP vengono elaborati in modo transitorio per la limitazione delle richieste e la protezione dagli abusi. I log dei server (che riportano l’identificativo del tuo account e le azioni compiute, mai la tua email) vengono conservati per un massimo di 30 giorni."
       ]
     }
@@ -71,11 +73,20 @@
       "Trasformare in transazioni i tuoi testi, le foto, le trascrizioni vocali e le notifiche inoltrate (elaborazione con IA).",
       "Rispondere alle domande ed eseguire le azioni che chiedi a un assistente IA collegato.",
       "Gestire il tuo abbonamento e la tua prova gratuita.",
-      "Inviarti email di servizio e di primo utilizzo — codici di accesso, avvisi di sicurezza, modifiche all’account, consigli per iniziare. Ogni email non essenziale contiene un link per disiscriverti.",
+      "Inviarti email di servizio, di primo utilizzo e promozionali — codici di accesso, avvisi di sicurezza, modifiche all’account, consigli per iniziare e messaggi occasionali sulla tua prova gratuita o sul tuo piano. Ogni email non essenziale contiene un link per disiscriverti.",
       "Recapitare le notifiche push che attivi. Il loro testo può contenere importi e nomi di esercenti, appare sulla schermata di blocco e transita dai servizi push di Apple e di Google.",
-      "Diagnosticare i crash, misurare l’utilizzo e prevenire gli abusi."
+      "Diagnosticare i crash, misurare l’utilizzo e prevenire gli abusi.",
+      "Misurare quali annunci sull’App Store portano le persone a Manilo (vedi l’attribuzione delle installazioni qui sopra)."
     ],
     "doNot": "<strong>Non vendiamo</strong> i tuoi dati, non li condividiamo per scopi pubblicitari e non li usiamo per addestrare modelli di IA, né nostri né di terze parti.",
+    "legalBases": {
+      "heading": "Basi giuridiche (art. 6 GDPR)",
+      "items": [
+        "Esecuzione del contratto con te (art. 6, par. 1, lett. b) — sincronizzare il tuo registro, analizzare le tue voci con l’IA, servire gli assistenti collegati, gestire il tuo abbonamento e inviarti le email di servizio.",
+        "Nostro legittimo interesse (art. 6, par. 1, lett. f) — analisi di utilizzo, attribuzione delle installazioni, prevenzione degli abusi e sicurezza, email di primo utilizzo e promozionali. Puoi opporti in qualsiasi momento: disiscriviti dalle email con il link presente in ogni messaggio e scrivici per escludere il tuo account dalle analisi di utilizzo.",
+        "Il tuo consenso (art. 6, par. 1, lett. a) — i cookie sui nostri siti web e le funzioni facoltative che attivi tu stesso (Cloud, bot Telegram, inoltro da Apple Wallet, collegamento di un assistente IA). Puoi revocarlo disattivando la funzione o rifiutando i cookie."
+      ]
+    },
     "mcp": {
       "heading": "Assistenti IA e Model Context Protocol (MCP)",
       "beforeLink": "Dalla nostra pagina",
@@ -90,16 +101,46 @@
     "heading": "Sub-responsabili del trattamento",
     "intro": "Per fornire il Servizio ci affidiamo ai fornitori seguenti. Ognuno tratta i dati solo secondo le nostre istruzioni, sulla base di un accordo sul trattamento dei dati.",
     "providers": [
-      { "name": "Google Cloud Platform", "desc": "hosting e archiviazione: il nostro backend gira su Google Cloud Run, con Google Firestore (database) e Google Cloud Storage (file degli scontrini) negli Stati Uniti; recapito delle notifiche push tramite Firebase Cloud Messaging." },
-      { "name": "Groq", "desc": "analisi IA principale del testo delle transazioni e delle immagini degli scontrini, e trascrizione dell’input vocale da Apple Watch e da Telegram. Le richieste contengono l’identificativo del tuo account per la prevenzione degli abusi; secondo le condizioni delle loro API, i contenuti non vengono usati per addestrare i loro modelli." },
-      { "name": "OpenAI", "desc": "analisi IA di riserva del testo delle transazioni e delle immagini degli scontrini, con le stesse condizioni API su identificativo dell’account e divieto di addestramento. OpenAI è anche la piattaforma dell’assistente che riceve i dati interrogati quando colleghi Manilo a ChatGPT." },
-      { "name": "Anthropic", "desc": "la piattaforma dell’assistente che riceve i dati interrogati quando colleghi Manilo a Claude; secondo le loro condizioni, i dati inviati tramite API non vengono usati per addestrare i modelli." },
-      { "name": "Apple", "desc": "Sign in with Apple, pagamento degli abbonamenti in-app, notifiche push e segnalazione dei crash." },
-      { "name": "Google", "desc": "Sign in with Google e Google Analytics per la misurazione dell’utilizzo (imposta cookie sui nostri siti web)." },
-      { "name": "RevenueCat", "desc": "stato dell’abbonamento e checkout web; riceve l’identificativo del tuo account, mai il tuo registro." },
-      { "name": "Microsoft 365", "desc": "invio delle email di servizio e di primo utilizzo." },
-      { "name": "Upstash", "desc": "cache lato server crittografata e di breve durata; le voci scadono entro 24 ore." },
-      { "name": "Telegram", "desc": "inoltro dei messaggi per chi sceglie di usare il bot Telegram. La tua conversazione con il bot (comprese le conferme delle transazioni che ti invia) resta nella cronologia delle chat di Telegram, soggetta all’informativa sulla privacy di Telegram." }
+      {
+        "name": "Google Cloud Platform",
+        "desc": "hosting e archiviazione: il nostro backend gira su Google Cloud Run, con Google Firestore (database) e Google Cloud Storage (file degli scontrini) negli Stati Uniti; recapito delle notifiche push tramite Firebase Cloud Messaging."
+      },
+      {
+        "name": "Groq",
+        "desc": "analisi IA principale del testo delle transazioni e delle immagini degli scontrini, e trascrizione dell’input vocale da Apple Watch e da Telegram. Le richieste contengono l’identificativo del tuo account per la prevenzione degli abusi; secondo le condizioni delle loro API, i contenuti non vengono usati per addestrare i loro modelli."
+      },
+      {
+        "name": "OpenAI",
+        "desc": "analisi IA di riserva del testo delle transazioni e delle immagini degli scontrini, con le stesse condizioni API su identificativo dell’account e divieto di addestramento. OpenAI è anche la piattaforma dell’assistente che riceve i dati interrogati quando colleghi Manilo a ChatGPT."
+      },
+      {
+        "name": "Anthropic",
+        "desc": "la piattaforma dell’assistente che riceve i dati interrogati quando colleghi Manilo a Claude; secondo le loro condizioni, i dati inviati tramite API non vengono usati per addestrare i modelli."
+      },
+      {
+        "name": "Apple",
+        "desc": "Sign in with Apple, pagamento degli abbonamenti in-app, notifiche push e segnalazione dei crash."
+      },
+      {
+        "name": "Google",
+        "desc": "Sign in with Google, Google Analytics (Firebase) per la misurazione dell’utilizzo (imposta cookie sui nostri siti web con il tuo consenso) e Google BigQuery per l’esportazione dei nostri dati di analisi."
+      },
+      {
+        "name": "RevenueCat",
+        "desc": "stato dell’abbonamento, checkout web e attribuzione delle installazioni; riceve l’identificativo del tuo account e i dati di attribuzione di Apple Search Ads, mai il tuo registro."
+      },
+      {
+        "name": "Microsoft 365",
+        "desc": "invio delle email di servizio e di primo utilizzo."
+      },
+      {
+        "name": "Upstash",
+        "desc": "cache lato server crittografata e di breve durata; le voci scadono entro 24 ore."
+      },
+      {
+        "name": "Telegram",
+        "desc": "inoltro dei messaggi per chi sceglie di usare il bot Telegram. La tua conversazione con il bot (comprese le conferme delle transazioni che ti invia) resta nella cronologia delle chat di Telegram, soggetta all’informativa sulla privacy di Telegram."
+      }
     ],
     "dpaBeforeEmail": "Quando i dati vengono trasferiti fuori dall’UE o dal Regno Unito, ci affidiamo alle garanzie riconosciute dei nostri fornitori (EU-U.S. Data Privacy Framework o clausole contrattuali tipo). Per una copia degli accordi sul trattamento dei dati o per l’elenco delle sedi secondarie dei sub-responsabili, scrivi a",
     "dpaAfterEmail": "."
@@ -110,7 +151,7 @@
       "Il tuo registro e i tuoi scontrini vengono conservati per tutto il tempo in cui esiste il tuo account — finché non elimini le singole voci o l’intero account.",
       "Se il tuo abbonamento Cloud termina, i dati sincronizzati restano archiviati, così li ritrovi se torni; la tua copia locale resta sul tuo dispositivo. Puoi rimuovere la copia sul server in qualsiasi momento eliminando il tuo account.",
       "Eliminazione dell’account: Impostazioni → Account → Elimina account. I tuoi dati vengono eliminati subito dal nostro database di produzione — è una cancellazione definitiva, non una disattivazione. Nello stesso momento i file degli scontrini diventano definitivamente inaccessibili. I backup crittografati del database scadono entro 30 giorni; le cache lato server entro 24 ore; i log dei server entro 30 giorni.",
-      "I fornitori di IA (Groq, OpenAI, Anthropic) elaborano in modo transitorio le richieste di analisi e quelle degli assistenti, secondo le condizioni di conservazione dei dati delle loro API, e non le usano per l’addestramento. Google Analytics conserva gli eventi di utilizzo per un massimo di 14 mesi."
+      "I fornitori di IA (Groq, OpenAI, Anthropic) elaborano in modo transitorio le richieste di analisi e quelle degli assistenti, secondo le condizioni di conservazione dei dati delle loro API, e non le usano per l’addestramento. Google Analytics conserva gli eventi di utilizzo per un massimo di 14 mesi e la nostra copia su BigQuery viene eliminata con la stessa cadenza di 14 mesi."
     ]
   },
   "rights": {

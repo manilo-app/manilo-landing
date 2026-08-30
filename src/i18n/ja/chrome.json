@@ -1,6 +1,10 @@
 {
   "skipLink": "本文へスキップ",
-  "nav": { "home": "ホーム", "pricing": "料金", "support": "サポート" },
+  "nav": {
+    "home": "ホーム",
+    "pricing": "料金",
+    "support": "サポート"
+  },
   "header": {
     "brandAria": "Maniloのホーム",
     "openDashboard": "ダッシュボードを開く",
@@ -26,5 +30,11 @@
     "copyright": "© 2026 Manilo",
     "status": "全システム正常稼働中",
     "language": "言語"
+  },
+  "cookies": {
+    "text": "サイトの利用状況を把握するためにGoogle AnalyticsのCookieを使用します。お客様が選択するまで、Cookieは設定されません。",
+    "accept": "同意する",
+    "decline": "拒否する",
+    "privacy": "プライバシーポリシー"
   }
 }

@@ -33,7 +33,7 @@
       },
       {
         "q": "Manilo affiche-t-il de la publicité ?",
-        "a": "Non. Manilo n’a aucune publicité, aucun courtier en données et aucun SDK de pistage publicitaire. L’offre gratuite est financée par l’abonnement Cloud, en option, et non par des revenus publicitaires. Manilo ne collecte pas votre identifiant publicitaire (IDFA)."
+        "a": "Non. Manilo n’a aucune publicité, aucun courtier en données et ne vend jamais vos données. L’offre gratuite est financée par l’abonnement Cloud, en option, et non par des revenus publicitaires. Manilo ne collecte pas votre identifiant publicitaire (IDFA) et ne demande jamais d’autorisation de pistage. Si vous avez installé Manilo depuis une publicité Apple Search Ads, le framework AdServices d’Apple, respectueux de la vie privée, nous indique de quelle campagne provient l’installation — rien de plus."
       },
       {
         "q": "Manilo respecte-t-il ma vie privée ? Vend-il mes données ?",

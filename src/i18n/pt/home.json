@@ -22,7 +22,7 @@
       "Funciona offline com banco de dados SQLite local",
       "Exportação em CSV e PDF",
       "Suporte a 14 idiomas",
-      "Sem anúncios, sem venda de dados, sem SDKs de rastreamento",
+      "Sem anúncios, sem corretores de dados, sem venda dos seus dados",
       "Registro de gastos pelo bot do Telegram",
       "Registro automático de compras do Apple Pay via Apple Wallet",
       "Painel web com tendências e relatórios"
@@ -33,7 +33,7 @@
     "pillAria": "Já na App Store. Disponível para iOS.",
     "pill": "Já na App Store · iOS",
     "title": "Registre qualquer gasto em qualquer moeda.",
-    "sub": "Converse com o seu dinheiro. O Manilo (antes Ledgy) é um app de controle de gastos multimoeda para iOS. Registre por voz no iPhone ou no Apple Watch, fotografe um recibo ou peça direto ao Claude e ao ChatGPT. O download é grátis. Sem anúncios. Seus dados ficam no seu aparelho.",
+    "sub": "Converse com o seu dinheiro. O Manilo (antes Ledgy) é um app de controle de gastos multimoeda para iOS. Registre por voz no iPhone ou no Apple Watch, fotografe um recibo ou peça direto ao Claude e ao ChatGPT. O download é grátis. Sem anúncios. Seus dados ficam no seu aparelho, a menos que você ative o Cloud.",
     "downloadCta": "Baixar na App Store",
     "downloadMeta": "Download grátis · iOS 15+",
     "pricingCta": "Ver preços",

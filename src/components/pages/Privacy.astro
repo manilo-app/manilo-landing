@@ -122,6 +122,17 @@ const breadcrumbLd = {
       </ul>
       <p set:html={d.howWeUse.doNot} />
 
+      {d.howWeUse.legalBases && (
+        <>
+          <h3 id="legal-bases">{d.howWeUse.legalBases.heading}</h3>
+          <ul>
+            {d.howWeUse.legalBases.items.map((item: string) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </>
+      )}
+
       <h3>{d.howWeUse.mcp.heading}</h3>
       <p>{d.howWeUse.mcp.beforeLink} <a href={navUrl(lang, '/integrations')}>{d.howWeUse.mcp.linkText}</a> {d.howWeUse.mcp.afterLink}</p>
       {d.howWeUse.mcp.read && <p set:html={d.howWeUse.mcp.read} />}
@@ -175,6 +186,7 @@ const breadcrumbLd = {
     <section id="contact">
       <h2 data-num="10">{d.contact.heading}</h2>
       <p>{d.contact.emailLabel} <a href="mailto:privacy@manilo.app">privacy@manilo.app</a></p>
+      {d.summary.controller && <p class="doc-meta">{d.summary.controller}</p>}
     </section>
   </article>
 </div>

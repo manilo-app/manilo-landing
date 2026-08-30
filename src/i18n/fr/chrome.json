@@ -1,6 +1,10 @@
 {
   "skipLink": "Aller au contenu",
-  "nav": { "home": "Accueil", "pricing": "Tarifs", "support": "Assistance" },
+  "nav": {
+    "home": "Accueil",
+    "pricing": "Tarifs",
+    "support": "Assistance"
+  },
   "header": {
     "brandAria": "Accueil Manilo",
     "openDashboard": "Ouvrir le tableau de bord",
@@ -26,5 +30,11 @@
     "copyright": "© 2026 Manilo",
     "status": "Tous les systèmes sont opérationnels",
     "language": "Langue"
+  },
+  "cookies": {
+    "text": "Nous utilisons des cookies Google Analytics pour comprendre comment le site est utilisé. Rien n’est déposé tant que vous n’avez pas choisi.",
+    "accept": "Accepter",
+    "decline": "Refuser",
+    "privacy": "Politique de confidentialité"
   }
 }

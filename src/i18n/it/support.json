@@ -33,7 +33,7 @@
       },
       {
         "q": "Manilo mostra pubblicità?",
-        "a": "No. Manilo non ha pubblicità, non ha broker di dati e non ha SDK di tracciamento pubblicitario. Il piano gratuito è sostenuto dall’abbonamento Cloud opzionale, non dai ricavi pubblicitari. Manilo non raccoglie il tuo Identificativo per gli inserzionisti (IDFA)."
+        "a": "No. Manilo non ha pubblicità, non ha broker di dati e non vende mai i tuoi dati. Il piano gratuito è sostenuto dall’abbonamento Cloud opzionale, non dai ricavi pubblicitari. Manilo non raccoglie il tuo Identificativo per gli inserzionisti (IDFA) e non chiede mai il permesso di tracciamento. Se hai installato Manilo da un annuncio Apple Search Ads, il framework AdServices di Apple, che tutela la privacy, ci indica da quale campagna proviene l’installazione — nulla di più."
       },
       {
         "q": "Manilo rispetta la privacy? Vende i miei dati?",

@@ -1,6 +1,10 @@
 {
   "skipLink": "Salta al contenuto",
-  "nav": { "home": "Home", "pricing": "Prezzi", "support": "Supporto" },
+  "nav": {
+    "home": "Home",
+    "pricing": "Prezzi",
+    "support": "Supporto"
+  },
   "header": {
     "brandAria": "Home di Manilo",
     "openDashboard": "Apri la dashboard",
@@ -26,5 +30,11 @@
     "copyright": "© 2026 Manilo",
     "status": "Tutti i sistemi sono operativi",
     "language": "Lingua"
+  },
+  "cookies": {
+    "text": "Usiamo i cookie di Google Analytics per capire come viene usato il sito. Non ne viene impostato nessuno finché non scegli.",
+    "accept": "Accetta",
+    "decline": "Rifiuta",
+    "privacy": "Informativa sulla privacy"
   }
 }

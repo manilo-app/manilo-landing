@@ -10,7 +10,7 @@
   "hero": {
     "eyebrow": "法律",
     "title": "隐私政策",
-    "lastUpdated": "最后更新于 2026 年 8 月 28 日"
+    "lastUpdated": "最后更新于 2026 年 8 月 30 日"
   },
   "toc": {
     "ariaLabel": "目录",
@@ -21,7 +21,8 @@
     "calloutLead": "简单来说：",
     "calloutBody": "Manilo（原 Ledgy）以本地优先——你的交易保存在你的设备上。如果你打开 Cloud，一份副本会同步到我们位于 Google Cloud（美国）的服务器，好让你的其他设备、你共享给的人，以及你选择连接的 AI 助手都能使用这些数据。我们绝不出售你的数据，绝不展示广告，也绝不用你的数据训练 AI 模型。",
     "introBeforeLink": "本隐私政策说明：当你使用 Manilo iOS 应用（含 Apple Watch 应用）、位于",
-    "introAfterLink": " 的 Manilo 网页仪表盘、Manilo Telegram 机器人、我们的 AI 助手集成（ChatGPT、Claude 及其他兼容 MCP 的客户端）以及任何相关服务（统称“本服务”）时，Manilo（下称“我们”）会收集哪些数据。部分服务端点仍运行在我们此前的 ledgy.app 域名下。本政策以通俗语言写成，并与 GDPR（EU 2016/679）及 Apple App Store 的要求保持一致。"
+    "introAfterLink": " 的 Manilo 网页仪表盘、Manilo Telegram 机器人、我们的 AI 助手集成（ChatGPT、Claude 及其他兼容 MCP 的客户端）以及任何相关服务（统称“本服务”）时，Manilo（下称“我们”）会收集哪些数据。部分服务端点仍运行在我们此前的 ledgy.app 域名下。本政策以通俗语言写成，并与 GDPR（EU 2016/679）及 Apple App Store 的要求保持一致。",
+    "controller": "数据控制者为 Borys Harholinskyi，在西班牙注册的个体经营者（autónomo），经营名称为 Manilo。联系方式：privacy@manilo.app。"
   },
   "whatWeCollect": {
     "heading": "我们收集哪些数据",
@@ -48,7 +49,8 @@
       "heading": "诊断与使用数据",
       "items": [
         "崩溃报告——已匿名化，通过 Apple 标准的崩溃报告机制发送（你可以在 iOS 设置中选择关闭）。",
-        "使用分析——我们在应用、网站和 API 中使用 Google Analytics 衡量功能使用情况：浏览的页面、使用的功能、已连接助手发起的工具调用，以及各项耗时。对于已登录的用户，这些事件会与你的账户标识关联。我们不会把交易金额、商家名称、备注或小票内容发送给分析服务。在我们的网站上，Google Analytics 会设置 Cookie。",
+        "使用分析——我们在应用、网站和 API 中使用 Google Analytics（Firebase）衡量功能使用情况：浏览的页面、使用的功能、已连接助手发起的工具调用，以及各项耗时。对于已登录的用户，这些事件会与你的账户标识关联，原始事件的一份副本还会导出到我们自己项目下的 Google BigQuery，以便我们按账户分析产品使用情况。我们不会把交易金额、商家名称、备注或小票内容发送给分析服务。在我们的网站上，只有当你在 Cookie 横幅中选择接受后，Google Analytics 才会设置 Cookie；即使你拒绝，网站的功能也完全不受影响。",
+        "安装归因——如果你是通过 Apple Search Ads 广告安装的 Manilo，Apple 保护隐私的 AdServices 框架会提供一个归因令牌，我们的订阅服务提供方 RevenueCat 会用它换取该次安装来自哪个广告系列、广告组和关键词。整个过程不涉及任何设备标识符（IDFA），也不会请求跟踪权限；我们仅用它来衡量哪些广告有效。",
         "安全数据——IP 地址仅为限流和防滥用而作瞬时处理。服务器日志（其中记录你的账户标识和操作，绝不记录你的邮箱地址）最多保留 30 天。"
       ]
     }
@@ -71,11 +73,20 @@
       "把你的文字、照片、语音转写和转发的通知解析成交易（AI 处理）。",
       "回答你的问题，并执行你要求已连接的 AI 助手完成的操作。",
       "管理你的订阅和试用。",
-      "发送事务性邮件和上手引导邮件——登录验证码、安全通知、账户变更、入门提示。每一封非必要邮件都带有退订链接。",
+      "发送事务性邮件、上手引导邮件和优惠邮件——登录验证码、安全通知、账户变更、入门提示，以及关于你的试用或套餐的偶尔通知。每一封非必要邮件都带有退订链接。",
       "投递你已启用的推送通知。通知文本可能包含金额和商家名称，会显示在你的锁定屏幕上，并经由 Apple 和 Google 的推送服务传输。",
-      "诊断崩溃、衡量使用情况并防止滥用。"
+      "诊断崩溃、衡量使用情况并防止滥用。",
+      "衡量哪些 App Store 广告为 Manilo 带来了用户（见上文的安装归因）。"
     ],
     "doNot": "<strong>我们不会</strong>出售你的数据，不会为广告目的共享它，也不会用它训练我们自己或第三方的 AI 模型。",
+    "legalBases": {
+      "heading": "法律依据（GDPR 第 6 条）",
+      "items": [
+        "为履行我们与你之间的合同（第 6(1)(b) 条）——同步你的账本、用 AI 解析你录入的内容、为已连接的助手提供服务、管理你的订阅，以及发送事务性邮件。",
+        "基于我们的正当利益（第 6(1)(f) 条）——使用分析、安装归因、防滥用与安全，以及上手引导和优惠邮件。你可以随时提出反对：通过每封邮件中的链接退订，或联系我们，为你的账户关闭分析统计。",
+        "基于你的同意（第 6(1)(a) 条）——我们网站上的 Cookie，以及你自己开启的可选功能（Cloud、Telegram 机器人、Apple Wallet 转发、连接 AI 助手）。你可以通过关闭相应功能或拒绝 Cookie 来撤回同意。"
+      ]
+    },
     "mcp": {
       "heading": "AI 助手与模型上下文协议（MCP）",
       "beforeLink": "如果你通过我们的",
@@ -90,16 +101,46 @@
     "heading": "子处理方",
     "intro": "为提供本服务，我们依赖以下服务提供方。每一方都受数据处理协议（DPA）约束，且仅按我们的指示处理数据。",
     "providers": [
-      { "name": "Google Cloud Platform", "desc": "托管与存储：我们的后端运行在 Google Cloud Run 上，数据库为 Google Firestore，小票文件存放于 Google Cloud Storage，均位于美国；推送投递通过 Firebase Cloud Messaging。" },
-      { "name": "Groq", "desc": "对交易文本和小票图片进行主要的 AI 解析，并转写 Apple Watch 与 Telegram 的语音输入。请求会携带你的账户标识用于防滥用；根据其 API 条款，相关内容不会用于训练它们的模型。" },
-      { "name": "OpenAI", "desc": "对交易文本和小票图片进行备用的 AI 解析，适用同样的账户标识与不用于训练的 API 条款。当你把 Manilo 连接到 ChatGPT 时，OpenAI 同时是接收你所查询数据的助手平台。" },
-      { "name": "Anthropic", "desc": "当你把 Manilo 连接到 Claude 时，接收你所查询数据的助手平台；根据其条款，API 数据不会用于模型训练。" },
-      { "name": "Apple", "desc": "Sign in with Apple、应用内订阅支付、推送通知和崩溃报告。" },
-      { "name": "Google", "desc": "Sign in with Google，以及用于衡量使用情况的 Google Analytics（会在我们的网站上设置 Cookie）。" },
-      { "name": "RevenueCat", "desc": "订阅状态与网页结账；会收到你的账户标识，绝不会收到你的账本。" },
-      { "name": "Microsoft 365", "desc": "事务性邮件和上手引导邮件的投递。" },
-      { "name": "Upstash", "desc": "加密的短时服务器端缓存；缓存条目会在 24 小时内过期。" },
-      { "name": "Telegram", "desc": "为选择启用 Telegram 机器人的用户提供消息中转。你与机器人的对话（包括它发送的交易确认）会保留在你的 Telegram 聊天记录中，适用 Telegram 自己的隐私政策。" }
+      {
+        "name": "Google Cloud Platform",
+        "desc": "托管与存储：我们的后端运行在 Google Cloud Run 上，数据库为 Google Firestore，小票文件存放于 Google Cloud Storage，均位于美国；推送投递通过 Firebase Cloud Messaging。"
+      },
+      {
+        "name": "Groq",
+        "desc": "对交易文本和小票图片进行主要的 AI 解析，并转写 Apple Watch 与 Telegram 的语音输入。请求会携带你的账户标识用于防滥用；根据其 API 条款，相关内容不会用于训练它们的模型。"
+      },
+      {
+        "name": "OpenAI",
+        "desc": "对交易文本和小票图片进行备用的 AI 解析，适用同样的账户标识与不用于训练的 API 条款。当你把 Manilo 连接到 ChatGPT 时，OpenAI 同时是接收你所查询数据的助手平台。"
+      },
+      {
+        "name": "Anthropic",
+        "desc": "当你把 Manilo 连接到 Claude 时，接收你所查询数据的助手平台；根据其条款，API 数据不会用于模型训练。"
+      },
+      {
+        "name": "Apple",
+        "desc": "Sign in with Apple、应用内订阅支付、推送通知和崩溃报告。"
+      },
+      {
+        "name": "Google",
+        "desc": "Sign in with Google、用于衡量使用情况的 Google Analytics（Firebase）（在你同意后才会在我们的网站上设置 Cookie），以及用于分析数据导出的 Google BigQuery。"
+      },
+      {
+        "name": "RevenueCat",
+        "desc": "订阅状态、网页结账和安装归因；会收到你的账户标识和 Apple Search Ads 的归因数据，绝不会收到你的账本。"
+      },
+      {
+        "name": "Microsoft 365",
+        "desc": "事务性邮件和上手引导邮件的投递。"
+      },
+      {
+        "name": "Upstash",
+        "desc": "加密的短时服务器端缓存；缓存条目会在 24 小时内过期。"
+      },
+      {
+        "name": "Telegram",
+        "desc": "为选择启用 Telegram 机器人的用户提供消息中转。你与机器人的对话（包括它发送的交易确认）会保留在你的 Telegram 聊天记录中，适用 Telegram 自己的隐私政策。"
+      }
     ],
     "dpaBeforeEmail": "当数据被传输至欧盟或英国境外时，我们依赖服务提供方经认可的保障措施（欧盟—美国数据隐私框架或标准合同条款）。如需 DPA 副本或子处理方的具体所在地信息，请写信至",
     "dpaAfterEmail": "。"
@@ -110,7 +151,7 @@
       "只要你的账户存在，你的账本和小票就会一直保留——直到你删除单条记录或删除整个账户。",
       "如果你的 Cloud 订阅结束，已同步的数据仍会继续保存，以便你回来时数据还在；本地副本仍留在你的设备上。你可以随时通过删除账户来清除服务器上的副本。",
       "删除账户：设置 → 账户 → 删除账户。你的数据会立即从我们的生产数据库中删除——这是彻底删除，而非停用。小票文件在同一时刻变为永久不可访问。加密的数据库备份将在 30 天内过期，服务器端缓存在 24 小时内过期，服务器日志在 30 天内过期。",
-      "AI 服务提供方（Groq、OpenAI、Anthropic）按其 API 数据保留条款瞬时处理解析请求和助手请求，且不会用它们训练模型。Google Analytics 对使用事件的保留期最长为 14 个月。"
+      "AI 服务提供方（Groq、OpenAI、Anthropic）按其 API 数据保留条款瞬时处理解析请求和助手请求，且不会用它们训练模型。Google Analytics 对使用事件的保留期最长为 14 个月，我们在 BigQuery 中的副本也按同样的 14 个月周期删除。"
     ]
   },
   "rights": {

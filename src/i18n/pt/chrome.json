@@ -26,5 +26,11 @@
     "copyright": "© 2026 Manilo",
     "status": "Todos os sistemas em operação",
     "language": "Idioma"
+  },
+  "cookies": {
+    "text": "Usamos cookies do Google Analytics para entender como o site é usado. Nada é definido até você escolher.",
+    "accept": "Aceitar",
+    "decline": "Recusar",
+    "privacy": "Política de Privacidade"
   }
 }

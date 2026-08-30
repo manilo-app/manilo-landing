@@ -22,7 +22,7 @@
       "Offline-first mit lokaler SQLite-Datenbank",
       "CSV- und PDF-Export",
       "In 14 Sprachen verfügbar",
-      "Keine Werbung, keine Datenhändler, keine Tracking-SDKs",
+      "Keine Werbung, keine Datenhändler, kein Verkauf deiner Daten",
       "Ausgaben per Telegram-Bot erfassen",
       "Apple-Pay-Zahlungen automatisch erfassen — via Apple Wallet",
       "Web-Dashboard mit Trends und Berichten"
@@ -33,16 +33,25 @@
     "pillAria": "Jetzt im App Store. Verfügbar für iOS.",
     "pill": "Jetzt im App Store · iOS",
     "title": "Erfasse jede Ausgabe in jeder Währung.",
-    "sub": "Sprich mit deinem Geld. Manilo (früher Ledgy) ist ein Multiwährungs-Ausgaben-Tracker für iOS. Erfasse Ausgaben per Sprache auf iPhone oder Apple Watch, fotografiere einen Beleg oder frag Claude und ChatGPT direkt. Kostenloser Download. Keine Werbung. Deine Daten bleiben auf deinem Gerät.",
+    "sub": "Sprich mit deinem Geld. Manilo (früher Ledgy) ist ein Multiwährungs-Ausgaben-Tracker für iOS. Erfasse Ausgaben per Sprache auf iPhone oder Apple Watch, fotografiere einen Beleg oder frag Claude und ChatGPT direkt. Kostenloser Download. Keine Werbung. Deine Daten bleiben auf deinem Gerät, solange du Cloud nicht aktivierst.",
     "downloadCta": "Laden im App Store",
     "downloadMeta": "Kostenloser Download · iOS 15+",
     "pricingCta": "Preise ansehen",
     "pricingMeta": "Solo-Nutzung für immer kostenlos",
     "phoneAlt": "Der Bildschirm „Transaktion hinzufügen“ in Manilo, auf dem eine Ausgabe von $555 per Sprache erfasst wird",
     "chips": {
-      "voice": { "label": "Sprache", "line": "„Kaffee für $4.50 bei Blue Bottle“" },
-      "receipt": { "label": "Beleg", "line": "Mittagessen · €18.20" },
-      "telegram": { "label": "Telegram", "line": "Tankfüllung · 60 EUR" }
+      "voice": {
+        "label": "Sprache",
+        "line": "„Kaffee für $4.50 bei Blue Bottle“"
+      },
+      "receipt": {
+        "label": "Beleg",
+        "line": "Mittagessen · €18.20"
+      },
+      "telegram": {
+        "label": "Telegram",
+        "line": "Tankfüllung · 60 EUR"
+      }
     }
   },
   "trust": {
@@ -54,9 +63,21 @@
     "title": "Drei Schritte. Danach nie wieder.",
     "sub": "Erfasse so, wie es gerade am schnellsten geht. Den Rest übernimmt Manilo.",
     "steps": [
-      { "num": "01", "title": "Erfassen", "body": "Sprache auf der Watch, ein Foto vom Beleg oder eine weitergeleitete SMS in Telegram." },
-      { "num": "02", "title": "Verstehen", "body": "Die AI liest den Text und wählt die passende Kategorie, das Konto und die Gruppe." },
-      { "num": "03", "title": "Überall sehen", "body": "iPhone, Apple Watch, Web-Dashboard und deine AI-Agenten (ChatGPT, Claude, Gemini und mehr)." }
+      {
+        "num": "01",
+        "title": "Erfassen",
+        "body": "Sprache auf der Watch, ein Foto vom Beleg oder eine weitergeleitete SMS in Telegram."
+      },
+      {
+        "num": "02",
+        "title": "Verstehen",
+        "body": "Die AI liest den Text und wählt die passende Kategorie, das Konto und die Gruppe."
+      },
+      {
+        "num": "03",
+        "title": "Überall sehen",
+        "body": "iPhone, Apple Watch, Web-Dashboard und deine AI-Agenten (ChatGPT, Claude, Gemini und mehr)."
+      }
     ]
   },
   "surfaces": {
@@ -65,12 +86,30 @@
     "titleAccent": "Ein Ort.",
     "sub": "Egal, welches Gerät gerade am nächsten ist — das nimmt Manilo. Alles landet im selben Haushaltsbuch.",
     "cards": {
-      "iphone": { "title": "iPhone", "body": "Sprache, Foto, Ziffernblock oder Einfügen von überall. Einmal tippen, ein Satz — fertig." },
-      "watch": { "title": "Apple Watch", "body": "Mikro halten. Sprechen. Fertig in 5 Sekunden. Komplikationen auf dem Zifferblatt führen direkt zum Erfassen." },
-      "siri": { "title": "Siri", "body": "„Hey Siri, erfasse eine Ausgabe in Manilo.“ App Intents ab iOS 16." },
-      "wallet": { "title": "Apple Wallet", "body": "Apple-Pay-Zahlungen werden automatisch erfasst. Jede Karte bekommt ihre eigene AI-Regel (z. B. „mit Reise 2026 taggen“)." },
-      "telegram": { "title": "Telegram-Bot", "body": "Text, Foto oder Sprachnachricht direkt im Chat. Inline-Buttons, um alles mit zwei Fingertipps zu korrigieren." },
-      "aiAgent": { "title": "AI-Agent", "body": "Sag einfach dem AI-Agenten, den du nutzt (ChatGPT, Claude, Gemini und mehr), was er erfassen soll." }
+      "iphone": {
+        "title": "iPhone",
+        "body": "Sprache, Foto, Ziffernblock oder Einfügen von überall. Einmal tippen, ein Satz — fertig."
+      },
+      "watch": {
+        "title": "Apple Watch",
+        "body": "Mikro halten. Sprechen. Fertig in 5 Sekunden. Komplikationen auf dem Zifferblatt führen direkt zum Erfassen."
+      },
+      "siri": {
+        "title": "Siri",
+        "body": "„Hey Siri, erfasse eine Ausgabe in Manilo.“ App Intents ab iOS 16."
+      },
+      "wallet": {
+        "title": "Apple Wallet",
+        "body": "Apple-Pay-Zahlungen werden automatisch erfasst. Jede Karte bekommt ihre eigene AI-Regel (z. B. „mit Reise 2026 taggen“)."
+      },
+      "telegram": {
+        "title": "Telegram-Bot",
+        "body": "Text, Foto oder Sprachnachricht direkt im Chat. Inline-Buttons, um alles mit zwei Fingertipps zu korrigieren."
+      },
+      "aiAgent": {
+        "title": "AI-Agent",
+        "body": "Sag einfach dem AI-Agenten, den du nutzt (ChatGPT, Claude, Gemini und mehr), was er erfassen soll."
+      }
     }
   },
   "smart": {
@@ -96,9 +135,18 @@
       ]
     },
     "budgetMock": {
-      "food": { "name": "Essen & Trinken", "sub": "$612 von $600" },
-      "groceries": { "name": "Lebensmittel", "sub": "$384 von $500" },
-      "transport": { "name": "Transport", "sub": "$142 von $250" }
+      "food": {
+        "name": "Essen & Trinken",
+        "sub": "$612 von $600"
+      },
+      "groceries": {
+        "name": "Lebensmittel",
+        "sub": "$384 von $500"
+      },
+      "transport": {
+        "name": "Transport",
+        "sub": "$142 von $250"
+      }
     },
     "fx": {
       "title": "Mehrere Währungen ohne Kopfrechnen",
@@ -182,10 +230,22 @@
     }
   },
   "numbers": [
-    { "value": "14", "label": "Sprachen, vollständig übersetzt" },
-    { "value": "29", "label": "Sprachen im CSV-Import, automatisch erkannt" },
-    { "value": "30+", "label": "MCP-Tools für AI-Agenten" },
-    { "value": "5", "label": "Erfassungswege · 1 Ort" }
+    {
+      "value": "14",
+      "label": "Sprachen, vollständig übersetzt"
+    },
+    {
+      "value": "29",
+      "label": "Sprachen im CSV-Import, automatisch erkannt"
+    },
+    {
+      "value": "30+",
+      "label": "MCP-Tools für AI-Agenten"
+    },
+    {
+      "value": "5",
+      "label": "Erfassungswege · 1 Ort"
+    }
   ],
   "faq": {
     "eyebrow": "FAQ",

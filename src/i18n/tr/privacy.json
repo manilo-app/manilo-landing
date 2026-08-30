@@ -10,7 +10,7 @@
   "hero": {
     "eyebrow": "Yasal",
     "title": "Gizlilik Politikası",
-    "lastUpdated": "Son güncelleme: 28 Ağustos 2026"
+    "lastUpdated": "Son güncelleme: 30 Ağustos 2026"
   },
   "toc": {
     "ariaLabel": "İçindekiler",
@@ -21,7 +21,8 @@
     "calloutLead": "Kısaca:",
     "calloutBody": "Manilo (eski adıyla Ledgy) yerel önceliklidir — işlemleriniz cihazınızda durur. Cloud'u açarsanız; diğer cihazlarınızın, paylaşımda bulunduğunuz kişilerin ve bağlamayı seçtiğiniz yapay zeka asistanlarının verilerinizle çalışabilmesi için bir kopya, Google Cloud (Amerika Birleşik Devletleri) üzerindeki sunucularımıza senkronize edilir. Verilerinizi asla satmayız, asla reklam göstermeyiz ve verilerinizi yapay zeka modellerini eğitmek için asla kullanmayız.",
     "introBeforeLink": "Bu Gizlilik Politikası; Manilo iOS uygulamasını (Apple Watch uygulaması dahil),",
-    "introAfterLink": " adresindeki Manilo web panelini, Manilo Telegram botunu, yapay zeka asistanı entegrasyonlarımızı (ChatGPT, Claude ve MCP uyumlu diğer istemciler) ve ilgili tüm hizmetleri (topluca \"Hizmet\") kullandığınızda Manilo'nun (\"biz\", \"bize\") hangi verileri topladığını açıklar. Bazı hizmet uç noktaları, eski alan adımız ledgy.app üzerinden çalışmaya devam etmektedir. Bu politika sade bir dille yazılmıştır ve GDPR (AB 2016/679) ile Apple App Store gereklilikleriyle uyumludur."
+    "introAfterLink": " adresindeki Manilo web panelini, Manilo Telegram botunu, yapay zeka asistanı entegrasyonlarımızı (ChatGPT, Claude ve MCP uyumlu diğer istemciler) ve ilgili tüm hizmetleri (topluca \"Hizmet\") kullandığınızda Manilo'nun (\"biz\", \"bize\") hangi verileri topladığını açıklar. Bazı hizmet uç noktaları, eski alan adımız ledgy.app üzerinden çalışmaya devam etmektedir. Bu politika sade bir dille yazılmıştır ve GDPR (AB 2016/679) ile Apple App Store gereklilikleriyle uyumludur.",
+    "controller": "Veri sorumlusu, İspanya'da kayıtlı bir bağımsız çalışan (autónomo) olan ve Manilo adıyla faaliyet gösteren Borys Harholinskyi'dir. İletişim: privacy@manilo.app."
   },
   "whatWeCollect": {
     "heading": "Neleri topluyoruz",
@@ -48,7 +49,8 @@
       "heading": "Tanılama ve kullanım verileri",
       "items": [
         "Çökme raporları — anonimleştirilmiş olarak, Apple'ın standart çökme raporlaması üzerinden gönderilir (iOS Ayarlar'dan kapatabilirsiniz).",
-        "Kullanım analitiği — özellik kullanımını ölçmek için uygulamada, web sitesinde ve API'mizde Google Analytics kullanıyoruz: görüntülenen ekranlar, kullanılan özellikler, bağlı asistanların yaptığı araç çağrıları ve süreler. Oturum açmış kullanıcılarda bu olaylar hesap tanımlayıcınıza bağlanır. İşlem tutarlarını, işletme adlarını, notları veya fiş içeriklerini analitiğe göndermeyiz. Web sitelerimizde Google Analytics çerez yerleştirir.",
+        "Kullanım analitiği — özellik kullanımını ölçmek için uygulamada, web sitesinde ve API'mizde Google Analytics (Firebase) kullanıyoruz: görüntülenen ekranlar, kullanılan özellikler, bağlı asistanların yaptığı araç çağrıları ve süreler. Oturum açmış kullanıcılarda bu olaylar hesap tanımlayıcınıza bağlanır ve ham olayların bir kopyası, ürün kullanımını hesap bazında çözümleyebilmemiz için kendi projemizdeki Google BigQuery'ye aktarılır. İşlem tutarlarını, işletme adlarını, notları veya fiş içeriklerini analitiğe göndermeyiz. Web sitelerimizde Google Analytics yalnızca çerez bildiriminde kabul ettikten sonra çerez yerleştirir; reddetmeniz sitenin işleyişini hiçbir şekilde etkilemez.",
+        "Yükleme atfı — Manilo'yu bir Apple Search Ads reklamı üzerinden yüklediyseniz, Apple'ın gizliliği koruyan AdServices çatısı bir atıf belirteci sağlar; abonelik sağlayıcımız RevenueCat bu belirteci, yüklemenin geldiği kampanya, reklam grubu ve anahtar kelime bilgisiyle takas eder. Bu süreçte hiçbir cihaz tanımlayıcısı (IDFA) kullanılmaz ve izleme izni istenmez; bu bilgiyi yalnızca hangi reklamların işe yaradığını ölçmek için kullanırız.",
         "Güvenlik verileri — IP adresleri, hız sınırlama ve kötüye kullanımı önleme amacıyla geçici olarak işlenir. Sunucu günlükleri (hesap tanımlayıcınıza ve yaptığınız işlemlere atıfta bulunur, e-posta adresinize asla) en fazla 30 gün saklanır."
       ]
     }
@@ -71,11 +73,20 @@
       "Metinlerinizi, fotoğraflarınızı, ses dökümlerinizi ve ilettiğiniz bildirimleri işlemlere dönüştürmek (yapay zekayla çözümleme).",
       "Bağlı bir yapay zeka asistanına yönelttiğiniz soruları yanıtlamak ve ondan yapmasını istediğiniz işlemleri gerçekleştirmek.",
       "Aboneliğinizi ve deneme sürenizi yönetmek.",
-      "İşlemsel ve başlangıç e-postaları göndermek — oturum açma kodları, güvenlik bildirimleri, hesap değişiklikleri, başlangıç ipuçları. Zorunlu olmayan her e-postada abonelikten çıkma bağlantısı bulunur.",
+      "İşlemsel, başlangıç ve teklif e-postaları göndermek — oturum açma kodları, güvenlik bildirimleri, hesap değişiklikleri, başlangıç ipuçları ve deneme süreniz ya da planınızla ilgili ara sıra gönderilen mesajlar. Zorunlu olmayan her e-postada abonelikten çıkma bağlantısı bulunur.",
       "Etkinleştirdiğiniz anlık bildirimleri iletmek. Bu bildirimlerin metni tutarları ve işletme adlarını içerebilir, kilit ekranınızda görünür ve Apple ile Google'ın anlık bildirim servisleri üzerinden geçer.",
-      "Çökmeleri teşhis etmek, kullanımı ölçmek ve kötüye kullanımı önlemek."
+      "Çökmeleri teşhis etmek, kullanımı ölçmek ve kötüye kullanımı önlemek.",
+      "Hangi App Store reklamlarının Manilo'ya kullanıcı getirdiğini ölçmek (yukarıdaki yükleme atfına bakın)."
     ],
     "doNot": "<strong>Verilerinizi satmıyoruz</strong>, reklam amacıyla paylaşmıyoruz ve kendi yapay zeka modellerimizi ya da üçüncü tarafların modellerini eğitmek için kullanmıyoruz.",
+    "legalBases": {
+      "heading": "Hukuki dayanaklar (GDPR Md. 6)",
+      "items": [
+        "Sizinle yaptığımız sözleşmenin ifası (Md. 6(1)(b)) — defterinizi senkronize etmek, kayıtlarınızı yapay zekayla çözümlemek, bağlı asistanlara hizmet vermek, aboneliğinizi yönetmek ve işlemsel e-postaları göndermek.",
+        "Meşru menfaatlerimiz (Md. 6(1)(f)) — kullanım analitiği, yükleme atfı, kötüye kullanımın önlenmesi ve güvenlik ile başlangıç ve teklif e-postaları. Buna dilediğiniz zaman itiraz edebilirsiniz: e-posta aboneliğinizi her mesajdaki bağlantıdan sonlandırabilir, hesabınız için analitik dışında kalmak üzere bize yazabilirsiniz.",
+        "Açık rızanız (Md. 6(1)(a)) — web sitelerimizdeki çerezler ve kendi isteğinizle açtığınız isteğe bağlı özellikler (Cloud, Telegram botu, Apple Wallet iletimi, bir yapay zeka asistanını bağlamak). Rızanızı, ilgili özelliği kapatarak veya çerezleri reddederek geri çekebilirsiniz."
+      ]
+    },
     "mcp": {
       "heading": "Yapay zeka asistanları ve Model Context Protocol (MCP)",
       "beforeLink": "Manilo'yu bir yapay zeka asistanına — ChatGPT (OpenAI), Claude (Anthropic) veya MCP uyumlu başka bir istemciye —",
@@ -95,8 +106,8 @@
       { "name": "OpenAI", "desc": "işlem metinlerinin ve fiş görüntülerinin yedek yapay zeka çözümlemesi; aynı hesap tanımlayıcısı ve eğitimde kullanmama API koşulları geçerlidir. OpenAI aynı zamanda, Manilo'yu ChatGPT'ye bağladığınızda sorgulanan verilerinizi alan asistan platformudur." },
       { "name": "Anthropic", "desc": "Manilo'yu Claude'a bağladığınızda sorgulanan verilerinizi alan asistan platformu; koşulları gereği API verileri model eğitiminde kullanılmaz." },
       { "name": "Apple", "desc": "Sign in with Apple, uygulama içi abonelik ödemeleri, anlık bildirimler ve çökme raporlaması." },
-      { "name": "Google", "desc": "Sign in with Google ve kullanım ölçümü için Google Analytics (web sitelerimizde çerez yerleştirir)." },
-      { "name": "RevenueCat", "desc": "abonelik durumu ve web üzerinden ödeme; hesap tanımlayıcınızı alır, defterinizi asla almaz." },
+      { "name": "Google", "desc": "Sign in with Google, kullanım ölçümü için Google Analytics (Firebase) (web sitelerimizde, rızanızla çerez yerleştirir) ve analitik dışa aktarımımız için Google BigQuery." },
+      { "name": "RevenueCat", "desc": "abonelik durumu, web üzerinden ödeme ve yükleme atfı; hesap tanımlayıcınızı ve Apple Search Ads atıf verilerini alır, defterinizi asla almaz." },
       { "name": "Microsoft 365", "desc": "işlemsel ve başlangıç e-postalarının gönderimi." },
       { "name": "Upstash", "desc": "şifrelenmiş, kısa ömürlü sunucu tarafı önbellek; kayıtlar 24 saat içinde silinir." },
       { "name": "Telegram", "desc": "Telegram botunu kullanmayı seçen kullanıcılar için mesaj aktarımı. Botla yaptığınız yazışma (botun gönderdiği işlem onayları dahil), Telegram'ın kendi gizlilik politikası kapsamında Telegram sohbet geçmişinizde kalır." }
@@ -110,7 +121,7 @@
       "Defteriniz ve fişleriniz, hesabınız var olduğu sürece saklanır — tek tek kayıtları ya da hesabınızın tamamını silene kadar.",
       "Cloud aboneliğiniz sona ererse, geri döndüğünüzde yerinde durması için senkronize edilmiş verileriniz saklanmaya devam eder; yerel kopyanız da cihazınızda kalır. Sunucudaki kopyayı, hesabınızı silerek dilediğiniz zaman kaldırabilirsiniz.",
       "Hesap silme: Ayarlar → Hesap → Hesabı sil. Verileriniz üretim veritabanımızdan anında silinir — devre dışı bırakma değil, kalıcı silme. Fiş dosyaları aynı anda kalıcı olarak erişilemez hale gelir. Şifrelenmiş veritabanı yedekleri 30 gün, sunucu tarafı önbellekler 24 saat, sunucu günlükleri 30 gün içinde silinir.",
-      "Yapay zeka sağlayıcıları (Groq, OpenAI, Anthropic), çözümleme ve asistan isteklerini kendi API veri saklama koşulları kapsamında geçici olarak işler ve bu verilerle model eğitmez. Google Analytics kullanım olaylarını en fazla 14 ay saklar."
+      "Yapay zeka sağlayıcıları (Groq, OpenAI, Anthropic), çözümleme ve asistan isteklerini kendi API veri saklama koşulları kapsamında geçici olarak işler ve bu verilerle model eğitmez. Google Analytics kullanım olaylarını en fazla 14 ay saklar; BigQuery'deki kopyamız da aynı 14 aylık takvimle silinir."
     ]
   },
   "rights": {

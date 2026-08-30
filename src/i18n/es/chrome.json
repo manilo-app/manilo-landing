@@ -1,6 +1,10 @@
 {
   "skipLink": "Ir al contenido",
-  "nav": { "home": "Inicio", "pricing": "Precios", "support": "Soporte" },
+  "nav": {
+    "home": "Inicio",
+    "pricing": "Precios",
+    "support": "Soporte"
+  },
   "header": {
     "brandAria": "Inicio de Manilo",
     "openDashboard": "Abrir panel",
@@ -26,5 +30,11 @@
     "copyright": "© 2026 Manilo",
     "status": "Todos los sistemas funcionando",
     "language": "Idioma"
+  },
+  "cookies": {
+    "text": "Usamos cookies de Google Analytics para entender cómo se usa el sitio. No se activa nada hasta que tú elijas.",
+    "accept": "Aceptar",
+    "decline": "Rechazar",
+    "privacy": "Política de Privacidad"
   }
 }

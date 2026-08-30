@@ -10,7 +10,7 @@
   "hero": {
     "eyebrow": "Legal",
     "title": "Privacy Policy",
-    "lastUpdated": "Last updated August 28, 2026"
+    "lastUpdated": "Last updated August 30, 2026"
   },
   "toc": {
     "ariaLabel": "Table of contents",
@@ -21,7 +21,8 @@
     "calloutLead": "The short version:",
     "calloutBody": "Manilo (formerly Ledgy) is local-first — your transactions live on your device. If you turn on Cloud, a copy syncs to our servers on Google Cloud (United States) so your other devices, people you share with, and AI assistants you choose to connect can work with it. We never sell your data, never show ads, and never use your data to train AI models.",
     "introBeforeLink": "This Privacy Policy explains what data Manilo (\"we\", \"us\") collects when you use the Manilo iOS app (including the Apple Watch app), the Manilo web dashboard at",
-    "introAfterLink": ", the Manilo Telegram bot, our AI-assistant integrations (ChatGPT, Claude, and other MCP-compatible clients), and any related services (collectively, the \"Service\"). Some service endpoints operate under our legacy ledgy.app domain. This policy is written in plain English and aligned with the GDPR (EU 2016/679) and Apple App Store requirements."
+    "introAfterLink": ", the Manilo Telegram bot, our AI-assistant integrations (ChatGPT, Claude, and other MCP-compatible clients), and any related services (collectively, the \"Service\"). Some service endpoints operate under our legacy ledgy.app domain. This policy is written in plain English and aligned with the GDPR (EU 2016/679) and Apple App Store requirements.",
+    "controller": "The data controller is Borys Harholinskyi, an individual entrepreneur (autónomo) registered in Spain, trading as Manilo. Contact: privacy@manilo.app."
   },
   "whatWeCollect": {
     "heading": "What we collect",
@@ -48,7 +49,8 @@
       "heading": "Diagnostic and usage data",
       "items": [
         "Crash reports — anonymized, sent through Apple's standard crash reporting (which you can opt out of in iOS Settings).",
-        "Usage analytics — we use Google Analytics across the app, the website, and our API to measure feature usage: screens viewed, features used, tool calls made by connected assistants, and timings. For signed-in users these events are linked to your account identifier. We do not send transaction amounts, merchant names, notes, or receipt contents to analytics. On our websites, Google Analytics sets cookies.",
+        "Usage analytics — we use Google Analytics (Firebase) across the app, the website, and our API to measure feature usage: screens viewed, features used, tool calls made by connected assistants, and timings. For signed-in users these events are linked to your account identifier, and a copy of the raw events is exported to Google BigQuery in our own project so we can analyze product usage per account. We do not send transaction amounts, merchant names, notes, or receipt contents to analytics. On our websites, Google Analytics sets cookies only after you accept them in the cookie banner; declining keeps the site fully functional.",
+        "Install attribution — if you installed Manilo from an Apple Search Ads ad, Apple's privacy-preserving AdServices framework provides an attribution token that our subscription provider RevenueCat exchanges for the campaign, ad group, and keyword the install came from. No device identifier (IDFA) is involved and no tracking permission is requested; we use it only to measure which ads work.",
         "Security data — IP addresses are processed transiently for rate limiting and abuse protection. Server logs (which reference your account identifier and actions, never your email) are retained for up to 30 days."
       ]
     }
@@ -71,11 +73,20 @@
       "Parse your text, photos, voice transcripts, and forwarded notifications into transactions (AI processing).",
       "Answer questions and perform actions you ask a connected AI assistant to do.",
       "Manage your subscription and trial.",
-      "Send transactional and onboarding email — sign-in codes, security notices, account changes, getting-started tips. Every non-essential email has an unsubscribe link.",
+      "Send transactional, onboarding, and offer email — sign-in codes, security notices, account changes, getting-started tips, and occasional messages about your trial or plan. Every non-essential email has an unsubscribe link.",
       "Deliver push notifications you enable. Their text can include amounts and merchant names, appears on your lock screen, and transits Apple's and Google's push services.",
-      "Diagnose crashes, measure usage, and prevent abuse."
+      "Diagnose crashes, measure usage, and prevent abuse.",
+      "Measure which App Store ads bring people to Manilo (see install attribution above)."
     ],
     "doNot": "<strong>We do not</strong> sell your data, share it for advertising, or use it to train our own or third-party AI models.",
+    "legalBases": {
+      "heading": "Legal bases (GDPR Art. 6)",
+      "items": [
+        "Performance of our contract with you (Art. 6(1)(b)) — syncing your ledger, parsing your entries with AI, serving connected assistants, managing your subscription, and sending transactional email.",
+        "Our legitimate interests (Art. 6(1)(f)) — usage analytics, install attribution, abuse prevention and security, and onboarding and offer email. You can object at any time: unsubscribe from email via the link in every message, and contact us to opt out of analytics for your account.",
+        "Your consent (Art. 6(1)(a)) — cookies on our websites, and optional features you switch on yourself (Cloud, Telegram bot, Apple Wallet forwarding, connecting an AI assistant). Withdraw it by turning the feature off or declining cookies."
+      ]
+    },
     "mcp": {
       "heading": "AI Assistants & Model Context Protocol (MCP)",
       "beforeLink": "If you connect Manilo to an AI assistant — ChatGPT (OpenAI), Claude (Anthropic), or another MCP-compatible client — via our",
@@ -90,16 +101,46 @@
     "heading": "Subprocessors",
     "intro": "To deliver the Service we rely on the following providers. Each processes data only on our instructions under a data-processing agreement.",
     "providers": [
-      { "name": "Google Cloud Platform", "desc": "hosting and storage: our backend runs on Google Cloud Run, with Google Firestore (database) and Google Cloud Storage (receipt files) in the United States; push delivery via Firebase Cloud Messaging." },
-      { "name": "Groq", "desc": "primary AI parsing of transaction text and receipt images, and transcription of Apple Watch and Telegram voice input. Requests carry your account identifier for abuse prevention; content is not used to train their models per their API terms." },
-      { "name": "OpenAI", "desc": "fallback AI parsing of transaction text and receipt images, under the same account-identifier and no-training API terms. OpenAI is also the assistant platform that receives your queried data when you connect Manilo to ChatGPT." },
-      { "name": "Anthropic", "desc": "the assistant platform that receives your queried data when you connect Manilo to Claude; API data is not used for model training per their terms." },
-      { "name": "Apple", "desc": "Sign in with Apple, in-app subscription payments, push notifications, and crash reporting." },
-      { "name": "Google", "desc": "Sign in with Google, and Google Analytics for usage measurement (sets cookies on our websites)." },
-      { "name": "RevenueCat", "desc": "subscription state and web checkout; receives your account identifier, never your ledger." },
-      { "name": "Microsoft 365", "desc": "transactional and onboarding email delivery." },
-      { "name": "Upstash", "desc": "encrypted, short-lived server-side cache; entries expire within 24 hours." },
-      { "name": "Telegram", "desc": "message relay for users who opt into the Telegram bot. Your conversation with the bot (including transaction confirmations it sends) stays in your Telegram chat history under Telegram's own privacy policy." }
+      {
+        "name": "Google Cloud Platform",
+        "desc": "hosting and storage: our backend runs on Google Cloud Run, with Google Firestore (database) and Google Cloud Storage (receipt files) in the United States; push delivery via Firebase Cloud Messaging."
+      },
+      {
+        "name": "Groq",
+        "desc": "primary AI parsing of transaction text and receipt images, and transcription of Apple Watch and Telegram voice input. Requests carry your account identifier for abuse prevention; content is not used to train their models per their API terms."
+      },
+      {
+        "name": "OpenAI",
+        "desc": "fallback AI parsing of transaction text and receipt images, under the same account-identifier and no-training API terms. OpenAI is also the assistant platform that receives your queried data when you connect Manilo to ChatGPT."
+      },
+      {
+        "name": "Anthropic",
+        "desc": "the assistant platform that receives your queried data when you connect Manilo to Claude; API data is not used for model training per their terms."
+      },
+      {
+        "name": "Apple",
+        "desc": "Sign in with Apple, in-app subscription payments, push notifications, and crash reporting."
+      },
+      {
+        "name": "Google",
+        "desc": "Sign in with Google, Google Analytics (Firebase) for usage measurement (sets cookies on our websites with your consent), and Google BigQuery for our analytics export."
+      },
+      {
+        "name": "RevenueCat",
+        "desc": "subscription state, web checkout, and install attribution; receives your account identifier and Apple Search Ads attribution data, never your ledger."
+      },
+      {
+        "name": "Microsoft 365",
+        "desc": "transactional and onboarding email delivery."
+      },
+      {
+        "name": "Upstash",
+        "desc": "encrypted, short-lived server-side cache; entries expire within 24 hours."
+      },
+      {
+        "name": "Telegram",
+        "desc": "message relay for users who opt into the Telegram bot. Your conversation with the bot (including transaction confirmations it sends) stays in your Telegram chat history under Telegram's own privacy policy."
+      }
     ],
     "dpaBeforeEmail": "Where data is transferred out of the EU or UK, we rely on our providers' recognized safeguards (EU-U.S. Data Privacy Framework or Standard Contractual Clauses). For DPA copies or subprocessor sub-locations, write to",
     "dpaAfterEmail": "."
@@ -110,7 +151,7 @@
       "Your ledger and receipts are kept for as long as your account exists — until you delete individual entries or your whole account.",
       "If your Cloud subscription ends, your synced data remains stored so it is there if you return; your local copy stays on your device. You can remove the server copy at any time by deleting your account.",
       "Account deletion: Settings → Account → Delete account. Your data is deleted from our production database immediately — a hard delete, not a deactivation. Receipt files become permanently inaccessible at the same moment. Encrypted database backups expire within 30 days; server-side caches within 24 hours; server logs within 30 days.",
-      "AI providers (Groq, OpenAI, Anthropic) process parsing and assistant requests transiently under their API data-retention terms and do not train on them. Google Analytics retains usage events for up to 14 months."
+      "AI providers (Groq, OpenAI, Anthropic) process parsing and assistant requests transiently under their API data-retention terms and do not train on them. Google Analytics retains usage events for up to 14 months, and our BigQuery copy is deleted on the same 14-month schedule."
     ]
   },
   "rights": {

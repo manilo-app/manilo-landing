@@ -33,7 +33,7 @@
       },
       {
         "q": "Manilo reklam gösteriyor mu?",
-        "a": "Hayır. Manilo'da reklam yok, veri satan aracı yok, reklam takip SDK'sı yok. Ücretsiz plan, reklam geliriyle değil, isteğe bağlı Cloud aboneliğiyle destekleniyor. Manilo, Reklamcılar için Tanımlayıcı (IDFA) bilgini toplamaz."
+        "a": "Hayır. Manilo'da reklam yok, veri simsarı yok ve verilerin asla satılmıyor. Ücretsiz plan, reklam geliriyle değil, isteğe bağlı Cloud aboneliğiyle destekleniyor. Manilo, Reklamcılar için Tanımlayıcı (IDFA) bilgini toplamaz ve asla izleme izni istemez. Manilo'yu bir Apple Search Ads reklamı üzerinden yüklediysen, Apple'ın gizliliği koruyan AdServices çatısı yüklemenin hangi kampanyadan geldiğini bize bildirir — fazlası değil."
       },
       {
         "q": "Manilo gizliliğe saygılı mı? Verilerimi satıyor mu?",
