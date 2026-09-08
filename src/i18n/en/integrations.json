@@ -20,25 +20,46 @@
       "name": "How to connect Manilo to ChatGPT",
       "description": "Connect the Manilo expense tracker to ChatGPT in two steps.",
       "steps": [
-        { "name": "Connect Manilo to ChatGPT", "text": "Open the Manilo app in ChatGPT and click Connect." },
-        { "name": "Follow the instructions", "text": "Sign in with Apple, Google, or email and grant access. Then mention Manilo in any chat." }
+        {
+          "name": "Connect Manilo to ChatGPT",
+          "text": "Open the Manilo app in ChatGPT and click Connect."
+        },
+        {
+          "name": "Follow the instructions",
+          "text": "Sign in with Apple, Google, or email and grant access. Then mention Manilo in any chat."
+        }
       ]
     },
     "howtoClaude": {
       "name": "How to connect Manilo to Claude",
       "description": "Add the Manilo expense tracker to Claude as a custom MCP connector.",
       "steps": [
-        { "name": "Open connector settings", "text": "In claude.ai or Claude Desktop, go to Settings → Connectors → Add custom connector." },
-        { "name": "Paste the Manilo server URL", "text": "Name: Manilo. Server URL: https://api.manilo.app/mcp." },
-        { "name": "Add and sign in", "text": "Click Add, sign in with Apple, Google, or email, then enable Manilo from the connectors menu in any chat." }
+        {
+          "name": "Open connector settings",
+          "text": "In claude.ai or Claude Desktop, go to Settings → Connectors → Add custom connector."
+        },
+        {
+          "name": "Paste the Manilo server URL",
+          "text": "Name: Manilo. Server URL: https://api.manilo.app/mcp."
+        },
+        {
+          "name": "Add and sign in",
+          "text": "Click Add, sign in with Apple, Google, or email, then enable Manilo from the connectors menu in any chat."
+        }
       ]
     },
     "howtoCursor": {
       "name": "How to connect Manilo to Cursor",
       "description": "Install the Manilo MCP server in Cursor with one click.",
       "steps": [
-        { "name": "Add Manilo to Cursor", "text": "Use the one-click install link, or add https://api.manilo.app/mcp to mcp.json." },
-        { "name": "Follow the instructions", "text": "Click Install when Cursor opens, then complete the sign-in in your browser." }
+        {
+          "name": "Add Manilo to Cursor",
+          "text": "Use the one-click install link, or add https://api.manilo.app/mcp to mcp.json."
+        },
+        {
+          "name": "Follow the instructions",
+          "text": "Click Install when Cursor opens, then complete the sign-in in your browser."
+        }
       ]
     }
   },
@@ -59,10 +80,22 @@
     "copy": "Copy",
     "copyAria": "Copy server URL",
     "tabs": {
-      "chatgpt": { "name": "ChatGPT", "hint": "2 steps · one click" },
-      "claude": { "name": "Claude", "hint": "3 steps · copy a URL" },
-      "cursor": { "name": "Cursor", "hint": "2 steps · one click" },
-      "other": { "name": "Other", "hint": "Windsurf, VS Code & more" }
+      "chatgpt": {
+        "name": "ChatGPT",
+        "hint": "2 steps · one click"
+      },
+      "claude": {
+        "name": "Claude",
+        "hint": "3 steps · copy a URL"
+      },
+      "cursor": {
+        "name": "Cursor",
+        "hint": "2 steps · one click"
+      },
+      "other": {
+        "name": "Other",
+        "hint": "Windsurf, VS Code & more"
+      }
     },
     "chatgpt": {
       "title": "Connect Manilo to ChatGPT",
@@ -159,7 +192,13 @@
         "body": "Every MCP client gets the same 30+ tools across transactions, accounts, budgets, and more."
       },
       "clientsAria": "Known-good MCP clients",
-      "clients": ["Windsurf", "VS Code", "Continue", "Zed", "Custom agents"],
+      "clients": [
+        "Windsurf",
+        "VS Code",
+        "Continue",
+        "Zed",
+        "Custom agents"
+      ],
       "morePre": "Building your own integration in code? Use the",
       "moreLink": "REST API v1",
       "morePost": "instead."
@@ -170,14 +209,38 @@
     "title": "What you can ask",
     "sub": "Every answer is computed from your own data — not an estimate.",
     "items": [
-      { "q": "What did I spend on coffee last month?", "a": "Totals by category over any date range." },
-      { "q": "Add a €12 lunch at Pret to my Wise account from yesterday.", "a": "Parses merchant, amount, currency, and date." },
-      { "q": "Transfer 200 EUR from Wise Personal to Cash.", "a": "Cross-account transfers, including cross-currency FX." },
-      { "q": "How does my April spending compare to March?", "a": "Multi-period comparison in your primary currency." },
-      { "q": "Find every transaction over €100 in May.", "a": "Filtered transaction search." },
-      { "q": "Show my top 5 categories this quarter.", "a": "Top-N aggregation." },
-      { "q": "What's my Santander balance right now?", "a": "Live balance — same formula as the mobile app." },
-      { "q": "Reconcile Santander to 616 EUR — my bank app shows that.", "a": "One-shot adjustment to match an external figure." }
+      {
+        "q": "What did I spend on coffee last month?",
+        "a": "Totals by category over any date range."
+      },
+      {
+        "q": "Add a €12 lunch at Pret to my Wise account from yesterday.",
+        "a": "Parses merchant, amount, currency, and date."
+      },
+      {
+        "q": "Transfer 200 EUR from Wise Personal to Cash.",
+        "a": "Cross-account transfers, including cross-currency FX."
+      },
+      {
+        "q": "How does my April spending compare to March?",
+        "a": "Multi-period comparison in your primary currency."
+      },
+      {
+        "q": "Find every transaction over €100 in May.",
+        "a": "Filtered transaction search."
+      },
+      {
+        "q": "Show my top 5 categories this quarter.",
+        "a": "Top-N aggregation."
+      },
+      {
+        "q": "What's my Santander balance right now?",
+        "a": "Live balance — same formula as the mobile app."
+      },
+      {
+        "q": "Reconcile Santander to 616 EUR — my bank app shows that.",
+        "a": "One-shot adjustment to match an external figure."
+      }
     ]
   },
   "capabilities": {
@@ -185,21 +248,48 @@
     "title": "What Manilo can do once connected",
     "sub": "The MCP server exposes 30+ tools to your assistant.",
     "cards": {
-      "read": { "title": "Read everything", "body": "Accounts, transactions, categories, budgets, groups, and tags." },
-      "edit": { "title": "Add & edit", "body": "Transactions, accounts, categories, budgets, and recurring rules." },
-      "move": { "title": "Move money", "body": "Transfers between accounts, including cross-currency with FX." },
-      "convert": { "title": "Convert currencies", "body": "Live ECB rates; dashboard totals in your primary currency." },
-      "receipts": { "title": "Handle receipts", "body": "Attach from a public URL and fetch signed download links." },
-      "reconcile": { "title": "Balance & reconcile", "body": "Live account balances and one-shot reconciliation against your bank." }
+      "read": {
+        "title": "Read everything",
+        "body": "Accounts, transactions, categories, budgets, groups, and tags."
+      },
+      "edit": {
+        "title": "Add & edit",
+        "body": "Transactions, accounts, categories, budgets, and recurring rules."
+      },
+      "move": {
+        "title": "Move money",
+        "body": "Transfers between accounts, including cross-currency with FX."
+      },
+      "convert": {
+        "title": "Convert currencies",
+        "body": "Live ECB rates; dashboard totals in your primary currency."
+      },
+      "receipts": {
+        "title": "Handle receipts",
+        "body": "Attach from a public URL and fetch signed download links."
+      },
+      "reconcile": {
+        "title": "Balance & reconcile",
+        "body": "Live account balances and one-shot reconciliation against your bank."
+      }
     }
   },
   "privacy": {
     "eyebrow": "Trust",
     "title": "Privacy & control",
     "items": {
-      "scope": { "title": "Sees only what you ask about", "body": "The assistant gets the data your question needs. We don't push your full ledger to Anthropic or OpenAI on connection." },
-      "password": { "title": "Your password stays yours", "body": "You sign in on Manilo's own consent page with Apple, Google, or email. The assistant never sees your password." },
-      "disconnect": { "title": "Disconnect any time", "body": "Remove the connector in your client's settings — Claude, ChatGPT, or any other. Revoking access takes effect immediately." }
+      "scope": {
+        "title": "Sees only what you ask about",
+        "body": "The assistant gets the data your question needs. We don't push your full ledger to Anthropic or OpenAI on connection."
+      },
+      "password": {
+        "title": "Your password stays yours",
+        "body": "You sign in on Manilo's own consent page with Apple, Google, or email. The assistant never sees your password."
+      },
+      "disconnect": {
+        "title": "Disconnect any time",
+        "body": "Remove the connector in your client's settings — Claude, ChatGPT, or any other. Revoking access takes effect immediately."
+      }
     },
     "notePre": "Full details in our",
     "noteLink": "Privacy Policy",
@@ -212,5 +302,9 @@
     "iosCta": "Get the iOS app",
     "helpIntro": "Stuck or missing a client?",
     "helpLink": "Help center"
+  },
+  "banks": {
+    "title": "Import from your bank",
+    "intro": "Step-by-step guides for downloading a statement and importing it into ChatGPT or Claude:"
   }
 }

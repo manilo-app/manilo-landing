@@ -1,3 +1,5 @@
+import { BANKS } from '../data/banks';
+
 export const LOCALES = ['en', 'de', 'es', 'fr', 'hi', 'it', 'ja', 'ko', 'pl', 'pt', 'ru', 'tr', 'uk', 'zh'] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = 'en';
@@ -38,12 +40,13 @@ const available = new Set(
   Object.keys(import.meta.glob('./*/*.json')).map((p) => p.replace('./', '').replace('.json', '')),
 );
 
-export const PAGE_LOCALES: Record<string, readonly Locale[]> = Object.fromEntries(
-  Object.entries(PAGE_DICTS).map(([path, dict]) => [
+export const PAGE_LOCALES: Record<string, readonly Locale[]> = Object.fromEntries([
+  ...Object.entries(PAGE_DICTS).map(([path, dict]) => [
     path,
     LOCALES.filter((l) => l === DEFAULT_LOCALE || available.has(`${l}/${dict}`)),
   ]),
-);
+  ...BANKS.map((b) => [`/import/${b.slug}`, [DEFAULT_LOCALE]]),
+]);
 
 export function localeUrl(locale: string, path: string): string {
   if (locale === DEFAULT_LOCALE) return path;

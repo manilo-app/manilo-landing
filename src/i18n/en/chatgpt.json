@@ -88,6 +88,10 @@
       }
     ]
   },
+  "banks": {
+    "title": "Import from your bank",
+    "intro": "Step-by-step guides for downloading a statement and importing it:"
+  },
   "faq": {
     "title": "Questions people actually ask",
     "items": [

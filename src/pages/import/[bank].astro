@@ -1,0 +1,11 @@
+---
+import BankImport from '../../components/pages/BankImport.astro';
+import { BANKS } from '../../data/banks';
+
+export function getStaticPaths() {
+  return BANKS.map((bank) => ({ params: { bank: bank.slug }, props: { bank } }));
+}
+
+const { bank } = Astro.props;
+---
+<BankImport bank={bank} />

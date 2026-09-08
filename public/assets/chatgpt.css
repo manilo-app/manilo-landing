@@ -55,3 +55,11 @@
 @media (max-width: 760px) {
   .cg-demo { padding: 20px; }
 }
+.cg-demo--placeholder {
+  align-items: center;
+  border-style: dashed;
+  color: var(--foreground-dim);
+}
+.cg-demo--placeholder i { color: var(--primary-light); margin-right: 8px; }
+.doc__body ol { margin: 0 0 12px; padding-left: 22px; }
+.doc__body ol li { margin-bottom: 4px; }

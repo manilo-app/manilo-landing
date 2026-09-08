@@ -1,0 +1,188 @@
+---
+import Base from '../../layouts/Base.astro';
+import { APP_STORE_URL, CHATGPT_APP_URL, DASHBOARD_URL, MCP_URL, SITE } from '../../consts';
+import { BANKS, type Bank } from '../../data/banks';
+
+interface Props {
+  bank: Bank;
+}
+
+const { bank } = Astro.props;
+const path = `/import/${bank.slug}`;
+const others = BANKS.filter((b) => b.slug !== bank.slug);
+
+const title = `Import ${bank.name} Statement into ChatGPT | Manilo`;
+const description = `Drop your ${bank.name} statement (PDF or CSV) into ChatGPT or Claude. Manilo turns it into categorized spending and a live dashboard. 7-day free trial.`;
+
+const faq = [
+  {
+    q: 'Where does my statement data go?',
+    a: 'The assistant reads the file you upload and creates the transactions in your Manilo account, where they sync to the web dashboard and the iOS app. Connecting is free; a 7-day free trial of Manilo Cloud starts with your first import or question, and after that it continues as a Manilo Cloud subscription. Nothing is deleted when the trial ends.',
+  },
+  {
+    q: `Which ${bank.name} file formats work?`,
+    a: 'PDF statements and CSV or Excel exports both work. Whatever the assistant can read, it can import: it maps each row to your categories and creates everything in one batch. If a row is unclear, it asks instead of guessing.',
+  },
+  {
+    q: 'Does it work in Claude too?',
+    a: `Yes. Add Manilo as a custom connector in Claude (Settings, Connectors, Add custom connector) with the server URL ${MCP_URL}, sign in, and upload the same file. Cursor and other MCP clients work as well.`,
+  },
+  {
+    q: `Does Manilo connect to ${bank.name} automatically?`,
+    a: `No. There is no bank account linking and nothing pulls from ${bank.name}. You download the statement yourself and hand it to the assistant. Next month, you just send the new one.`,
+  },
+  {
+    q: 'What about other banks?',
+    a: `The same three steps work for any bank that lets you download a statement. Guides are available for ${others.map((b) => b.name).join(', ')}.`,
+  },
+];
+
+const howToLd = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: `Import your ${bank.name} statement into ChatGPT`,
+  description,
+  totalTime: 'PT3M',
+  step: [
+    { name: `Download your ${bank.name} statement`, text: `${bank.pdf.join(' ')} A CSV export works too.` },
+    { name: 'Open Manilo in ChatGPT or Claude', text: 'Open the Manilo app in ChatGPT, or add Manilo as a custom connector in Claude, and sign in.' },
+    { name: 'Upload the file and say "import this statement"', text: 'The assistant maps every row to your categories, creates the transactions in one batch, and replies with a link to your dashboard.' },
+  ].map((s, i) => ({ '@type': 'HowToStep', position: i + 1, ...s, ...(i === 0 && { url: `${SITE}${path}#download` }) })),
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+    { '@type': 'ListItem', position: 2, name: 'Manilo in ChatGPT', item: `${SITE}/chatgpt` },
+    { '@type': 'ListItem', position: 3, name: bank.name, item: `${SITE}${path}` },
+  ],
+};
+---
+<Base
+  title={title}
+  description={description}
+  path={path}
+  ogType="article"
+  screenLabel={`09 Import ${bank.name}`}
+  css={['/assets/doc.css', '/assets/chatgpt.css']}
+  js={['/assets/doc.js']}
+>
+<Fragment slot="head">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<script type="application/ld+json" is:inline set:html={JSON.stringify(howToLd)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(faqLd)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)} />
+</Fragment>
+
+<section class="doc-hero" id="hero">
+  <div class="container">
+    <span class="t-eyebrow">{bank.name} · {bank.country}</span>
+    <h1>Import your {bank.name} statement into ChatGPT</h1>
+    <p class="cg-lead">Download a statement from {bank.name}, drop it into ChatGPT or Claude, and Manilo turns it into categorized transactions plus a live dashboard. No column mapping, no manual entry.</p>
+    <p class="doc-meta">
+      <span><i class="fa-solid fa-file-lines"></i> PDF or CSV</span>
+      <span><i class="fa-solid fa-plug"></i> ChatGPT &amp; Claude</span>
+      <span><i class="fa-brands fa-apple"></i> Free iOS app, no ads</span>
+    </p>
+    <div class="cg-hero-ctas">
+      <a class="btn btn--primary" href={CHATGPT_APP_URL} target="_blank" rel="noopener noreferrer" data-cta="Open Manilo in ChatGPT" data-cta-position="hero">Open Manilo in ChatGPT</a>
+      <a class="btn btn--secondary" href="/integrations#claude" data-cta="Connect Claude" data-cta-position="hero">Connect Claude</a>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+<div class="doc">
+  <aside class="doc__toc doc__toc--collapsible" aria-label="Table of contents">
+    <h4>Contents</h4>
+    <button class="doc__toc-toggle" type="button" aria-expanded="false" aria-controls="toc-list">
+      <i class="fa-solid fa-bars"></i> Contents <i class="fa-solid fa-chevron-down doc__toc-chev"></i>
+    </button>
+    <ol id="toc-list">
+      <li><a href="#download">Download the statement</a></li>
+      <li><a href="#open">Open Manilo</a></li>
+      <li><a href="#import">Import it</a></li>
+      <li><a href="#what-you-get">What you get</a></li>
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="#faq">Questions</a></li>
+      <li><a href="#other-banks">Other banks</a></li>
+    </ol>
+  </aside>
+
+  <article class="doc__body">
+    <section id="download">
+      <h2 data-num="01">Download your {bank.name} statement</h2>
+      <p>Either format works. PDF statements are what {bank.name} produces every month; a CSV export lets you pick an exact date range.</p>
+      <h3>PDF statement</h3>
+      <ol>{bank.pdf.map((s) => <li>{s}</li>)}</ol>
+      <h3>CSV export</h3>
+      <ol>{bank.csv.map((s) => <li>{s}</li>)}</ol>
+      <p>Menu names change from time to time; if you do not see these exact labels, look for anything called statements, documents, export, or download in your {bank.name} account.</p>
+    </section>
+
+    <section id="open">
+      <h2 data-num="02">Open Manilo in ChatGPT or Claude</h2>
+      <p>In ChatGPT, open the <a href={CHATGPT_APP_URL} target="_blank" rel="noopener noreferrer" data-cta="Open Manilo in ChatGPT" data-cta-position="step">Manilo app</a> and sign in with Apple, Google, or email. In Claude, add Manilo as a custom connector with the server URL <code>{MCP_URL}</code>; the <a href="/integrations">integrations page</a> walks through every client.</p>
+      <div class="cg-hero-ctas">
+        <a class="btn btn--primary" href={CHATGPT_APP_URL} target="_blank" rel="noopener noreferrer" data-cta="Open Manilo in ChatGPT" data-cta-position="step">Open Manilo in ChatGPT</a>
+        <a class="btn btn--secondary" href="/integrations#claude" data-cta="Connect Claude" data-cta-position="step">Connect Claude</a>
+      </div>
+    </section>
+
+    <section id="import">
+      <h2 data-num="03">Drop the file in and say “import this statement”</h2>
+      <p>Attach the {bank.name} file to the chat and ask the assistant to import it. It reads every row, maps each one to your categories, and creates the transactions in one batch. The reply summarizes what was imported and links to your dashboard.</p>
+      <div class="callout"><i class="fa-solid fa-circle-info"></i><span>ChatGPT shows a confirmation prompt (<strong>Allow once</strong> / <strong>Always</strong>) before any write, so nothing lands in your ledger without your OK.</span></div>
+    </section>
+
+    <section id="what-you-get">
+      <h2 data-num="04">What you get</h2>
+      <ul>
+        <li><strong>Categorized transactions.</strong> Every row from the statement, mapped to your own categories, with unclear rows flagged for you to confirm.</li>
+        <li><strong>A live dashboard.</strong> Totals by category and month at <a href={DASHBOARD_URL} target="_blank" rel="noopener noreferrer">dashboard.manilo.app</a>, updated the moment the import finishes.</li>
+        <li><strong>Answers from your own data.</strong> Ask “how much did I spend on groceries last month?” and get a number computed from the transactions you imported.</li>
+        <li><strong>Everything in the iOS app too.</strong> The same data syncs to the free Manilo app, where you can also log expenses by voice, receipt photo, or Apple Watch.</li>
+      </ul>
+    </section>
+
+    <section id="demo">
+      <h2 data-num="05">Demo</h2>
+      <div class="glass-flat cg-demo cg-demo--placeholder" id="demo-media">
+        <p><i class="fa-solid fa-circle-play" aria-hidden="true"></i> Demo video coming soon</p>
+      </div>
+      <p>To be clear: the assistant reads the file you give it. Manilo does not connect to {bank.name}.</p>
+    </section>
+
+    <section id="faq">
+      <h2 data-num="06">Questions</h2>
+      {faq.map((f) => (
+        <>
+          <h3>{f.q}</h3>
+          <p>{f.a}</p>
+        </>
+      ))}
+    </section>
+
+    <section id="other-banks">
+      <h2 data-num="07">Import from other banks</h2>
+      <ul class="cg-banks">
+        {others.map((b) => <li><a href={`/import/${b.slug}`}>{b.name}</a></li>)}
+      </ul>
+      <div class="cg-hero-ctas">
+        <a class="btn btn--primary" href={CHATGPT_APP_URL} target="_blank" rel="noopener noreferrer" data-cta="Open Manilo in ChatGPT" data-cta-position="closing">Open Manilo in ChatGPT</a>
+        <a class="btn btn--secondary" href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" data-cta="Get the iOS app" data-cta-position="closing"><i class="fa-brands fa-apple" aria-hidden="true"></i> Get the iOS app</a>
+      </div>
+    </section>
+  </article>
+</div>
+</div>
+</Base>

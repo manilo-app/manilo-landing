@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { navUrl, type Locale } from '../../i18n/config';
 import { getDict } from '../../i18n';
+import { BANKS } from '../../data/banks';
 
 interface Props {
   lang: Locale;
@@ -153,6 +154,15 @@ const faqLd = {
           <li><strong>{item.strong}</strong> {item.body}</li>
         ))}
       </ul>
+      {d.banks && (
+        <>
+          <h3>{d.banks.title}</h3>
+          <p>{d.banks.intro}</p>
+          <ul class="cg-banks">
+            {BANKS.map((b) => <li><a href={`/import/${b.slug}`}>{b.name}</a></li>)}
+          </ul>
+        </>
+      )}
     </section>
 
     <section id="faq">

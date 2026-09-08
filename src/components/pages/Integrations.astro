@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { navUrl, type Locale } from '../../i18n/config';
 import { getDict } from '../../i18n';
+import { BANKS } from '../../data/banks';
 
 interface Props {
   lang: Locale;
@@ -332,6 +333,18 @@ const howtoCursorLd = howToLd(d.jsonLd.howtoCursor, 'cursor');
       ))}
     </div>
   </section>
+
+  {d.banks && (
+    <section class="ig-section" id="banks" aria-labelledby="banks-title">
+      <div class="ig-section__head">
+        <h2 id="banks-title">{d.banks.title}</h2>
+        <p class="t-dim">{d.banks.intro}</p>
+      </div>
+      <ul class="cg-banks">
+        {BANKS.map((b) => <li><a href={`/import/${b.slug}`}>{b.name}</a></li>)}
+      </ul>
+    </section>
+  )}
 
   <section class="ig-section" id="capabilities" aria-labelledby="capabilities-title">
     <div class="ig-section__head">
